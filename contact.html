@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Surava Capital</title>
+  <meta name="description" content="Get in touch with Surava Capital to schedule an introductory call or ask a question about our services." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">S</span>
+        Surava Capital
+      </a>
+      <nav class="nav-links">
+        <div class="has-dropdown">
+          <a href="services.html">Services</a>
+          <div class="dropdown">
+            <a href="services.html#advisory">Investment Advisory <small>Independent, fee-only portfolio guidance</small></a>
+            <a href="services.html#planning">Financial Planning <small>Goals-based plans for life's milestones</small></a>
+            <a href="services.html#retirement">Retirement Strategy <small>Income planning for the long run</small></a>
+            <a href="services.html#wealth">Wealth Management <small>Holistic management for growing assets</small></a>
+          </div>
+        </div>
+        <a href="education.html">Education</a>
+        <a href="insights.html">Insights</a>
+        <a href="markets.html">Markets</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="pricing.html">Pricing</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-secondary btn-sm">Client Login</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero-page">
+    <div class="container">
+      <span class="tag">Contact</span>
+      <h1>Let's talk about your financial picture.</h1>
+      <p class="lead">Schedule a free, no-obligation introductory call, or send us a message and a member of our team will respond within 1–2 business days.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT GRID ===== -->
+  <section>
+    <div class="container split">
+      <div class="form-card">
+        <h2 style="font-size:1.5rem;">Send us a message</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone number (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" />
+          </div>
+          <div class="form-group">
+            <label for="topic">What can we help with?</label>
+            <select id="topic" name="topic">
+              <option>Schedule an introductory call</option>
+              <option>Investment advisory</option>
+              <option>Financial planning</option>
+              <option>Retirement strategy</option>
+              <option>Careers</option>
+              <option>General question</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about what you're looking for..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send message</button>
+          <p id="form-note" style="display:none; margin-top:16px; color: var(--color-accent-dark); font-weight:600; font-size:0.9rem;"></p>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <div class="card">
+          <h3>General inquiries</h3>
+          <p>hello@suravacapital.com<br/>(555) 010-2040</p>
+        </div>
+        <div class="card">
+          <h3>Office</h3>
+          <p>500 Congress Avenue, Suite 1200<br/>Austin, TX 78701</p>
+        </div>
+        <div class="card">
+          <h3>Hours</h3>
+          <p>Monday – Friday<br/>8:00 AM – 6:00 PM CT</p>
+        </div>
+        <div class="card">
+          <h3>Existing clients</h3>
+          <p>Use the Client Login button in the navigation to access your portal and schedule a meeting with your advisor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ STRIP ===== -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Before you reach out</span>
+        <h2>Quick answers</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Is the introductory call really free?</h3>
+          <p>Yes — there's no cost and no obligation. It's a chance for us to understand your situation and for you to ask questions about how we work.</p>
+        </div>
+        <div class="card">
+          <h3>Do I need a minimum amount to invest?</h3>
+          <p>Our Plan Only service has no minimum. Ongoing Advisory has a recommended minimum of $250,000 in investable assets.</p>
+        </div>
+        <div class="card">
+          <h3>Do you work with clients outside Texas?</h3>
+          <p>Yes — we work with clients across the United States, primarily via video calls and our secure client portal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <span class="logo-mark">S</span>
+            Surava Capital
+          </div>
+          <p style="color:#B7C0C9; font-size:0.9rem; max-width:280px;">Independent financial education and investment advisory, built on fiduciary advice and transparent fees.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#advisory">Investment Advisory</a></li>
+            <li><a href="services.html#planning">Financial Planning</a></li>
+            <li><a href="services.html#retirement">Retirement Strategy</a></li>
+            <li><a href="services.html#wealth">Wealth Management</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="education.html">Education Hub</a></li>
+            <li><a href="insights.html">Market Insights</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Client Login</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="insights.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="disclosures.html">Disclosures</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Surava Capital. All rights reserved.</span>
+        <div class="legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="disclosures.html">Disclosures</a>
+        </div>
+      </div>
+      <p class="disclosure">Surava Capital is an independent investment advisory firm. Advisory services are offered for a fee and involve risk, including the possible loss of principal. Past performance does not guarantee future results. Nothing on this website should be construed as personalized investment, tax, or legal advice. This is a demonstration website and does not represent an active registered investment adviser.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
