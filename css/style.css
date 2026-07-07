@@ -262,7 +262,7 @@ p {
   background-image: url("../assets/Mockup.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 1.00;
+  opacity: 0.20;
   z-index: 0;
 }
 
