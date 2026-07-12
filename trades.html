@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trades — Surava Capital</title>
+  <meta name="description" content="Where our macro view meets real trades. For every market call we make in Insights, we log what actually happened — transparently, dated, and honest, including when we're wrong." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9474E9Z4GK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9474E9Z4GK');
+</script>
+<style>
+  .trades-wrap { overflow-x: auto; margin-top: 10px; }
+  table.trades { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  table.trades thead th {
+    text-align: left; padding: 14px 16px; border-bottom: 2px solid #1B2A3F;
+    color: #1B2A3F; font-weight: 700; font-size: 0.8rem; text-transform: uppercase;
+    letter-spacing: 0.05em; white-space: nowrap;
+  }
+  table.trades tbody td {
+    padding: 16px; border-bottom: 1px solid #E2E6EA; vertical-align: top;
+    color: #33404F; line-height: 1.5;
+  }
+  table.trades tbody tr:hover { background: #F4F5F3; }
+  .t-date { white-space: nowrap; color: #6B7480; font-size: 0.88rem; }
+  .t-asset { font-weight: 600; color: #1B2A3F; white-space: nowrap; }
+  .t-call { color: #1B2A3F; }
+  .t-trade { color: #33404F; }
+  .t-call a { color: #7D8A9D; font-weight: 600; text-decoration: none; font-size: 0.85rem; }
+  .t-call a:hover { text-decoration: underline; }
+  .pill {
+    display: inline-block; padding: 3px 10px; border-radius: 999px;
+    font-size: 0.78rem; font-weight: 600; white-space: nowrap;
+  }
+  .pill-right   { background: #E6EEE8; color: #2F6B43; }
+  .pill-wrong   { background: #F3E3E2; color: #9A3B34; }
+  .pill-open    { background: #EAECEF; color: #566373; }
+  .pill-neutral { background: #EFEAE0; color: #7A6A3C; }
+</style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logo-icon.png" alt="Surava Capital logo" class="logo-mark-img">
+        Surava Capital
+      </a>
+      <nav class="nav-links">
+        <div class="has-dropdown">
+          <a href="services.html">Services</a>
+          <div class="dropdown">
+            <a href="services.html#advisory">Investment Advisory <small>Independent, fee-only portfolio guidance</small></a>
+            <a href="services.html#planning">Financial Planning <small>Goals-based plans for life's milestones</small></a>
+            <a href="services.html#retirement">Retirement Strategy <small>Income planning for the long run</small></a>
+            <a href="services.html#wealth">Wealth Management <small>Holistic management for growing assets</small></a>
+          </div>
+        </div>
+        <a href="education.html">Education</a>
+        <a href="insights.html">Insights</a>
+        <a href="markets.html">Markets</a>
+        <a href="about.html">About</a>
+        <a href="trades.html">Trades</a>
+        <a href="pricing.html">Pricing</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-secondary btn-sm">Client Login</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero-page">
+    <div class="container">
+      <span class="tag">Trades</span>
+      <h1>Where our macro view meets real trades.</h1>
+      <p class="lead">For every market call we make in Insights, we log what actually happened alongside the trades taken. Dated, transparent, and honest, including when we're wrong. This is a record, not a recommendation.</p>
+    </div>
+  </section>
+
+  <!-- ===== TRADES TABLE ===== -->
+  <section>
+    <div class="container">
+      <div class="section-head left">
+        <span class="tag">The journal</span>
+        <h2>Macro call vs. the trade taken</h2>
+      </div>
+      <div class="trades-wrap">
+        <table class="trades">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Asset</th>
+              <th>Our macro call</th>
+              <th>The trade taken</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody id="trades-body"></tbody>
+        </table>
+      </div>
+
+      <p class="disclosure" style="margin-top:32px; max-width:760px;">This journal documents our own views and trades for transparency and education. It is a record of what we said and did, not a recommendation, a solicitation, an offer, or a performance claim. Individual entries are illustrative and do not represent overall results. Past outcomes do not indicate future results. Nothing on this page is personal investment advice.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <img src="assets/logo-icon.png" alt="Surava Capital logo" class="logo-mark-img">
+            Surava Capital
+          </div>
+          <p style="color:#B7C0C9; font-size:0.9rem; max-width:280px;">Independent financial education and investment advisory, built on fiduciary advice and transparent fees.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#advisory">Investment Advisory</a></li>
+            <li><a href="services.html#planning">Financial Planning</a></li>
+            <li><a href="services.html#retirement">Retirement Strategy</a></li>
+            <li><a href="services.html#wealth">Wealth Management</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="education.html">Education Hub</a></li>
+            <li><a href="insights.html">Market Insights</a></li>
+            <li><a href="markets.html">Live Markets</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="trades.html">Trades</a></li>
+            <li><a href="insights.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="disclosures.html">Disclosures</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Surava Capital. All rights reserved.</span>
+        <div class="legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="disclosures.html">Disclosures</a>
+        </div>
+      </div>
+      <p class="disclosure">Surava Capital is an independent investment advisory firm. Advisory services are offered for a fee and involve risk, including the possible loss of principal. Past performance does not guarantee future results. Nothing on this website should be construed as personalized investment, tax, or legal advice. This is a demonstration website and does not represent an active registered investment adviser.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  <!-- ===================================================================
+       TRADES LIST — this is the ONLY part you edit to log a trade.
+       Newest goes at the TOP.
+       status options: "right" | "wrong" | "open" | "neutral"
+       callLinkUrl / callLinkText are optional (manual link to an Insights article).
+       =================================================================== -->
+  <script>
+    const trades = [
+      {
+        date: "Example",
+        asset: "Brent Crude",
+        call: "Macro call goes here (e.g. easy money in oil is made; curve prices an optimistic resolution).",
+        callLinkUrl: "insight-02-hormuz-vs-opec.html",
+        callLinkText: "Read the call",
+        trade: "The trade taken goes here (e.g. built short exposure incrementally on the way up).",
+        outcome: "What happened goes here.",
+        status: "open"
+      },
+      {
+        date: "Example",
+        asset: "Gold",
+        call: "Another macro call.",
+        callLinkUrl: "",
+        callLinkText: "",
+        trade: "The corresponding trade.",
+        outcome: "Outcome / still open.",
+        status: "neutral"
+      }
+      // To log a new trade, copy a block above, paste it ABOVE the others,
+      // and fill in the details. Keep the comma between entries.
+    ];
+
+    (function renderTrades() {
+      var body = document.getElementById('trades-body');
+      if (!body) return;
+
+      var pillClass = {
+        right: 'pill pill-right',
+        wrong: 'pill pill-wrong',
+        open: 'pill pill-open',
+        neutral: 'pill pill-neutral'
+      };
+      var pillLabel = {
+        right: 'Called it',
+        wrong: 'Got it wrong',
+        open: 'Open',
+        neutral: 'Mixed'
+      };
+
+      body.innerHTML = trades.map(function (t) {
+        var link = (t.callLinkUrl && t.callLinkText)
+          ? '<br><a href="' + t.callLinkUrl + '">' + t.callLinkText + ' &rarr;</a>'
+          : '';
+        var pc = pillClass[t.status] || pillClass.open;
+        var pl = pillLabel[t.status] || '';
+        var pill = pl ? '<span class="' + pc + '">' + pl + '</span>' : '';
+        return '<tr>' +
+          '<td class="t-date">' + t.date + '</td>' +
+          '<td class="t-asset">' + t.asset + '</td>' +
+          '<td class="t-call">' + t.call + link + '</td>' +
+          '<td class="t-trade">' + t.trade + '</td>' +
+          '<td>' + pill + '<div style="margin-top:6px; font-size:0.88rem; color:#6B7480;">' + t.outcome + '</div></td>' +
+        '</tr>';
+      }).join('');
+    })();
+  </script>
+
+</body>
+</html>
