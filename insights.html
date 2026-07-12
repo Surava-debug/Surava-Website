@@ -165,27 +165,28 @@
        ARTICLE LIST — this is the ONLY part you edit to publish a new article.
        Newest goes at the TOP. The top entry becomes the Featured article;
        everything below it auto-fills The Archive.
+       Leave image as "" if the article has no picture — the card still works.
        =================================================================== -->
   <script>
     const articles = [
       {
+        title: "Why the Strait of Hormuz Matters More Than OPEC",
+        category: "World Events",
+        readTime: "8 min read",
+        excerpt: "When investors think about oil, they watch OPEC. But chokepoints move markets faster and harder than any production quota. From Suez to the 1980s Tanker War to today, a look at why the Strait of Hormuz matters more.",
+        url: "insight-02-hormuz-vs-opec.html",
+        image: "assets/hormuz-ais.png"
+      },
+      {
         title: "The Iran Conflict and Global Oil Markets",
         category: "World Events",
         readTime: "9 min read",
-        excerpt: "Within 72 hours of joint US–Israeli strikes on Iran, tanker traffic through the Strait of Hormuz effectively halted and Brent crude briefly touched $120. We look at what's driving the move — and how much of it is fundamentals versus narrative.",
+        excerpt: "Within 72 hours of joint US–Israeli strikes on Iran, tanker traffic through the Strait of Hormuz effectively halted and Brent crude briefly touched $120. We look at what's driving the move, and how much of it is fundamentals versus narrative.",
         url: "insight-01-iran-oil-markets.html",
-        image: "assets/hormuz-ais.png"
+        image: ""
       }
-      // ↑ To publish a new article, copy the block above, paste it ABOVE this line,
-      //   and fill in the new details. Keep the comma between entries. Example:
-      // {
-      //   title: "Your new headline",
-      //   category: "Macro",
-      //   readTime: "6 min read",
-      //   excerpt: "Short summary shown on the card.",
-      //   url: "insight-02-your-article.html",
-      //   image: "assets/your-image.png"
-      // },
+      // To publish a new article, copy a block above, paste it ABOVE the
+      // others, and fill in the new details. Keep the comma between entries.
     ];
 
     (function renderInsights() {
@@ -194,10 +195,13 @@
 
       const featuredEl = document.getElementById('featured-article');
       if (featured && featuredEl) {
+        var fMedia = featured.image
+          ? '<div class="media"><img src="' + featured.image + '" alt="' + featured.title + '" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" /></div>'
+          : '<div class="media"></div>';
         featuredEl.innerHTML =
-          '<div class="media"><img src="' + featured.image + '" alt="' + featured.title + '" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" /></div>' +
+          fMedia +
           '<div>' +
-            '<div class="meta" style="color:var(--color-accent-dark); font-weight:700; text-transform:uppercase; letter-spacing:0.08em; font-size:0.78rem; margin-bottom:10px;">Featured · ' + featured.category + ' · ' + featured.readTime + '</div>' +
+            '<div class="meta" style="color:var(--color-accent-dark); font-weight:700; text-transform:uppercase; letter-spacing:0.08em; font-size:0.78rem; margin-bottom:10px;">Featured &middot; ' + featured.category + ' &middot; ' + featured.readTime + '</div>' +
             '<h2>' + featured.title + '</h2>' +
             '<p>' + featured.excerpt + '</p>' +
             '<a href="' + featured.url + '" class="btn btn-secondary">Read full article</a>' +
@@ -210,10 +214,13 @@
           gridEl.innerHTML = '<p style="color:var(--color-muted, #6b7480);">More articles will appear here as they\'re published.</p>';
         } else {
           gridEl.innerHTML = rest.map(function (a) {
+            var thumb = a.image
+              ? '<div class="thumb" style="min-height:180px;"><img src="' + a.image + '" alt="' + a.title + '" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>'
+              : '<div class="thumb"></div>';
             return '<a href="' + a.url + '" class="article-card" style="text-decoration:none; color:inherit; display:block;">' +
-              '<div class="thumb" style="min-height:180px;"><img src="' + a.image + '" alt="' + a.title + '" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>' +
+              thumb +
               '<div class="body">' +
-                '<div class="meta">' + a.category + ' · ' + a.readTime + '</div>' +
+                '<div class="meta">' + a.category + ' &middot; ' + a.readTime + '</div>' +
                 '<h3>' + a.title + '</h3>' +
                 '<p>' + a.excerpt + '</p>' +
               '</div>' +
