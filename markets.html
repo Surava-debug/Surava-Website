@@ -4,15 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Markets — Surava Capital</title>
-  <meta name="description" content="Live exchange rates and country-level economic indicators — inflation, GDP growth, and unemployment — updated automatically." />
+  <meta name="description" content="Live markets, an economic calendar of the meetings and data releases that move prices, and the tickers we watch — from Surava Capital." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/markets.css" />
   <link rel="icon" type="image/png" href="favicon.png">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9474E9Z4GK"></script>
 <script>
@@ -56,84 +55,122 @@
     </div>
   </header>
 
+  <!-- ===== TICKER TAPE ===== -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+      "symbols": [
+        {"proName": "TVC:UKOIL", "title": "Brent"},
+        {"proName": "TVC:USOIL", "title": "WTI"},
+        {"proName": "TVC:GOLD", "title": "Gold"},
+        {"proName": "TVC:SILVER", "title": "Silver"},
+        {"proName": "SP:SPX", "title": "S&P 500"},
+        {"proName": "FX:USDCHF", "title": "USD/CHF"}
+      ],
+      "showSymbolLogo": true,
+      "colorTheme": "light",
+      "isTransparent": true,
+      "displayMode": "adaptive",
+      "locale": "en"
+    }
+    </script>
+  </div>
+
   <!-- ===== HERO ===== -->
   <section class="hero-page">
     <div class="container">
       <span class="tag">Markets</span>
-      <h1>Live exchange rates &amp; country economic data.</h1>
-      <p class="lead">Exchange rates update on every page load from a live market feed. Country indicators (inflation, GDP growth, unemployment) reflect the most recently published official figures.</p>
+      <h1>The meetings and data that move markets, in one place.</h1>
+      <p class="lead">A live economic calendar of the central-bank meetings and data releases we watch, alongside the prices we follow most closely. This page is for context, not recommendations.</p>
     </div>
   </section>
 
-  <!-- ===== LIVE FX ===== -->
+  <!-- ===== ECONOMIC CALENDAR ===== -->
   <section>
     <div class="container">
       <div class="section-head left">
-        <span class="tag">Foreign exchange</span>
-        <h2>Live exchange rates</h2>
-        <p id="fx-updated" class="meta">Loading…</p>
+        <span class="tag">Economic calendar</span>
+        <h2>Upcoming meetings and data releases</h2>
       </div>
-
-      <div class="market-toolbar">
-        <label for="fx-base">Base currency</label>
-        <select id="fx-base">
-          <option value="USD">USD — US Dollar</option>
-          <option value="EUR">EUR — Euro</option>
-          <option value="GBP">GBP — British Pound</option>
-          <option value="JPY">JPY — Japanese Yen</option>
-        </select>
-        <button id="fx-refresh" class="btn btn-secondary btn-sm" type="button">Refresh</button>
-      </div>
-
-      <div id="fx-grid" class="grid grid-3 market-grid">
-        <div class="market-card market-skeleton">Loading exchange rates…</div>
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+        {
+          "colorTheme": "light",
+          "isTransparent": true,
+          "locale": "en",
+          "countryFilter": "us,eu,ch,gb,jp,cn",
+          "importanceFilter": "0,1",
+          "width": "100%",
+          "height": "600"
+        }
+        </script>
       </div>
     </div>
   </section>
 
-  <!-- ===== COUNTRY INDICATORS ===== -->
+  <!-- ===== LIVE MARKETS ===== -->
   <section class="section-alt">
     <div class="container">
       <div class="section-head left">
-        <span class="tag">Country data</span>
-        <h2>Economic indicators by country</h2>
-        <p id="indicators-updated" class="meta">Loading…</p>
+        <span class="tag">Live markets</span>
+        <h2>The prices we watch</h2>
       </div>
-
-      <div class="market-toolbar">
-        <label for="country-select">Country</label>
-        <select id="country-select">
-          <option value="US" selected>United States</option>
-          <option value="DE">Germany</option>
-          <option value="GB">United Kingdom</option>
-          <option value="FR">France</option>
-          <option value="JP">Japan</option>
-          <option value="CN">China</option>
-          <option value="BR">Brazil</option>
-          <option value="MX">Mexico</option>
-          <option value="AU">Australia</option>
-          <option value="ES">Spain</option>
-          <option value="IN">India</option>
-          <option value="CA">Canada</option>
-        </select>
-      </div>
-
-      <div id="indicators-grid" class="grid grid-3 market-grid">
-        <div class="market-card market-skeleton">Loading indicators…</div>
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+        {
+          "colorTheme": "light",
+          "dateRange": "1D",
+          "showChart": true,
+          "locale": "en",
+          "isTransparent": true,
+          "showSymbolLogo": true,
+          "showFloatingTooltip": true,
+          "width": "100%",
+          "height": "550",
+          "tabs": [
+            {
+              "title": "Commodities",
+              "symbols": [
+                {"s": "TVC:UKOIL", "d": "Brent Crude"},
+                {"s": "TVC:USOIL", "d": "WTI Crude"},
+                {"s": "TVC:GOLD", "d": "Gold"},
+                {"s": "TVC:SILVER", "d": "Silver"}
+              ]
+            },
+            {
+              "title": "Indices",
+              "symbols": [
+                {"s": "SP:SPX", "d": "S&P 500"},
+                {"s": "NASDAQ:IXIC", "d": "Nasdaq"},
+                {"s": "TVC:DXY", "d": "US Dollar Index"}
+              ]
+            },
+            {
+              "title": "FX",
+              "symbols": [
+                {"s": "FX:EURUSD", "d": "EUR/USD"},
+                {"s": "FX:USDCHF", "d": "USD/CHF"},
+                {"s": "FX:GBPUSD", "d": "GBP/USD"}
+              ]
+            }
+          ]
+        }
+        </script>
       </div>
     </div>
   </section>
 
-  <!-- ===== NEWSLETTER ===== -->
+  <!-- ===== EARNINGS (placeholder until tickers chosen) ===== -->
   <section>
     <div class="container">
-      <div class="cta-banner">
-        <h2>Want this kind of data in context?</h2>
-        <p>Raw numbers rarely tell the whole story. Talk to an advisor about what current conditions mean for your plan.</p>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn btn-accent">Talk to an advisor</a>
-        </div>
+      <div class="section-head left">
+        <span class="tag">Earnings</span>
+        <h2>Company earnings dates</h2>
       </div>
+      <p style="max-width:640px; color:var(--color-muted, #6b7480);">Coming soon. We'll list the next reporting dates for the companies we follow most closely.</p>
     </div>
   </section>
 
@@ -192,11 +229,10 @@
           <a href="disclosures.html">Disclosures</a>
         </div>
       </div>
-      <p class="disclosure">Surava Capital is an independent investment advisory firm. Advisory services are offered for a fee and involve risk, including the possible loss of principal. Past performance does not guarantee future results. Nothing on this website should be construed as personalized investment, tax, or legal advice. This is a demonstration website and does not represent an active registered investment adviser. Market data is sourced from third-party public APIs (Frankfurter, World Bank) and may be delayed or revised.</p>
+      <p class="disclosure">Surava Capital is an independent investment advisory firm. Advisory services are offered for a fee and involve risk, including the possible loss of principal. Past performance does not guarantee future results. Nothing on this website should be construed as personalized investment, tax, or legal advice. This is a demonstration website and does not represent an active registered investment adviser. Live market data and the economic calendar on this page are provided by TradingView and may be delayed.</p>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
-  <script src="js/markets.js"></script>
 </body>
 </html>
