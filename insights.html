@@ -196,7 +196,7 @@
       const featuredEl = document.getElementById('featured-article');
       if (featured && featuredEl) {
         var fMedia = featured.image
-          ? '<div class="media"><img src="' + featured.image + '" alt="' + featured.title + '" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" /></div>'
+          ? '<div class="media"><img src="' + featured.image + '" alt="' + featured.title + '" style="width:100%; height:100%; object-fit:contain; border-radius:8px;" /></div>'
           : '<div class="media"></div>';
         featuredEl.innerHTML =
           fMedia +
