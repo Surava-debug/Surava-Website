@@ -68,62 +68,21 @@
     </div>
   </section>
 
-  <!-- ===== FEATURED ===== -->
+  <!-- ===== FEATURED (auto-filled by JS) ===== -->
   <section>
     <div class="container">
-      <div class="split">
-        <div class="media"><img src="assets/hormuz-ais.png" alt="AIS tanker tracking near the Strait of Hormuz" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" /></div>
-        <div>
-          <div class="meta" style="color:var(--color-accent-dark); font-weight:700; text-transform:uppercase; letter-spacing:0.08em; font-size:0.78rem; margin-bottom:10px;">Featured · World Events · 9 min read</div>
-          <h2>The Iran Conflict and Global Oil Markets</h2>
-          <p>Within 72 hours of joint US–Israeli strikes on Iran, tanker traffic through the Strait of Hormuz effectively halted and Brent crude briefly touched $120. We look at what's driving the move — and how much of it is fundamentals versus narrative.</p>
-          <a href="insight-01-iran-oil-markets.html" class="btn btn-secondary">Read full article</a>
-        </div>
-      </div>
+      <div class="split" id="featured-article"></div>
     </div>
   </section>
 
-  <!-- ===== COMING NEXT ===== -->
+  <!-- ===== THE ARCHIVE (auto-filled by JS) ===== -->
   <section class="section-alt">
     <div class="container">
       <div class="section-head left">
-        <span class="tag">Coming next</span>
-        <h2>More in this series</h2>
+        <span class="tag">The Archive</span>
+        <h2>Previously published</h2>
       </div>
-      <div class="grid grid-3">
-        <div class="article-card">
-          <div class="thumb"></div>
-          <div class="body">
-            <div class="meta">World Events · Coming soon</div>
-            <h3>Why the Strait of Hormuz matters more than OPEC</h3>
-            <p>Part of our ongoing series on the Iran conflict and its ripple effects through global energy markets.</p>
-          </div>
-        </div>
-        <div class="article-card">
-          <div class="thumb"></div>
-          <div class="body">
-            <div class="meta">Macro · Coming soon</div>
-            <h3>The IEA's reserve releases, explained</h3>
-            <p>What strategic petroleum reserve releases can and can't do to calm a supply shock.</p>
-          </div>
-        </div>
-        <div class="article-card">
-          <div class="thumb"></div>
-          <div class="body">
-            <div class="meta">Markets · Coming soon</div>
-            <h3>What the oil forward curve is pricing in</h3>
-            <p>Reading the term structure of oil futures for clues about how long the market expects this to last.</p>
-          </div>
-        </div>
-        <div class="article-card">
-          <div class="thumb"></div>
-          <div class="body">
-            <div class="meta">Macro · Coming soon</div>
-            <h3>How markets may position for prolonged disruption</h3>
-            <p>Scenarios for an extended Strait of Hormuz closure and how different asset classes could respond.</p>
-          </div>
-        </div>
-      </div>
+      <div class="grid grid-3" id="archive-grid"></div>
     </div>
   </section>
 
@@ -201,5 +160,69 @@
   </footer>
 
   <script src="js/script.js"></script>
+
+  <!-- ===================================================================
+       ARTICLE LIST — this is the ONLY part you edit to publish a new article.
+       Newest goes at the TOP. The top entry becomes the Featured article;
+       everything below it auto-fills The Archive.
+       =================================================================== -->
+  <script>
+    const articles = [
+      {
+        title: "The Iran Conflict and Global Oil Markets",
+        category: "World Events",
+        readTime: "9 min read",
+        excerpt: "Within 72 hours of joint US–Israeli strikes on Iran, tanker traffic through the Strait of Hormuz effectively halted and Brent crude briefly touched $120. We look at what's driving the move — and how much of it is fundamentals versus narrative.",
+        url: "insight-01-iran-oil-markets.html",
+        image: "assets/hormuz-ais.png"
+      }
+      // ↑ To publish a new article, copy the block above, paste it ABOVE this line,
+      //   and fill in the new details. Keep the comma between entries. Example:
+      // {
+      //   title: "Your new headline",
+      //   category: "Macro",
+      //   readTime: "6 min read",
+      //   excerpt: "Short summary shown on the card.",
+      //   url: "insight-02-your-article.html",
+      //   image: "assets/your-image.png"
+      // },
+    ];
+
+    (function renderInsights() {
+      const featured = articles[0];
+      const rest = articles.slice(1);
+
+      const featuredEl = document.getElementById('featured-article');
+      if (featured && featuredEl) {
+        featuredEl.innerHTML =
+          '<div class="media"><img src="' + featured.image + '" alt="' + featured.title + '" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" /></div>' +
+          '<div>' +
+            '<div class="meta" style="color:var(--color-accent-dark); font-weight:700; text-transform:uppercase; letter-spacing:0.08em; font-size:0.78rem; margin-bottom:10px;">Featured · ' + featured.category + ' · ' + featured.readTime + '</div>' +
+            '<h2>' + featured.title + '</h2>' +
+            '<p>' + featured.excerpt + '</p>' +
+            '<a href="' + featured.url + '" class="btn btn-secondary">Read full article</a>' +
+          '</div>';
+      }
+
+      const gridEl = document.getElementById('archive-grid');
+      if (gridEl) {
+        if (rest.length === 0) {
+          gridEl.innerHTML = '<p style="color:var(--color-muted, #6b7480);">More articles will appear here as they\'re published.</p>';
+        } else {
+          gridEl.innerHTML = rest.map(function (a) {
+            return '<a href="' + a.url + '" class="article-card" style="text-decoration:none; color:inherit; display:block;">' +
+              '<div class="thumb" style="min-height:180px;"><img src="' + a.image + '" alt="' + a.title + '" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>' +
+              '<div class="body">' +
+                '<div class="meta">' + a.category + ' · ' + a.readTime + '</div>' +
+                '<h3>' + a.title + '</h3>' +
+                '<p>' + a.excerpt + '</p>' +
+              '</div>' +
+            '</a>';
+          }).join('');
+        }
+      }
+    })();
+  </script>
+
 </body>
 </html>
