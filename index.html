@@ -156,34 +156,9 @@
         <h2>Market insights &amp; research</h2>
         <p>Independent commentary on markets, planning strategies, and the economy, written in plain English.</p>
       </div>
-      <div class="grid grid-3">
-        <div class="article-card">
-          <div class="thumb"></div>
-          <div class="body">
-            <div class="meta">Markets · 5 min read</div>
-            <h3>Why diversification still matters in concentrated markets</h3>
-            <p>A look at how index concentration affects portfolio risk, and what it means for long-term investors.</p>
-            <a href="insights.html" class="card-link">Read article →</a>
-          </div>
-        </div>
-        <div class="article-card">
-          <div class="thumb"></div>
-          <div class="body">
-            <div class="meta">Planning · 4 min read</div>
-            <h3>The retirement withdrawal order that saves the most in taxes</h3>
-            <p>Sequencing withdrawals across taxable, tax-deferred, and tax-free accounts can materially change your outcome.</p>
-            <a href="insights.html" class="card-link">Read article →</a>
-          </div>
-        </div>
-        <div class="article-card">
-          <div class="thumb"></div>
-          <div class="body">
-            <div class="meta">Education · 6 min read</div>
-            <h3>Understanding fees: what "fee-only" actually means</h3>
-            <p>A breakdown of advisory fee structures and why they matter more than most investors realize.</p>
-            <a href="insights.html" class="card-link">Read article →</a>
-          </div>
-        </div>
+      <div class="grid grid-3" id="home-insights"></div>
+      <div style="text-align:center; margin-top:32px;">
+        <a href="insights.html" class="btn btn-secondary">View all insights</a>
       </div>
     </div>
   </section>
@@ -262,5 +237,31 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/articles.js"></script>
+  <script>
+    (function renderHomeInsights(){
+      var el = document.getElementById('home-insights');
+      if (!el || typeof articles === 'undefined') return;
+      var latest = articles.slice(0, 3);
+      if (latest.length === 0) {
+        el.innerHTML = '<p style="color:var(--color-muted,#6b7480);">New articles will appear here as they\'re published.</p>';
+        return;
+      }
+      el.innerHTML = latest.map(function (a) {
+        var thumb = a.image
+          ? '<div class="thumb" style="min-height:180px;"><img src="' + a.image + '" alt="' + a.title + '" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>'
+          : '<div class="thumb"></div>';
+        return '<a href="' + a.url + '" class="article-card" style="text-decoration:none; color:inherit; display:block;">' +
+          thumb +
+          '<div class="body">' +
+            '<div class="meta">' + a.category + ' &middot; ' + a.readTime + '</div>' +
+            '<h3>' + a.title + '</h3>' +
+            '<p>' + a.excerpt + '</p>' +
+            '<span class="card-link">Read article &rarr;</span>' +
+          '</div>' +
+        '</a>';
+      }).join('');
+    })();
+  </script>
 </body>
 </html>
