@@ -7,6 +7,14 @@
    =================================================================== */
 const articles = [
   {
+    title: "The Shock That Came Back: Oil, the Strait, and the Fed's Hard Choice",
+    category: "Macro",
+    readTime: "6 min read",
+    excerpt: "The 2026 oil shock is back. Brent is climbing again on renewed strait tensions, and this time it lands on a Federal Reserve with a new chair and markets pricing a rate hike. Why the second-order effect matters more than the headline.",
+    url: "insight-04-strait-fed-dilemma.html",
+    image: "assets/brent-strait-crisis.png"
+  },
+  {
     title: "When Bonds Stop Paying You Back: Why Gold Responds to Real Yields",
     category: "Macro",
     readTime: "6 min read",
