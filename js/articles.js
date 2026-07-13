@@ -7,6 +7,14 @@
    =================================================================== */
 const articles = [
   {
+    title: "When Bonds Stop Paying You Back: Why Gold Responds to Real Yields",
+    category: "Macro",
+    readTime: "6 min read",
+    excerpt: "Gold is one of the most misunderstood assets among younger investors. A plain-language look at real yields, the single number that best explains when gold performs, and what market history shows.",
+    url: "insight-03-gold-real-yields.html",
+    image: "assets/gold-real-yields.png"
+  },
+  {
     title: "Why the Strait of Hormuz Matters More Than OPEC",
     category: "World Events",
     readTime: "8 min read",
