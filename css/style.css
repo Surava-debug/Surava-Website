@@ -803,7 +803,6 @@ footer {
 
 /* timeline */
 .timeline {
-  border-left: 2px solid var(--color-line);
   margin-left: 12px;
   padding-left: 32px;
 }
@@ -811,6 +810,7 @@ footer {
 .timeline-item {
   position: relative;
   margin-bottom: 36px;
+  min-height: 78px;
 }
 
 .timeline-item::before {
@@ -823,6 +823,18 @@ footer {
   border-radius: 50%;
   background: var(--color-accent);
   border: 3px solid var(--color-bg);
+  z-index: 1;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 11px;
+  width: 2px;
+  height: calc(100% + 36px);
+  background: var(--color-line);
+  z-index: 0;
 }
 
 .timeline-item .year {
