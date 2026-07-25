@@ -829,8 +829,8 @@ footer {
 .timeline-item:not(:last-child)::after {
   content: "";
   position: absolute;
-  left: -35px;
-  top: 11px;
+  left: calc(-41px + 14px/2 - 1px);
+  top: calc(4px + 14px/2);
   width: 2px;
   height: calc(100% + 36px);
   background: var(--color-line);
