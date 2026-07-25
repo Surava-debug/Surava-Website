@@ -33,7 +33,7 @@ const articles = [
   {
     title: "The Iran Conflict and Global Oil Markets",
     category: "World Events",
-    readTime: "9 min read",
+    readTime: "3 min read",
     excerpt: "Within 72 hours of joint US\u2013Israeli strikes on Iran, tanker traffic through the Strait of Hormuz effectively halted and Brent crude briefly touched $120. We look at what's driving the move, and how much of it is fundamentals versus narrative.",
     url: "insight-01-iran-oil-markets.html",
     image: "assets/hormuz-ais.png"
