@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Retirement Withdrawal Calculator — Surava Capital</title>
-  <meta name="description" content="Estimate how long your savings could last under different withdrawal rates, return assumptions, and inflation scenarios." />
+  <title>Investment Growth Calculator — Surava Capital</title>
+  <meta name="description" content="See what regular monthly investing could grow into over time, and how much of it comes from compounding rather than your own contributions." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
@@ -21,33 +21,39 @@
 </script>
 <style>
   .calc-wrap { max-width: 900px; }
-  .calc-grid { display: grid; grid-template-columns: 340px 1fr; gap: 32px; align-items: start; }
+  .calc-grid { display: grid; grid-template-columns: 320px 1fr; gap: 32px; align-items: start; }
   @media (max-width: 800px) { .calc-grid { grid-template-columns: 1fr; } }
   .calc-inputs {
     background: #fff; border: 1px solid var(--color-line); border-radius: var(--radius);
     padding: 24px;
   }
+  .calc-inputs .hint { font-size: 0.8rem; color: #8B94A0; margin-top: 6px; }
   .calc-result-headline {
-    font-family: var(--font-serif); font-size: 1.6rem; color: #1B2A3F;
-    margin: 0 0 6px;
+    font-family: var(--font-serif); font-size: 1.9rem; color: #1B2A3F;
+    margin: 0 0 4px;
   }
-  .calc-result-sub { color: #6B7480; font-size: 0.92rem; margin: 0 0 20px; }
+  .calc-result-sub { color: #6B7480; font-size: 0.95rem; margin: 0 0 20px; }
+  .calc-split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 22px;
+  }
+  .calc-split .box {
+    border: 1px solid var(--color-line); border-radius: 12px; padding: 14px 18px; background: #fff;
+  }
+  .calc-split .box .label { font-size: 0.8rem; color: #6B7480; margin-bottom: 4px; display: flex; align-items: center; gap: 7px; }
+  .calc-split .box .val { font-size: 1.15rem; font-weight: 700; color: #1B2A3F; }
+  .swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+  .swatch.paid { background: #B7C0C9; }
+  .swatch.growth { background: #1B2A3F; }
   .calc-chart-box {
     background: #fff; border: 1px solid var(--color-line); border-radius: var(--radius);
-    padding: 20px; margin-bottom: 24px;
+    padding: 20px;
   }
-  #calcChart { width: 100%; height: 280px; display: block; }
-  .calc-table-box { max-height: 320px; overflow-y: auto; border: 1px solid var(--color-line); border-radius: var(--radius); }
-  .calc-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
-  .calc-table th, .calc-table td { padding: 8px 14px; text-align: right; border-bottom: 1px solid var(--color-line); color: #33404F; }
-  .calc-table th { background: #F4F5F3; color: #1B2A3F; position: sticky; top: 0; font-weight: 700; }
-  .calc-table td:first-child, .calc-table th:first-child { text-align: left; }
+  #calcChart { width: 100%; height: 300px; display: block; }
   .calc-note {
     background:#F4F5F3; border:1px solid #E2E6EA; border-left:4px solid #7D8A9D;
     border-radius:8px; padding:14px 18px; margin:24px 0 0; color:#33404F;
     font-size:0.88rem; line-height:1.6;
   }
-  .depleted-row td { color: #B3261E !important; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -87,8 +93,8 @@
     <div class="container">
       <div class="breadcrumb"><a href="education.html">Education</a> / Retirement Planning</div>
       <span class="tag">Interactive Tool</span>
-      <h1>Retirement withdrawal calculator</h1>
-      <p class="lead">Estimate how long a portfolio could last under different withdrawal amounts, return assumptions, and inflation. Adjust the inputs and the projection updates instantly.</p>
+      <h1>What could regular investing grow into?</h1>
+      <p class="lead">Enter what you could set aside each month and see what it might become. The chart splits the result into what you paid in versus what compounding added, that difference is the whole reason to start early.</p>
     </div>
   </section>
 
@@ -98,49 +104,54 @@
 
         <div class="calc-inputs">
           <div class="form-group">
-            <label for="calcSavings">Starting portfolio (CHF)</label>
-            <input type="number" id="calcSavings" value="800000" min="0" step="10000" />
+            <label for="calcStart">Starting amount (CHF)</label>
+            <input type="number" id="calcStart" value="1000" min="0" step="500" />
+            <div class="hint">What you can invest today. Zero is fine.</div>
           </div>
           <div class="form-group">
-            <label for="calcWithdrawal">Annual withdrawal, first year (CHF)</label>
-            <input type="number" id="calcWithdrawal" value="32000" min="0" step="1000" />
+            <label for="calcMonthly">Monthly contribution (CHF)</label>
+            <input type="number" id="calcMonthly" value="300" min="0" step="50" />
+            <div class="hint">The amount you'd invest every month.</div>
+          </div>
+          <div class="form-group">
+            <label for="calcYears">Time horizon (years)</label>
+            <input type="number" id="calcYears" value="30" min="1" max="60" step="1" />
+            <div class="hint">How long you'd keep investing.</div>
           </div>
           <div class="form-group">
             <label for="calcReturn">Expected annual return (%)</label>
-            <input type="number" id="calcReturn" value="4" min="-10" max="20" step="0.5" />
+            <input type="number" id="calcReturn" value="5" min="-10" max="20" step="0.5" />
+            <div class="hint">Broad stock markets have historically averaged roughly 5&ndash;8% per year over long periods, before inflation. Not guaranteed.</div>
           </div>
-          <div class="form-group">
-            <label for="calcInflation">Annual inflation (%)</label>
-            <input type="number" id="calcInflation" value="1.5" min="0" max="15" step="0.5" />
-          </div>
-          <p style="font-size:0.82rem; color:#6B7480; margin:16px 0 0;">Withdrawals increase with inflation each year, so your purchasing power stays constant.</p>
         </div>
 
         <div>
           <h2 class="calc-result-headline" id="calcHeadline">—</h2>
           <p class="calc-result-sub" id="calcSubline">—</p>
 
-          <div class="calc-chart-box">
-            <canvas id="calcChart"></canvas>
+          <div class="calc-split">
+            <div class="box">
+              <div class="label"><span class="swatch paid"></span>You paid in</div>
+              <div class="val" id="calcPaidIn">—</div>
+            </div>
+            <div class="box">
+              <div class="label"><span class="swatch growth"></span>Compounding added</div>
+              <div class="val" id="calcGrowth">—</div>
+            </div>
           </div>
 
-          <div class="calc-table-box">
-            <table class="calc-table" id="calcTable">
-              <thead>
-                <tr><th>Year</th><th>Withdrawal</th><th>Balance at year end</th></tr>
-              </thead>
-              <tbody></tbody>
-            </table>
+          <div class="calc-chart-box">
+            <canvas id="calcChart"></canvas>
           </div>
         </div>
 
       </div>
 
       <div class="calc-note">
-        <strong>How to read this.</strong> This is a simplified projection using a constant return every year. Real markets don't work that way, returns vary year to year, and the order of good and bad years matters (a downturn early in retirement is more damaging than the same downturn later, known as sequence-of-returns risk). Treat this as a way to build intuition about the relationship between spending, returns, and time, not as a prediction.
+        <strong>How to read this.</strong> This projection assumes the same return every single year, which real markets never deliver, some years are strongly positive, others negative. Over long periods the average matters more than any single year, which is why the time horizon input changes the result more dramatically than any other. Treat this as a way to build intuition, not as a prediction.
       </div>
 
-      <p class="disclosure" style="margin-top:24px;">This tool is for general educational purposes only. It does not constitute investment, tax, or legal advice, a forecast, or a recommendation, and it does not account for taxes, fees, AHV or Pillar 2 income, or variable market returns. Results are hypothetical. Surava Capital is not entered in the Swiss adviser register under FIDLEG and does not provide personal investment advice.</p>
+      <p class="disclosure" style="margin-top:24px;">This tool is for general educational purposes only. It does not constitute investment, tax, or legal advice, a forecast, or a recommendation. It does not account for taxes, fees, inflation, or variable market returns, and results are hypothetical. Surava Capital is not entered in the Swiss adviser register under FIDLEG and does not provide personal investment advice.</p>
 
       <p style="margin-top:24px;"><a href="education.html#retirement-planning" class="btn btn-secondary">Back to Education Hub</a></p>
     </div>
@@ -207,16 +218,15 @@
   <script src="js/script.js"></script>
   <script>
   (function () {
-    var MAX_YEARS = 60;
-
     var el = {
-      savings: document.getElementById("calcSavings"),
-      withdrawal: document.getElementById("calcWithdrawal"),
+      start: document.getElementById("calcStart"),
+      monthly: document.getElementById("calcMonthly"),
+      years: document.getElementById("calcYears"),
       ret: document.getElementById("calcReturn"),
-      infl: document.getElementById("calcInflation"),
       headline: document.getElementById("calcHeadline"),
       subline: document.getElementById("calcSubline"),
-      tableBody: document.querySelector("#calcTable tbody"),
+      paidIn: document.getElementById("calcPaidIn"),
+      growth: document.getElementById("calcGrowth"),
       canvas: document.getElementById("calcChart"),
     };
 
@@ -224,41 +234,41 @@
       return "CHF " + Math.round(n).toLocaleString("de-CH");
     }
 
-    function simulate(savings, withdrawal, ret, infl) {
-      var balance = savings;
-      var w = withdrawal;
-      var rows = [];
-      var balances = [savings];
-      for (var y = 1; y <= MAX_YEARS; y++) {
-        balance = balance * (1 + ret) - w;
-        rows.push({ year: y, withdrawal: w, balance: Math.max(balance, 0) });
-        balances.push(Math.max(balance, 0));
-        w = w * (1 + infl);
-        if (balance <= 0) {
-          return { rows: rows, balances: balances, depletedYear: y, lasted: false };
+    function simulate(start, monthly, annualRet, years) {
+      var rm = Math.pow(1 + annualRet, 1 / 12) - 1;
+      var balance = start;
+      var invested = start;
+      var balances = [start];
+      var investedSeries = [start];
+      for (var y = 1; y <= years; y++) {
+        for (var m = 0; m < 12; m++) {
+          balance = balance * (1 + rm) + monthly;
+          invested += monthly;
         }
+        balances.push(balance);
+        investedSeries.push(invested);
       }
-      return { rows: rows, balances: balances, depletedYear: null, lasted: true };
+      return { balances: balances, investedSeries: investedSeries };
     }
 
-    function drawChart(balances, depletedYear) {
+    function drawChart(balances, investedSeries) {
       var canvas = el.canvas;
       var dpr = window.devicePixelRatio || 1;
       var rect = canvas.getBoundingClientRect();
       canvas.width = rect.width * dpr;
-      canvas.height = 280 * dpr;
+      canvas.height = 300 * dpr;
       var ctx = canvas.getContext("2d");
       ctx.scale(dpr, dpr);
-      var W = rect.width, H = 280;
-      var padL = 70, padR = 16, padT = 14, padB = 30;
+      var W = rect.width, H = 300;
+      var padL = 72, padR = 16, padT = 14, padB = 32;
 
       ctx.clearRect(0, 0, W, H);
 
-      var maxBal = Math.max.apply(null, balances) * 1.05 || 1;
+      var maxVal = Math.max.apply(null, balances) * 1.05 || 1;
       var n = balances.length;
 
       function xAt(i) { return padL + (W - padL - padR) * (i / (n - 1)); }
-      function yAt(v) { return padT + (H - padT - padB) * (1 - v / maxBal); }
+      function yAt(v) { return padT + (H - padT - padB) * (1 - v / maxVal); }
 
       // gridlines + y labels
       ctx.strokeStyle = "#E2E6EA";
@@ -268,93 +278,84 @@
       ctx.lineWidth = 1;
       var steps = 4;
       for (var s = 0; s <= steps; s++) {
-        var v = (maxBal / steps) * s;
+        var v = (maxVal / steps) * s;
         var y = yAt(v);
         ctx.beginPath();
         ctx.moveTo(padL, y);
         ctx.lineTo(W - padR, y);
         ctx.stroke();
-        ctx.fillText("CHF " + Math.round(v / 1000).toLocaleString("de-CH") + "k", padL - 8, y + 4);
+        var label = v >= 1000000
+          ? "CHF " + (v / 1000000).toFixed(1) + "M"
+          : "CHF " + Math.round(v / 1000).toLocaleString("de-CH") + "k";
+        ctx.fillText(label, padL - 8, y + 4);
       }
 
-      // x labels every 10 years
+      // x labels
       ctx.textAlign = "center";
-      for (var yr = 0; yr < n; yr += 10) {
-        ctx.fillText(yr, xAt(yr), H - 8);
+      var step = n > 40 ? 10 : (n > 15 ? 5 : 2);
+      for (var yr = 0; yr < n; yr += step) {
+        ctx.fillText(yr + "y", xAt(yr), H - 10);
       }
 
-      // area fill
+      // total balance area (navy = growth portion sits above invested area)
       ctx.beginPath();
       ctx.moveTo(xAt(0), yAt(balances[0]));
       for (var i = 1; i < n; i++) ctx.lineTo(xAt(i), yAt(balances[i]));
+      for (var j = n - 1; j >= 0; j--) ctx.lineTo(xAt(j), yAt(investedSeries[j]));
+      ctx.closePath();
+      ctx.fillStyle = "rgba(27,42,63,0.85)";
+      ctx.fill();
+
+      // invested area (light slate)
+      ctx.beginPath();
+      ctx.moveTo(xAt(0), yAt(investedSeries[0]));
+      for (var k = 1; k < n; k++) ctx.lineTo(xAt(k), yAt(investedSeries[k]));
       ctx.lineTo(xAt(n - 1), yAt(0));
       ctx.lineTo(xAt(0), yAt(0));
       ctx.closePath();
-      ctx.fillStyle = "rgba(125,138,157,0.12)";
+      ctx.fillStyle = "#B7C0C9";
       ctx.fill();
 
-      // balance line
+      // total balance outline
       ctx.beginPath();
       ctx.moveTo(xAt(0), yAt(balances[0]));
-      for (var j = 1; j < n; j++) ctx.lineTo(xAt(j), yAt(balances[j]));
+      for (var q = 1; q < n; q++) ctx.lineTo(xAt(q), yAt(balances[q]));
       ctx.strokeStyle = "#1B2A3F";
-      ctx.lineWidth = 2.4;
+      ctx.lineWidth = 2;
       ctx.lineJoin = "round";
       ctx.stroke();
-
-      // depletion marker
-      if (depletedYear !== null && depletedYear < n) {
-        var dx = xAt(depletedYear);
-        ctx.beginPath();
-        ctx.arc(dx, yAt(0), 4.5, 0, Math.PI * 2);
-        ctx.fillStyle = "#B3261E";
-        ctx.fill();
-        ctx.fillStyle = "#B3261E";
-        ctx.font = "600 11px Inter, sans-serif";
-        ctx.textAlign = "center";
-        ctx.fillText("Depleted", dx, yAt(0) - 10);
-      }
     }
 
     function update() {
-      var savings = parseFloat(el.savings.value) || 0;
-      var withdrawal = parseFloat(el.withdrawal.value) || 0;
+      var start = parseFloat(el.start.value) || 0;
+      var monthly = parseFloat(el.monthly.value) || 0;
+      var years = Math.min(Math.max(parseInt(el.years.value) || 1, 1), 60);
       var ret = (parseFloat(el.ret.value) || 0) / 100;
-      var infl = (parseFloat(el.infl.value) || 0) / 100;
 
-      if (savings <= 0 || withdrawal <= 0) {
+      if (start <= 0 && monthly <= 0) {
         el.headline.textContent = "Enter your numbers to begin";
-        el.subline.textContent = "Set a starting portfolio and an annual withdrawal above zero.";
-        el.tableBody.innerHTML = "";
-        drawChart([0, 0], null);
+        el.subline.textContent = "Set a starting amount or a monthly contribution above zero.";
+        el.paidIn.textContent = "—";
+        el.growth.textContent = "—";
+        drawChart([0, 0], [0, 0]);
         return;
       }
 
-      var result = simulate(savings, withdrawal, ret, infl);
+      var result = simulate(start, monthly, ret, years);
+      var finalBal = result.balances[years];
+      var finalInv = result.investedSeries[years];
+      var growth = finalBal - finalInv;
 
-      if (result.lasted) {
-        el.headline.textContent = "Lasts 60+ years";
-        el.subline.textContent = "Under these assumptions, the portfolio outlives the 60-year projection window." +
-          (result.balances[MAX_YEARS] > savings ? " The balance is still growing." : "");
-      } else {
-        el.headline.textContent = "Lasts about " + result.depletedYear + " years";
-        el.subline.textContent = "Under these assumptions, the portfolio would be depleted in year " + result.depletedYear + ".";
-      }
+      el.headline.textContent = fmtCHF(finalBal);
+      el.subline.textContent = "Estimated value after " + years + " years, investing " + fmtCHF(monthly) + " per month.";
+      el.paidIn.textContent = fmtCHF(finalInv);
+      el.growth.textContent = fmtCHF(Math.max(growth, 0));
 
-      // table
-      var html = "";
-      for (var i = 0; i < result.rows.length; i++) {
-        var r = result.rows[i];
-        var cls = (result.depletedYear === r.year) ? ' class="depleted-row"' : "";
-        html += "<tr" + cls + "><td>" + r.year + "</td><td>" + fmtCHF(r.withdrawal) + "</td><td>" + fmtCHF(r.balance) + "</td></tr>";
-      }
-      el.tableBody.innerHTML = html;
-
-      drawChart(result.balances, result.depletedYear);
+      drawChart(result.balances, result.investedSeries);
     }
 
     ["input", "change"].forEach(function (evt) {
-      [el.savings, el.withdrawal, el.ret, el.infl].forEach(function (input) {
+      [el.start, el.monthly, el.years, el.ret].forEach(function (input) {
         input.addEventListener(evt, update);
       });
     });
