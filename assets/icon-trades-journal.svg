@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<rect x="4" y="3" width="15.5" height="18" rx="1.4" fill="#5C6B80"/>
+<circle cx="4" cy="6.5" r="0.85" fill="#E7EAEF"/>
+<circle cx="4" cy="10.5" r="0.85" fill="#E7EAEF"/>
+<circle cx="4" cy="14.5" r="0.85" fill="#E7EAEF"/>
+<circle cx="4" cy="18.5" r="0.85" fill="#E7EAEF"/>
+<line x1="8" y1="8" x2="15" y2="8" stroke="#E7EAEF" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M16.3,6.3 L17.4,8.3 L18.5,6.3" fill="none" stroke="#E7EAEF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" transform="rotate(180 17.4 7.3)"/>
+<line x1="8" y1="12.5" x2="15" y2="12.5" stroke="#E7EAEF" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M16.3,11.5 L17.4,13.5 L18.5,11.5" fill="none" stroke="#E7EAEF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="8" y1="17" x2="15" y2="17" stroke="#E7EAEF" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M16.3,15.2 L17.4,17.2 L18.5,15.2" fill="none" stroke="#E7EAEF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" transform="rotate(180 17.4 16.2)"/>
+</svg>
