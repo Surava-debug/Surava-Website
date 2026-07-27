@@ -889,3 +889,17 @@ footer {
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
+.econ-glance { background: #F4F5F3; padding: 48px 0; }
+.econ-glance h2 { color: #1B2A3F; margin-bottom: 24px; }
+.econ-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+.econ-card { background: #fff; border: 1px solid #E2E6EA; border-radius: 8px; padding: 20px; }
+.econ-card-label { font-weight: 600; color: #1B2A3F; margin-bottom: 12px; font-size: 0.95rem; }
+.econ-card-stat { font-size: 1.6rem; font-weight: 700; color: #1B2A3F; margin-bottom: 8px; }
+.econ-card-date { font-size: 0.85rem; font-weight: 400; color: #7D8A9D; }
+.econ-sparkline { width: 100%; height: 60px; display: block; margin-bottom: 8px; }
+.econ-sparkline path { fill: none; stroke: #1B2A3F; stroke-width: 2; }
+.econ-source { font-size: 0.75rem; color: #7D8A9D; }
+.econ-source a { color: #7D8A9D; }
+.econ-rate-box { border-top: 3px solid #1B2A3F; padding-top: 12px; }
+.econ-rate-sublabel { font-size: 0.85rem; color: #7D8A9D; border-bottom: 1px solid #E2E6EA; padding-bottom: 4px; margin-bottom: 8px; }
+.econ-rate-value { font-size: 1.8rem; font-weight: 700; color: #1B2A3F; }
