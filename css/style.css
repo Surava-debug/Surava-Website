@@ -903,3 +903,12 @@ footer {
 .econ-rate-box { border-top: 3px solid #1B2A3F; padding-top: 12px; }
 .econ-rate-sublabel { font-size: 0.85rem; color: #7D8A9D; border-bottom: 1px solid #E2E6EA; padding-bottom: 4px; margin-bottom: 8px; }
 .econ-rate-value { font-size: 1.8rem; font-weight: 700; color: #1B2A3F; }
+.econ-chart { width: 100%; height: 180px; }
+.econ-range-buttons { display: flex; gap: 6px; margin: 10px 0; flex-wrap: wrap; }
+.econ-range-buttons button {
+  background: none; border: 1px solid #E2E6EA; border-radius: 4px;
+  padding: 3px 10px; font-size: 0.78rem; color: #7D8A9D; cursor: pointer;
+  transition: all 0.15s ease;
+}
+.econ-range-buttons button:hover { border-color: #1B2A3F; color: #1B2A3F; }
+.econ-range-buttons button.active { background: #1B2A3F; border-color: #1B2A3F; color: #fff; }
