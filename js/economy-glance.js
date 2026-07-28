@@ -38,11 +38,10 @@
         maintainAspectRatio: false,
         plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false } },
         scales: {
-          x: {
-            type: 'time',
-            time: { unit: 'year' },
+        x: {
+            type: 'category',
             grid: { display: false },
-            ticks: { color: '#7D8A9D', maxTicksLimit: 6 }
+            ticks: { color: '#7D8A9D', maxTicksLimit: 6, autoSkip: true }
           },
           y: {
             grid: { color: '#E2E6EA' },
