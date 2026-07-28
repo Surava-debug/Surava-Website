@@ -91,6 +91,9 @@
         <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/DFEDTARU" target="_blank" rel="noopener">Federal Reserve</a></div>
       </div>
 
+      <button class="econ-toggle" id="econToggleBtn">Show more indicators (PCE, Unemployment, GDP) ▾</button>
+      <div class="econ-extra-grid" id="econExtraGrid" hidden>
+
       <div class="econ-card">
         <div class="econ-card-label">Inflation (PCE)</div>
         <div class="econ-card-stat"><span id="pceValue">—</span> <span class="econ-card-date" id="pceDate"></span></div>
@@ -136,13 +139,27 @@
         <div class="econ-chart-wrap">
   <canvas id="gdpChart"></canvas>
 </div>
-        <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/A191RL1Q225SBEA" target="_blank" rel="noopener">Bureau of Economic Analysis</a></div>
+<div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/A191RL1Q225SBEA" target="_blank" rel="noopener">Bureau of Economic Analysis</a></div>
       </div>
 
+      </div>
     </div>
   </div>
 </section>
 <script src="js/economy-glance.js" defer></script> 
+<script>
+  document.getElementById('econToggleBtn').addEventListener('click', function() {
+    var extra = document.getElementById('econExtraGrid');
+    var isHidden = extra.hasAttribute('hidden');
+    if (isHidden) {
+      extra.removeAttribute('hidden');
+      this.textContent = 'Hide extra indicators ▴';
+    } else {
+      extra.setAttribute('hidden', '');
+      this.textContent = 'Show more indicators (PCE, Unemployment, GDP) ▾';
+    }
+  });
+</script>
 
   <!-- ===== FEATURED (auto-filled by JS) ===== -->
   <section>
