@@ -4,23 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Insights — Surava Capital</title>
-  <meta name="description" content="Independent macro commentary and market analysis from Surava Capital — the world events moving markets, explained clearly." />
+  <meta name="description" content="Independent macro commentary and market insights from Surava Capital. Clear analysis on the world events moving markets, written in plain English." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9474E9Z4GK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-9474E9Z4GK');
-</script>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9474E9Z4GK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9474E9Z4GK');
+  </script>
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
   <header class="navbar">
     <div class="nav-inner">
       <a href="index.html" class="logo">
@@ -31,14 +32,14 @@
         <div class="has-dropdown">
           <a href="services.html">Services</a>
           <div class="dropdown">
-            <a href="services.html#advisory">Investment Advisory <small>Planned: independent, fee-only guidance</small></a>
-            <a href="services.html#planning">Financial Planning <small>Planned: goals-based plans for life's milestones</small></a>
-            <a href="services.html#retirement">Retirement Strategy <small>Planned: income planning for the long run</small></a>
-            <a href="services.html#wealth">Wealth Management <small>Planned: as we grow into it</small></a>
+            <a href="services.html#advisory"><strong>Investment Advisory</strong><span>Planned: independent, fee-only guidance</span></a>
+            <a href="services.html#planning"><strong>Financial Planning</strong><span>Planned: goals-based plans for life's milestones</span></a>
+            <a href="services.html#retirement"><strong>Retirement Strategy</strong><span>Planned: income planning for the long run</span></a>
+            <a href="services.html#wealth"><strong>Wealth Management</strong><span>Planned: as we grow into it</span></a>
           </div>
         </div>
         <a href="education.html">Education</a>
-        <a href="insights.html">Insights</a>
+        <a href="insights.html" class="active">Insights</a>
         <a href="trades.html">Trades</a>
         <a href="markets.html">Markets</a>
         <a href="about.html">About</a>
@@ -67,82 +68,105 @@
       </div>
     </div>
   </section>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 
-<section class="econ-glance">
-  <div class="section-inner">
-    <h2>Economy at a Glance</h2>
-    <div class="econ-grid" id="econGlance">
+  <!-- ===== ECONOMY AT A GLANCE ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+  <section class="econ-glance">
+    <div class="section-inner">
+      <h2>Economy at a Glance</h2>
+      <div class="econ-grid" id="econGlance">
 
-      <div class="econ-card">
-        <div class="econ-card-label">Policy Rate</div>
-        <div class="econ-card-stat"><span id="fedFundsValue">—</span></div>
-        <div class="econ-range-buttons" data-chart="fedFundsChart">
-          <button data-range="1m">1M</button>
-          <button data-range="3m">3M</button>
-          <button data-range="6m">6M</button>
-          <button data-range="ytd">YTD</button>
-          <button data-range="1y">1Y</button>
-          <button data-range="all" class="active">All</button>
+        <!-- Policy Rate: featured, centered -->
+        <div class="econ-card econ-card-featured">
+          <div class="econ-card-label">Policy Rate</div>
+          <div class="econ-card-stat"><span id="fedFundsValue">—</span></div>
+          <div class="econ-range-buttons" data-chart="fedFundsChart">
+            <button data-range="1m">1M</button>
+            <button data-range="3m">3M</button>
+            <button data-range="6m">6M</button>
+            <button data-range="ytd">YTD</button>
+            <button data-range="1y">1Y</button>
+            <button data-range="all" class="active">All</button>
+          </div>
+          <div class="econ-chart-wrap">
+            <canvas id="fedFundsChart"></canvas>
+          </div>
+          <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/DFEDTARU" target="_blank" rel="noopener">Federal Reserve</a></div>
         </div>
-        <div class="econ-chart-wrap">
-  <canvas id="fedFundsChart"></canvas>
-</div>
-        <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/DFEDTARU" target="_blank" rel="noopener">Federal Reserve</a></div>
-      </div>
 
-      <div class="econ-card">
-        <div class="econ-card-label">Inflation (PCE)</div>
-        <div class="econ-card-stat"><span id="pceValue">—</span> <span class="econ-card-date" id="pceDate"></span></div>
-        <div class="econ-range-buttons" data-chart="pceChart">
-          <button data-range="1m">1M</button>
-          <button data-range="3m">3M</button>
-          <button data-range="6m">6M</button>
-          <button data-range="ytd">YTD</button>
-          <button data-range="1y">1Y</button>
-          <button data-range="all" class="active">All</button>
+        <!-- Toggle -->
+        <button class="econ-toggle" id="econToggleBtn">Show more indicators (PCE, Unemployment, GDP) ▾</button>
+
+        <!-- Hidden extra indicators -->
+        <div class="econ-extra-grid" id="econExtraGrid" hidden>
+
+          <div class="econ-card">
+            <div class="econ-card-label">Inflation (PCE)</div>
+            <div class="econ-card-stat"><span id="pceValue">—</span> <span class="econ-card-date" id="pceDate"></span></div>
+            <div class="econ-range-buttons" data-chart="pceChart">
+              <button data-range="1m">1M</button>
+              <button data-range="3m">3M</button>
+              <button data-range="6m">6M</button>
+              <button data-range="ytd">YTD</button>
+              <button data-range="1y">1Y</button>
+              <button data-range="all" class="active">All</button>
+            </div>
+            <div class="econ-chart-wrap">
+              <canvas id="pceChart"></canvas>
+            </div>
+            <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/PCEPI" target="_blank" rel="noopener">Bureau of Economic Analysis</a></div>
+          </div>
+
+          <div class="econ-card">
+            <div class="econ-card-label">Unemployment Rate</div>
+            <div class="econ-card-stat"><span id="unrateValue">—</span> <span class="econ-card-date" id="unrateDate"></span></div>
+            <div class="econ-range-buttons" data-chart="unrateChart">
+              <button data-range="1m">1M</button>
+              <button data-range="3m">3M</button>
+              <button data-range="6m">6M</button>
+              <button data-range="ytd">YTD</button>
+              <button data-range="1y">1Y</button>
+              <button data-range="all" class="active">All</button>
+            </div>
+            <div class="econ-chart-wrap">
+              <canvas id="unrateChart"></canvas>
+            </div>
+            <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/UNRATE" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics</a></div>
+          </div>
+
+          <div class="econ-card">
+            <div class="econ-card-label">Gross Domestic Product (GDP)</div>
+            <div class="econ-card-stat"><span id="gdpValue">—</span> <span class="econ-card-date" id="gdpDate"></span></div>
+            <div class="econ-range-buttons" data-chart="gdpChart">
+              <button data-range="1y">1Y</button>
+              <button data-range="3y">3Y</button>
+              <button data-range="all" class="active">All</button>
+            </div>
+            <div class="econ-chart-wrap">
+              <canvas id="gdpChart"></canvas>
+            </div>
+            <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/A191RL1Q225SBEA" target="_blank" rel="noopener">Bureau of Economic Analysis</a></div>
+          </div>
+
         </div>
-        <div class="econ-chart-wrap">
-  <canvas id="pceChart"></canvas>
-</div>
-        <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/PCEPI" target="_blank" rel="noopener">Bureau of Economic Analysis</a></div>
       </div>
-
-      <div class="econ-card">
-        <div class="econ-card-label">Unemployment Rate</div>
-        <div class="econ-card-stat"><span id="unrateValue">—</span> <span class="econ-card-date" id="unrateDate"></span></div>
-        <div class="econ-range-buttons" data-chart="unrateChart">
-          <button data-range="1m">1M</button>
-          <button data-range="3m">3M</button>
-          <button data-range="6m">6M</button>
-          <button data-range="ytd">YTD</button>
-          <button data-range="1y">1Y</button>
-          <button data-range="all" class="active">All</button>
-        </div>
-<div class="econ-chart-wrap">
-  <canvas id="unrateChart"></canvas>
-</div>
-        <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/UNRATE" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics</a></div>
-      </div>
-
-      <div class="econ-card">
-        <div class="econ-card-label">Gross Domestic Product (GDP)</div>
-        <div class="econ-card-stat"><span id="gdpValue">—</span> <span class="econ-card-date" id="gdpDate"></span></div>
-        <div class="econ-range-buttons" data-chart="gdpChart">
-          <button data-range="1y">1Y</button>
-          <button data-range="3y">3Y</button>
-          <button data-range="all" class="active">All</button>
-        </div>
-        <div class="econ-chart-wrap">
-  <canvas id="gdpChart"></canvas>
-</div>
-        <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/A191RL1Q225SBEA" target="_blank" rel="noopener">Bureau of Economic Analysis</a></div>
-      </div>
-
     </div>
-  </div>
-</section>
-<script src="js/economy-glance.js" defer></script> 
+  </section>
+  <script>
+    document.getElementById('econToggleBtn').addEventListener('click', function() {
+      var extra = document.getElementById('econExtraGrid');
+      var isHidden = extra.hasAttribute('hidden');
+      if (isHidden) {
+        extra.removeAttribute('hidden');
+        this.textContent = 'Hide extra indicators ▴';
+        window.dispatchEvent(new Event('resize'));
+      } else {
+        extra.setAttribute('hidden', '');
+        this.textContent = 'Show more indicators (PCE, Unemployment, GDP) ▾';
+      }
+    });
+  </script>
+  <script src="js/economy-glance.js" defer></script>
 
   <!-- ===== FEATURED (auto-filled by JS) ===== -->
   <section>
@@ -178,109 +202,65 @@
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-logo">
-            <img src="assets/logo-icon.png" alt="Surava Capital logo" class="logo-mark-img">
-            Surava Capital
-          </div>
-          <p style="color:#B7C0C9; font-size:0.9rem; max-width:280px;">Independent financial education and market commentary, built on honesty and transparency.</p>
-        </div>
-        <div>
-          <h4>Services (Planned)</h4>
-          <ul>
-            <li><a href="services.html#advisory">Investment Advisory</a></li>
-            <li><a href="services.html#planning">Financial Planning</a></li>
-            <li><a href="services.html#retirement">Retirement Strategy</a></li>
-            <li><a href="services.html#wealth">Wealth Management</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="education.html">Education Hub</a></li>
-            <li><a href="insights.html">Market Insights</a></li>
-            <li><a href="markets.html">Live Markets</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="trades.html">Trades</a></li>
-            <li><a href="insights.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Use</a></li>
-            <li><a href="disclosures.html">Disclosures</a></li>
-          </ul>
-        </div>
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo" style="margin-bottom:14px; display:inline-flex;">
+          <img src="assets/logo-icon.png" alt="Surava Capital logo" class="logo-mark-img">
+          Surava Capital
+        </a>
+        <p>Independent financial education and market commentary, built on honesty and transparency.</p>
       </div>
-      <div class="footer-bottom">
-        <span>© 2026 Surava Capital. All rights reserved.</span>
-        <div class="legal-links">
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="disclosures.html">Disclosures</a>
-        </div>
+      <div>
+        <h4>Services (Planned)</h4>
+        <ul>
+          <li><a href="services.html#advisory">Investment Advisory</a></li>
+          <li><a href="services.html#planning">Financial Planning</a></li>
+          <li><a href="services.html#retirement">Retirement Strategy</a></li>
+          <li><a href="services.html#wealth">Wealth Management</a></li>
+        </ul>
       </div>
-      <p class="disclosure">Surava Capital is an independent financial education and market-commentary venture. Nothing on this website constitutes personalized investment, tax, or legal advice, or an offer to provide regulated financial services. Investing involves risk, including the possible loss of principal, and past performance does not guarantee future results. Surava Capital is not yet entered in the Swiss adviser register under FIDLEG and does not currently provide personal investment advice or portfolio management. Market data is sourced from third-party public APIs (Frankfurter, World Bank) and may be delayed or revised.</p>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="education.html">Education Hub</a></li>
+          <li><a href="insights.html">Market Insights</a></li>
+          <li><a href="markets.html">Live Markets</a></li>
+          <li><a href="trades.html">Trades Journal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="trades.html">Trades</a></li>
+          <li><a href="insights.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="disclosures.html">Disclosures</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Surava Capital. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclosures.html">Disclosures</a>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <p>Surava Capital is an independent financial education and market-commentary venture. Nothing on this website constitutes personalized investment, tax, or legal advice, or an offer to provide regulated financial services. Investing involves risk, including the possible loss of principal, and past performance does not guarantee future results. Surava Capital is not yet entered in the Swiss adviser register under FIDLEG and does not currently provide personal investment advice or portfolio management.</p>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
-
-  <!-- Article list is shared with the homepage. Edit js/articles.js to publish. -->
   <script src="js/articles.js"></script>
-  <script>
-    (function renderInsights() {
-      const featured = articles[0];
-      const rest = articles.slice(1);
-
-      const featuredEl = document.getElementById('featured-article');
-      if (featured && featuredEl) {
-        var fMedia = featured.image
-          ? '<div class="media"><img src="' + featured.image + '" alt="' + featured.title + '" style="width:100%; height:100%; object-fit:contain; border-radius:8px;" /></div>'
-          : '<div class="media"></div>';
-        featuredEl.innerHTML =
-          fMedia +
-          '<div>' +
-            '<div class="meta" style="color:var(--color-accent-dark); font-weight:700; text-transform:uppercase; letter-spacing:0.08em; font-size:0.78rem; margin-bottom:10px;">Featured &middot; ' + featured.category + ' &middot; ' + featured.readTime + '</div>' +
-            '<h2>' + featured.title + '</h2>' +
-            '<p>' + featured.excerpt + '</p>' +
-            '<a href="' + featured.url + '" class="btn btn-secondary">Read full article</a>' +
-          '</div>';
-      }
-
-      const gridEl = document.getElementById('archive-grid');
-      if (gridEl) {
-        if (rest.length === 0) {
-          gridEl.innerHTML = '<p style="color:var(--color-muted, #6b7480);">More articles will appear here as they\'re published.</p>';
-        } else {
-          gridEl.innerHTML = rest.map(function (a) {
-            var thumb = a.image
-              ? '<div class="thumb" style="min-height:180px;"><img src="' + a.image + '" alt="' + a.title + '" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>'
-              : '<div class="thumb"></div>';
-            return '<a href="' + a.url + '" class="article-card" style="text-decoration:none; color:inherit; display:block;">' +
-              thumb +
-              '<div class="body">' +
-                '<div class="meta">' + a.category + ' &middot; ' + a.readTime + '</div>' +
-                '<h3>' + a.title + '</h3>' +
-                '<p>' + a.excerpt + '</p>' +
-              '</div>' +
-            '</a>';
-          }).join('');
-        }
-      }
-    })();
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
