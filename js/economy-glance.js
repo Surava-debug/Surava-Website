@@ -3,6 +3,18 @@
   if (!container) return;
 
   const charts = {};
+  function downsampleMonthly(points) {
+    const seen = new Set();
+    const result = [];
+    for (const p of points) {
+      const monthKey = p.date.slice(0, 7); // "YYYY-MM"
+      if (!seen.has(monthKey)) {
+        seen.add(monthKey);
+        result.push(p);
+      }
+    }
+    return result;
+  }
 
   function filterByRange(points, range) {
     if (range === 'all') return points;
@@ -103,8 +115,8 @@
     document.getElementById('gdpValue').textContent = (lastGdp.value > 0 ? '+' : '') + lastGdp.value + '%';
     document.getElementById('gdpDate').textContent = formatDate(lastGdp.date);
 
-    const fullData = {
-      fedFundsChart: s.fedFundsUpper,
+   const fullData = {
+      fedFundsChart: downsampleMonthly(s.fedFundsUpper),
       pceChart: pceYoY,
       unrateChart: unrate,
       gdpChart: gdp
