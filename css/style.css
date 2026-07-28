@@ -891,14 +891,16 @@ footer {
 }
 .econ-glance { background: #F4F5F3; padding: 48px 0; }
 .econ-glance h2 { color: #1B2A3F; margin-bottom: 24px; }
-.econ-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
-.econ-card-featured { max-width: 700px; margin: 0 auto; }
+.econ-grid { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.econ-card-featured { max-width: 700px; width: 100%; }
 .econ-toggle {
-  display: block; margin: 8px auto 0; background: none; border: 1px solid #E2E6EA;
+  display: block; background: none; border: 1px solid #E2E6EA;
   border-radius: 6px; padding: 8px 16px; font-size: 0.85rem; color: #1B2A3F; cursor: pointer;
 }
 .econ-toggle:hover { background: #F4F5F3; }
-.econ-extra-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 20px; }
+.econ-extra-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; width: 100%; }
+.econ-extra-grid[hidden] { display: none; }
+.econ-extra-grid:not([hidden]) { display: grid; }
 .econ-card { background: #fff; border: 1px solid #E2E6EA; border-radius: 8px; padding: 20px; }
 .econ-card-label { font-weight: 600; color: #1B2A3F; margin-bottom: 12px; font-size: 0.95rem; }
 .econ-card-stat { font-size: 1.6rem; font-weight: 700; color: #1B2A3F; margin-bottom: 8px; }
