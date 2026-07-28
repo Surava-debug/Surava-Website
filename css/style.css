@@ -891,14 +891,18 @@ footer {
 }
 .econ-glance { background: #F4F5F3; padding: 48px 0; }
 .econ-glance h2 { color: #1B2A3F; margin-bottom: 24px; }
-.econ-grid { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+.econ-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
 .econ-card { background: #fff; border: 1px solid #E2E6EA; border-radius: 8px; padding: 20px; }
-.econ-card-featured { max-width: 700px; width: 100%; }
 .econ-card-label { font-weight: 600; color: #1B2A3F; margin-bottom: 12px; font-size: 0.95rem; }
 .econ-card-stat { font-size: 1.6rem; font-weight: 700; color: #1B2A3F; margin-bottom: 8px; }
 .econ-card-date { font-size: 0.85rem; font-weight: 400; color: #7D8A9D; }
+.econ-sparkline { width: 100%; height: 60px; display: block; margin-bottom: 8px; }
+.econ-sparkline path { fill: none; stroke: #1B2A3F; stroke-width: 2; }
 .econ-source { font-size: 0.75rem; color: #7D8A9D; }
 .econ-source a { color: #7D8A9D; }
+.econ-rate-box { border-top: 3px solid #1B2A3F; padding-top: 12px; }
+.econ-rate-sublabel { font-size: 0.85rem; color: #7D8A9D; border-bottom: 1px solid #E2E6EA; padding-bottom: 4px; margin-bottom: 8px; }
+.econ-rate-value { font-size: 1.8rem; font-weight: 700; color: #1B2A3F; }
 .econ-chart-wrap { position: relative; width: 100%; height: 180px; }
 .econ-chart-wrap canvas { width: 100% !important; height: 100% !important; }
 .econ-range-buttons { display: flex; gap: 6px; margin: 10px 0; flex-wrap: wrap; }
@@ -909,10 +913,3 @@ footer {
 }
 .econ-range-buttons button:hover { border-color: #1B2A3F; color: #1B2A3F; }
 .econ-range-buttons button.active { background: #1B2A3F; border-color: #1B2A3F; color: #fff; }
-.econ-toggle {
-  background: none; border: 1px solid #E2E6EA; border-radius: 6px;
-  padding: 8px 16px; font-size: 0.85rem; color: #1B2A3F; cursor: pointer;
-  margin: 4px 0;
-}
-.econ-toggle:hover { background: #F4F5F3; }
-.econ-extra-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; width: 100%; }
