@@ -87,6 +87,100 @@
   </section>
 
   <!-- ===== ECONOMIC CALENDAR ===== -->
+   <!-- ===== ECONOMY AT A GLANCE ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+  <section class="econ-glance">
+    <div class="section-inner">
+      <h2>Economy at a Glance</h2>
+      <div class="econ-grid" id="econGlance">
+
+        <div class="econ-card econ-card-featured">
+          <div class="econ-card-label">Policy Rate</div>
+          <div class="econ-card-stat"><span id="fedFundsValue">—</span></div>
+          <div class="econ-range-buttons" data-chart="fedFundsChart">
+            <button data-range="1m">1M</button>
+            <button data-range="3m">3M</button>
+            <button data-range="6m">6M</button>
+            <button data-range="ytd">YTD</button>
+            <button data-range="1y">1Y</button>
+            <button data-range="all" class="active">All</button>
+          </div>
+          <div class="econ-chart-wrap">
+            <canvas id="fedFundsChart"></canvas>
+          </div>
+          <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/DFEDTARU" target="_blank" rel="noopener">Federal Reserve</a></div>
+        </div>
+
+        <button class="econ-toggle" id="econToggleBtn">Show more indicators (PCE, Unemployment, GDP) ▾</button>
+        <div class="econ-extra-grid" id="econExtraGrid" hidden>
+
+        <div class="econ-card">
+          <div class="econ-card-label">Inflation (PCE)</div>
+          <div class="econ-card-stat"><span id="pceValue">—</span> <span class="econ-card-date" id="pceDate"></span></div>
+          <div class="econ-range-buttons" data-chart="pceChart">
+            <button data-range="1m">1M</button>
+            <button data-range="3m">3M</button>
+            <button data-range="6m">6M</button>
+            <button data-range="ytd">YTD</button>
+            <button data-range="1y">1Y</button>
+            <button data-range="all" class="active">All</button>
+          </div>
+          <div class="econ-chart-wrap">
+            <canvas id="pceChart"></canvas>
+          </div>
+          <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/PCEPI" target="_blank" rel="noopener">Bureau of Economic Analysis</a></div>
+        </div>
+
+        <div class="econ-card">
+          <div class="econ-card-label">Unemployment Rate</div>
+          <div class="econ-card-stat"><span id="unrateValue">—</span> <span class="econ-card-date" id="unrateDate"></span></div>
+          <div class="econ-range-buttons" data-chart="unrateChart">
+            <button data-range="1m">1M</button>
+            <button data-range="3m">3M</button>
+            <button data-range="6m">6M</button>
+            <button data-range="ytd">YTD</button>
+            <button data-range="1y">1Y</button>
+            <button data-range="all" class="active">All</button>
+          </div>
+          <div class="econ-chart-wrap">
+            <canvas id="unrateChart"></canvas>
+          </div>
+          <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/UNRATE" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics</a></div>
+        </div>
+
+        <div class="econ-card">
+          <div class="econ-card-label">Gross Domestic Product (GDP)</div>
+          <div class="econ-card-stat"><span id="gdpValue">—</span> <span class="econ-card-date" id="gdpDate"></span></div>
+          <div class="econ-range-buttons" data-chart="gdpChart">
+            <button data-range="1y">1Y</button>
+            <button data-range="3y">3Y</button>
+            <button data-range="all" class="active">All</button>
+          </div>
+          <div class="econ-chart-wrap">
+            <canvas id="gdpChart"></canvas>
+          </div>
+          <div class="econ-source">Source: <a href="https://fred.stlouisfed.org/series/A191RL1Q225SBEA" target="_blank" rel="noopener">Bureau of Economic Analysis</a></div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.getElementById('econToggleBtn').addEventListener('click', function() {
+      var extra = document.getElementById('econExtraGrid');
+      var isHidden = extra.hasAttribute('hidden');
+      if (isHidden) {
+        extra.removeAttribute('hidden');
+        this.textContent = 'Hide extra indicators ▴';
+      } else {
+        extra.setAttribute('hidden', '');
+        this.textContent = 'Show more indicators (PCE, Unemployment, GDP) ▾';
+      }
+    });
+  </script>
+  <script src="js/economy-glance.js" defer></script>
+
   <section>
     <div class="container">
       <div class="section-head left">
