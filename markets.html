@@ -151,14 +151,17 @@
         <!-- TradingView: WTI crude and silver -->
         <div class="tradingview-widget-container">
           <div class="tradingview-widget-container__widget"></div>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-          {"symbol": "TVC:USOIL", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en"}
-          </script>
-        </div>
-        <div class="tradingview-widget-container">
-          <div class="tradingview-widget-container__widget"></div>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-          {"symbol": "TVC:SILVER", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en"}
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+          {
+            "symbols": [
+              {"proName": "TVC:USOIL", "title": "WTI Crude"},
+              {"proName": "TVC:SILVER", "title": "Silver"}
+            ],
+            "colorTheme": "light",
+            "isTransparent": true,
+            "showSymbolLogo": true,
+            "locale": "en"
+          }
           </script>
         </div>
       </div>

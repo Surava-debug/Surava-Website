@@ -1266,15 +1266,14 @@ footer {
 .macro-row .macro-title-row .macro-title { margin-bottom: 0; }
 
 .macro-quotes {
-  display: grid;
-  grid-template-columns: auto 1fr 1fr;
+  display: flex;
   align-items: center;
-  gap: 0 16px;
+  gap: 16px;
   background: #fff;
   border: 1px solid #E2E6EA;
   border-radius: 8px;
-  padding: 4px 14px;
-  width: min(100%, 520px);
+  padding: 4px 6px 4px 16px;
+  width: min(100%, 560px);
 }
 
 .macro-quotes-label {
@@ -1286,15 +1285,11 @@ footer {
   white-space: nowrap;
 }
 
-.macro-quotes .tradingview-widget-container { min-width: 0; }
-.macro-quotes .tradingview-widget-container + .tradingview-widget-container {
-  border-left: 1px solid #E2E6EA;
-  padding-left: 12px;
-}
+.macro-quotes .tradingview-widget-container { flex: 1; min-width: 0; }
 
 @media (max-width: 600px) {
-  .macro-quotes { grid-template-columns: 1fr 1fr; padding: 8px 12px; }
-  .macro-quotes-label { grid-column: 1 / -1; margin-bottom: 2px; }
+  .macro-quotes { flex-direction: column; align-items: stretch; gap: 4px; padding: 10px 8px; }
+  .macro-quotes-label { padding-left: 8px; }
 }
 
 /* ==========================================================
