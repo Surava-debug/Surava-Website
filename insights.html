@@ -178,6 +178,7 @@
         featuredEl.innerHTML =
           fMedia +
           '<div>' +
+            (featured.aiTest ? '<span class="ai-badge">AI-generated (Claude) &middot; Test</span>' : '') +
             '<div class="meta" style="color:var(--color-accent-dark); font-weight:700; text-transform:uppercase; letter-spacing:0.08em; font-size:0.78rem; margin-bottom:10px;">Featured &middot; ' + featured.category + ' &middot; ' + featured.readTime + '</div>' +
             '<h2>' + featured.title + '</h2>' +
             '<p>' + featured.excerpt + '</p>' +
@@ -197,6 +198,7 @@
             return '<a href="' + a.url + '" class="article-card" style="text-decoration:none; color:inherit; display:block;">' +
               thumb +
               '<div class="body">' +
+                (a.aiTest ? '<span class="ai-badge">AI-generated (Claude) &middot; Test</span>' : '') +
                 '<div class="meta">' + a.category + ' &middot; ' + a.readTime + '</div>' +
                 '<h3>' + a.title + '</h3>' +
                 '<p>' + a.excerpt + '</p>' +

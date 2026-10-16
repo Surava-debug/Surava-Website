@@ -250,6 +250,7 @@
         return '<a href="' + a.url + '" class="article-card" style="text-decoration:none; color:inherit; display:block;">' +
           thumb +
           '<div class="body">' +
+            (a.aiTest ? '<span class="ai-badge">AI-generated (Claude) &middot; Test</span>' : '') +
             '<div class="meta">' + a.category + ' &middot; ' + a.readTime + '</div>' +
             '<h3>' + a.title + '</h3>' +
             '<p>' + a.excerpt + '</p>' +
