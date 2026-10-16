@@ -100,17 +100,28 @@
     </div>
   </section>
 
-  <!-- ===== INSIGHTS PREVIEW ===== -->
+  <!-- ===== INSIGHTS + EDUCATION ===== -->
   <section class="section-alt">
     <div class="container">
       <div class="section-head">
-        <span class="tag">Latest thinking</span>
-        <h2>Market insights &amp; research</h2>
-        <p>Independent commentary on markets, the economy, and the world events moving them, written in plain English.</p>
+        <span class="tag">Latest</span>
+        <h2>Market insights &amp; education</h2>
       </div>
-      <div class="grid grid-3" id="home-insights"></div>
-      <div style="text-align:center; margin-top:32px;">
-        <a href="insights.html" class="btn btn-secondary">View all insights</a>
+      <div class="home-pair">
+        <div class="home-col">
+          <div class="home-col-head"><h3>Insights</h3><a href="insights.html">All insights &rarr;</a></div>
+          <div class="home-list" id="home-insights"></div>
+        </div>
+        <div class="home-col">
+          <div class="home-col-head"><h3>Education</h3><a href="education.html">Education Hub &rarr;</a></div>
+          <div class="home-list">
+          <a class="home-row" href="guide-index-funds.html"><span class="home-row-meta">Investing basics</span><span class="home-row-title">What is an index fund, and why do they work?</span></a>
+          <a class="home-row" href="guide-three-pillar-system.html"><span class="home-row-meta">Retirement</span><span class="home-row-title">The Swiss three-pillar system, explained</span></a>
+          <a class="home-row" href="guide-diversification.html"><span class="home-row-meta">Investing basics</span><span class="home-row-title">Diversification, explained without the jargon</span></a>
+          <a class="home-row" href="guide-market-timing.html"><span class="home-row-meta">Behavioral finance</span><span class="home-row-title">Why market timing rarely works</span></a>
+          <a class="home-row" href="tool-growth-calculator.html"><span class="home-row-meta">Tool</span><span class="home-row-title">Investment growth calculator</span></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -202,18 +213,13 @@
         return;
       }
       el.innerHTML = latest.map(function (a) {
-        var thumb = a.image
-          ? '<div class="thumb" style="min-height:180px;"><img src="' + a.image + '" alt="' + a.title + '" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>'
-          : '<div class="thumb"></div>';
-        return '<a href="' + a.url + '" class="article-card" style="text-decoration:none; color:inherit; display:block;">' +
-          thumb +
-          '<div class="body">' +
-            (a.aiTest ? '<span class="ai-badge">AI-generated (Claude) &middot; Test</span>' : '') +
-            '<div class="meta">' + a.category + ' &middot; ' + a.readTime + '</div>' +
-            '<h3>' + a.title + '</h3>' +
-            '<p>' + a.excerpt + '</p>' +
-            '<span class="card-link">Read article &rarr;</span>' +
-          '</div>' +
+        var thumb = a.image ? '<img class="home-thumb" src="' + a.image + '" alt="" />' : '<span class="home-thumb"></span>';
+        return '<a class="home-row home-row-insight" href="' + a.url + '">' + thumb +
+          '<span class="home-row-text">' +
+            '<span class="home-row-meta">' + a.category + ' &middot; ' + a.readTime +
+              (a.aiTest ? ' <span class="ai-badge ai-badge-sm">AI test</span>' : '') + '</span>' +
+            '<span class="home-row-title">' + a.title + '</span>' +
+          '</span>' +
         '</a>';
       }).join('');
     })();
