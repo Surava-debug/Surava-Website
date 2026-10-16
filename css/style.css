@@ -1292,6 +1292,24 @@ footer {
   .macro-quotes-label { padding-left: 8px; }
 }
 
+/* ============ INSIGHTS: SMALLER FEATURED IMAGE ============ */
+
+.featured-split {
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  gap: 40px;
+}
+
+.featured-split .media,
+.featured-split img {
+  height: 210px;
+}
+
+@media (max-width: 900px) {
+  .featured-split { grid-template-columns: 1fr; gap: 24px; }
+  .featured-split .media,
+  .featured-split img { height: 200px; max-width: 340px; }
+}
+
 /* ==========================================================
    FEATURE SWITCH: Services and Pricing are switched OFF.
    They are hidden from the menu and footer on every page.
