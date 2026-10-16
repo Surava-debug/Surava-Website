@@ -107,21 +107,33 @@
         <span class="tag">Latest</span>
         <h2>Market insights &amp; education</h2>
       </div>
-      <div class="home-pair">
-        <div class="home-col">
-          <div class="home-col-head"><h3>Insights</h3><a href="insights.html">All insights &rarr;</a></div>
-          <div class="home-list" id="home-insights"></div>
-        </div>
-        <div class="home-col">
-          <div class="home-col-head"><h3>Education</h3><a href="education.html">Education Hub &rarr;</a></div>
-          <div class="home-list">
-          <a class="home-row" href="guide-index-funds.html"><span class="home-row-meta">Investing basics</span><span class="home-row-title">What is an index fund, and why do they work?</span></a>
-          <a class="home-row" href="guide-three-pillar-system.html"><span class="home-row-meta">Retirement</span><span class="home-row-title">The Swiss three-pillar system, explained</span></a>
-          <a class="home-row" href="guide-diversification.html"><span class="home-row-meta">Investing basics</span><span class="home-row-title">Diversification, explained without the jargon</span></a>
-          <a class="home-row" href="guide-market-timing.html"><span class="home-row-meta">Behavioral finance</span><span class="home-row-title">Why market timing rarely works</span></a>
-          <a class="home-row" href="tool-growth-calculator.html"><span class="home-row-meta">Tool</span><span class="home-row-title">Investment growth calculator</span></a>
-          </div>
-        </div>
+      <div class="feature-pair">
+        <article class="feature-card" id="feat-insight" aria-live="polite">
+          <div class="feature-label"><span>Featured insight</span><span class="feature-rot">Rotating example</span></div>
+          <a class="feature-link" href="insights.html">
+            <div class="feature-img"><img alt="" /></div>
+            <div class="feature-body">
+              <div class="feature-meta"></div>
+              <h3 class="feature-title"></h3>
+              <p class="feature-text"></p>
+              <span class="feature-cta">Read article &rarr;</span>
+            </div>
+          </a>
+          <div class="feature-foot"><div class="feature-dots"></div><a href="insights.html">All insights &rarr;</a></div>
+        </article>
+        <article class="feature-card" id="feat-edu" aria-live="polite">
+          <div class="feature-label"><span>From the Education Hub</span><span class="feature-rot">Rotating example</span></div>
+          <a class="feature-link" href="education.html">
+            <div class="feature-img"><img alt="" /></div>
+            <div class="feature-body">
+              <div class="feature-meta"></div>
+              <h3 class="feature-title"></h3>
+              <p class="feature-text"></p>
+              <span class="feature-cta">Read the guide &rarr;</span>
+            </div>
+          </a>
+          <div class="feature-foot"><div class="feature-dots"></div><a href="education.html">Education Hub &rarr;</a></div>
+        </article>
       </div>
     </div>
   </section>
@@ -204,24 +216,52 @@
   <script src="js/script.js"></script>
   <script src="js/articles.js"></script>
   <script>
-    (function renderHomeInsights(){
-      var el = document.getElementById('home-insights');
-      if (!el || typeof articles === 'undefined') return;
-      var latest = articles.slice(0, 3);
-      if (latest.length === 0) {
-        el.innerHTML = '<p style="color:var(--color-muted,#6b7480);">New articles will appear here as they\'re published.</p>';
-        return;
+    (function featureRotation(){
+      var guides = [
+        {cat:"Investing basics", title:"What is an index fund, and why do they work?", text:"How index funds work, what they cost, and why so many long-term investors build around them.", url:"guide-index-funds.html", img:"assets/index-fund-fees-thumb.jpg"},
+        {cat:"Retirement", title:"The Swiss three-pillar system, explained", text:"How AHV, your pension fund and Pillar 3a fit together, in plain language.", url:"guide-three-pillar-system.html", img:"assets/three-pillar-system-thumb.jpg"},
+        {cat:"Investing basics", title:"Diversification, explained without the jargon", text:"Why spreading your money lowers risk, and the common ways people get it wrong.", url:"guide-diversification.html", img:"assets/chart-diversification-thumb.jpg"},
+        {cat:"Retirement", title:"How much do you actually need to retire?", text:"A way to estimate your number from your own spending, not from rules of thumb.", url:"guide-retirement-number.html", img:"assets/chart-retirement-number-thumb.jpg"},
+        {cat:"Behavioral finance", title:"Why market timing rarely works", text:"What the data says about missing the best days, and why staying invested usually wins.", url:"guide-market-timing.html", img:"assets/chart-missing-best-days-thumb.jpg"},
+        {cat:"Tool", title:"Investment growth calculator", text:"See what regular monthly investing could grow into, and how much comes from compounding.", url:"tool-growth-calculator.html", img:"assets/chart-growth-calc-thumb.jpg"}
+      ];
+      var insights = (typeof articles !== 'undefined' ? articles : []).map(function (a) {
+        return {cat: a.category + ' \u00b7 ' + a.readTime, title: a.title, text: a.excerpt, url: a.url, img: a.image, ai: a.aiTest};
+      });
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function setup(id, items) {
+        var card = document.getElementById(id);
+        if (!card || !items.length) return;
+        var link = card.querySelector('.feature-link'), img = card.querySelector('.feature-img img'),
+            meta = card.querySelector('.feature-meta'), title = card.querySelector('.feature-title'),
+            text = card.querySelector('.feature-text'), dots = card.querySelector('.feature-dots');
+        var i = Math.floor(Math.random() * items.length), timer = null;
+        dots.innerHTML = items.map(function (_, n) { return '<button type="button" aria-label="Show item ' + (n + 1) + '"></button>'; }).join('');
+        var btns = dots.querySelectorAll('button');
+        function show(n) {
+          i = (n + items.length) % items.length;
+          var it = items[i];
+          link.classList.add('is-fading');
+          setTimeout(function () {
+            link.href = it.url;
+            if (it.img) { img.src = it.img; img.parentNode.hidden = false; } else { img.parentNode.hidden = true; }
+            meta.innerHTML = it.cat + (it.ai ? ' <span class="ai-badge ai-badge-sm">AI-generated (Claude) &middot; Test</span>' : '');
+            title.textContent = it.title;
+            text.textContent = it.text;
+            btns.forEach(function (b, k) { b.classList.toggle('active', k === i); });
+            link.classList.remove('is-fading');
+          }, reduce ? 0 : 200);
+        }
+        function start() { if (!reduce) { stop(); timer = setInterval(function () { show(i + 1); }, 7000); } }
+        function stop() { if (timer) clearInterval(timer); timer = null; }
+        btns.forEach(function (b, k) { b.addEventListener('click', function () { show(k); start(); }); });
+        card.addEventListener('mouseenter', stop);
+        card.addEventListener('mouseleave', start);
+        show(i); start();
       }
-      el.innerHTML = latest.map(function (a) {
-        var thumb = a.image ? '<img class="home-thumb" src="' + a.image + '" alt="" />' : '<span class="home-thumb"></span>';
-        return '<a class="home-row home-row-insight" href="' + a.url + '">' + thumb +
-          '<span class="home-row-text">' +
-            '<span class="home-row-meta">' + a.category + ' &middot; ' + a.readTime +
-              (a.aiTest ? ' <span class="ai-badge ai-badge-sm">AI test</span>' : '') + '</span>' +
-            '<span class="home-row-title">' + a.title + '</span>' +
-          '</span>' +
-        '</a>';
-      }).join('');
+      setup('feat-insight', insights);
+      setTimeout(function () { setup('feat-edu', guides); }, 3500);
     })();
   </script>
 </body>
