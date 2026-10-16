@@ -1092,3 +1092,26 @@ footer {
   .hero-split { grid-template-columns: 1fr; gap: 28px; }
   .hero-quotes { max-width: 420px; }
 }
+
+/* ============ COMPANY IN FOCUS ============ */
+
+.focus-chart {
+  background: var(--color-card);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: 12px;
+  height: 420px;
+  margin-bottom: 40px;
+}
+
+.focus-chart .tradingview-widget-container { height: 100%; }
+.focus-chart .tradingview-widget-container__widget { height: calc(100% - 32px); }
+
+.focus-subhead {
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 720px) {
+  .focus-chart { height: 360px; padding: 8px; }
+}
