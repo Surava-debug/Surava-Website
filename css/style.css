@@ -1265,11 +1265,14 @@ footer {
 
 .macro-head { margin-bottom: 20px; }
 .macro-head .tag { margin-bottom: 8px; }
-.macro-row .macro-head h2 {
+.macro-row .macro-head h3 {
   text-align: left;
   margin-bottom: 0;
-  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
 }
+
+.macro-row .macro-title { margin-bottom: 32px; }
+.macro-row .macro-title h2 { text-align: left; margin-bottom: 0; }
 
 .macro-row .econ-grid { align-items: stretch; }
 .macro-row .econ-card-featured { max-width: none; }
