@@ -79,10 +79,28 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero-page">
-    <div class="container">
-      <span class="tag">Markets</span>
-      <h1>The meetings and data that move markets, in one place.</h1>
-      <p class="lead">A live economic calendar of the central-bank meetings and data releases we watch, alongside the prices we follow most closely. This page is for context, not recommendations.</p>
+    <div class="container hero-split">
+      <div class="hero-text">
+        <span class="tag">Markets</span>
+        <h1>The meetings and data that move markets, in one place.</h1>
+        <p class="lead">A live economic calendar of the central-bank meetings and data releases we watch, alongside the prices we follow most closely. This page is for context, not recommendations.</p>
+      </div>
+      <div class="hero-quotes">
+        <span class="hero-quotes-label">Live prices</span>
+        <!-- TradingView: WTI crude and silver -->
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+          {"symbol": "TVC:USOIL", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en"}
+          </script>
+        </div>
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+          {"symbol": "TVC:SILVER", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en"}
+          </script>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -247,9 +265,9 @@
             {
               "title": "Commodities",
               "symbols": [
-                {"s": "NYMEX:CL1!", "d": "WTI Crude (front-month future)"},
+                {"s": "TVC:USOIL", "d": "WTI Crude"},
                 {"s": "TVC:GOLD", "d": "Gold"},
-                {"s": "COMEX:SI1!", "d": "Silver (front-month future)"}
+                {"s": "TVC:SILVER", "d": "Silver"}
               ]
             },
             {
