@@ -948,10 +948,7 @@ footer {
   padding: 24px 28px;
 }
 
-.catalyst.is-soon {
-  border-left: 4px solid var(--color-navy);
-  padding-left: 25px;
-}
+.catalyst.is-soon .catalyst-countdown { color: var(--color-ink); }
 
 .catalyst-date {
   display: flex;
@@ -1050,7 +1047,6 @@ footer {
     gap: 16px;
     padding: 20px;
   }
-  .catalyst.is-soon { padding-left: 17px; }
   .catalyst-day { font-size: 1.6rem; }
   .catalyst-countdown { display: none; }
 }
@@ -1114,4 +1110,144 @@ footer {
 
 @media (max-width: 720px) {
   .focus-chart { height: 360px; padding: 8px; }
+}
+
+/* ============ KEY DATES: IMPACT TIERS ============ */
+
+:root {
+  --impact-high: #B3261E;
+  --impact-high-soft: #FBE9E7;
+  --impact-medium: #B26A00;
+  --impact-medium-soft: #FDF1DF;
+  --impact-low: #5C6B80;
+  --impact-low-soft: #E7EAEF;
+}
+
+.catalyst { border-left-width: 5px; }
+.catalyst.impact-high   { border-left-color: var(--impact-high); }
+.catalyst.impact-medium { border-left-color: var(--impact-medium); }
+.catalyst.impact-low    { border-left-color: var(--impact-low); }
+
+.catalyst.impact-high .catalyst-date   { background: var(--impact-high-soft); }
+.catalyst.impact-medium .catalyst-date { background: var(--impact-medium-soft); }
+.catalyst.impact-low .catalyst-date    { background: var(--impact-low-soft); }
+
+.catalyst.impact-high .catalyst-day,
+.catalyst.impact-high .catalyst-month   { color: var(--impact-high); }
+.catalyst.impact-medium .catalyst-day,
+.catalyst.impact-medium .catalyst-month { color: var(--impact-medium); }
+
+.impact-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 4px 10px;
+  color: #fff;
+}
+.impact-high .impact-pill   { background: var(--impact-high); }
+.impact-medium .impact-pill { background: var(--impact-medium); }
+.impact-low .impact-pill    { background: var(--impact-low); }
+
+.focus-dates-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-bottom: 16px;
+}
+.focus-dates-head .focus-subhead { margin-bottom: 0; }
+
+.impact-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+.impact-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.impact-legend .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.impact-legend .dot.impact-high   { background: var(--impact-high); }
+.impact-legend .dot.impact-medium { background: var(--impact-medium); }
+.impact-legend .dot.impact-low    { background: var(--impact-low); }
+
+/* ============ KEY DATES: KEY POINTS ============ */
+
+.catalyst-body p { margin-bottom: 8px; }
+
+.catalyst-points {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+}
+
+.catalyst-points li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.catalyst-points li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--impact-low);
+}
+.impact-high .catalyst-points li::before   { background: var(--impact-high); }
+.impact-medium .catalyst-points li::before { background: var(--impact-medium); }
+
+/* ============ KEY DATES: COMPACT ============ */
+
+.catalyst-list { gap: 10px; }
+
+.catalyst {
+  grid-template-columns: 56px minmax(0, 1fr) auto;
+  gap: 16px;
+  padding: 14px 18px;
+  align-items: center;
+}
+
+.catalyst-date { padding: 7px 0; border-radius: 10px; }
+.catalyst-day { font-size: 1.45rem; }
+.catalyst-month { font-size: 0.66rem; margin-top: 4px; }
+
+.catalyst-meta { gap: 8px; margin-bottom: 4px; }
+.catalyst-when { font-size: 0.82rem; font-weight: 600; color: var(--color-ink-soft); }
+
+.catalyst-body h3 { font-size: 1.02rem; margin-bottom: 4px; }
+
+.catalyst-points {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2px 16px;
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--color-ink-soft);
+}
+.catalyst-points li { padding-left: 12px; }
+.catalyst-points li::before { left: 0; width: 5px; height: 5px; top: 0.62em; }
+
+.catalyst-src {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-accent-dark);
+}
+
+.catalyst-countdown { font-size: 0.8rem; align-self: start; }
+
+@media (max-width: 720px) {
+  .catalyst { grid-template-columns: 48px minmax(0, 1fr); gap: 12px; padding: 12px 14px; }
+  .catalyst-day { font-size: 1.25rem; }
 }

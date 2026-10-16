@@ -10,8 +10,11 @@
      ticker    e.g. "NASDAQ: MRNA"
      type      short label for the pill: "Earnings", "Data readout",
                "Investor event", "Central bank", "Macro data", ...
+     impact    "high", "medium" or "low": how much the event can move
+               the stock. Sets the colour of the card.
      title     one line: what happens
-     why       one or two sentences: why it can move the stock.
+     why       one sentence: what happens.
+     points    2-3 short key points: why it gets its impact tier.
                Describe the event, never tell readers to buy or sell.
      source    link to the company's own announcement
    =================================================================== */
@@ -22,8 +25,14 @@ const catalysts = [
     company: "Moderna",
     ticker: "NASDAQ: MRNA",
     type: "Data readout",
-    title: "Phase 3 melanoma vaccine data at ESMO (Madrid)",
-    why: "Full Phase 3 results for intismeran, the personalised cancer vaccine developed with Merck, in a Presidential Symposium slot. The August headline readout was positive; the market will now judge the detail, and much of the year's rally rests on it.",
+    impact: "high",
+    title: "Phase 3 melanoma vaccine data, ESMO",
+    why: "",
+    points: [
+      "Valuation rests on this pipeline",
+      "Full data: size and durability of the effect",
+      "August headline alone: +177% in a day"
+    ],
     source: "https://www.newswire.com/news/moderna-announces-late-breaking-data-to-be-presented-at-esmo-congress-2026"
   },
   {
@@ -32,8 +41,13 @@ const catalysts = [
     company: "Moderna",
     ticker: "NASDAQ: MRNA",
     type: "Investor event",
-    title: "Investor webcast on the ESMO data",
-    why: "Management's take on the melanoma results, the regulatory path and the wider oncology pipeline, a few hours after the data goes public.",
+    impact: "low",
+    title: "Investor webcast on the data",
+    why: "",
+    points: [
+      "Data already public by then",
+      "Watch: approval and launch timeline"
+    ],
     source: "https://www.newswire.com/news/moderna-announces-late-breaking-data-to-be-presented-at-esmo-congress-2026"
   },
   {
@@ -42,8 +56,13 @@ const catalysts = [
     company: "Moderna",
     ticker: "NASDAQ: MRNA",
     type: "Earnings",
-    title: "Q3 2026 results and conference call",
-    why: "The first report since the stock joined the Nasdaq-100. Revenue is still small relative to the valuation, so guidance and oncology spending will get as much attention as the quarter itself.",
+    impact: "medium",
+    title: "Q3 2026 results and call",
+    why: "",
+    points: [
+      "Revenue small and mostly predictable",
+      "Watch: cash burn and guidance"
+    ],
     source: "https://www.newswire.com/news/moderna-to-report-third-quarter-2026-financial-results-on-friday-november-6-2026"
   }
 ];
@@ -57,6 +76,8 @@ const catalysts = [
 
   var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   var DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+  var IMPACT = { high: 'High impact', medium: 'Medium impact', low: 'Low impact' };
 
   var today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -87,26 +108,27 @@ const catalysts = [
   list.innerHTML = upcoming.map(function (c) {
     var days = Math.round((c._d - today) / 86400000);
     var countdown = days === 0 ? 'Today' : days === 1 ? 'Tomorrow' : 'In ' + days + ' days';
-    var when = DAYS[c._d.getDay()] + (c.time ? ' · ' + esc(c.time) + ' Zurich' : ' · time TBC');
+    var impact = IMPACT[c.impact] ? c.impact : 'medium';
+    var when = DAYS[c._d.getDay()] + (c.time ? ' ' + esc(c.time) : ' · time TBC');
 
     return '' +
-      '<article class="catalyst' + (days <= 7 ? ' is-soon' : '') + '">' +
+      '<article class="catalyst impact-' + impact + (days <= 7 ? ' is-soon' : '') + '">' +
         '<div class="catalyst-date">' +
           '<span class="catalyst-day">' + c._d.getDate() + '</span>' +
           '<span class="catalyst-month">' + MONTHS[c._d.getMonth()] + '</span>' +
         '</div>' +
         '<div class="catalyst-body">' +
           '<div class="catalyst-meta">' +
+            '<span class="impact-pill">' + IMPACT[impact] + '</span>' +
             '<span class="catalyst-pill">' + esc(c.type) + '</span>' +
-            '<span class="catalyst-company">' + esc(c.company) + '</span>' +
-            '<span class="catalyst-ticker">' + esc(c.ticker) + '</span>' +
+            '<span class="catalyst-when">' + when + '</span>' +
           '</div>' +
           '<h3>' + esc(c.title) + '</h3>' +
-          '<p>' + esc(c.why) + '</p>' +
-          '<div class="catalyst-foot">' +
-            '<span>' + when + '</span>' +
-            (c.source ? '<a href="' + esc(c.source) + '" target="_blank" rel="noopener">Company announcement ↗</a>' : '') +
-          '</div>' +
+          (c.why ? '<p>' + esc(c.why) + '</p>' : '') +
+          (c.points && c.points.length
+            ? '<ul class="catalyst-points">' + c.points.map(function (pt) { return '<li>' + esc(pt) + '</li>'; }).join('') + '</ul>'
+            : '') +
+          (c.source ? '<a class="catalyst-src" href="' + esc(c.source) + '" target="_blank" rel="noopener">Source ↗</a>' : '') +
         '</div>' +
         '<div class="catalyst-countdown">' + countdown + '</div>' +
       '</article>';
