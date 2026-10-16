@@ -922,3 +922,135 @@ footer {
 }
 .econ-range-buttons button:hover { border-color: #1B2A3F; color: #1B2A3F; }
 .econ-range-buttons button.active { background: #1B2A3F; border-color: #1B2A3F; color: #fff; }
+
+/* ============ DATES TO WATCH (markets.html) ============ */
+
+.catalyst-intro {
+  max-width: 640px;
+  color: var(--color-ink-soft);
+  margin: -24px 0 28px;
+}
+
+.catalyst-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.catalyst {
+  display: grid;
+  grid-template-columns: 76px 1fr auto;
+  gap: 24px;
+  align-items: start;
+  background: var(--color-card);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+}
+
+.catalyst.is-soon {
+  border-left: 4px solid var(--color-navy);
+  padding-left: 25px;
+}
+
+.catalyst-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent-soft);
+  border-radius: 12px;
+  padding: 10px 0;
+  line-height: 1;
+}
+
+.catalyst-day {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.catalyst-month {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-top: 6px;
+}
+
+.catalyst-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.catalyst-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  background: var(--color-accent-soft);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.catalyst-company {
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.catalyst-ticker {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.catalyst-body h3 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.catalyst-body p {
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.catalyst-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.catalyst-foot a {
+  color: var(--color-accent-dark);
+  font-weight: 600;
+}
+
+.catalyst-countdown {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.catalyst-empty {
+  color: var(--color-ink-soft);
+}
+
+@media (max-width: 720px) {
+  .catalyst {
+    grid-template-columns: 60px 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+  .catalyst.is-soon { padding-left: 17px; }
+  .catalyst-day { font-size: 1.6rem; }
+  .catalyst-countdown { display: none; }
+}
