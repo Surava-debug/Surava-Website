@@ -92,29 +92,17 @@
     </div>
   </section>
 
-  <!-- ===== TRADES TABLE ===== -->
+  <!-- ===== THE JOURNAL (placeholder) ===== -->
   <section>
     <div class="container">
       <div class="section-head left">
         <span class="tag">The journal</span>
-        <h2>Macro call vs. the trade taken</h2>
+        <h2>Coming as soon as we can prove it.</h2>
       </div>
-      <div class="trades-wrap">
-        <table class="trades">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Asset</th>
-              <th>Our macro call</th>
-              <th>The trade taken</th>
-              <th>Outcome</th>
-            </tr>
-          </thead>
-          <tbody id="trades-body"></tbody>
-        </table>
+      <div class="card" style="max-width:640px;">
+        <p style="margin:0; color:var(--color-ink-soft);">We only publish entries we can back with a dated, verifiable record. Until then, this page stays empty.</p>
       </div>
-
-      <p class="disclosure" style="margin-top:32px; max-width:760px;">This journal documents our own views and trades for transparency and education. It is a record of what we said and did, not a recommendation, a solicitation, an offer, or a performance claim. Individual entries are illustrative and do not represent overall results. Past outcomes do not indicate future results. Nothing on this page is personal investment advice.</p>
+      <!-- To bring the journal table back: ask Claude to restore the trades table section. -->
     </div>
   </section>
 
@@ -187,17 +175,6 @@
        =================================================================== -->
   <script>
     const trades = [
-          {
-      date: "Mar\u2013Apr 2026",
-      asset: "Brent Crude",
-      call: "As Brent ran toward $120 on the closure of the Strait of Hormuz, the futures curve was already pricing an optimistic resolution: the front month spiked while contracts 12 to 24 months out held in the $90\u201395 range. The view we took at the time was that the easy upside had been made and the risk was skewed toward normalisation rather than a further leg higher.",
-      callLinkUrl: "insight-01-iran-oil-markets.html",
-      callLinkText: "Read the related analysis",
-      trade: "No position taken. This is a record of a published macro view, not an executed trade.",
-      outcome: "Short term the call held: the 7\u20138 April ceasefire triggered a sharp reversal, with crude selling off hard in a single session, in line with the view that the upside was exhausted. Longer term it was only half right. The strait dispute re-escalated from June, and by mid-July crude was climbing again, so a durable normalisation did not hold. A correct near-term read, an incomplete longer-term one.",
-      status: "neutral"
-    }
-
       // To log a new trade, copy a block above, paste it ABOVE the others,
       // and fill in the details. Keep the comma between entries.
     ];
