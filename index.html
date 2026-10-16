@@ -218,12 +218,12 @@
   <script>
     (function featureRotation(){
       var guides = [
-        {cat:"Investing basics", title:"What is an index fund, and why do they work?", text:"How index funds work, what they cost, and why so many long-term investors build around them.", url:"guide-index-funds.html", img:"assets/index-fund-fees-thumb.jpg"},
-        {cat:"Retirement", title:"The Swiss three-pillar system, explained", text:"How AHV, your pension fund and Pillar 3a fit together, in plain language.", url:"guide-three-pillar-system.html", img:"assets/three-pillar-system-thumb.jpg"},
-        {cat:"Investing basics", title:"Diversification, explained without the jargon", text:"Why spreading your money lowers risk, and the common ways people get it wrong.", url:"guide-diversification.html", img:"assets/chart-diversification-thumb.jpg"},
-        {cat:"Retirement", title:"How much do you actually need to retire?", text:"A way to estimate your number from your own spending, not from rules of thumb.", url:"guide-retirement-number.html", img:"assets/chart-retirement-number-thumb.jpg"},
-        {cat:"Behavioral finance", title:"Why market timing rarely works", text:"What the data says about missing the best days, and why staying invested usually wins.", url:"guide-market-timing.html", img:"assets/chart-missing-best-days-thumb.jpg"},
-        {cat:"Tool", title:"Investment growth calculator", text:"See what regular monthly investing could grow into, and how much comes from compounding.", url:"tool-growth-calculator.html", img:"assets/chart-growth-calc-thumb.jpg"}
+        {cat:"Investing basics", title:"What is an index fund, and why do they work?", text:"How index funds work, what they cost, and why so many long-term investors build around them.", url:"guide-index-funds.html", ai:true, img:"assets/index-fund-fees-thumb.jpg"},
+        {cat:"Retirement", title:"The Swiss three-pillar system, explained", text:"How AHV, your pension fund and Pillar 3a fit together, in plain language.", url:"guide-three-pillar-system.html", ai:true, img:"assets/three-pillar-system-thumb.jpg"},
+        {cat:"Investing basics", title:"Diversification, explained without the jargon", text:"Why spreading your money lowers risk, and the common ways people get it wrong.", url:"guide-diversification.html", ai:true, img:"assets/chart-diversification-thumb.jpg"},
+        {cat:"Retirement", title:"How much do you actually need to retire?", text:"A way to estimate your number from your own spending, not from rules of thumb.", url:"guide-retirement-number.html", ai:true, img:"assets/chart-retirement-number-thumb.jpg"},
+        {cat:"Behavioral finance", title:"Why market timing rarely works", text:"What the data says about missing the best days, and why staying invested usually wins.", url:"guide-market-timing.html", ai:true, img:"assets/chart-missing-best-days-thumb.jpg"},
+        {cat:"Tool", title:"Investment growth calculator", text:"See what regular monthly investing could grow into, and how much comes from compounding.", url:"tool-growth-calculator.html", ai:true, img:"assets/chart-growth-calc-thumb.jpg"}
       ];
       var insights = (typeof articles !== 'undefined' ? articles : []).map(function (a) {
         return {cat: a.category + ' \u00b7 ' + a.readTime, title: a.title, text: a.excerpt, url: a.url, img: a.image, ai: a.aiTest};
