@@ -1368,6 +1368,35 @@ footer {
 
 .ai-notice .ai-badge { margin: 0 8px 0 0; }
 
+/* ============ INSIGHTS: COMING SOON SLOT ============ */
+
+.coming-soon-card {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px 24px;
+  flex-wrap: wrap;
+  border: 1.5px dashed var(--color-line);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  background: var(--color-card);
+}
+
+.coming-soon-card h3 { font-size: 1.1rem; margin: 0 0 4px; }
+.coming-soon-card p { margin: 0; color: var(--color-ink-soft); font-size: 0.95rem; }
+
+.coming-soon-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  background: var(--color-accent-soft);
+  border-radius: 999px;
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+
 /* ==========================================================
    FEATURE SWITCH: Services and Pricing are switched OFF.
    They are hidden from the menu and footer on every page.
