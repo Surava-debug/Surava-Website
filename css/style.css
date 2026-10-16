@@ -1310,6 +1310,33 @@ footer {
   .featured-split img { height: 200px; max-width: 340px; }
 }
 
+/* ============ SLIM CALL-TO-ACTION BAR ============ */
+
+.cta-banner.cta-slim {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  flex-wrap: wrap;
+  padding: 22px 28px;
+  border-radius: var(--radius);
+  text-align: left;
+}
+
+.cta-slim h3 {
+  color: #fff;
+  font-size: 1.15rem;
+  margin: 0 0 4px;
+}
+
+.cta-slim p { margin: 0; font-size: 0.92rem; }
+
+.cta-slim-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+@media (max-width: 720px) {
+  .cta-banner.cta-slim { padding: 20px; }
+}
+
 /* ==========================================================
    FEATURE SWITCH: Services and Pricing are switched OFF.
    They are hidden from the menu and footer on every page.
