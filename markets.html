@@ -179,6 +179,37 @@
         </div>
 
         <button class="econ-toggle" id="econToggleBtn">Show more indicators (PCE, Unemployment, GDP) ▾</button>
+      </div>
+      </div>
+
+      <!-- Right: Economic calendar (TradingView) -->
+      <div class="macro-col">
+        <div class="macro-head">
+          <span class="tag">Economic calendar</span>
+          <h3>Upcoming meetings and data releases</h3>
+        </div>
+        <div class="macro-calendar">
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+            {
+              "colorTheme": "light",
+              "isTransparent": true,
+              "locale": "en",
+              "countryFilter": "ch,us,cn,jp",
+              "importanceFilter": "1",
+              "width": "100%",
+              "height": "480"
+            }
+            </script>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Extra indicators: full width, three side by side -->
+    <div class="container econ-extra-wrap">
         <div class="econ-extra-grid" id="econExtraGrid" hidden>
 
         <div class="econ-card">
@@ -230,33 +261,6 @@
         </div>
 
         </div>
-      </div>
-      </div>
-
-      <!-- Right: Economic calendar (TradingView) -->
-      <div class="macro-col">
-        <div class="macro-head">
-          <span class="tag">Economic calendar</span>
-          <h3>Upcoming meetings and data releases</h3>
-        </div>
-        <div class="macro-calendar">
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
-            {
-              "colorTheme": "light",
-              "isTransparent": true,
-              "locale": "en",
-              "countryFilter": "ch,us,cn,jp",
-              "importanceFilter": "1",
-              "width": "100%",
-              "height": "480"
-            }
-            </script>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
   <script>

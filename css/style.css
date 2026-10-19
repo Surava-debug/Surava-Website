@@ -1685,3 +1685,13 @@ section aside.tldr p,
   margin: 0;
 }
 .catalyst-intro strong { color: var(--color-ink); }
+
+/* ============ EXTRA INDICATORS: FULL WIDTH ROW OF THREE ============ */
+.macro-row .econ-extra-wrap { margin-top: 24px; }
+.macro-row .econ-extra-wrap .econ-extra-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+@media (max-width: 900px) {
+  .macro-row .econ-extra-wrap .econ-extra-grid { grid-template-columns: 1fr; gap: 16px; }
+}
