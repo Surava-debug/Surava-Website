@@ -1695,3 +1695,6 @@ section aside.tldr p,
 @media (max-width: 900px) {
   .macro-row .econ-extra-wrap .econ-extra-grid { grid-template-columns: 1fr; gap: 16px; }
 }
+
+/* Toggle button centred under the Policy Rate card */
+.macro-row .econ-toggle { align-self: center; }
