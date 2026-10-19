@@ -1597,3 +1597,32 @@ footer {
   /* Wide tables scroll inside themselves, not the whole page */
   .compare-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
+
+/* ============ ARTICLE DISCLAIMER (same on every article, guide and tool) ============ */
+.article-disclaimer {
+  margin: 40px 0 0;
+  padding: 18px 20px;
+  background: var(--color-card);
+  border: 1px solid var(--color-line);
+  border-left: 3px solid var(--color-accent-dark);
+  border-radius: 10px;
+  font-family: var(--font-sans);
+}
+.article-disclaimer-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  margin-bottom: 8px;
+}
+aside.article-disclaimer p,
+.article-body aside.article-disclaimer p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+  margin: 0;
+}
+.article-body aside.article-disclaimer p + p,
+aside.article-disclaimer p + p { margin-top: 8px; }
