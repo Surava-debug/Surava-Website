@@ -5,7 +5,7 @@
 
    Fields:
      date      "YYYY-MM-DD"
-     time      Zurich time as "HH:MM", or "" if not announced yet
+     time      Zurich time as "HH:MM" (CET/CEST is added automatically), or "" if not announced yet
      company   name shown in bold
      ticker    e.g. "NASDAQ: MRNA"
      type      short label for the pill: "Earnings", "Data readout",
@@ -105,11 +105,21 @@ const catalysts = [
     return;
   }
 
+  // Official Zurich time zone for that date: CEST in summer, CET in winter
+  function zurichZone(dateStr) {
+    try {
+      var parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', timeZoneName: 'short' })
+        .formatToParts(new Date(dateStr + 'T12:00:00Z'));
+      var z = parts.filter(function (x) { return x.type === 'timeZoneName'; })[0];
+      return z ? ' ' + z.value : '';
+    } catch (e) { return ''; }
+  }
+
   list.innerHTML = upcoming.map(function (c) {
     var days = Math.round((c._d - today) / 86400000);
     var countdown = days === 0 ? 'Today' : days === 1 ? 'Tomorrow' : 'In ' + days + ' days';
     var impact = IMPACT[c.impact] ? c.impact : 'medium';
-    var when = DAYS[c._d.getDay()] + (c.time ? ' ' + esc(c.time) : ' · time TBC');
+    var when = DAYS[c._d.getDay()] + (c.time ? ' ' + esc(c.time) + zurichZone(c.date) : ' · time TBC');
 
     return '' +
       '<article class="catalyst impact-' + impact + (days <= 7 ? ' is-soon' : '') + '">' +
