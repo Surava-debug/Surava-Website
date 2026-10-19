@@ -1752,3 +1752,9 @@ section aside.tldr p,
   .has-dropdown.open .dropdown { display: block; }
   .nav-actions { display: flex; align-items: center; gap: 12px; }
 }
+
+/* iPhone/iPad: stop the browser from enlarging body text in landscape */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
