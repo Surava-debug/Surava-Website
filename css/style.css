@@ -1640,10 +1640,19 @@ aside.article-disclaimer p + p { margin-top: 8px; }
 }
 .tldr-label {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.72rem;
   font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--color-ink);
-  margin-bottom: 6px;
+  margin-bottom: 2px;
+}
+.tldr-sub {
+  display: block;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--color-ink-soft);
+  margin-bottom: 8px;
 }
 .tldr p,
 aside.tldr p,
