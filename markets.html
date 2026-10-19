@@ -132,21 +132,32 @@
         </div>
       <div class="macro-quotes">
         <span class="macro-quotes-label">Live prices</span>
-        <!-- TradingView: WTI crude and silver -->
-        <div class="tradingview-widget-container">
-          <div class="tradingview-widget-container__widget"></div>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-          {
-            "symbols": [
-              {"proName": "TVC:USOIL", "title": "WTI Crude"},
-              {"proName": "TVC:SILVER", "title": "Silver"}
-            ],
-            "colorTheme": "light",
-            "isTransparent": true,
-            "showSymbolLogo": true,
-            "locale": "en"
-          }
-          </script>
+        <!-- TradingView: WTI crude and silver, one widget each so phones can stack them -->
+        <div class="macro-quotes-pair">
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+            {
+              "symbols": [{"proName": "TVC:USOIL", "title": "WTI Crude"}],
+              "colorTheme": "light",
+              "isTransparent": true,
+              "showSymbolLogo": true,
+              "locale": "en"
+            }
+            </script>
+          </div>
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+            {
+              "symbols": [{"proName": "TVC:SILVER", "title": "Silver"}],
+              "colorTheme": "light",
+              "isTransparent": true,
+              "showSymbolLogo": true,
+              "locale": "en"
+            }
+            </script>
+          </div>
         </div>
       </div>
       </div>

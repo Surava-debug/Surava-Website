@@ -1714,3 +1714,11 @@ section aside.tldr p,
 @media (max-width: 980px) {
   .nav-actions .btn-secondary { display: none; }
 }
+
+/* Live prices: oil and silver side by side, stacked on phones */
+.macro-quotes-pair { flex: 1; min-width: 0; display: flex; gap: 8px; }
+.macro-quotes-pair .tradingview-widget-container { flex: 1 1 0; min-width: 0; }
+@media (max-width: 600px) {
+  .macro-quotes-pair { flex-direction: column; gap: 0; }
+  .macro-quotes-pair .tradingview-widget-container + .tradingview-widget-container { border-top: 1px solid var(--color-line); }
+}
