@@ -1540,3 +1540,60 @@ footer {
   .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
 }
 /* ===== END FEATURE SWITCH ===== */
+
+/* ============ PHONE POLISH (max 720px) ============
+   Tighter spacing, smaller headings and a cleaner header
+   on phones. Desktop is not affected.
+   ================================================== */
+@media (max-width: 720px) {
+  .container { padding: 0 20px; }
+
+  /* Header: logo + menu only, the menu already has Contact */
+  .nav-inner { padding: 12px 20px; }
+  .logo { font-size: 1.2rem; gap: 8px; }
+  .logo-mark-img { width: 28px; height: 28px; }
+  .nav-actions .btn-primary { display: none; }
+  .nav-toggle { font-size: 1.5rem; padding: 4px 6px; }
+  .nav-links.open { padding: 16px 20px 20px; gap: 14px; }
+
+  /* Sections: less empty space between blocks */
+  section { padding: 44px 0; }
+  .section-head { margin-bottom: 28px; }
+  .section-head.left { margin-bottom: 24px; }
+  .section-head h2 { font-size: 1.75rem; }
+  .tag { margin-bottom: 10px; }
+
+  /* Heroes */
+  .hero { padding: 48px 0 40px; }
+  .hero h1 { font-size: 2.2rem; margin-bottom: 16px; }
+  .hero p.lead { font-size: 1.02rem; margin-bottom: 24px; }
+  .hero-eyebrow { font-size: 0.7rem; padding: 5px 12px; margin-bottom: 18px; }
+  .hero-page { padding: 36px 0 24px; }
+  .hero-page h1 { font-size: 2rem; }
+
+  /* Cards */
+  .card { padding: 22px; }
+  .card .icon { width: 40px; height: 40px; margin-bottom: 12px; }
+  .card h3 { font-size: 1.12rem; }
+  .grid { gap: 14px; }
+  .article-card .thumb { height: 170px; }
+  .article-card .body { padding: 18px; }
+
+  /* About: founder placeholders were 400px tall boxes */
+  .team-card .photo { max-width: 120px !important; aspect-ratio: 1 / 1 !important; margin-bottom: 10px !important; }
+
+  /* Two plain sections in a row: no double gap between them */
+  section:not(.section-alt) + section:not(.section-alt):not(.cta-section),
+  .section-alt + .section-alt { padding-top: 0; }
+
+  /* Footer: brand on its own row, links in two columns */
+  footer { padding: 40px 0 20px; margin-top: 24px; }
+  .footer-grid { gap: 24px 16px; padding-bottom: 28px; }
+  .footer-grid > div:first-child { grid-column: 1 / -1; }
+  .footer-grid h4 { margin-bottom: 10px; }
+  .footer-grid li { margin-bottom: 8px; }
+  .footer-logo { font-size: 1.25rem; }
+
+  /* Wide tables scroll inside themselves, not the whole page */
+  .compare-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
