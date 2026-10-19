@@ -1663,3 +1663,24 @@ section aside.tldr p,
   color: var(--color-ink);
   margin: 0;
 }
+
+/* ============ MARKETS HERO: TWO THREADS ============ */
+.markets-tracks {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  max-width: 680px;
+  display: grid;
+  gap: 10px;
+}
+.markets-tracks li {
+  padding-left: 16px;
+  border-left: 2px solid var(--color-accent);
+  color: var(--color-ink-soft);
+  line-height: 1.55;
+}
+.markets-tracks strong { color: var(--color-ink); }
+.markets-note {
+  font-size: 0.9rem;
+  margin: 0;
+}
