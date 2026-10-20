@@ -1841,3 +1841,12 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .is-clickable:hover, a.article-card:hover, .feature-card:hover { transform: none; }
 }
+
+/* ============ COMING SOON PLACEHOLDERS ============ */
+.article-card.is-coming-soon { border-style: dashed; }
+.article-card.is-coming-soon .thumb { opacity: 0.6; }
+.article-card.is-coming-soon h3,
+.article-card.is-coming-soon p { color: var(--color-ink-soft); }
+.article-card.is-coming-soon .coming-soon-pill,
+.contact-info .coming-soon-pill { display: inline-block; margin-top: 4px; }
+.team-card .photo-soon { display: inline-block; margin: 0 auto 12px; }
