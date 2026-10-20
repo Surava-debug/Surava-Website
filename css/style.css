@@ -1821,3 +1821,8 @@ html {
 .focus-card-next p { margin: 0; color: var(--color-ink-soft); }
 @media (max-width: 900px) { .focus-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .focus-grid { grid-template-columns: 1fr; } }
+
+/* Whole card clickable */
+.is-clickable { cursor: pointer; }
+.is-clickable:hover h2,
+.is-clickable:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
