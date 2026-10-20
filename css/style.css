@@ -1850,3 +1850,9 @@ html {
 .article-card.is-coming-soon .coming-soon-pill,
 .contact-info .coming-soon-pill { display: inline-block; margin-top: 4px; }
 .team-card .photo-soon { display: inline-block; margin: 0 auto 12px; }
+
+/* ============ INSIGHTS: TWO THREADS LAYOUT ============ */
+.hero-page .markets-tracks a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.insights-thread { scroll-margin-top: 80px; }
+.insights-subhead { font-size: 1.35rem; margin: 48px 0 20px; }
+@media (max-width: 720px) { .insights-subhead { margin-top: 32px; } }
