@@ -1931,3 +1931,6 @@ html {
 .article-card > .body > p:has(+ .card-link:last-child),
 .article-card > .body > p:has(+ .coming-soon-pill:last-child) { margin-bottom: 16px; }
 .article-card > .body > span, .article-card > .body > a { align-self: flex-start; }
+
+/* Section rhythm: hero and first section light, then alternating grey / light */
+.econ-glance.section-alt { background: var(--color-bg-alt); }
