@@ -1899,3 +1899,19 @@ html {
 @media (max-width: 640px) { .hero-page .markets-tracks { grid-template-columns: 1fr; } }
 /* Reading pages: opener sits in the same column as the text below */
 .hero-page.hero-left > .container { max-width: var(--read-width, 760px); }
+
+/* Homepage feature cards: interactive slide dots */
+.feature-dots { align-items: center; gap: 4px; margin-left: -6px; transform-origin: left center; transition: transform 0.2s ease; }
+.feature-dots button {
+  box-sizing: content-box; padding: 6px; background-clip: content-box;
+  transition: width 0.25s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .feature-dots:hover { transform: scale(1.15); }
+  .feature-dots button:not(.active):hover { width: 14px; border-radius: 999px; background-color: var(--color-accent); }
+  .feature-dots button.active:hover { width: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .feature-dots, .feature-dots button { transition: none; }
+  .feature-dots:hover { transform: none; }
+}
