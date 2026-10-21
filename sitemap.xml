@@ -21,8 +21,48 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://suravacapital.ch/careers.html</loc>
-    <priority>0.5</priority>
+    <loc>https://suravacapital.ch/trades.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/guide-index-funds.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/guide-diversification.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/guide-retirement-number.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/guide-three-pillar-system.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/guide-market-timing.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/tool-growth-calculator.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/insight-01-iran-oil-markets.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/insight-02-hormuz-vs-opec.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/insight-03-gold-real-yields.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/insight-04-strait-fed-dilemma.html</loc>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://suravacapital.ch/contact.html</loc>
