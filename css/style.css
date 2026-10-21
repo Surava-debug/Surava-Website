@@ -1917,6 +1917,6 @@ html {
   .feature-dots:hover { transform: none; }
 }
 
-/* Homepage "Everything we publish": Learn more links on one line */
-.publish-grid > .card { display: flex; flex-direction: column; }
-.publish-grid > .card .card-link { margin-top: auto; padding-top: 4px; }
+/* Card grids: the bottom link (Learn more, View guides) sits on one line across a row */
+.grid > .card:has(> .card-link) { display: flex; flex-direction: column; }
+.grid > .card > .card-link { margin-top: auto; padding-top: 4px; align-self: flex-start; }
