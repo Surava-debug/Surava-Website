@@ -15,8 +15,10 @@
                Leave "" while it is still current.
      link      page to read more (markets.html while current,
                an Insights article later), or ""
-     articles  optional list of our articles on this company:
-               [{ title: "...", url: "/insights/..." }]
+     analysis  optional "Explore our analysis" box next to the card, one
+               entry per key date (opens on click):
+               [{ date: "Sat, 24 Oct", event: "...", text: "...",
+                  url: "/insights/..." or "" for not written yet }]
    =================================================================== */
 const focusArchive = [
   {
@@ -28,8 +30,19 @@ const focusArchive = [
     why: "Phase 3 data showed its personalised mRNA cancer vaccine, used with Keytruda, lowered the risk of melanoma returning. The shares more than doubled in a day.",
     outcome: "",
     link: "/markets/",
-    articles: [
-      { title: "The Cancer Vaccine Works. Is That Enough for Moderna's Stock?", url: "/insights/insight-05-moderna-hazard-ratio.html" }
+    analysis: [
+      {
+        date: "Sat, 24 Oct",
+        event: "Phase 3 melanoma data at ESMO",
+        text: "The vaccine works. Saturday shows how well. A plain-language look at the number to watch and what is already priced in.",
+        url: "/insights/insight-05-moderna-hazard-ratio.html"
+      },
+      {
+        date: "Fri, 6 Nov",
+        event: "Q3 2026 results",
+        text: "Our look at the quarter follows after the results.",
+        url: ""
+      }
     ]
   }
 ];
@@ -60,11 +73,20 @@ const focusArchive = [
         '<p>' + esc(f.why) + '</p>' +
         '<div class="focus-label">What happened</div>' +
         '<p>' + (f.outcome ? esc(f.outcome) : '<em>Still unfolding.</em>') + '</p>' +
-        (f.articles && f.articles.length ? '<div class="focus-label">Our analysis</div>' + f.articles.map(function (a) {
-          return '<p><a class="focus-article" href="' + esc(a.url) + '">' + esc(a.title) + ' →</a></p>';
-        }).join('') : '') +
         (f.link ? '<a class="card-link" href="' + esc(f.link) + '">' + (current ? 'Follow it on Markets' : 'Read more') + ' →</a>' : '') +
-      '</article>';
+      '</article>' +
+      (f.analysis && f.analysis.length ?
+        '<div class="focus-analysis">' +
+          '<div class="focus-label">Explore our analysis</div>' +
+          '<p class="focus-analysis-sub">' + esc(f.company) + ', by key date</p>' +
+          f.analysis.map(function (a) {
+            return '<details class="focus-analysis-item">' +
+              '<summary><span class="fa-date">' + esc(a.date) + '</span><span class="fa-event">' + esc(a.event) + '</span></summary>' +
+              '<div class="fa-body"><p>' + esc(a.text) + '</p>' +
+              (a.url ? '<a class="fa-link" href="' + esc(a.url) + '">Read the analysis →</a>' : '<span class="fa-soon">Coming soon</span>') +
+              '</div></details>';
+          }).join('') +
+        '</div>' : '');
   }).join('') +
   '<div class="focus-card focus-card-next">' +
     '<span class="coming-soon-pill">Next</span>' +
