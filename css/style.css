@@ -1884,7 +1884,6 @@ html {
 .hero-page .markets-tracks,
 .hero-page .ai-notice,
 .hero-page .tldr { margin-left: auto; margin-right: auto; }
-.hero-page .markets-tracks,
 .hero-page .ai-notice,
 .hero-page .tldr { text-align: left; }
 /* Reading pages (guides, articles, tools, legal) keep the opener left-aligned */
@@ -1893,3 +1892,8 @@ html {
 .hero-page.hero-left .lead,
 .hero-page.hero-left .ai-notice,
 .hero-page.hero-left .tldr { margin-left: 0; margin-right: 0; }
+/* Markets hero: the two threads as two small centered cards */
+.hero-page .markets-tracks { grid-template-columns: 1fr 1fr; gap: 14px; max-width: 760px; margin-top: 20px; margin-bottom: 20px; }
+.hero-page .markets-tracks li { padding: 16px 20px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-card); text-align: center; font-size: 0.95rem; }
+.hero-page .markets-tracks li strong { display: block; margin-bottom: 4px; }
+@media (max-width: 640px) { .hero-page .markets-tracks { grid-template-columns: 1fr; } }
