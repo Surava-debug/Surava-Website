@@ -1861,3 +1861,18 @@ html {
 /* Insights: "See further" toggle under a focus grid */
 .focus-grid [hidden] { display: none !important; }
 .see-further-wrap { display: flex; justify-content: center; margin-top: 24px; }
+
+/* Homepage: company in focus panel (replaces the image on that card) */
+.feature-company-panel {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 24px;
+  color: #fff;
+}
+.fcp-name { font-family: var(--font-serif); font-size: 2.2rem; line-height: 1.1; font-weight: 600; }
+.fcp-ticker { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #B7C0C9; }
+.fcp-period { font-size: 0.85rem; color: #B7C0C9; margin-top: 8px; }

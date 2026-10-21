@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261020e" />
+  <link rel="stylesheet" href="css/style.css?v=20261021c" />
   <link rel="icon" type="image/png" href="favicon.png">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -100,16 +100,33 @@
     </div>
   </section>
 
-  <!-- ===== INSIGHTS + EDUCATION ===== -->
+  <!-- ===== WHAT WE ARE WATCHING: company in focus + macro (from js/focus-archive.js and js/articles.js) ===== -->
   <section class="section-alt">
     <div class="container">
       <div class="section-head">
         <span class="tag">Latest</span>
-        <h2>Market insights &amp; education</h2>
+        <h2>What we are watching</h2>
       </div>
       <div class="feature-pair">
+        <article class="feature-card" id="feat-company" aria-live="polite">
+          <div class="feature-label"><span>Company in focus</span><span class="feature-rot">Current focus</span></div>
+          <a class="feature-link" href="markets.html">
+            <div class="feature-img feature-company-panel">
+              <span class="fcp-name"></span>
+              <span class="fcp-ticker"></span>
+              <span class="fcp-period"></span>
+            </div>
+            <div class="feature-body">
+              <div class="feature-meta">Why it caught our attention</div>
+              <h3 class="feature-title"></h3>
+              <p class="feature-text"></p>
+              <span class="feature-cta">Follow it on Markets &rarr;</span>
+            </div>
+          </a>
+          <div class="feature-foot"><div class="feature-dots"></div><a href="insights.html#company-in-focus">All companies &rarr;</a></div>
+        </article>
         <article class="feature-card" id="feat-insight" aria-live="polite">
-          <div class="feature-label"><span>Featured insight</span><span class="feature-rot">Rotating example</span></div>
+          <div class="feature-label"><span>Macro analysis</span><span class="feature-rot">Rotating example</span></div>
           <a class="feature-link" href="insights.html">
             <div class="feature-img"><img alt="" /></div>
             <div class="feature-body">
@@ -119,20 +136,7 @@
               <span class="feature-cta">Read article &rarr;</span>
             </div>
           </a>
-          <div class="feature-foot"><div class="feature-dots"></div><a href="insights.html">All insights &rarr;</a></div>
-        </article>
-        <article class="feature-card" id="feat-edu" aria-live="polite">
-          <div class="feature-label"><span>From the Education Hub</span><span class="feature-rot">Rotating example</span></div>
-          <a class="feature-link" href="education.html">
-            <div class="feature-img"><img alt="" /></div>
-            <div class="feature-body">
-              <div class="feature-meta"></div>
-              <h3 class="feature-title"></h3>
-              <p class="feature-text"></p>
-              <span class="feature-cta">Read the guide &rarr;</span>
-            </div>
-          </a>
-          <div class="feature-foot"><div class="feature-dots"></div><a href="education.html">Education Hub &rarr;</a></div>
+          <div class="feature-foot"><div class="feature-dots"></div><a href="insights.html#macro-analysis">All macro pieces &rarr;</a></div>
         </article>
       </div>
     </div>
@@ -214,17 +218,11 @@
   </footer>
 
   <script src="js/script.js?v=20261020b"></script>
+  <script src="js/focus-archive.js"></script>
   <script src="js/articles.js"></script>
   <script>
     (function featureRotation(){
-      var guides = [
-        {cat:"Investing basics", title:"What is an index fund, and why do they work?", text:"How index funds work, what they cost, and why so many long-term investors build around them.", url:"guide-index-funds.html", ai:true, img:"assets/index-fund-fees-thumb.jpg"},
-        {cat:"Retirement", title:"The Swiss three-pillar system, explained", text:"How AHV, your pension fund and Pillar 3a fit together, in plain language.", url:"guide-three-pillar-system.html", ai:true, img:"assets/three-pillar-system-thumb.jpg"},
-        {cat:"Investing basics", title:"Diversification, explained without the jargon", text:"Why spreading your money lowers risk, and the common ways people get it wrong.", url:"guide-diversification.html", ai:true, img:"assets/chart-diversification-thumb.jpg"},
-        {cat:"Retirement", title:"How much do you actually need to retire?", text:"A way to estimate your number from your own spending, not from rules of thumb.", url:"guide-retirement-number.html", ai:true, img:"assets/chart-retirement-number-thumb.jpg"},
-        {cat:"Behavioral finance", title:"Why market timing rarely works", text:"What the data says about missing the best days, and why staying invested usually wins.", url:"guide-market-timing.html", ai:true, img:"assets/chart-missing-best-days-thumb.jpg"},
-        {cat:"Tool", title:"Investment growth calculator", text:"See what regular monthly investing could grow into, and how much comes from compounding.", url:"tool-growth-calculator.html", ai:true, img:"assets/chart-growth-calc-thumb.jpg"}
-      ];
+
       var insights = (typeof articles !== 'undefined' ? articles : []).map(function (a) {
         return {cat: a.category + ' \u00b7 ' + a.readTime, title: a.title, text: a.excerpt, url: a.url, img: a.image, ai: a.aiTest};
       });
@@ -261,7 +259,24 @@
         show(i); start();
       }
       setup('feat-insight', insights);
-      setTimeout(function () { setup('feat-edu', guides); }, 3500);
+
+      (function companyCard() {
+        var card = document.getElementById('feat-company');
+        if (!card || typeof focusArchive === 'undefined' || !focusArchive.length) { if (card) card.hidden = true; return; }
+        var M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        function fmt(ym) { if (!ym) return ''; var p = ym.split('-'); return M[+p[1] - 1] + ' ' + p[0]; }
+        var f = focusArchive.filter(function (x) { return x.status === 'current'; })[0] || focusArchive[0];
+        var current = f.status === 'current';
+        card.querySelector('.fcp-name').textContent = f.company;
+        card.querySelector('.fcp-ticker').textContent = f.ticker;
+        card.querySelector('.fcp-period').textContent = current ? 'In focus since ' + fmt(f.from) : fmt(f.from) + ' \u2013 ' + fmt(f.to);
+        var why = String(f.why || ''), cut = why.indexOf('. ');
+        card.querySelector('.feature-title').textContent = cut > 0 ? why.slice(0, cut + 1) : why;
+        card.querySelector('.feature-text').textContent = cut > 0 ? why.slice(cut + 2) : '';
+        card.querySelector('.feature-rot').textContent = current ? 'Current focus' : 'Past focus';
+        if (f.link) card.querySelector('.feature-link').href = f.link;
+        card.querySelector('.feature-dots').hidden = true;
+      })();
     })();
   </script>
 </body>
