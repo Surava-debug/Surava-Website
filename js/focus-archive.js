@@ -32,12 +32,14 @@ const focusArchive = [
     link: "/markets/",
     analysis: [
       {
+        id: "analysis-esmo-2026",
         date: "Sat, 24 Oct",
         event: "Phase 3 melanoma data at ESMO",
         text: "The vaccine works. Saturday shows how well. A plain-language look at the number to watch and what is already priced in.",
         url: "/insights/insight-05-moderna-hazard-ratio.html"
       },
       {
+        id: "analysis-q3-2026",
         date: "Fri, 6 Nov",
         event: "Q3 2026 results",
         text: "Our look at the quarter follows after the results.",
@@ -80,7 +82,7 @@ const focusArchive = [
           '<div class="focus-label">Explore our analysis</div>' +
           '<p class="focus-analysis-sub">' + esc(f.company) + ', by key date</p>' +
           f.analysis.map(function (a) {
-            return '<details class="focus-analysis-item">' +
+            return '<details class="focus-analysis-item"' + (a.id ? ' id="' + esc(a.id) + '"' : '') + '>' +
               '<summary><span class="fa-date">' + esc(a.date) + '</span><span class="fa-event">' + esc(a.event) + '</span></summary>' +
               '<div class="fa-body"><p>' + esc(a.text) + '</p>' +
               (a.url ? '<a class="fa-link" href="' + esc(a.url) + '">Read the analysis →</a>' : '<span class="fa-soon">Coming soon</span>') +
@@ -92,4 +94,21 @@ const focusArchive = [
     '<span class="coming-soon-pill">Next</span>' +
     '<p>The next company goes here once something catches our attention.</p>' +
   '</div>';
+
+  // Opened from a link like /insights/#analysis-q3-2026: unfold that date
+  function openFromHash() {
+    var id = decodeURIComponent((location.hash || '').slice(1));
+    var el = id && document.getElementById(id);
+    if (el && el.tagName === 'DETAILS') {
+      el.open = true;
+      // after layout settles, scroll so the date sits below the sticky menu
+      setTimeout(function () {
+        var box = el.closest('.focus-analysis') || el;
+        var y = box.getBoundingClientRect().top + window.pageYOffset - 100;
+        window.scrollTo({ top: y < 0 ? 0 : y });
+      }, 250);
+    }
+  }
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
 })();

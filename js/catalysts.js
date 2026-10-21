@@ -17,6 +17,8 @@
      points    2-3 short key points: why it gets its impact tier.
                Describe the event, never tell readers to buy or sell.
      source    link to the company's own announcement
+     link      optional: our own page on this event. Makes the whole card
+               clickable (it grows slightly on hover).
    =================================================================== */
 const catalysts = [
   {
@@ -33,7 +35,8 @@ const catalysts = [
       "Full data: size and durability of the effect",
       "August headline alone: +177% in a day"
     ],
-    source: "https://www.newswire.com/news/moderna-announces-late-breaking-data-to-be-presented-at-esmo-congress-2026"
+    source: "https://www.newswire.com/news/moderna-announces-late-breaking-data-to-be-presented-at-esmo-congress-2026",
+    link: "/insights/insight-05-moderna-hazard-ratio.html"
   },
   {
     date: "2026-10-24",
@@ -48,7 +51,8 @@ const catalysts = [
       "Data already public by then",
       "Watch: approval and launch timeline"
     ],
-    source: "https://www.newswire.com/news/moderna-announces-late-breaking-data-to-be-presented-at-esmo-congress-2026"
+    source: "https://www.newswire.com/news/moderna-announces-late-breaking-data-to-be-presented-at-esmo-congress-2026",
+    link: "/insights/insight-05-moderna-hazard-ratio.html"
   },
   {
     date: "2026-11-06",
@@ -63,7 +67,8 @@ const catalysts = [
       "Revenue small and mostly predictable",
       "Watch: cash burn and guidance"
     ],
-    source: "https://www.newswire.com/news/moderna-to-report-third-quarter-2026-financial-results-on-friday-november-6-2026"
+    source: "https://www.newswire.com/news/moderna-to-report-third-quarter-2026-financial-results-on-friday-november-6-2026",
+    link: "/insights/#analysis-q3-2026"
   }
 ];
 
@@ -122,7 +127,8 @@ const catalysts = [
     var when = DAYS[c._d.getDay()] + (c.time ? ' ' + esc(c.time) + zurichZone(c.date) : ' · time TBC');
 
     return '' +
-      '<article class="catalyst impact-' + impact + (days <= 7 ? ' is-soon' : '') + '">' +
+      '<article class="catalyst impact-' + impact + (days <= 7 ? ' is-soon' : '') + (c.link ? ' has-link' : '') + '"' +
+        (c.link ? ' data-href="' + esc(c.link) + '" tabindex="0" role="link" aria-label="' + esc(c.title) + ': read our analysis"' : '') + '>' +
         '<div class="catalyst-date">' +
           '<span class="catalyst-day">' + c._d.getDate() + '</span>' +
           '<span class="catalyst-month">' + MONTHS[c._d.getMonth()] + '</span>' +
@@ -143,4 +149,23 @@ const catalysts = [
         '<div class="catalyst-countdown">' + countdown + '</div>' +
       '</article>';
   }).join('');
+
+  // Cards with our own page: whole card opens it (the Source link keeps working)
+  function go(card, e) {
+    var href = card.getAttribute('data-href');
+    if (!href) return;
+    if (e && (e.metaKey || e.ctrlKey)) window.open(href, '_blank', 'noopener');
+    else window.location.href = href;
+  }
+  list.addEventListener('click', function (e) {
+    var card = e.target.closest('.catalyst.has-link');
+    if (!card || e.target.closest('a')) return;
+    if (String(window.getSelection ? window.getSelection() : '').length) return;
+    go(card, e);
+  });
+  list.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter') return;
+    var card = e.target.closest('.catalyst.has-link');
+    if (card && e.target === card) go(card, e);
+  });
 })();

@@ -952,6 +952,21 @@ footer {
 
 .catalyst.is-soon .catalyst-countdown { color: var(--color-ink); }
 
+.catalyst.has-link {
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.catalyst.has-link:hover,
+.catalyst.has-link:focus-visible {
+  transform: scale(1.015);
+  box-shadow: 0 8px 24px rgba(27, 42, 63, 0.10);
+}
+.catalyst.has-link:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .catalyst.has-link { transition: none; }
+  .catalyst.has-link:hover { transform: none; }
+}
+
 .catalyst-date {
   display: flex;
   flex-direction: column;
