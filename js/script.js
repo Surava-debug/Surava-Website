@@ -61,9 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Highlight current nav link
-  const path = window.location.pathname.split("/").pop() || "index.html";
+  // Menu links point to section folders (/markets/, /education/ ...); highlight the section you are in, guides included
+  const path = window.location.pathname.replace(/index\.html$/, "");
   document.querySelectorAll(".nav-links > a, .has-dropdown > a").forEach((a) => {
-    if ((a.getAttribute("href") || "").split("/").pop() === path) {
+    const href = (a.getAttribute("href") || "").split("#")[0];
+    if (href.length > 1 && href.endsWith("/") && path.startsWith(href)) {
       a.style.color = "var(--color-accent-dark)";
     }
   });

@@ -5,23 +5,23 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://suravacapital.ch/about.html</loc>
+    <loc>https://suravacapital.ch/about/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suravacapital.ch/markets.html</loc>
+    <loc>https://suravacapital.ch/markets/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://suravacapital.ch/insights.html</loc>
+    <loc>https://suravacapital.ch/insights/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://suravacapital.ch/education.html</loc>
+    <loc>https://suravacapital.ch/education/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://suravacapital.ch/trades.html</loc>
+    <loc>https://suravacapital.ch/trades/</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -65,7 +65,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://suravacapital.ch/contact.html</loc>
+    <loc>https://suravacapital.ch/contact/</loc>
     <priority>0.6</priority>
   </url>
   <url>

@@ -25,7 +25,7 @@ const focusArchive = [
     to: "",
     why: "Phase 3 data showed its personalised mRNA cancer vaccine, used with Keytruda, lowered the risk of melanoma returning. The shares more than doubled in a day.",
     outcome: "",
-    link: "/markets.html"
+    link: "/markets/"
   }
 ];
 
