@@ -1906,10 +1906,11 @@ html {
   box-sizing: content-box; padding: 6px; background-clip: content-box;
   transition: width 0.25s ease, background-color 0.2s ease, transform 0.2s ease;
 }
+.feature-dots button.active { background-clip: content-box; }
 @media (hover: hover) and (pointer: fine) {
-  .feature-dots:hover { transform: scale(1.15); }
-  .feature-dots button:not(.active):hover { width: 14px; border-radius: 999px; background-color: var(--color-accent); }
-  .feature-dots button.active:hover { width: 26px; }
+  .feature-dots:hover { transform: scale(1.06); }
+  .feature-dots button:not(.active):hover { width: 12px; border-radius: 999px; background-color: var(--color-accent); }
+  .feature-dots button.active:hover { width: 22px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .feature-dots, .feature-dots button { transition: none; }
