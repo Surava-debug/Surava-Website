@@ -1922,3 +1922,12 @@ html {
 .grid > .card > .card-link { margin-top: auto; padding-top: 4px; align-self: flex-start; }
 .card.is-clickable .card-link { transition: color 0.18s ease; }
 .card.is-clickable:hover .card-link { color: var(--color-ink); }
+
+/* Article cards: Read guide / Coming soon sit on one line at the bottom of every card in a row */
+.article-card { display: flex; flex-direction: column; }
+.article-card > .body { flex: 1; display: flex; flex-direction: column; }
+.article-card > .body > .card-link:last-child,
+.article-card > .body > .coming-soon-pill:last-child { margin-top: auto; align-self: flex-start; }
+.article-card > .body > p:has(+ .card-link:last-child),
+.article-card > .body > p:has(+ .coming-soon-pill:last-child) { margin-bottom: 16px; }
+.article-card > .body > span, .article-card > .body > a { align-self: flex-start; }
