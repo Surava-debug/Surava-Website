@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Highlight current nav link
   const path = window.location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-links > a, .has-dropdown > a").forEach((a) => {
-    if (a.getAttribute("href") === path) {
+    if ((a.getAttribute("href") || "").split("/").pop() === path) {
       a.style.color = "var(--color-accent-dark)";
     }
   });

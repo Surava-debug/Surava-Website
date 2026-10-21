@@ -266,7 +266,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../assets/Mockup.jpg");
+  background-image: url("/assets/brand/Mockup.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.20;
@@ -925,7 +925,7 @@ footer {
 .econ-range-buttons button:hover { border-color: #1B2A3F; color: #1B2A3F; }
 .econ-range-buttons button.active { background: #1B2A3F; border-color: #1B2A3F; color: #fff; }
 
-/* ============ DATES TO WATCH (markets.html) ============ */
+/* ============ DATES TO WATCH (/markets.html) ============ */
 
 .catalyst-intro {
   max-width: 640px;

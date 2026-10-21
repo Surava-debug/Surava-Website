@@ -88,7 +88,7 @@
   }
 
   try {
-    const res = await fetch('data/econ-glance.json');
+    const res = await fetch('/data/econ-glance.json');
     const data = await res.json();
     const s = data.series;
 
