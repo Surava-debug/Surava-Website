@@ -9,15 +9,6 @@
    =================================================================== */
 const articles = [
   {
-    title: "The Cancer Vaccine Works. Is That Enough for Moderna's Stock?",
-    category: "Company Focus",
-    readTime: "3 min read",
-    excerpt: "Moderna is up about 640% this year on a cancer vaccine trial. On Saturday, one number decides whether the data lives up to the price. A plain-language look at the hazard ratio, the odds, and what is already priced in.",
-    url: "/insights/insight-05-moderna-hazard-ratio.html",
-    aiTest: true,
-    image: "/assets/charts/moderna-hr-odds.png"
-  },
-  {
     title: "The Shock That Came Back: Oil, the Strait, and the Fed's Hard Choice",
     category: "Macro",
     readTime: "6 min read",

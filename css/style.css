@@ -1811,6 +1811,7 @@ html {
   margin-bottom: 4px;
 }
 .focus-card p { font-size: 0.92rem; line-height: 1.55; margin: 0 0 14px; }
+.focus-card .focus-article { font-weight: 600; color: var(--color-ink); text-decoration: underline; text-underline-offset: 3px; }
 .focus-card .card-link { margin-top: auto; font-weight: 600; font-size: 0.9rem; color: var(--color-ink); }
 .focus-card-next {
   border: 1.5px dashed var(--color-line);

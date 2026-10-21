@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20261021a" />
+  <link rel="stylesheet" href="/css/style.css?v=20261021c" />
   <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -26,6 +26,10 @@
   .article-body h2 { font-size: 1.5rem; margin: 40px 0 14px; color: #1B2A3F; }
   .article-body a { color: var(--color-accent-dark); font-weight: 600; }
   .article-meta { color:#6B7480; font-size:0.9rem; margin-top:14px; }
+  .compare-table { width:100%; border-collapse:collapse; margin:28px 0; font-size:0.92rem; }
+  .compare-table th, .compare-table td { border:1px solid #E2E6EA; padding:10px 14px; text-align:left; vertical-align:top; }
+  .compare-table th { background:#F4F5F3; color:#1B2A3F; font-weight:700; }
+  .compare-table td { color:#33404F; }
 </style>
 </head>
 <body>
@@ -65,7 +69,7 @@
   <!-- ===== ARTICLE HERO ===== -->
   <section class="hero-page hero-left">
     <div class="container">
-      <div class="breadcrumb"><a href="/insights/">Insights</a> / Company Focus</div>
+      <div class="breadcrumb"><a href="/insights/">Insights</a> / Company in focus</div>
       <span class="tag">Company Focus</span>
       <h1>The Cancer Vaccine Works. Is That Enough for Moderna's Stock?</h1>
       <p class="lead">Moderna is up about 640% this year on a cancer vaccine trial. On Saturday, one number decides whether the data lives up to the price.</p>
@@ -94,10 +98,29 @@
       <h2>What is most likely</h2>
       <p>There are two clues. The big trial was stopped early because the benefit was already obvious, which makes a weak result very unlikely. But big trials almost always look somewhat worse than small ones, so the number will probably shrink a little from 0.51.</p>
 
-      <figure style="margin:32px 0;">
-        <img src="/assets/charts/moderna-hr-odds.png" alt="Bar chart of estimated odds for the Phase 3 hazard ratio: about 37% for 0.55 or lower, about 42% for 0.55 to 0.65, about 21% above 0.65" style="width:100%; height:auto; border:1px solid #E2E6EA; border-radius:10px; display:block;" />
-        <figcaption style="margin-top:10px; font-size:0.85rem; color:#6B7480;">Our own simulation, combining the Phase 2b result with the early stop of the Phase 3 trial. An estimate, not a forecast.</figcaption>
-      </figure>
+      <table class="compare-table">
+        <tr>
+          <th>Saturday's HR</th>
+          <th>What it means</th>
+          <th>Our odds</th>
+        </tr>
+        <tr>
+          <td><strong>0.55 or lower</strong></td>
+          <td>As strong as the early trial</td>
+          <td>~37%</td>
+        </tr>
+        <tr>
+          <td><strong>0.55 to 0.65</strong></td>
+          <td>Clearly works, a bit weaker</td>
+          <td>~42%</td>
+        </tr>
+        <tr>
+          <td><strong>Above 0.65</strong></td>
+          <td>Works, but noticeably weaker</td>
+          <td>~21%</td>
+        </tr>
+      </table>
+      <p style="font-size:0.85rem; color:#6B7480; margin-top:-16px;">Our own simulation, combining the Phase 2b result with the early stop of the Phase 3 trial. An estimate, not a forecast.</p>
 
       <p>Our best guess is an HR <strong>around 0.58</strong>. That would describe a very good drug. Whether it is good enough for the stock is a different question.</p>
 
