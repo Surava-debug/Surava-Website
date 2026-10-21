@@ -76,19 +76,19 @@
           <div class="icon"><img src="assets/icon-investing-basics.svg" alt="" style="width:24px; height:24px; object-fit:contain;"></div>
           <h3>Investing Basics</h3>
           <p>Core concepts: asset classes, diversification, index funds, and how markets actually work.</p>
-          <a href="#investing-basics" class="card-link">View guides →</a>
+          <a href="#investing-basics" class="card-link" data-count-for="investing-basics">2 guides →</a>
         </div>
         <div class="card">
           <div class="icon"><img src="assets/icon-retirement-planning.svg" alt="" style="width:24px; height:24px; object-fit:contain;"></div>
           <h3>Retirement Planning</h3>
           <p>Saving milestones, the three-pillar system, AHV, and drawing an income in retirement.</p>
-          <a href="#retirement-planning" class="card-link">View guides →</a>
+          <a href="#retirement-planning" class="card-link" data-count-for="retirement-planning">2 guides, 1 tool →</a>
         </div>
         <div class="card">
           <div class="icon"><img src="assets/icon-behavioral-finance.svg" alt="" style="width:24px; height:24px; object-fit:contain;"></div>
           <h3>Behavioral Finance</h3>
           <p>Why investors make costly mistakes, and practical habits to avoid them.</p>
-          <a href="#behavioral-finance" class="card-link">View guides →</a>
+          <a href="#behavioral-finance" class="card-link" data-count-for="behavioral-finance">1 guide →</a>
         </div>
       </div>
     </div>
@@ -299,5 +299,20 @@
   </footer>
 
   <script src="js/script.js?v=20261020b"></script>
+  <script>
+    // Topic cards: count the published guides and tools in each section (coming-soon cards are skipped)
+    document.querySelectorAll('[data-count-for]').forEach(function (link) {
+      var sec = document.getElementById(link.getAttribute('data-count-for'));
+      if (!sec) return;
+      var g = 0, t = 0;
+      sec.querySelectorAll('.article-card:not(.is-coming-soon) a.card-link[href]').forEach(function (a) {
+        if (/^tool-/.test(a.getAttribute('href'))) t++; else g++;
+      });
+      var parts = [];
+      if (g) parts.push(g + (g === 1 ? ' guide' : ' guides'));
+      if (t) parts.push(t + (t === 1 ? ' tool' : ' tools'));
+      if (parts.length) link.textContent = parts.join(', ') + ' \u2192';
+    });
+  </script>
 </body>
 </html>

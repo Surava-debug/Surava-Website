@@ -1920,3 +1920,5 @@ html {
 /* Card grids: the bottom link (Learn more, View guides) sits on one line across a row */
 .grid > .card:has(> .card-link) { display: flex; flex-direction: column; }
 .grid > .card > .card-link { margin-top: auto; padding-top: 4px; align-self: flex-start; }
+.card.is-clickable .card-link { transition: color 0.18s ease; }
+.card.is-clickable:hover .card-link { color: var(--color-ink); }
