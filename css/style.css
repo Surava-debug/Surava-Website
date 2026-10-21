@@ -1856,3 +1856,7 @@ html {
 .insights-thread { scroll-margin-top: 80px; }
 .insights-subhead { font-size: 1.35rem; margin: 48px 0 20px; }
 @media (max-width: 720px) { .insights-subhead { margin-top: 32px; } }
+
+/* Insights: "See further" toggle under a focus grid */
+.focus-grid [hidden] { display: none !important; }
+.see-further-wrap { display: flex; justify-content: center; margin-top: 24px; }
