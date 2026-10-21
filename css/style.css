@@ -1887,3 +1887,9 @@ html {
 .hero-page .markets-tracks,
 .hero-page .ai-notice,
 .hero-page .tldr { text-align: left; }
+/* Reading pages (guides, articles, tools, legal) keep the opener left-aligned */
+.hero-page.hero-left { text-align: left; }
+.hero-page.hero-left h1,
+.hero-page.hero-left .lead,
+.hero-page.hero-left .ai-notice,
+.hero-page.hero-left .tldr { margin-left: 0; margin-right: 0; }
