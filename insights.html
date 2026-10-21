@@ -73,26 +73,15 @@
     </div>
   </section>
 
-  <!-- ===== THREAD 2: MACRO ANALYSIS (featured + archive auto-filled by JS) ===== -->
+  <!-- ===== THREAD 2: MACRO ANALYSIS (auto-filled from js/articles.js) ===== -->
   <section id="macro-analysis" class="section-alt insights-thread">
     <div class="container">
       <div class="section-head left">
         <span class="tag">Macro analysis</span>
-        <h2>Our latest macro analysis</h2>
+        <h2>Every macro piece we have written</h2>
+        <p class="focus-intro">Our articles on central banks, the economy and the world events moving markets. Newest first.</p>
       </div>
-      <div class="split featured-split" id="featured-article"></div>
-
-      <h3 class="insights-subhead">Earlier macro pieces</h3>
-      <div class="grid grid-3" id="archive-grid"></div>
-
-      <!-- Coming soon slot: delete this block once the first real article is live -->
-      <div class="coming-soon-card">
-        <span class="coming-soon-pill">Coming soon</span>
-        <div>
-          <h3>Real articles are in the works</h3>
-          <p>Our own analysis, researched and written by us, is in progress. It will replace the test articles here.</p>
-        </div>
-      </div>
+      <div class="focus-grid" id="macro-archive-grid"></div>
     </div>
   </section>
 
@@ -177,47 +166,29 @@
   <script src="js/focus-archive.js"></script>
   <script src="js/articles.js"></script>
   <script>
-    (function renderInsights() {
-      const featured = articles[0];
-      const rest = articles.slice(1);
-
-      const featuredEl = document.getElementById('featured-article');
-      if (featured && featuredEl) {
-        var fMedia = featured.image
-          ? '<div class="media"><img src="' + featured.image + '" alt="' + featured.title + '" style="width:100%; height:100%; object-fit:contain; border-radius:8px;" /></div>'
-          : '<div class="media"></div>';
-        featuredEl.innerHTML =
-          fMedia +
-          '<div>' +
-            (featured.aiTest ? '<span class="ai-badge">AI-generated (Claude) &middot; Test</span>' : '') +
-            '<div class="meta" style="color:var(--color-accent-dark); font-weight:700; text-transform:uppercase; letter-spacing:0.08em; font-size:0.78rem; margin-bottom:10px;">Featured &middot; ' + featured.category + ' &middot; ' + featured.readTime + '</div>' +
-            '<h2>' + featured.title + '</h2>' +
-            '<p>' + featured.excerpt + '</p>' +
-            '<a href="' + featured.url + '" class="btn btn-secondary">Read full article</a>' +
-          '</div>';
-      }
-
-      const gridEl = document.getElementById('archive-grid');
-      if (gridEl) {
-        if (rest.length === 0) {
-          gridEl.innerHTML = '<p style="color:var(--color-muted, #6b7480);">More articles will appear here as they\'re published.</p>';
-        } else {
-          gridEl.innerHTML = rest.map(function (a) {
-            var thumb = a.image
-              ? '<div class="thumb" style="min-height:180px;"><img src="' + a.image + '" alt="' + a.title + '" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>'
-              : '<div class="thumb"></div>';
-            return '<a href="' + a.url + '" class="article-card" style="text-decoration:none; color:inherit; display:block;">' +
-              thumb +
-              '<div class="body">' +
-                (a.aiTest ? '<span class="ai-badge">AI-generated (Claude) &middot; Test</span>' : '') +
-                '<div class="meta">' + a.category + ' &middot; ' + a.readTime + '</div>' +
-                '<h3>' + a.title + '</h3>' +
-                '<p>' + a.excerpt + '</p>' +
-              '</div>' +
-            '</a>';
-          }).join('');
-        }
-      }
+    (function renderMacro() {
+      var grid = document.getElementById('macro-archive-grid');
+      if (!grid || typeof articles === 'undefined') return;
+      function esc(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
+      grid.innerHTML = articles.map(function (a, i) {
+        var latest = i === 0;
+        return '' +
+          '<article class="focus-card' + (latest ? ' is-current' : '') + '">' +
+            '<div class="focus-card-top">' +
+              '<span class="focus-status">' + (latest ? 'Latest' : 'Earlier') + '</span>' +
+              '<span class="focus-period">' + esc(a.category) + ' &middot; ' + esc(a.readTime) + '</span>' +
+            '</div>' +
+            (a.aiTest ? '<div><span class="ai-badge">AI-generated (Claude) &middot; Test</span></div>' : '') +
+            '<h3>' + esc(a.title) + '</h3>' +
+            '<div class="focus-label">In short</div>' +
+            '<p>' + esc(a.excerpt) + '</p>' +
+            '<a class="card-link" href="' + esc(a.url) + '">Read the article →</a>' +
+          '</article>';
+      }).join('') +
+      '<div class="focus-card focus-card-next">' +
+        '<span class="coming-soon-pill">Coming soon</span>' +
+        '<p>Real articles, researched and written by us, are in the works. They will replace the test articles here.</p>' +
+      '</div>';
     })();
   </script>
 
