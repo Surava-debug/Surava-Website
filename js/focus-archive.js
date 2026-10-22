@@ -12,6 +12,9 @@
      to        "YYYY-MM" when it left focus ("" while current)
      why       1-2 sentences: why it caught our attention
      homeTitle / homeText  optional: shorter wording for the homepage card
+     chart     optional, for past companies: frozen chart image of the focus period,
+               e.g. "/assets/charts/moderna-support-levels.png". Current companies
+               get a live chart automatically.
      outcome   1-2 sentences: what happened. Facts, never a buy/sell view.
                Leave "" while it is still current.
      link      page to read more (markets.html while current,

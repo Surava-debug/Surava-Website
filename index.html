@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20261022h" />
+  <link rel="stylesheet" href="/css/style.css?v=20261022i" />
   <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -271,8 +271,14 @@
         var f = focusArchive.filter(function (x) { return x.status === 'current'; })[0] || focusArchive[0];
         var current = f.status === 'current';
         // 1-month chart of the company in focus (TradingView), symbol taken from the ticker, e.g. "NASDAQ: MRNA"
+        // Live chart only while a company is current. A past company shows its frozen snapshot
+        // (f.chart, an image path in focus-archive.js) or no chart at all.
         var tv = card.querySelector('.feature-chart .tradingview-widget-container');
-        if (tv && f.ticker) {
+        var box = card.querySelector('.feature-chart');
+        if (!current) {
+          if (f.chart) { box.innerHTML = '<img src="' + f.chart + '" alt="' + f.company + ' share price while in focus" />'; box.classList.add('is-snapshot'); }
+          else { box.hidden = true; }
+        } else if (tv && f.ticker) {
           var sc = document.createElement('script');
           sc.src = 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
           sc.async = true;
