@@ -1385,6 +1385,32 @@ footer {
 
 .ai-notice .ai-badge { margin: 0 8px 0 0; }
 
+/* Own research notice: same layout as the AI notice, in green */
+.research-notice {
+  margin-top: 18px;
+  max-width: 720px;
+  font-size: 0.92rem;
+  color: var(--color-ink-soft);
+  background: #F1F8F3;
+  border: 1px solid #BFDCC8;
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+.research-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1E6B3A;
+  background: #E2F2E7;
+  border: 1px solid #BFDCC8;
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin: 0 8px 0 0;
+}
+
 /* ============ INSIGHTS: COMING SOON SLOT ============ */
 
 .coming-soon-card {
