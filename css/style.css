@@ -1614,6 +1614,9 @@ footer {
 }
 
 /* ============ ARTICLE DISCLAIMER (same on every article, guide and tool) ============ */
+/* Key takeaway sits at the end of each article, above the disclaimer */
+.article-body .tldr { margin: 40px 0 0; max-width: none; }
+
 .article-disclaimer {
   margin: 40px 0 0;
   padding: 18px 20px;
