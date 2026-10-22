@@ -75,6 +75,9 @@ const tradeLevels = {
     var h = m / 60; return (h < 10 ? h.toFixed(1).replace('.0', '') : Math.round(h)) + ' h';
   }
   function hasNotes(t) { return t.why || t.exitWhy || t.lesson; }
+  // The last column only exists once a trade has notes (the analysis link sits in the box header)
+  var anyNotes = trades.some(hasNotes);
+  if (!anyNotes) { var lastTh = document.querySelector('table.trades thead th:last-child'); if (lastTh && !lastTh.textContent) lastTh.remove(); }
   body.innerHTML = chrono.slice().reverse().map(function (t) {
     var win = t._m >= 0;
     var row = '<tr data-n="' + t._n + '" tabindex="0">' +
@@ -88,9 +91,8 @@ const tradeLevels = {
       '<td class="t-held">' + held(t) + '</td>' +
       '<td class="t-worst" data-worst="' + t._n + '"><span class="t-none">&ndash;</span></td>' +
       '<td class="t-move ' + (win ? 'is-win' : 'is-loss') + '">' + (win ? '+' : '&minus;') + Math.abs(t._m).toFixed(2) + '%</td>' +
-      '<td class="t-actions">' +
-        (hasNotes(t) ? '<button type="button" class="t-notes-btn" data-notes="' + t._n + '" aria-expanded="false">Notes</button>' : '') +
-        (t.link ? '<a class="t-link" href="' + esc(t.link) + '">Analysis &rarr;</a>' : '') + '</td>' +
+      (anyNotes ? '<td class="t-actions">' +
+        (hasNotes(t) ? '<button type="button" class="t-notes-btn" data-notes="' + t._n + '" aria-expanded="false">Notes</button>' : '') + '</td>' : '') +
     '</tr>';
     if (hasNotes(t)) {
       row += '<tr class="t-notes" id="notes-' + t._n + '" hidden><td></td><td colspan="9"><dl>' +
