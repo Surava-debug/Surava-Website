@@ -12,6 +12,10 @@
      entry       "Average price"
      exit        "Close price"
      link        optional: our analysis behind the trade
+     tag         optional: short label, e.g. "Event", "News reaction", "Planned"
+     why         optional: why we entered, 1-2 sentences
+     exitWhy     optional: why we closed
+     lesson      optional: what we learned
 
    Only prices and times go in here. This file is public on GitHub,
    so never put position sizes, CHF amounts or account details in it.
@@ -65,19 +69,44 @@ const tradeLevels = {
   chrono.forEach(function (t, i) { t._n = i + 1; t._m = move(t); });
 
   // ---- Table: newest first ----
+  function held(t) {
+    var m = Math.round((Date.parse(t.closed) - Date.parse(t.opened)) / 60000);
+    if (m < 60) return Math.max(m, 1) + ' min';
+    var h = m / 60; return (h < 10 ? h.toFixed(1).replace('.0', '') : Math.round(h)) + ' h';
+  }
+  function hasNotes(t) { return t.why || t.exitWhy || t.lesson; }
   body.innerHTML = chrono.slice().reverse().map(function (t) {
     var win = t._m >= 0;
-    return '<tr data-n="' + t._n + '" tabindex="0">' +
+    var row = '<tr data-n="' + t._n + '" tabindex="0">' +
       '<td class="t-num">#' + t._n + '</td>' +
       '<td class="t-date">' + when(t.opened) + '<br><span>to ' + when(t.closed) + '</span></td>' +
-      '<td class="t-asset">' + esc(t.instrument) + ' <span class="t-sym">' + esc(t.symbol) + '</span></td>' +
+      '<td class="t-asset">' + esc(t.instrument) + ' <span class="t-sym">' + esc(t.symbol) + '</span>' +
+        (t.tag ? '<br><span class="t-tag">' + esc(t.tag) + '</span>' : '') + '</td>' +
       '<td><span class="dir dir-' + t.direction + '">' + (t.direction === 'short' ? 'Short' : 'Long') + '</span></td>' +
       '<td class="t-px">' + price(t.entry) + '</td>' +
       '<td class="t-px">' + price(t.exit) + '</td>' +
+      '<td class="t-held">' + held(t) + '</td>' +
+      '<td class="t-worst" data-worst="' + t._n + '"><span class="t-none">&ndash;</span></td>' +
       '<td class="t-move ' + (win ? 'is-win' : 'is-loss') + '">' + (win ? '+' : '&minus;') + Math.abs(t._m).toFixed(2) + '%</td>' +
-      '<td>' + (t.link ? '<a class="t-link" href="' + esc(t.link) + '">Analysis &rarr;</a>' : '<span class="t-none">&ndash;</span>') + '</td>' +
+      '<td class="t-actions">' +
+        (hasNotes(t) ? '<button type="button" class="t-notes-btn" data-notes="' + t._n + '" aria-expanded="false">Notes</button>' : '') +
+        (t.link ? '<a class="t-link" href="' + esc(t.link) + '">Analysis &rarr;</a>' : '') + '</td>' +
     '</tr>';
+    if (hasNotes(t)) {
+      row += '<tr class="t-notes" id="notes-' + t._n + '" hidden><td></td><td colspan="9"><dl>' +
+        (t.why ? '<div><dt>Why we entered</dt><dd>' + esc(t.why) + '</dd></div>' : '') +
+        (t.exitWhy ? '<div><dt>Why we closed</dt><dd>' + esc(t.exitWhy) + '</dd></div>' : '') +
+        (t.lesson ? '<div><dt>What we learned</dt><dd>' + esc(t.lesson) + '</dd></div>' : '') +
+        '</dl></td></tr>';
+    }
+    return row;
   }).join('');
+  body.addEventListener('click', function (e) {
+    var b = e.target.closest('.t-notes-btn'); if (!b) return;
+    e.stopPropagation();
+    var r = document.getElementById('notes-' + b.getAttribute('data-notes'));
+    var open = r.hidden; r.hidden = !open; b.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }, true);
 
   // ---- Charts: candlesticks with our entries and exits marked ----
   if (!charts || typeof LightweightCharts === 'undefined') return;
@@ -108,6 +137,20 @@ const tradeLevels = {
         for (var i = 0; i < times.length && times[i] <= t; i++) best = times[i];
         return best;
       }
+      // Worst point: how far the price ran against us between entry and exit,
+      // using only the 5-minute candles fully inside the trade (so very short trades show a dash).
+      list.forEach(function (t) {
+        var a0 = Date.parse(t.opened) / 1000, a1 = Date.parse(t.closed) / 1000, worst = null;
+        d.bars.forEach(function (b) {
+          if (b[0] >= a0 && b[0] + 300 <= a1) {
+            var w = t.direction === 'short' ? (b[2] - t.entry) / t.entry : (t.entry - b[3]) / t.entry;
+            worst = worst === null ? w : Math.max(worst, w);
+          }
+        });
+        var cell = document.querySelector('[data-worst="' + t._n + '"]');
+        if (cell && worst !== null) cell.innerHTML = worst <= 0 ? '<span class="t-none">never</span>' :
+          '<span class="t-worst-v">&minus;' + (worst * 100).toFixed(2) + '%</span>';
+      });
       var el = document.getElementById('tc' + k);
       var chart = LightweightCharts.createChart(el, {
         autoSize: true,
