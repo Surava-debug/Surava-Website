@@ -130,13 +130,19 @@ const tradeLevels = {
     var list = groups[sym];
     var box = document.createElement('figure');
     box.className = 'trade-chart';
-    box.innerHTML = '<figcaption>' + esc(list[0].instrument) + ' <span>' + esc(sym) + ' &middot; 5-minute candles</span></figcaption>' +
+    box.innerHTML = '<figcaption>' + esc(list[0].instrument) + ' <span>' + esc(sym) + ' &middot; 15-minute candles</span></figcaption>' +
       '<div class="trade-chart-wrap" id="tc' + k + '" role="img" aria-label="' + esc(list[0].instrument) + ' price chart with our trade entries and exits"></div>';
     charts.appendChild(box);
 
     fetch(tradePrices[sym]).then(function (r) { return r.json(); }).then(function (d) {
       var off = zurichOffset(d.bars[0][0]);
-      var bars = d.bars.map(function (b) { return { time: b[0] + off, open: b[1], high: b[2], low: b[3], close: b[4] }; });
+      // The file holds 5-minute candles; the chart shows them merged into 15-minute candles
+      var CANDLE = 900, bars = [];
+      d.bars.forEach(function (b) {
+        var t = Math.floor(b[0] / CANDLE) * CANDLE + off, last = bars[bars.length - 1];
+        if (last && last.time === t) { last.high = Math.max(last.high, b[2]); last.low = Math.min(last.low, b[3]); last.close = b[4]; }
+        else bars.push({ time: t, open: b[1], high: b[2], low: b[3], close: b[4] });
+      });
       var times = bars.map(function (b) { return b.time; });
       function snap(iso) { // the candle the trade happened in
         var t = Math.floor(Date.parse(iso) / 1000) + off, best = times[0];
