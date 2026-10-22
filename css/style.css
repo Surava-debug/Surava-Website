@@ -2081,3 +2081,4 @@ table.trades tbody tr:hover { background: #F4F5F3; }
 .t-link { font-weight: 600; font-size: 0.85rem; color: var(--color-ink); white-space: nowrap; }
 .t-none { color: var(--color-ink-soft); }
 .journal-note { margin-top: 14px; font-size: 0.82rem; color: var(--color-ink-soft); }
+.trade-charts:has(> .trade-chart:only-child) { grid-template-columns: 1fr; }

@@ -19,12 +19,10 @@
 const trades = [
   { instrument: "Moderna", symbol: "MRNA", direction: "short", opened: "2026-10-21T17:21:06Z", closed: "2026-10-22T16:33:49Z", entry: 247.90, exit: 216.70, link: "/insights/insight-05-moderna-hazard-ratio.html" },
   { instrument: "Moderna", symbol: "MRNA", direction: "short", opened: "2026-10-22T08:00:24Z", closed: "2026-10-22T16:54:19Z", entry: 241.88, exit: 202.21, link: "/insights/insight-05-moderna-hazard-ratio.html" },
-  { instrument: "Silver",  symbol: "XAGUSD", direction: "long", opened: "2026-10-22T12:51:08Z", closed: "2026-10-22T19:05:30Z", entry: 55.9705, exit: 54.6128 },
   { instrument: "Moderna", symbol: "MRNA", direction: "short", opened: "2026-10-22T16:45:38Z", closed: "2026-10-22T16:46:45Z", entry: 204.78, exit: 199.94, link: "/insights/insight-05-moderna-hazard-ratio.html" },
   { instrument: "Moderna", symbol: "MRNA", direction: "short", opened: "2026-10-22T16:49:23Z", closed: "2026-10-22T16:54:18Z", entry: 194.59, exit: 202.16, link: "/insights/insight-05-moderna-hazard-ratio.html" },
   { instrument: "Moderna", symbol: "MRNA", direction: "short", opened: "2026-10-22T17:02:11Z", closed: "2026-10-22T17:05:07Z", entry: 194.42, exit: 189.90, link: "/insights/insight-05-moderna-hazard-ratio.html" },
   { instrument: "Moderna", symbol: "MRNA", direction: "long",  opened: "2026-10-22T17:16:43Z", closed: "2026-10-22T18:01:54Z", entry: 184.55, exit: 180.75, link: "/insights/insight-05-moderna-hazard-ratio.html" },
-  { instrument: "Silver",  symbol: "XAGUSD", direction: "short", opened: "2026-10-22T19:01:08Z", closed: "2026-10-22T19:05:28Z", entry: 54.5990, exit: 54.6357 }
 ];
 
 /* ------------------------------------------------------------------
