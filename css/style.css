@@ -1966,7 +1966,7 @@ html {
 .see-further-wrap { display: flex; justify-content: center; margin-top: 24px; }
 
 /* Homepage: live 1-year chart of the company in focus */
-.feature-chart { background: var(--color-card); padding: 6px 4px 0; height: 210px; }
+.feature-chart { background: var(--color-card); padding: 4px 6px; height: 230px; }
 .feature-chart .tradingview-widget-container { height: 100%; }
 .feature-chart .tradingview-widget-container__widget { height: 100%; }
 
