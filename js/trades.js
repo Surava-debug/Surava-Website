@@ -274,14 +274,24 @@ const tradeLevels = {
       var tb = document.getElementById('trades-body');
       function fromRow(e) {
         var r = e.target.closest('tr[data-n]'); if (!r || e.target.closest('a')) return;
-        if (pick(+r.getAttribute('data-n'))) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        var t = pick(+r.getAttribute('data-n')); if (t) { picked = t; box.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
       }
       tb.addEventListener('click', fromRow);
       tb.addEventListener('keydown', function (e) { if (e.key === 'Enter') fromRow(e); });
       // Deep link from articles: /trades/#trade-3 opens trade #3
       var hm = /^#trade-(\d+)$/.exec(location.hash);
-      if (hm && pick(+hm[1])) { if (tbox) tbox.open = true; box.scrollIntoView({ block: 'center' }); }
+      var picked = null;
+      if (hm && (picked = pick(+hm[1]))) { if (tbox) tbox.open = true; box.scrollIntoView({ block: 'center' }); }
       else showAll(); // start with every trade on one chart
+      // The chart sits in a folded box: when it unfolds, let the chart take its real width, then redraw the view
+      if (tbox) tbox.addEventListener('toggle', function () {
+        if (!tbox.open) return;
+        requestAnimationFrame(function () { if (picked) show(picked); else showAll(); });
+      });
+      chips.addEventListener('click', function (e) {
+        var b = e.target.closest('button'); if (!b) return;
+        picked = b.getAttribute('data-n') === 'all' ? null : list.filter(function (x) { return x._n === +b.getAttribute('data-n'); })[0] || null;
+      });
     });
   });
 })();

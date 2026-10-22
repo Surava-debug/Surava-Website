@@ -2152,3 +2152,5 @@ table.trades { min-width: 820px; }
 @keyframes tbIn { to { opacity: 1; transform: none; } }
 @media (max-width: 600px) { .trade-box summary { padding: 14px 16px; } .tb-body { padding: 4px 12px 14px; } }
 @media (prefers-reduced-motion: reduce) { .trade-box[open] #trades-body tr[data-n] { animation: none; opacity: 1; transform: none; } }
+.tb-body .journal-legend { margin-top: 18px; }
+.tb-body .chart-note { margin-bottom: 8px; }
