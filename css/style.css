@@ -2133,3 +2133,39 @@ tr.t-notes dd { margin: 0; font-size: 0.9rem; color: #33404F; }
 .journal-rules li { margin-bottom: 4px; }
 .journal-rules a { color: var(--color-ink); text-decoration: underline; }
 table.trades { min-width: 820px; }
+
+/* ---- Foldable trades box (articles) ---- */
+.trade-box { margin-top: 16px; border: 1px solid var(--color-line); border-radius: var(--radius); background: var(--color-card); max-width: 820px; transition: box-shadow .2s ease, transform .2s ease; }
+.trade-box:not([open]):hover { transform: translateY(-2px) scale(1.01); box-shadow: 0 8px 24px rgba(27,42,63,.08); }
+.trade-box summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 14px; padding: 16px 20px; }
+.trade-box summary::-webkit-details-marker { display: none; }
+.tb-head { flex: 1; min-width: 0; }
+.tb-title { display: block; font-weight: 700; font-size: 1.05rem; color: var(--color-ink); }
+.tb-sub { display: block; font-size: 0.88rem; color: var(--color-ink-soft); margin-top: 2px; }
+.tb-count { font-size: 0.72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink); background: var(--color-accent-soft); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+.tb-chev { width: 10px; height: 10px; border-right: 2px solid var(--color-ink); border-bottom: 2px solid var(--color-ink); transform: rotate(45deg); transition: transform .25s ease; margin: 0 4px 4px; flex: none; }
+.trade-box[open] .tb-chev { transform: rotate(-135deg); margin-bottom: -4px; }
+.tb-body { border-top: 1px solid var(--color-line); padding: 6px 12px 14px; }
+.tb-list { list-style: none; margin: 0; padding: 0; }
+.tb-list li { opacity: 0; transform: translateY(-6px); }
+.trade-box[open] .tb-list li { animation: tbIn .3s ease forwards; animation-delay: calc(var(--i) * 70ms); }
+@keyframes tbIn { to { opacity: 1; transform: none; } }
+.tb-list a { display: grid; grid-template-columns: 34px 64px 1fr auto 76px 16px; align-items: center; gap: 12px; padding: 10px 8px; border-radius: 8px; color: var(--color-ink); text-decoration: none; font-size: 0.9rem; font-variant-numeric: tabular-nums; transition: background .15s ease, transform .15s ease; }
+.tb-list li + li a { border-top: 1px solid var(--color-line); }
+.tb-list a:hover { background: #F2F4F7; transform: scale(1.01); }
+.tb-n { font-weight: 700; }
+.tb-when { color: var(--color-ink-soft); }
+.tb-px { color: #33404F; }
+.tb-res { font-weight: 700; text-align: right; }
+.tb-res.is-win { color: #2F7D4A; } .tb-res.is-loss { color: #B23A32; }
+.tb-go { color: var(--color-ink-soft); }
+.tb-foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px; padding: 12px 8px 0; font-size: 0.82rem; color: var(--color-ink-soft); }
+.tb-foot a { font-weight: 700; color: var(--color-ink); text-decoration: none; }
+.tb-foot a:hover { text-decoration: underline; }
+@media (max-width: 600px) {
+  .trade-box summary { padding: 14px 16px; }
+  .tb-list a { grid-template-columns: 30px 58px 1fr 16px; grid-template-areas: "n d res go" "w w w w" "p p p p"; row-gap: 4px; }
+  .tb-n { grid-area: n; } .tb-list .dir { grid-area: d; } .tb-res { grid-area: res; } .tb-go { grid-area: go; }
+  .tb-when { grid-area: w; font-size: 0.82rem; } .tb-px { grid-area: p; font-size: 0.82rem; }
+}
+@media (prefers-reduced-motion: reduce) { .trade-box[open] .tb-list li { animation: none; opacity: 1; transform: none; } }

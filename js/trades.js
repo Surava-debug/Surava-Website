@@ -272,7 +272,10 @@ const tradeLevels = {
       }
       tb.addEventListener('click', fromRow);
       tb.addEventListener('keydown', function (e) { if (e.key === 'Enter') fromRow(e); });
-      showAll(); // start with every trade on one chart
+      // Deep link from articles: /trades/#trade-3 opens trade #3
+      var hm = /^#trade-(\d+)$/.exec(location.hash);
+      if (hm && pick(+hm[1])) box.scrollIntoView({ block: 'center' });
+      else showAll(); // start with every trade on one chart
     });
   });
 })();
