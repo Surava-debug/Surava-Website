@@ -67,7 +67,7 @@ const tradeLevels = {
   // ---- Table: newest first ----
   body.innerHTML = chrono.slice().reverse().map(function (t) {
     var win = t._m >= 0;
-    return '<tr data-n="' + t._n + '" tabindex="0" title="Show on chart">' +
+    return '<tr data-n="' + t._n + '" tabindex="0">' +
       '<td class="t-num">#' + t._n + '</td>' +
       '<td class="t-date">' + when(t.opened) + '<br><span>to ' + when(t.closed) + '</span></td>' +
       '<td class="t-asset">' + esc(t.instrument) + ' <span class="t-sym">' + esc(t.symbol) + '</span></td>' +
@@ -83,6 +83,7 @@ const tradeLevels = {
   if (!charts || typeof LightweightCharts === 'undefined') return;
   var groups = {};
   chrono.forEach(function (t) { if (tradePrices[t.symbol]) (groups[t.symbol] = groups[t.symbol] || []).push(t); });
+  var narrow = window.matchMedia && window.matchMedia('(max-width: 600px)').matches;
   var TZ = 2 * 3600; // show Zurich time (CEST, UTC+2) on the time axis
   function zurichOffset(sec) {
     var p = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', timeZoneName: 'shortOffset' }).formatToParts(new Date(sec * 1000));
@@ -127,35 +128,42 @@ const tradeLevels = {
       series.setData(bars);
       var levels = tradeLevels[sym] || [];
       levels.filter(function (lv) { return lv.type === 'res'; }).forEach(function (lv) {
-        series.createPriceLine({ price: lv.price, color: '#C2410C', lineWidth: 2, lineStyle: 0, axisLabelVisible: true,
-          axisLabelColor: '#C2410C', axisLabelTextColor: '#fff', title: 'Resistance' });
+        series.createPriceLine({ price: lv.price, color: 'rgba(194, 65, 12, 0.75)', lineWidth: 1, lineStyle: 0, axisLabelVisible: true,
+          axisLabelColor: '#C2410C', axisLabelTextColor: '#fff', title: narrow ? '' : 'Resistance' });
       });
       // Support zones as shaded bands with their name (small drawing plug-in for the chart library)
       var zones = levels.filter(function (lv) { return lv.type === 'sup'; });
       if (zones.length && series.attachPrimitive) {
-        series.attachPrimitive({
-          updateAllViews: function () {},
-          paneViews: function () {
-            return [{
-              zOrder: function () { return 'bottom'; },
-              renderer: function () {
-                return { draw: function (target) {
-                  target.useBitmapCoordinateSpace(function (sc) {
-                    var ctx = sc.context, r = sc.horizontalPixelRatio, v = sc.verticalPixelRatio;
-                    zones.forEach(function (z) {
-                      var y1 = series.priceToCoordinate(z.to), y2 = series.priceToCoordinate(z.from);
-                      if (y1 === null || y2 === null) return;
+        function zoneView(layer) { // layer 'bottom' = shaded band under the candles, 'top' = label above them
+          return {
+            zOrder: function () { return layer; },
+            renderer: function () {
+              return { draw: function (target) {
+                target.useBitmapCoordinateSpace(function (sc) {
+                  var ctx = sc.context, r = sc.horizontalPixelRatio, v = sc.verticalPixelRatio;
+                  zones.forEach(function (z) {
+                    var y1 = series.priceToCoordinate(z.to), y2 = series.priceToCoordinate(z.from);
+                    if (y1 === null || y2 === null) return;
+                    if (layer === 'bottom') {
                       ctx.fillStyle = 'rgba(92, 107, 128, 0.10)';
                       ctx.fillRect(0, y1 * v, sc.bitmapSize.width, (y2 - y1) * v);
-                      ctx.fillStyle = 'rgba(92, 107, 128, 0.85)';
-                      ctx.font = (11 * r) + 'px Inter, -apple-system, sans-serif';
-                      ctx.fillText(z.label, 8 * r, y1 * v + 13 * v);
-                    });
+                      return;
+                    }
+                    ctx.font = '600 ' + (10.5 * r) + 'px Inter, -apple-system, sans-serif';
+                    var tw = ctx.measureText(z.label).width, px = 6 * r, py = (y1 + 4) * v, h = 16 * v;
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+                    ctx.fillRect(px, py, tw + 10 * r, h);
+                    ctx.fillStyle = 'rgba(92, 107, 128, 1)';
+                    ctx.fillText(z.label, px + 5 * r, py + 11.5 * v);
                   });
-                } };
-              }
-            }];
-          }
+                });
+              } };
+            }
+          };
+        }
+        series.attachPrimitive({
+          updateAllViews: function () {},
+          paneViews: function () { return [zoneView('bottom'), zoneView('top')]; }
         });
       }
       // One trade at a time: chips above the chart (and the table rows) pick the trade.
@@ -166,14 +174,14 @@ const tradeLevels = {
         var tIn = snap(t.opened), tOut = snap(t.closed);
         series.setMarkers([
           { time: tIn, position: short ? 'aboveBar' : 'belowBar', shape: short ? 'arrowDown' : 'arrowUp',
-            color: short ? '#B23A32' : '#2F7D4A', text: (short ? 'Short ' : 'Long ') + price(t.entry) },
+            color: short ? '#B23A32' : '#2F7D4A', size: 1.4 },
           { time: tOut, position: short ? 'belowBar' : 'aboveBar', shape: short ? 'arrowUp' : 'arrowDown',
-            color: '#1B2A3F', text: 'Exit ' + price(t.exit) }
+            color: '#1B2A3F', size: 1.4 }
         ].sort(function (a, b) { return a.time - b.time; }));
         lines.forEach(function (l) { series.removePriceLine(l); });
         lines = [
-          series.createPriceLine({ price: t.entry, color: short ? '#B23A32' : '#2F7D4A', lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: 'Entry' }),
-          series.createPriceLine({ price: t.exit, color: '#1B2A3F', lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: 'Exit' })
+          series.createPriceLine({ price: t.entry, color: short ? '#B23A32' : '#2F7D4A', lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: narrow ? '' : (short ? 'Short entry' : 'Long entry') }),
+          series.createPriceLine({ price: t.exit, color: '#1B2A3F', lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: narrow ? '' : 'Exit' })
         ];
         var iIn = times.indexOf(tIn), iOut = times.indexOf(tOut);
         var pad = Math.max(8, Math.round((iOut - iIn) * 0.3));
