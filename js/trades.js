@@ -101,6 +101,12 @@ const tradeLevels = {
     }
     return row;
   }).join('');
+  body.querySelectorAll('tr[data-n]').forEach(function (r, i) { r.style.setProperty('--i', i); });
+  var tbox = body.closest('details');
+  if (tbox) {
+    var cnt = tbox.querySelector('.tb-count');
+    if (cnt) cnt.textContent = trades.length + (trades.length === 1 ? ' trade' : ' trades');
+  }
   body.addEventListener('click', function (e) {
     var b = e.target.closest('.t-notes-btn'); if (!b) return;
     e.stopPropagation();
@@ -274,7 +280,7 @@ const tradeLevels = {
       tb.addEventListener('keydown', function (e) { if (e.key === 'Enter') fromRow(e); });
       // Deep link from articles: /trades/#trade-3 opens trade #3
       var hm = /^#trade-(\d+)$/.exec(location.hash);
-      if (hm && pick(+hm[1])) box.scrollIntoView({ block: 'center' });
+      if (hm && pick(+hm[1])) { if (tbox) tbox.open = true; box.scrollIntoView({ block: 'center' }); }
       else showAll(); // start with every trade on one chart
     });
   });

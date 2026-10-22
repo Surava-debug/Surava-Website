@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20261022u" />
+  <link rel="stylesheet" href="/css/style.css?v=20261022v" />
   <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -82,15 +82,27 @@
       <div id="trade-charts" class="trade-charts"></div>
       <p class="journal-note chart-note">5-minute candles in Zurich time, including pre- and after-market trading. Prices: Yahoo Finance. Our CFD prices can differ slightly from the exchange price. Support and resistance lines are the levels from our earlier chart analysis, drawn before these trades. Drag or pinch to move around. Chart: <a href="https://www.tradingview.com/lightweight-charts/" target="_blank" rel="noopener">TradingView Lightweight Charts</a>.</p>
 
-      <div class="trades-wrap">
-        <table class="trades">
-          <thead>
-            <tr><th>#</th><th>Opened / closed</th><th>Instrument</th><th>Direction</th><th>Entry</th><th>Exit</th><th>Held</th><th title="How far the price moved against us at its worst while the trade was open">Worst point</th><th>Result</th><th></th></tr>
-          </thead>
-          <tbody id="trades-body"></tbody>
-        </table>
-      </div>
-      <p class="journal-note">Times in Zurich time. Source: Trading 212 account export. Each line is one closed position. "Worst point" is how far the price moved against us while the trade was open, measured on the 5-minute candles fully inside the trade (a dash means the trade was too short to measure). "Result" is the share-price move in our favour, before leverage and fees. This is a record of our own experiment, not a recommendation.</p>
+      <details class="trade-box" id="moderna-trades">
+        <summary>
+          <span class="tb-head">
+            <span class="tb-title">Our Moderna trades</span>
+            <span class="tb-sub">Based on our calls on Moderna, our company in focus. <a href="/insights/insight-05-moderna-hazard-ratio.html">Read the analysis &rarr;</a></span>
+          </span>
+          <span class="tb-count">6 trades</span>
+          <span class="tb-chev" aria-hidden="true"></span>
+        </summary>
+        <div class="tb-body">
+          <div class="trades-wrap">
+            <table class="trades">
+              <thead>
+                <tr><th>#</th><th>Opened / closed</th><th>Instrument</th><th>Direction</th><th>Entry</th><th>Exit</th><th>Held</th><th title="How far the price moved against us at its worst while the trade was open">Worst point</th><th>Result</th><th></th></tr>
+              </thead>
+              <tbody id="trades-body"></tbody>
+            </table>
+          </div>
+          <p class="journal-note">Times in Zurich time. Source: Trading 212 account export. Each line is one closed position. "Worst point" is how far the price moved against us while the trade was open, measured on the 5-minute candles fully inside the trade (a dash means the trade was too short to measure). "Result" is the share-price move in our favour, before leverage and fees. This is a record of our own experiment, not a recommendation.</p>
+        </div>
+      </details>
 
       <div class="journal-rules">
         <h3>How this journal works</h3>
@@ -166,7 +178,7 @@
 
   <script src="/js/script.js?v=20261021b"></script>
   <script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
-  <script src="/js/trades.js?v=15"></script>
+  <script src="/js/trades.js?v=16"></script>
 
 
 </body>
