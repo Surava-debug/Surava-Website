@@ -83,7 +83,9 @@ const focusArchive = [
           '<p class="focus-analysis-sub">' + esc(f.company) + ', by key date</p>' +
           f.analysis.map(function (a) {
             return '<details class="focus-analysis-item"' + (a.id ? ' id="' + esc(a.id) + '"' : '') + '>' +
-              '<summary><span class="fa-date">' + esc(a.date) + '</span><span class="fa-event">' + esc(a.event) + '</span></summary>' +
+              '<summary><span class="fa-date">' + esc(a.date) +
+                (a.url ? '<span class="research-badge fa-pill">Own market research</span>' : '<span class="fa-pill fa-pill-soon">Coming</span>') +
+              '</span><span class="fa-event">' + esc(a.event) + '</span></summary>' +
               '<div class="fa-body"><p>' + esc(a.text) + '</p>' +
               (a.url ? '<a class="fa-link" href="' + esc(a.url) + '">Read the analysis →</a>' : '<span class="fa-soon">Coming soon</span>') +
               '</div></details>';
