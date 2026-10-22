@@ -1875,8 +1875,8 @@ html {
   }
 }
 @media (prefers-reduced-motion: reduce) { .focus-analysis.is-unfolding { animation: none; } }
-.focus-card.has-analysis { cursor: pointer; transition: box-shadow 0.18s ease; }
-.focus-card.has-analysis:hover { box-shadow: 0 8px 24px rgba(27, 42, 63, 0.08); }
+.focus-card.has-analysis { cursor: pointer; }
+
 .focus-toggle {
   display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
   margin: auto 0 12px; padding: 7px 14px;
@@ -1931,18 +1931,18 @@ html {
 .is-clickable:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
 /* Clickable cards grow slightly on hover (mouse only, not on phones) */
-.is-clickable, a.article-card, .feature-card {
+.is-clickable, a.article-card, .feature-card, .focus-card.has-analysis {
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 @media (hover: hover) and (pointer: fine) {
-  .is-clickable:hover, a.article-card:hover, .feature-card:hover {
+  .is-clickable:hover, a.article-card:hover, .feature-card:hover, .focus-card.has-analysis:hover {
     transform: scale(1.02);
     box-shadow: 0 14px 32px rgba(27, 42, 63, 0.08);
   }
   #featured-article.is-clickable:hover { transform: scale(1.01); box-shadow: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .is-clickable:hover, a.article-card:hover, .feature-card:hover { transform: none; }
+  .is-clickable:hover, a.article-card:hover, .feature-card:hover, .focus-card.has-analysis:hover { transform: none; }
 }
 
 /* ============ COMING SOON PLACEHOLDERS ============ */
