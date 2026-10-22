@@ -110,7 +110,7 @@
         <article class="feature-card" id="feat-company" aria-live="polite">
           <div class="feature-label"><span>Company in focus</span><span class="feature-rot">Current focus</span></div>
           <div class="feature-img feature-chart">
-            <!-- TradingView: 1-year price chart of the company in focus, filled in by the script below -->
+            <!-- TradingView: 1-month price chart of the company in focus, filled in by the script below -->
             <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div>
           </div>
           <a class="feature-link" href="/markets/">
@@ -270,19 +270,19 @@
         function fmt(ym) { if (!ym) return ''; var p = ym.split('-'); return M[+p[1] - 1] + ' ' + p[0]; }
         var f = focusArchive.filter(function (x) { return x.status === 'current'; })[0] || focusArchive[0];
         var current = f.status === 'current';
-        // 1-year chart of the company in focus (TradingView), symbol taken from the ticker, e.g. "NASDAQ: MRNA"
+        // 1-month chart of the company in focus (TradingView), symbol taken from the ticker, e.g. "NASDAQ: MRNA"
         var tv = card.querySelector('.feature-chart .tradingview-widget-container');
         if (tv && f.ticker) {
           var sc = document.createElement('script');
           sc.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
           sc.async = true;
           sc.text = JSON.stringify({
-            symbols: [[f.company, f.ticker.replace(/\s+/g, '') + '|12M']],
+            symbols: [[f.company, f.ticker.replace(/\s+/g, '') + '|1M']],
             chartOnly: false, width: '100%', height: '100%', locale: 'en', colorTheme: 'light',
             isTransparent: true, showVolume: false, hideDateRanges: true, hideMarketStatus: true,
             scalePosition: 'right', scaleMode: 'Normal', fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
             chartType: 'area', lineColor: '#1B2A3F', topColor: 'rgba(27, 42, 63, 0.18)', bottomColor: 'rgba(27, 42, 63, 0)',
-            lineWidth: 2, dateRanges: ['12m|1D']
+            lineWidth: 2, dateRanges: ['1m|30']
           });
           tv.appendChild(sc);
         }
