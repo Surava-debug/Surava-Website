@@ -31,6 +31,17 @@ const tradePrices = {
   MRNA: "/data/prices/mrna-2026-10-21_22.json"
 };
 
+/* Levels from our earlier chart analysis, drawn as fixed lines on the chart.
+   type "res" = resistance (red), "sup" = support (grey). */
+const tradeLevels = {
+  MRNA: [
+    { type: "res", price: 250, label: "Resistance ~$250 (previously determined)" },
+    { type: "sup", from: 209, to: 217, label: "Support $209–217" },
+    { type: "sup", from: 183, to: 197, label: "Support $183–197" },
+    { type: "sup", from: 135, to: 160, label: "Support $135–160" }
+  ]
+};
+
 /* ------------------------------------------------------------------
    Rendering. No need to touch anything below this line.
    ------------------------------------------------------------------ */
@@ -114,6 +125,39 @@ const tradePrices = {
         lastValueVisible: false, priceLineVisible: false
       });
       series.setData(bars);
+      var levels = tradeLevels[sym] || [];
+      levels.filter(function (lv) { return lv.type === 'res'; }).forEach(function (lv) {
+        series.createPriceLine({ price: lv.price, color: '#C2410C', lineWidth: 2, lineStyle: 0, axisLabelVisible: true,
+          axisLabelColor: '#C2410C', axisLabelTextColor: '#fff', title: 'Resistance' });
+      });
+      // Support zones as shaded bands with their name (small drawing plug-in for the chart library)
+      var zones = levels.filter(function (lv) { return lv.type === 'sup'; });
+      if (zones.length && series.attachPrimitive) {
+        series.attachPrimitive({
+          updateAllViews: function () {},
+          paneViews: function () {
+            return [{
+              zOrder: function () { return 'bottom'; },
+              renderer: function () {
+                return { draw: function (target) {
+                  target.useBitmapCoordinateSpace(function (sc) {
+                    var ctx = sc.context, r = sc.horizontalPixelRatio, v = sc.verticalPixelRatio;
+                    zones.forEach(function (z) {
+                      var y1 = series.priceToCoordinate(z.to), y2 = series.priceToCoordinate(z.from);
+                      if (y1 === null || y2 === null) return;
+                      ctx.fillStyle = 'rgba(92, 107, 128, 0.10)';
+                      ctx.fillRect(0, y1 * v, sc.bitmapSize.width, (y2 - y1) * v);
+                      ctx.fillStyle = 'rgba(92, 107, 128, 0.85)';
+                      ctx.font = (11 * r) + 'px Inter, -apple-system, sans-serif';
+                      ctx.fillText(z.label, 8 * r, y1 * v + 13 * v);
+                    });
+                  });
+                } };
+              }
+            }];
+          }
+        });
+      }
       // One trade at a time: chips above the chart (and the table rows) pick the trade.
       // The chart then zooms to that trade and shows only its entry and exit.
       var lines = [];
