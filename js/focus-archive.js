@@ -11,6 +11,7 @@
      from      "YYYY-MM" when it went into focus
      to        "YYYY-MM" when it left focus ("" while current)
      why       1-2 sentences: why it caught our attention
+     homeTitle / homeText  optional: shorter wording for the homepage card
      outcome   1-2 sentences: what happened. Facts, never a buy/sell view.
                Leave "" while it is still current.
      link      page to read more (markets.html while current,
@@ -28,6 +29,8 @@ const focusArchive = [
     from: "2026-10",
     to: "",
     why: "Phase 3 data showed its personalised mRNA cancer vaccine, used with Keytruda, lowered the risk of melanoma returning. The shares more than doubled in a day.",
+    homeTitle: "A stock that can move double digits on one headline.",
+    homeText: "Its price rests on the cancer vaccine pipeline, so trial data and earnings can swing it sharply in either direction.",
     outcome: "",
     link: "/markets/",
     analysis: [

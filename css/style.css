@@ -1965,6 +1965,11 @@ html {
 .focus-grid [hidden] { display: none !important; }
 .see-further-wrap { display: flex; justify-content: center; margin-top: 24px; }
 
+/* Homepage: live 1-year chart of the company in focus */
+.feature-chart { background: var(--color-card); padding: 6px 4px 0; height: 210px; }
+.feature-chart .tradingview-widget-container { height: 100%; }
+.feature-chart .tradingview-widget-container__widget { height: 100%; }
+
 /* Homepage: company in focus panel (replaces the image on that card) */
 .feature-company-panel {
   background: var(--color-ink);
