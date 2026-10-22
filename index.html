@@ -110,7 +110,7 @@
         <article class="feature-card" id="feat-company" aria-live="polite">
           <div class="feature-label"><span>Company in focus</span><span class="feature-rot">Current focus</span></div>
           <div class="feature-img feature-chart">
-            <!-- TradingView: 1-month price chart of the company in focus, filled in by the script below -->
+            <!-- TradingView: 1-year price chart of the company in focus, filled in by the script below -->
             <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div>
           </div>
           <a class="feature-link" href="/markets/">
@@ -270,7 +270,7 @@
         function fmt(ym) { if (!ym) return ''; var p = ym.split('-'); return M[+p[1] - 1] + ' ' + p[0]; }
         var f = focusArchive.filter(function (x) { return x.status === 'current'; })[0] || focusArchive[0];
         var current = f.status === 'current';
-        // 1-month chart of the company in focus (TradingView), symbol taken from the ticker, e.g. "NASDAQ: MRNA"
+        // 1-year chart of the company in focus (TradingView), symbol taken from the ticker, e.g. "NASDAQ: MRNA"
         // Live chart only while a company is current. A past company shows its frozen snapshot
         // (f.chart, an image path in focus-archive.js) or no chart at all.
         var tv = card.querySelector('.feature-chart .tradingview-widget-container');
@@ -284,14 +284,14 @@
           sc.async = true;
           sc.text = JSON.stringify({
             symbol: f.ticker.replace(/\s+/g, ''), width: '100%', height: '100%', autosize: true,
-            locale: 'en', dateRange: '1M', colorTheme: 'light', isTransparent: true,
-            chartOnly: false, noTimeScale: true, largeChartUrl: '',
+            locale: 'en', dateRange: '12M', colorTheme: 'light', isTransparent: true,
+            chartOnly: false, noTimeScale: false, largeChartUrl: '',
             trendLineColor: '#1B2A3F', underLineColor: 'rgba(27, 42, 63, 0.15)', underLineBottomColor: 'rgba(27, 42, 63, 0)'
           });
           tv.appendChild(sc);
           var cap = document.createElement('div');
           cap.className = 'feature-chart-caption';
-          cap.textContent = 'Last month, live price';
+          cap.textContent = 'Past year \u00b7 Live data: TradingView';
           box.parentNode.insertBefore(cap, box.nextSibling);
         }
         var title = f.homeTitle, text = f.homeText;
