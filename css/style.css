@@ -1887,6 +1887,11 @@ html {
 .focus-toggle-icon { font-size: 1rem; line-height: 1; transition: transform 0.2s ease; }
 .focus-card.is-expanded .focus-toggle-icon { transform: rotate(45deg); }
 .focus-card.has-analysis .card-link { margin-top: 0; }
+.focus-analysis { display: flex; flex-direction: column; }
+.focus-analysis > .focus-label { margin-bottom: 12px; }
+.fa-more { margin-top: auto; padding-top: 16px; font-weight: 600; font-size: 0.9rem; color: var(--color-ink-soft); }
+.fa-more:hover { color: var(--color-ink); }
+.focus-card.has-analysis .focus-toggle { margin: auto 0 0; }
 .focus-analysis-sub { font-size: 0.85rem; color: var(--color-ink-soft); margin: 0 0 12px; }
 .focus-analysis-item { border-top: 1px solid var(--color-line); }
 .focus-analysis-item:last-child { border-bottom: 1px solid var(--color-line); }

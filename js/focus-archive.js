@@ -76,15 +76,14 @@ const focusArchive = [
         '<h3>' + esc(f.company) + ' <span class="focus-ticker">' + esc(f.ticker) + '</span></h3>' +
         '<div class="focus-label">Why we watched</div>' +
         '<p>' + esc(f.why) + '</p>' +
-        '<div class="focus-label">What happened</div>' +
-        '<p>' + (f.outcome ? esc(f.outcome) : '<em>Still unfolding.</em>') + '</p>' +
+        (f.outcome || !current ? '<div class="focus-label">What happened</div>' +
+          '<p>' + (f.outcome ? esc(f.outcome) : '<em>Still unfolding.</em>') + '</p>' : '') +
         (hasA ? '<button type="button" class="focus-toggle" aria-expanded="false" aria-controls="' + panelId + '">Explore our analysis <span class="focus-toggle-icon" aria-hidden="true">+</span></button>' : '') +
-        (f.link ? '<a class="card-link" href="' + esc(f.link) + '">' + (current ? 'Follow it on Markets' : 'Read more') + ' →</a>' : '') +
+        (f.link && !hasA ? '<a class="card-link" href="' + esc(f.link) + '">' + (current ? 'Follow it on Markets' : 'Read more') + ' →</a>' : '') +
       '</article>' +
       (f.analysis && f.analysis.length ?
         '<div class="focus-analysis" id="' + panelId + '" hidden>' +
-          '<div class="focus-label">Explore our analysis</div>' +
-          '<p class="focus-analysis-sub">' + esc(f.company) + ', by key date</p>' +
+          '<div class="focus-label">' + esc(f.company) + ', by key date</div>' +
           f.analysis.map(function (a) {
             return '<details class="focus-analysis-item"' + (a.id ? ' id="' + esc(a.id) + '"' : '') + '>' +
               '<summary><span class="fa-date">' + esc(a.date) +
@@ -94,6 +93,7 @@ const focusArchive = [
               (a.url ? '<a class="fa-link" href="' + esc(a.url) + '">Read the analysis →</a>' : '<span class="fa-soon">Coming soon</span>') +
               '</div></details>';
           }).join('') +
+          (f.link ? '<a class="fa-more" href="' + esc(f.link) + '">' + (current ? 'Live chart and key dates on Markets' : 'Read more') + ' →</a>' : '') +
         '</div>' : '');
   }).join('') +
   '<div class="focus-card focus-card-next">' +
