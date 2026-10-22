@@ -2154,3 +2154,5 @@ table.trades { min-width: 820px; }
 @media (prefers-reduced-motion: reduce) { .trade-box[open] #trades-body tr[data-n] { animation: none; opacity: 1; transform: none; } }
 .tb-body .journal-legend { margin-top: 18px; }
 .tb-body .chart-note { margin-bottom: 8px; }
+.chart-tf { margin-bottom: 6px; }
+.chart-tf button { min-width: 42px; }
