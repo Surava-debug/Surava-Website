@@ -168,19 +168,35 @@ const tradeLevels = {
       }
       // One trade at a time: chips above the chart (and the table rows) pick the trade.
       // The chart then zooms to that trade and shows only its entry and exit.
+      var ENTRY = '#B23A32', EXIT = '#111827';
       var lines = [];
+      function clearLines() { lines.forEach(function (l) { series.removePriceLine(l); }); lines = []; }
+      function showAll() { // every entry and exit at once, arrows only
+        var marks = [];
+        list.forEach(function (t) {
+          var short = t.direction === 'short';
+          marks.push({ time: snap(t.opened), position: short ? 'aboveBar' : 'belowBar', shape: short ? 'arrowDown' : 'arrowUp', color: ENTRY, size: 1.2 });
+          marks.push({ time: snap(t.closed), position: short ? 'belowBar' : 'aboveBar', shape: short ? 'arrowUp' : 'arrowDown', color: EXIT, size: 1.2 });
+        });
+        series.setMarkers(marks.sort(function (a, b) { return a.time - b.time; }));
+        clearLines();
+        chart.timeScale().fitContent();
+        chips.querySelectorAll('button').forEach(function (b) { b.classList.toggle('is-on', b.getAttribute('data-n') === 'all'); });
+        info.innerHTML = '<strong>All ' + list.length + ' trades</strong> &middot; pick a trade to zoom in on its entry and exit';
+        document.querySelectorAll('#trades-body tr').forEach(function (r) { r.classList.remove('is-selected'); });
+      }
       function show(t) {
         var short = t.direction === 'short', win = t._m >= 0;
         var tIn = snap(t.opened), tOut = snap(t.closed);
         series.setMarkers([
           { time: tIn, position: short ? 'aboveBar' : 'belowBar', shape: short ? 'arrowDown' : 'arrowUp',
-            color: short ? '#B23A32' : '#2F7D4A', size: 1.4 },
+            color: ENTRY, size: 1.4 },
           { time: tOut, position: short ? 'belowBar' : 'aboveBar', shape: short ? 'arrowUp' : 'arrowDown',
-            color: '#1B2A3F', size: 1.4 }
+            color: EXIT, size: 1.4 }
         ].sort(function (a, b) { return a.time - b.time; }));
-        lines.forEach(function (l) { series.removePriceLine(l); });
+        clearLines();
         lines = [
-          series.createPriceLine({ price: t.entry, color: short ? '#B23A32' : '#2F7D4A', lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: narrow ? '' : (short ? 'Short entry' : 'Long entry') }),
+          series.createPriceLine({ price: t.entry, color: ENTRY, lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: narrow ? '' : 'Entry' }),
           series.createPriceLine({ price: t.exit, color: '#1B2A3F', lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: narrow ? '' : 'Exit' })
         ];
         var iIn = times.indexOf(tIn), iOut = times.indexOf(tOut);
@@ -194,7 +210,7 @@ const tradeLevels = {
       }
       var chips = document.createElement('div');
       chips.className = 'chart-zoom';
-      chips.innerHTML = list.map(function (t) {
+      chips.innerHTML = '<button type="button" data-n="all">All trades</button>' + list.map(function (t) {
         return '<button type="button" data-n="' + t._n + '">#' + t._n + ' ' + (t.direction === 'short' ? 'Short' : 'Long') + '</button>';
       }).join('');
       var info = document.createElement('div');
@@ -202,7 +218,10 @@ const tradeLevels = {
       box.insertBefore(chips, el);
       box.insertBefore(info, el);
       function pick(n) { var t = list.filter(function (x) { return x._n === n; })[0]; if (t) show(t); return t; }
-      chips.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) pick(+b.getAttribute('data-n')); });
+      chips.addEventListener('click', function (e) {
+        var b = e.target.closest('button'); if (!b) return;
+        if (b.getAttribute('data-n') === 'all') showAll(); else pick(+b.getAttribute('data-n'));
+      });
       var tb = document.getElementById('trades-body');
       function fromRow(e) {
         var r = e.target.closest('tr[data-n]'); if (!r || e.target.closest('a')) return;
@@ -210,7 +229,7 @@ const tradeLevels = {
       }
       tb.addEventListener('click', fromRow);
       tb.addEventListener('keydown', function (e) { if (e.key === 'Enter') fromRow(e); });
-      show(list[list.length - 1]); // start with the newest trade
+      showAll(); // start with every trade on one chart
     });
   });
 })();
