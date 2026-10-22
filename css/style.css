@@ -2092,3 +2092,10 @@ table.trades tbody tr:hover { background: #F4F5F3; }
 .chart-zoom { display: flex; gap: 6px; margin: 0 0 8px; }
 .chart-zoom button { font: 600 0.78rem var(--font-sans); padding: 4px 11px; border-radius: 999px; border: 1px solid var(--color-line); background: #fff; color: var(--color-ink-soft); cursor: pointer; }
 .chart-zoom button.is-on { background: var(--color-ink); border-color: var(--color-ink); color: #fff; }
+.chart-zoom { flex-wrap: wrap; }
+.chart-info { font-size: 0.86rem; color: var(--color-ink-soft); margin: 0 0 8px; }
+.chart-info strong { color: var(--color-ink); }
+.chart-info .is-win { color: #2F7D4A; font-weight: 700; }
+.chart-info .is-loss { color: #B23A32; font-weight: 700; }
+#trades-body tr[data-n] { cursor: pointer; }
+#trades-body tr.is-selected { background: #EEF1F5; }

@@ -56,7 +56,7 @@ const tradePrices = {
   // ---- Table: newest first ----
   body.innerHTML = chrono.slice().reverse().map(function (t) {
     var win = t._m >= 0;
-    return '<tr>' +
+    return '<tr data-n="' + t._n + '" tabindex="0" title="Show on chart">' +
       '<td class="t-num">#' + t._n + '</td>' +
       '<td class="t-date">' + when(t.opened) + '<br><span>to ' + when(t.closed) + '</span></td>' +
       '<td class="t-asset">' + esc(t.instrument) + ' <span class="t-sym">' + esc(t.symbol) + '</span></td>' +
@@ -114,33 +114,51 @@ const tradePrices = {
         lastValueVisible: false, priceLineVisible: false
       });
       series.setData(bars);
-      var marks = [];
-      list.forEach(function (t) {
-        var short = t.direction === 'short';
-        marks.push({ time: snap(t.opened), position: short ? 'aboveBar' : 'belowBar', shape: short ? 'arrowDown' : 'arrowUp',
-                     color: short ? '#B23A32' : '#2F7D4A', text: '#' + t._n });
-        marks.push({ time: snap(t.closed), position: short ? 'belowBar' : 'aboveBar', shape: short ? 'arrowUp' : 'arrowDown',
-                     color: '#1B2A3F', text: '#' + t._n });
-      });
-      marks.sort(function (a, b) { return a.time - b.time; });
-      series.setMarkers(marks);
-      chart.timeScale().fitContent();
-
-      // Zoom buttons: whole period, or the busiest stretch (around the trades closed last)
-      var last = list.reduce(function (m, t) { return Math.max(m, Date.parse(t.closed) / 1000); }, 0) + off;
-      var first = list.reduce(function (m, t) { return Math.min(m, Date.parse(t.opened) / 1000); }, Infinity) + off;
-      var busyFrom = Math.max(times[0], last - 3 * 3600), busyTo = Math.min(times[times.length - 1], last + 45 * 60);
-      var bar = document.createElement('div');
-      bar.className = 'chart-zoom';
-      bar.innerHTML = '<button type="button" class="is-on" data-z="all">All trades</button>' +
-                      '<button type="button" data-z="busy">Zoom: busiest hours</button>';
-      box.insertBefore(bar, el);
-      bar.addEventListener('click', function (e) {
-        var b = e.target.closest('button'); if (!b) return;
-        bar.querySelectorAll('button').forEach(function (x) { x.classList.toggle('is-on', x === b); });
-        if (b.getAttribute('data-z') === 'busy') chart.timeScale().setVisibleRange({ from: busyFrom, to: busyTo });
-        else chart.timeScale().fitContent();
-      });
+      // One trade at a time: chips above the chart (and the table rows) pick the trade.
+      // The chart then zooms to that trade and shows only its entry and exit.
+      var lines = [];
+      function show(t) {
+        var short = t.direction === 'short', win = t._m >= 0;
+        var tIn = snap(t.opened), tOut = snap(t.closed);
+        series.setMarkers([
+          { time: tIn, position: short ? 'aboveBar' : 'belowBar', shape: short ? 'arrowDown' : 'arrowUp',
+            color: short ? '#B23A32' : '#2F7D4A', text: (short ? 'Short ' : 'Long ') + price(t.entry) },
+          { time: tOut, position: short ? 'belowBar' : 'aboveBar', shape: short ? 'arrowUp' : 'arrowDown',
+            color: '#1B2A3F', text: 'Exit ' + price(t.exit) }
+        ].sort(function (a, b) { return a.time - b.time; }));
+        lines.forEach(function (l) { series.removePriceLine(l); });
+        lines = [
+          series.createPriceLine({ price: t.entry, color: short ? '#B23A32' : '#2F7D4A', lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: 'Entry' }),
+          series.createPriceLine({ price: t.exit, color: '#1B2A3F', lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: 'Exit' })
+        ];
+        var iIn = times.indexOf(tIn), iOut = times.indexOf(tOut);
+        var pad = Math.max(8, Math.round((iOut - iIn) * 0.3));
+        chart.timeScale().setVisibleLogicalRange({ from: iIn - pad, to: iOut + pad });
+        chips.querySelectorAll('button').forEach(function (b) { b.classList.toggle('is-on', +b.getAttribute('data-n') === t._n); });
+        info.innerHTML = '<strong>#' + t._n + ' ' + (short ? 'Short' : 'Long') + '</strong> &middot; ' +
+          when(t.opened) + ' &rarr; ' + when(t.closed) + ' &middot; <span class="' + (win ? 'is-win' : 'is-loss') + '">' +
+          (win ? '+' : '&minus;') + Math.abs(t._m).toFixed(2) + '%</span>';
+        document.querySelectorAll('#trades-body tr').forEach(function (r) { r.classList.toggle('is-selected', +r.getAttribute('data-n') === t._n); });
+      }
+      var chips = document.createElement('div');
+      chips.className = 'chart-zoom';
+      chips.innerHTML = list.map(function (t) {
+        return '<button type="button" data-n="' + t._n + '">#' + t._n + ' ' + (t.direction === 'short' ? 'Short' : 'Long') + '</button>';
+      }).join('');
+      var info = document.createElement('div');
+      info.className = 'chart-info';
+      box.insertBefore(chips, el);
+      box.insertBefore(info, el);
+      function pick(n) { var t = list.filter(function (x) { return x._n === n; })[0]; if (t) show(t); return t; }
+      chips.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) pick(+b.getAttribute('data-n')); });
+      var tb = document.getElementById('trades-body');
+      function fromRow(e) {
+        var r = e.target.closest('tr[data-n]'); if (!r || e.target.closest('a')) return;
+        if (pick(+r.getAttribute('data-n'))) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      tb.addEventListener('click', fromRow);
+      tb.addEventListener('keydown', function (e) { if (e.key === 'Enter') fromRow(e); });
+      show(list[list.length - 1]); // start with the newest trade
     });
   });
 })();
