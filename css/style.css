@@ -2045,3 +2045,39 @@ html {
 
 /* Section rhythm: hero and first section light, then alternating grey / light */
 .econ-glance.section-alt { background: var(--color-bg-alt); }
+
+/* ============ TRADES JOURNAL ============ */
+.journal-intro { max-width: 720px; color: var(--color-ink-soft); margin: 10px 0 0; }
+.journal-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 24px 0 10px; font-size: 0.82rem; color: var(--color-ink-soft); }
+.journal-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.lg-tri { width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 10px solid var(--color-ink); }
+.lg-dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--color-ink); background: #fff; }
+.lg-bar { width: 10px; height: 14px; border-radius: 3px; border: 1.5px solid; }
+.lg-win { border-color: #2F7D4A; background: #2F7D4A33; }
+.lg-loss { border-color: #B23A32; background: #B23A3233; }
+.trade-charts { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 28px; }
+.trade-chart { margin: 0; background: var(--color-card); border: 1px solid var(--color-line); border-radius: var(--radius); padding: 14px 16px 10px; min-width: 0; }
+.trade-chart figcaption { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-ink); margin-bottom: 8px; }
+.trade-chart-wrap { position: relative; height: 280px; }
+@media (max-width: 800px) { .trade-charts { grid-template-columns: 1fr; } .trade-chart-wrap { height: 240px; } }
+
+.trades-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table.trades { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 680px; }
+table.trades thead th { text-align: left; padding: 12px 14px; border-bottom: 2px solid var(--color-ink); color: var(--color-ink); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
+table.trades tbody td { padding: 12px 14px; border-bottom: 1px solid var(--color-line); color: #33404F; vertical-align: top; }
+table.trades tbody tr:hover { background: #F4F5F3; }
+.t-num { color: var(--color-ink-soft); font-weight: 600; }
+.t-date { white-space: nowrap; font-size: 0.86rem; }
+.t-date span { color: var(--color-ink-soft); }
+.t-asset { font-weight: 600; color: var(--color-ink); white-space: nowrap; }
+.t-sym { font-weight: 600; font-size: 0.75rem; color: var(--color-ink-soft); letter-spacing: 0.04em; }
+.t-px { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.t-move { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.t-move.is-win { color: #2F7D4A; }
+.t-move.is-loss { color: #B23A32; }
+.dir { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.dir-short { background: #EDE7F3; color: #5A3E7A; }
+.dir-long { background: #E3EDF7; color: #1F4E79; }
+.t-link { font-weight: 600; font-size: 0.85rem; color: var(--color-ink); white-space: nowrap; }
+.t-none { color: var(--color-ink-soft); }
+.journal-note { margin-top: 14px; font-size: 0.82rem; color: var(--color-ink-soft); }
