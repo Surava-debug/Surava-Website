@@ -1861,6 +1861,32 @@ html {
   border-radius: var(--radius);
   padding: 22px 24px;
 }
+.focus-analysis[hidden] { display: none; }
+.focus-analysis.is-unfolding { animation: faUnfold 0.38s cubic-bezier(0.2, 0.8, 0.2, 1) both; transform-origin: left center; }
+@keyframes faUnfold {
+  from { opacity: 0; transform: translateX(-28px) scaleX(0.94); }
+  to   { opacity: 1; transform: none; }
+}
+@media (max-width: 600px) {
+  .focus-analysis.is-unfolding { animation-name: faUnfoldDown; transform-origin: top center; }
+  @keyframes faUnfoldDown {
+    from { opacity: 0; transform: translateY(-14px); }
+    to   { opacity: 1; transform: none; }
+  }
+}
+@media (prefers-reduced-motion: reduce) { .focus-analysis.is-unfolding { animation: none; } }
+.focus-card.has-analysis { cursor: pointer; transition: box-shadow 0.18s ease; }
+.focus-card.has-analysis:hover { box-shadow: 0 8px 24px rgba(27, 42, 63, 0.08); }
+.focus-toggle {
+  display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
+  margin: auto 0 12px; padding: 7px 14px;
+  font: 600 0.88rem var(--font-sans); color: var(--color-ink);
+  background: var(--color-accent-soft); border: 1px solid var(--color-line); border-radius: 999px; cursor: pointer;
+}
+.focus-toggle:hover { border-color: var(--color-accent); }
+.focus-toggle-icon { font-size: 1rem; line-height: 1; transition: transform 0.2s ease; }
+.focus-card.is-expanded .focus-toggle-icon { transform: rotate(45deg); }
+.focus-card.has-analysis .card-link { margin-top: 0; }
 .focus-analysis-sub { font-size: 0.85rem; color: var(--color-ink-soft); margin: 0 0 12px; }
 .focus-analysis-item { border-top: 1px solid var(--color-line); }
 .focus-analysis-item:last-child { border-bottom: 1px solid var(--color-line); }

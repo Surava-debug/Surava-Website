@@ -64,8 +64,11 @@ const focusArchive = [
   grid.innerHTML = items.map(function (f) {
     var current = f.status === 'current';
     var period = fmt(f.from) + ' – ' + (current ? 'today' : fmt(f.to));
+    var hasA = !!(f.analysis && f.analysis.length);
+    var panelId = 'analysis-' + String(f.company).toLowerCase().replace(/[^a-z0-9]+/g, '-');
     return '' +
-      '<article class="focus-card' + (current ? ' is-current' : '') + '">' +
+      '<article class="focus-card' + (current ? ' is-current' : '') + (hasA ? ' has-analysis' : '') + '"' +
+        (hasA ? ' data-panel="' + panelId + '"' : '') + '>' +
         '<div class="focus-card-top">' +
           '<span class="focus-status">' + (current ? 'Current focus' : 'Past focus') + '</span>' +
           '<span class="focus-period">' + esc(period) + '</span>' +
@@ -75,10 +78,11 @@ const focusArchive = [
         '<p>' + esc(f.why) + '</p>' +
         '<div class="focus-label">What happened</div>' +
         '<p>' + (f.outcome ? esc(f.outcome) : '<em>Still unfolding.</em>') + '</p>' +
+        (hasA ? '<button type="button" class="focus-toggle" aria-expanded="false" aria-controls="' + panelId + '">Explore our analysis <span class="focus-toggle-icon" aria-hidden="true">+</span></button>' : '') +
         (f.link ? '<a class="card-link" href="' + esc(f.link) + '">' + (current ? 'Follow it on Markets' : 'Read more') + ' →</a>' : '') +
       '</article>' +
       (f.analysis && f.analysis.length ?
-        '<div class="focus-analysis">' +
+        '<div class="focus-analysis" id="' + panelId + '" hidden>' +
           '<div class="focus-label">Explore our analysis</div>' +
           '<p class="focus-analysis-sub">' + esc(f.company) + ', by key date</p>' +
           f.analysis.map(function (a) {
@@ -97,15 +101,37 @@ const focusArchive = [
     '<p>The next company goes here once something catches our attention.</p>' +
   '</div>';
 
-  // Opened from a link like /insights/#analysis-q3-2026: unfold that date
+  // The company card opens and closes its "Explore our analysis" panel
+  function setPanel(card, open) {
+    var panel = document.getElementById(card.getAttribute('data-panel'));
+    var btn = card.querySelector('.focus-toggle');
+    if (!panel) return;
+    panel.hidden = !open;
+    card.classList.toggle('is-expanded', open);
+    if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    panel.classList.remove('is-unfolding');
+    if (open) { void panel.offsetWidth; panel.classList.add('is-unfolding'); }
+  }
+  grid.addEventListener('click', function (e) {
+    var card = e.target.closest('.focus-card.has-analysis');
+    if (!card || e.target.closest('a')) return;
+    if (String(window.getSelection ? window.getSelection() : '').length) return;
+    e.preventDefault(); // keeps the generic card click from opening Markets
+    setPanel(card, !card.classList.contains('is-expanded'));
+  });
+
+  // Opened from a link like /insights/#analysis-q3-2026: show the panel, unfold that date
   function openFromHash() {
     var id = decodeURIComponent((location.hash || '').slice(1));
     var el = id && document.getElementById(id);
     if (el && el.tagName === 'DETAILS') {
+      var panel = el.closest('.focus-analysis');
+      var card = panel && grid.querySelector('[data-panel="' + panel.id + '"]');
+      if (card) setPanel(card, true);
       el.open = true;
-      // after layout settles, scroll so the date sits below the sticky menu
+      // after layout settles, scroll so the box sits below the sticky menu
       setTimeout(function () {
-        var box = el.closest('.focus-analysis') || el;
+        var box = panel || el;
         var y = box.getBoundingClientRect().top + window.pageYOffset - 100;
         window.scrollTo({ top: y < 0 ? 0 : y });
       }, 250);
