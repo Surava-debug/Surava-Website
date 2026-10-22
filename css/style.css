@@ -2057,9 +2057,10 @@ html {
 .lg-loss { border-color: #B23A32; background: #B23A3233; }
 .trade-charts { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 28px; }
 .trade-chart { margin: 0; background: var(--color-card); border: 1px solid var(--color-line); border-radius: var(--radius); padding: 14px 16px 10px; min-width: 0; }
+.trade-chart figcaption span { font-weight: 600; letter-spacing: 0.04em; color: var(--color-ink-soft); text-transform: none; }
 .trade-chart figcaption { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-ink); margin-bottom: 8px; }
-.trade-chart-wrap { position: relative; height: 280px; }
-@media (max-width: 800px) { .trade-charts { grid-template-columns: 1fr; } .trade-chart-wrap { height: 240px; } }
+.trade-chart-wrap { position: relative; height: 440px; }
+@media (max-width: 800px) { .trade-charts { grid-template-columns: 1fr; } .trade-chart-wrap { height: 340px; } }
 
 .trades-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 table.trades { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 680px; }
@@ -2082,3 +2083,12 @@ table.trades tbody tr:hover { background: #F4F5F3; }
 .t-none { color: var(--color-ink-soft); }
 .journal-note { margin-top: 14px; font-size: 0.82rem; color: var(--color-ink-soft); }
 .trade-charts:has(> .trade-chart:only-child) { grid-template-columns: 1fr; }
+.lg-arrow { width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; }
+.lg-short { border-top: 10px solid #B23A32; }
+.lg-long { border-bottom: 10px solid #2F7D4A; }
+.lg-exit { border-bottom: 10px solid var(--color-ink); }
+.chart-note { margin: -16px 0 28px; }
+.chart-note a { color: var(--color-ink-soft); text-decoration: underline; }
+.chart-zoom { display: flex; gap: 6px; margin: 0 0 8px; }
+.chart-zoom button { font: 600 0.78rem var(--font-sans); padding: 4px 11px; border-radius: 999px; border: 1px solid var(--color-line); background: #fff; color: var(--color-ink-soft); cursor: pointer; }
+.chart-zoom button.is-on { background: var(--color-ink); border-color: var(--color-ink); color: #fff; }

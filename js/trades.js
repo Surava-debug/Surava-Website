@@ -25,6 +25,12 @@ const trades = [
   { instrument: "Moderna", symbol: "MRNA", direction: "long",  opened: "2026-10-22T17:16:43Z", closed: "2026-10-22T18:01:54Z", entry: 184.55, exit: 180.75, link: "/insights/insight-05-moderna-hazard-ratio.html" },
 ];
 
+/* Price data behind the chart: 5-minute candles saved once per period
+   (frozen, so the chart never moves on after the trades). One file per symbol. */
+const tradePrices = {
+  MRNA: "/data/prices/mrna-2026-10-21_22.json"
+};
+
 /* ------------------------------------------------------------------
    Rendering. No need to touch anything below this line.
    ------------------------------------------------------------------ */
@@ -62,64 +68,79 @@ const trades = [
     '</tr>';
   }).join('');
 
-  // ---- Charts: one per instrument, entry to exit per trade ----
-  if (!charts || typeof Chart === 'undefined') return;
+  // ---- Charts: candlesticks with our entries and exits marked ----
+  if (!charts || typeof LightweightCharts === 'undefined') return;
   var groups = {};
-  chrono.forEach(function (t) { (groups[t.instrument] = groups[t.instrument] || []).push(t); });
+  chrono.forEach(function (t) { if (tradePrices[t.symbol]) (groups[t.symbol] = groups[t.symbol] || []).push(t); });
+  var TZ = 2 * 3600; // show Zurich time (CEST, UTC+2) on the time axis
+  function zurichOffset(sec) {
+    var p = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', timeZoneName: 'shortOffset' }).formatToParts(new Date(sec * 1000));
+    var z = (p.filter(function (x) { return x.type === 'timeZoneName'; })[0] || {}).value || 'GMT+2';
+    var m = z.match(/GMT([+-]\d+)/); return m ? +m[1] * 3600 : TZ;
+  }
 
-  charts.innerHTML = Object.keys(groups).map(function (name, k) {
-    return '<figure class="trade-chart"><figcaption>' + esc(name) + '</figcaption>' +
-      '<div class="trade-chart-wrap"><canvas id="tc' + k + '" role="img" aria-label="' + esc(name) +
-      ': entry and exit price of each trade"></canvas></div></figure>';
-  }).join('');
+  Object.keys(groups).forEach(function (sym, k) {
+    var list = groups[sym];
+    var box = document.createElement('figure');
+    box.className = 'trade-chart';
+    box.innerHTML = '<figcaption>' + esc(list[0].instrument) + ' <span>' + esc(sym) + ' &middot; 5-minute candles</span></figcaption>' +
+      '<div class="trade-chart-wrap" id="tc' + k + '" role="img" aria-label="' + esc(list[0].instrument) + ' price chart with our trade entries and exits"></div>';
+    charts.appendChild(box);
 
-  Object.keys(groups).forEach(function (name, k) {
-    var list = groups[name];
-    var narrow = window.matchMedia && window.matchMedia('(max-width: 600px)').matches;
-    var labels = list.map(function (t) {
-      var d = t.direction === 'short' ? 'Short' : 'Long';
-      return narrow ? ['#' + t._n, d] : ['#' + t._n + ' ' + d, when(t.opened)];
-    });
-    var lo = Math.min.apply(null, list.map(function (t) { return Math.min(t.entry, t.exit); }));
-    var hi = Math.max.apply(null, list.map(function (t) { return Math.max(t.entry, t.exit); }));
-    var pad = Math.max((hi - lo) * 0.12, hi * 0.004);
-    var colors = list.map(function (t) { return t._m >= 0 ? GREEN : RED; });
-    new Chart(document.getElementById('tc' + k), {
-      data: {
-        labels: labels,
-        datasets: [
-          { type: 'bar', label: 'Entry to exit', data: list.map(function (t) { return [t.entry, t.exit]; }),
-            backgroundColor: colors.map(function (c) { return c + '33'; }), borderColor: colors, borderWidth: 1.5,
-            borderSkipped: false, borderRadius: 3, maxBarThickness: 26 },
-          { type: 'line', label: 'Entry', data: list.map(function (t) { return t.entry; }), showLine: false,
-            pointStyle: 'triangle', pointRadius: 7, pointHoverRadius: 8,
-            pointRotation: list.map(function (t) { return t.direction === 'short' ? 180 : 0; }),
-            pointBackgroundColor: '#1B2A3F', pointBorderColor: '#1B2A3F' },
-          { type: 'line', label: 'Exit', data: list.map(function (t) { return t.exit; }), showLine: false,
-            pointStyle: 'circle', pointRadius: 4.5, pointHoverRadius: 6,
-            pointBackgroundColor: '#fff', pointBorderColor: '#1B2A3F', pointBorderWidth: 2 }
-        ]
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: {
-          legend: { display: false },
-          tooltip: { callbacks: {
-            title: function (items) { var t = list[items[0].dataIndex]; return '#' + t._n + ' ' + name + ' ' + (t.direction === 'short' ? 'short' : 'long'); },
-            label: function () { return null; },
-            afterBody: function (items) {
-              var t = list[items[0].dataIndex];
-              return ['Entry ' + price(t.entry) + '  (' + when(t.opened) + ')', 'Exit  ' + price(t.exit) + '  (' + when(t.closed) + ')',
-                      'Move  ' + (t._m >= 0 ? '+' : '-') + Math.abs(t._m).toFixed(2) + '%'];
-            }
-          } }
-        },
-        scales: {
-          x: { grid: { display: false }, ticks: { color: '#6B7480', autoSkip: false, maxRotation: 0, font: { size: 11 } } },
-          y: { beginAtZero: false, suggestedMin: lo - pad, suggestedMax: hi + pad, grid: { color: '#E2E6EA' }, border: { display: false },
-               ticks: { color: '#6B7480', maxTicksLimit: 6, callback: function (v) { return '$' + (Math.abs(v) >= 100 ? Math.round(v) : v.toFixed(2)); } } }
-        }
+    fetch(tradePrices[sym]).then(function (r) { return r.json(); }).then(function (d) {
+      var off = zurichOffset(d.bars[0][0]);
+      var bars = d.bars.map(function (b) { return { time: b[0] + off, open: b[1], high: b[2], low: b[3], close: b[4] }; });
+      var times = bars.map(function (b) { return b.time; });
+      function snap(iso) { // the candle the trade happened in
+        var t = Math.floor(Date.parse(iso) / 1000) + off, best = times[0];
+        for (var i = 0; i < times.length && times[i] <= t; i++) best = times[i];
+        return best;
       }
+      var el = document.getElementById('tc' + k);
+      var chart = LightweightCharts.createChart(el, {
+        autoSize: true,
+        localization: { locale: 'en-GB' },
+        layout: { background: { color: '#FFFFFF' }, textColor: '#6B7480', fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif' },
+        grid: { vertLines: { color: '#F0F2F4' }, horzLines: { color: '#F0F2F4' } },
+        rightPriceScale: { borderColor: '#E2E6EA' },
+        timeScale: { borderColor: '#E2E6EA', timeVisible: true, secondsVisible: false },
+        crosshair: { mode: 0 },
+        handleScroll: { vertTouchDrag: false }
+      });
+      var series = chart.addCandlestickSeries({
+        upColor: '#2F7D4A', downColor: '#B23A32', borderVisible: false,
+        wickUpColor: '#2F7D4A', wickDownColor: '#B23A32',
+        priceFormat: { type: 'price', precision: 2, minMove: 0.01 },
+        lastValueVisible: false, priceLineVisible: false
+      });
+      series.setData(bars);
+      var marks = [];
+      list.forEach(function (t) {
+        var short = t.direction === 'short';
+        marks.push({ time: snap(t.opened), position: short ? 'aboveBar' : 'belowBar', shape: short ? 'arrowDown' : 'arrowUp',
+                     color: short ? '#B23A32' : '#2F7D4A', text: '#' + t._n });
+        marks.push({ time: snap(t.closed), position: short ? 'belowBar' : 'aboveBar', shape: short ? 'arrowUp' : 'arrowDown',
+                     color: '#1B2A3F', text: '#' + t._n });
+      });
+      marks.sort(function (a, b) { return a.time - b.time; });
+      series.setMarkers(marks);
+      chart.timeScale().fitContent();
+
+      // Zoom buttons: whole period, or the busiest stretch (around the trades closed last)
+      var last = list.reduce(function (m, t) { return Math.max(m, Date.parse(t.closed) / 1000); }, 0) + off;
+      var first = list.reduce(function (m, t) { return Math.min(m, Date.parse(t.opened) / 1000); }, Infinity) + off;
+      var busyFrom = Math.max(times[0], last - 3 * 3600), busyTo = Math.min(times[times.length - 1], last + 45 * 60);
+      var bar = document.createElement('div');
+      bar.className = 'chart-zoom';
+      bar.innerHTML = '<button type="button" class="is-on" data-z="all">All trades</button>' +
+                      '<button type="button" data-z="busy">Zoom: busiest hours</button>';
+      box.insertBefore(bar, el);
+      bar.addEventListener('click', function (e) {
+        var b = e.target.closest('button'); if (!b) return;
+        bar.querySelectorAll('button').forEach(function (x) { x.classList.toggle('is-on', x === b); });
+        if (b.getAttribute('data-z') === 'busy') chart.timeScale().setVisibleRange({ from: busyFrom, to: busyTo });
+        else chart.timeScale().fitContent();
+      });
     });
   });
 })();
