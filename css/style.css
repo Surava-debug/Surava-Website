@@ -2214,3 +2214,34 @@ table.trades { min-width: 820px; }
 #focus-archive-grid .focus-card.is-current p.focus-timeframe {
   font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;
 }
+/* ---- Homepage: company in focus card, same look as Insights ---- */
+#feat-company.is-current {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  color: #fff;
+  box-shadow: 0 16px 36px rgba(27, 42, 63, 0.22);
+}
+#feat-company.is-current:hover { box-shadow: 0 20px 40px rgba(27, 42, 63, 0.3); }
+#feat-company.is-current .feature-label { color: #fff; }
+.feature-pills { display: inline-flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+#feat-company.is-current .feature-rot {
+  display: inline-flex; align-items: center; gap: 7px;
+  color: var(--color-navy); background: #fff; font-weight: 700;
+}
+#feat-company.is-current .feature-rot::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%; background: #2E9E5B;
+  animation: focusPulse 1.8s ease-out infinite;
+}
+#feat-company.is-current .focus-ends-soon { font-size: 0.68rem; padding: 2px 9px; }
+#feat-company.is-current .feature-chart { border-color: transparent; background: #fff; }
+#feat-company.is-current .feature-chart-caption { color: #9FAABA; }
+#feat-company.is-current .feature-meta { color: #9FAABA; }
+#feat-company.is-current .feature-title { color: #fff; }
+#feat-company.is-current .feature-text { color: #D5DBE3; }
+#feat-company.is-current .feature-cta { color: #fff; }
+#feat-company.is-current .feature-foot { border-top-color: rgba(255, 255, 255, 0.15); }
+#feat-company.is-current .feature-foot a { color: #C9D2DE; }
+#feat-company.is-current .feature-foot a:hover { color: #fff; }
+@media (prefers-reduced-motion: reduce) {
+  #feat-company.is-current .feature-rot::before { animation: none; }
+}
