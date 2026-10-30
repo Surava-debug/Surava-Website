@@ -89,8 +89,7 @@ const focusArchive = [
         (hasA ? ' data-panel="' + panelId + '"' : '') + '>' +
         '<div class="focus-card-top">' +
           '<span class="focus-status">' + (current ? 'Current focus' : 'Past focus') + '</span>' +
-          (compact ? (endsSoon(f.until) ? '<span class="focus-ends-soon">Event ends soon</span>' : '')
-                   : '<span class="focus-period">' + esc(period) + '</span>') +
+          (compact ? '' : '<span class="focus-period">' + esc(period) + '</span>') +
         '</div>' +
         '<h3>' + esc(f.company) + ' <span class="focus-ticker">' + esc(f.ticker) + '</span></h3>' +
         (compact
@@ -98,7 +97,8 @@ const focusArchive = [
           : '<div class="focus-label">Why we watched</div><p>' + esc(f.why) + '</p>') +
         (f.outcome || !current ? '<div class="focus-label">What happened</div>' +
           '<p>' + (f.outcome ? esc(f.outcome) : '<em>Still unfolding.</em>') + '</p>' : '') +
-        (hasA ? '<button type="button" class="focus-toggle" aria-expanded="false" aria-controls="' + panelId + '">Explore our analysis <span class="focus-toggle-icon" aria-hidden="true">+</span></button>' : '') +
+        (hasA ? '<div class="focus-actions"><button type="button" class="focus-toggle" aria-expanded="false" aria-controls="' + panelId + '">Explore our analysis <span class="focus-toggle-icon" aria-hidden="true">+</span></button>' +
+          (compact && endsSoon(f.until) ? '<span class="focus-ends-soon">Event ends soon</span>' : '') + '</div>' : '') +
         (f.link && !hasA ? '<a class="card-link" href="' + esc(f.link) + '">' + (current ? 'Follow it on Markets' : 'Read more') + ' →</a>' : '') +
       '</article>' +
       (f.analysis && f.analysis.length ?

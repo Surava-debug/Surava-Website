@@ -2208,9 +2208,24 @@ table.trades { min-width: 820px; }
 #focus-archive-grid .focus-card.is-current + .focus-analysis .fa-more:hover { color: var(--color-ink); }
 /* ---- Insights: compact current focus card (time frame + ends soon) ---- */
 .focus-ends-soon {
+  display: inline-flex; align-items: center; gap: 6px;
   font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-  color: #7A4A00; background: #FFE3A8; border-radius: 999px; padding: 4px 10px; white-space: nowrap;
+  color: #A3261F; background: #FDE4E1; border: 1px solid #F6C3BD;
+  border-radius: 999px; padding: 4px 10px; white-space: nowrap;
 }
+.focus-ends-soon::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #E0453A; }
+.focus-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: auto; }
+.focus-card.has-analysis .focus-actions .focus-toggle { margin: 0; }
+.focus-actions { flex-wrap: nowrap; gap: 6px; }
+.focus-actions .focus-toggle { padding: 7px 11px; font-size: 0.84rem; white-space: nowrap; }
+.focus-actions .focus-ends-soon { font-size: 0.62rem; padding: 4px 7px; gap: 5px; letter-spacing: 0.03em; }
+.focus-actions { flex-wrap: wrap; }
+@media (max-width: 600px) {
+  .focus-grid { grid-template-columns: minmax(0, 1fr); }
+  #focus-archive-grid .focus-card { padding: 22px 18px; }
+  .focus-actions .focus-toggle { padding: 7px 10px; }
+}
+.feature-chart-caption.has-soon { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 0; }
 #focus-archive-grid .focus-card.is-current p.focus-timeframe {
   font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;
 }
@@ -2232,7 +2247,7 @@ table.trades { min-width: 820px; }
   content: ""; width: 7px; height: 7px; border-radius: 50%; background: #2E9E5B;
   animation: focusPulse 1.8s ease-out infinite;
 }
-#feat-company.is-current .focus-ends-soon { font-size: 0.68rem; padding: 2px 9px; }
+#feat-company.is-current .focus-ends-soon { font-size: 0.68rem; padding: 3px 10px; }
 #feat-company.is-current .feature-chart { border-color: transparent; background: #fff; }
 #feat-company.is-current .feature-chart-caption { color: #9FAABA; }
 #feat-company.is-current .feature-meta { color: #9FAABA; }
