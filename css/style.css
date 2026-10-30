@@ -2156,3 +2156,40 @@ table.trades { min-width: 820px; }
 .tb-body .chart-note { margin-bottom: 8px; }
 .chart-tf { margin-bottom: 6px; }
 .chart-tf button { min-width: 42px; }
+/* ---- Insights: current company in focus stands out ---- */
+#focus-archive-grid .focus-card.is-current {
+  background: var(--color-navy);
+  border: 1px solid var(--color-navy);
+  color: #fff;
+  box-shadow: 0 16px 36px rgba(27, 42, 63, 0.22);
+}
+#focus-archive-grid .focus-card.is-current h3,
+#focus-archive-grid .focus-card.is-current .focus-label { color: #fff; }
+#focus-archive-grid .focus-card.is-current p { color: #D5DBE3; }
+#focus-archive-grid .focus-card.is-current .focus-ticker,
+#focus-archive-grid .focus-card.is-current .focus-period { color: #9FAABA; }
+#focus-archive-grid .focus-card.is-current .focus-status {
+  display: inline-flex; align-items: center; gap: 7px;
+  color: var(--color-navy); background: #fff;
+}
+#focus-archive-grid .focus-card.is-current .focus-status::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: #2E9E5B; box-shadow: 0 0 0 0 rgba(46, 158, 91, 0.6);
+  animation: focusPulse 1.8s ease-out infinite;
+}
+@keyframes focusPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(46, 158, 91, 0.6); }
+  70%  { box-shadow: 0 0 0 7px rgba(46, 158, 91, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 158, 91, 0); }
+}
+#focus-archive-grid .focus-card.is-current .focus-toggle {
+  color: var(--color-navy); background: #fff; border-color: #fff;
+}
+#focus-archive-grid .focus-card.is-current .focus-toggle:hover { background: var(--color-accent-soft); }
+#focus-archive-grid .focus-card.is-current .card-link { color: #fff; }
+@media (hover: hover) and (pointer: fine) {
+  #focus-archive-grid .focus-card.is-current.has-analysis:hover { box-shadow: 0 20px 40px rgba(27, 42, 63, 0.3); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #focus-archive-grid .focus-card.is-current .focus-status::before { animation: none; }
+}
