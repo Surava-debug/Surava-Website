@@ -1385,17 +1385,46 @@ footer {
 
 .ai-notice .ai-badge { margin: 0 8px 0 0; }
 
-/* Own research notice: same layout as the AI notice, in green */
+/* Own research notice: provenance card, 3 steps (who did what) */
 .research-notice {
-  margin-top: 18px;
+  position: relative;
+  margin-top: 22px;
   max-width: 720px;
-  font-size: 0.92rem;
+  padding: 14px 18px 16px 22px;
+  font-size: 0.9rem;
   color: var(--color-ink-soft);
-  background: #F1F8F3;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F1F8F3 100%);
   border: 1px solid #BFDCC8;
-  border-radius: 10px;
-  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(27, 42, 63, 0.06);
+  overflow: hidden;
 }
+.research-notice::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #2E8B57 0%, var(--color-navy) 100%);
+}
+.rn-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.rn-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  background: var(--color-navy);
+  box-shadow: 0 2px 6px rgba(27, 42, 63, 0.25);
+}
+.rn-icon svg { width: 15px; height: 15px; }
 .research-badge {
   display: inline-block;
   font-family: var(--font-sans);
@@ -1408,7 +1437,72 @@ footer {
   border: 1px solid #BFDCC8;
   border-radius: 999px;
   padding: 3px 10px;
-  margin: 0 8px 0 0;
+  margin: 0;
+}
+.rn-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 16px;
+}
+.rn-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.45;
+}
+.rn-num {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: #2E8B57;
+}
+.rn-ai .rn-num { background: var(--color-accent-dark); }
+.rn-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 32px;
+  right: -8px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #BFDCC8, #C9D0D9);
+  transform-origin: left center;
+  animation: rn-draw-x 0.7s ease-out 0.25s both;
+}
+.rn-step:nth-child(2)::after { animation-delay: 0.55s; background: linear-gradient(90deg, #C9D0D9, #BFDCC8); }
+.rn-text strong { color: var(--color-ink); font-weight: 600; }
+@keyframes rn-draw-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes rn-draw-y { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@media (max-width: 600px) {
+  .research-notice { padding: 14px 16px 14px 20px; }
+  .rn-steps { grid-template-columns: 1fr; gap: 12px 0; }
+  .rn-step { flex-direction: row; align-items: flex-start; gap: 12px; }
+  .rn-text { padding-top: 2px; }
+  .rn-step:not(:last-child)::after {
+    top: 28px; bottom: -10px; left: 11px; right: auto;
+    width: 2px; height: auto;
+    background: linear-gradient(180deg, #BFDCC8, #C9D0D9);
+    transform-origin: center top;
+    animation-name: rn-draw-y;
+  }
+  .rn-step:nth-child(2)::after { background: linear-gradient(180deg, #C9D0D9, #BFDCC8); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rn-step::after { animation: none !important; }
 }
 
 /* ============ INSIGHTS: COMING SOON SLOT ============ */
