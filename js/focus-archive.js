@@ -25,7 +25,9 @@
      analysis  optional "Explore our analysis" box next to the card, one
                entry per key date (opens on click):
                [{ date: "Sat, 24 Oct", event: "...", text: "...",
-                  url: "/insights/..." or "" for not written yet }]
+                  url: "/insights/..." or "" for not written yet,
+                  conclusion: true once the article's conclusion is published
+                              (button then reads "Read the analysis & the conclusion") }]
    =================================================================== */
 const focusArchive = [
   {
@@ -46,7 +48,8 @@ const focusArchive = [
         date: "Sat, 24 Oct",
         event: "Phase 3 melanoma data at ESMO",
         text: "The vaccine works. Saturday shows how well. A plain-language look at the number to watch and what is already priced in.",
-        url: "/insights/insight-05-moderna-hazard-ratio.html"
+        url: "/insights/insight-05-moderna-hazard-ratio.html",
+        conclusion: false
       },
       {
         id: "analysis-q3-2026",
@@ -110,7 +113,7 @@ const focusArchive = [
                 (a.url ? '<span class="research-badge fa-pill">Own market research</span>' : '<span class="fa-pill fa-pill-soon">Coming</span>') +
               '</span><span class="fa-event">' + esc(a.event) + '</span></summary>' +
               '<div class="fa-body"><p>' + esc(a.text) + '</p>' +
-              (a.url ? '<a class="fa-link" href="' + esc(a.url) + '">Read the analysis →</a>' : '<span class="fa-soon">Coming soon</span>') +
+              (a.url ? '<a class="fa-link fa-cta" href="' + esc(a.url) + '"><span>' + (a.conclusion ? 'Read the analysis &amp; the conclusion' : 'Read the analysis') + '</span><span class="fa-cta-arrow" aria-hidden="true">→</span></a>' : '<span class="fa-soon">Coming soon</span>') +
               '</div></details>';
           }).join('') +
           (f.link ? '<a class="fa-more" href="' + esc(f.link) + '">' + (current ? 'Live chart and key dates on Markets' : 'Read more') + ' →</a>' : '') +
