@@ -2268,7 +2268,30 @@ table.trades { min-width: 820px; }
 #focus-archive-grid .focus-card.is-current .focus-status::before,
 #feat-company.is-current .feature-rot::before { flex: none; position: relative; top: -0.5px; }
 /* Insights: "Event ends soon" only shows while the analysis box is closed */
-#focus-archive-grid .focus-card.is-expanded .focus-ends-soon { display: none; }
+#focus-archive-grid .focus-actions .focus-ends-soon {
+  max-width: 180px; overflow: hidden;
+  transition: opacity 0.25s ease, transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), max-width 0.3s ease, padding 0.3s ease, border-width 0.3s ease, margin 0.3s ease;
+}
+#focus-archive-grid .focus-card.is-expanded .focus-actions .focus-ends-soon {
+  opacity: 0; transform: translateX(-10px); max-width: 0;
+  padding-left: 0; padding-right: 0; border-width: 0; margin-left: -6px;
+}
+.focus-analysis.is-folding { animation: faFold 0.3s cubic-bezier(0.4, 0, 0.8, 0.4) both; transform-origin: left center; pointer-events: none; }
+@keyframes faFold {
+  from { opacity: 1; transform: none; }
+  to   { opacity: 0; transform: translateX(-28px) scaleX(0.94); }
+}
+@media (max-width: 600px) {
+  .focus-analysis.is-folding { animation-name: faFoldUp; transform-origin: top center; }
+  @keyframes faFoldUp {
+    from { opacity: 1; transform: none; }
+    to   { opacity: 0; transform: translateY(-14px); }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .focus-analysis.is-folding { animation: none; }
+  #focus-archive-grid .focus-actions .focus-ends-soon { transition: none; }
+}
 #focus-archive-grid .focus-card.is-current .focus-status { padding: 7px 11px; }
 #feat-company.is-current .feature-rot { padding: 5px 10px; }
 .focus-ends-soon { padding-top: 6px; padding-bottom: 6px; }

@@ -122,15 +122,30 @@ const focusArchive = [
   '</div>';
 
   // The company card opens and closes its "Explore our analysis" panel
-  function setPanel(card, open) {
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function setPanel(card, open, instant) {
     var panel = document.getElementById(card.getAttribute('data-panel'));
     var btn = card.querySelector('.focus-toggle');
     if (!panel) return;
-    panel.hidden = !open;
     card.classList.toggle('is-expanded', open);
     if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    panel.classList.remove('is-unfolding');
-    if (open) { void panel.offsetWidth; panel.classList.add('is-unfolding'); }
+    panel.classList.remove('is-unfolding', 'is-folding');
+    if (panel._foldTimer) { clearTimeout(panel._foldTimer); panel._foldTimer = null; }
+    if (open) {
+      panel.hidden = false;
+      if (!instant) { void panel.offsetWidth; panel.classList.add('is-unfolding'); }
+    } else if (instant || reduceMotion || panel.hidden) {
+      panel.hidden = true;
+    } else {
+      // play the closing animation, then hide the box
+      void panel.offsetWidth;
+      panel.classList.add('is-folding');
+      panel._foldTimer = setTimeout(function () {
+        panel.hidden = true;
+        panel.classList.remove('is-folding');
+        panel._foldTimer = null;
+      }, 300);
+    }
   }
   grid.addEventListener('click', function (e) {
     var card = e.target.closest('.focus-card.has-analysis');
@@ -142,9 +157,7 @@ const focusArchive = [
 
   // Current focus: card and analysis panel are both open by default
   grid.querySelectorAll('.focus-card.is-current.has-analysis').forEach(function (card) {
-    setPanel(card, true);
-    var panel = document.getElementById(card.getAttribute('data-panel'));
-    if (panel) panel.classList.remove('is-unfolding');
+    setPanel(card, true, true);
   });
 
   // Opened from a link like /insights/#analysis-q3-2026: show the panel, unfold that date
