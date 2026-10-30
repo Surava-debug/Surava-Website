@@ -126,6 +126,13 @@ const focusArchive = [
     setPanel(card, !card.classList.contains('is-expanded'));
   });
 
+  // Current focus: card and analysis panel are both open by default
+  grid.querySelectorAll('.focus-card.is-current.has-analysis').forEach(function (card) {
+    setPanel(card, true);
+    var panel = document.getElementById(card.getAttribute('data-panel'));
+    if (panel) panel.classList.remove('is-unfolding');
+  });
+
   // Opened from a link like /insights/#analysis-q3-2026: show the panel, unfold that date
   function openFromHash() {
     var id = decodeURIComponent((location.hash || '').slice(1));
