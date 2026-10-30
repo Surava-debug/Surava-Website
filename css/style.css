@@ -2425,3 +2425,60 @@ table.trades { min-width: 820px; }
   .fa-cta::after { animation: none; display: none; }
   .fa-cta, .fa-cta-arrow { transition: none; }
 }
+
+/* Homepage "Everything we publish": Education featured with a photo, the other three below */
+.publish-grid { grid-template-columns: repeat(3, 1fr); }
+.publish-grid > .card-featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  padding: 0;
+  overflow: hidden;
+}
+.card-featured .card-photo {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  background: var(--color-accent-soft);
+}
+.card-featured .card-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  transition: transform 0.5s ease;
+}
+.card-featured:hover .card-photo img { transform: scale(1.03); }
+.card-featured-body {
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.card-featured-body p { max-width: 460px; }
+@media (max-width: 760px) {
+  .publish-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .publish-grid > .card-featured { grid-template-columns: 1fr; }
+  .card-featured .card-photo { min-height: 0; aspect-ratio: 16 / 10; }
+  .card-featured .card-photo img { object-position: center 50%; }
+  .card-featured-body { padding: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-featured .card-photo img { transition: none; }
+  .card-featured:hover .card-photo img { transform: none; }
+}
+
+/* Skim marks: a light grey highlighter on the phrases a skimming reader should catch */
+.article-body mark.skim {
+  color: inherit;
+  background: linear-gradient(180deg, transparent 40%, #DFE4EA 40%);
+  padding: 0 2px;
+  border-radius: 2px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
