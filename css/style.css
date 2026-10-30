@@ -2260,3 +2260,15 @@ table.trades { min-width: 820px; }
 @media (prefers-reduced-motion: reduce) {
   #feat-company.is-current .feature-rot::before { animation: none; }
 }
+/* ---- Pill dots: optically centred on the uppercase text ---- */
+.focus-ends-soon,
+#focus-archive-grid .focus-card.is-current .focus-status,
+#feat-company.is-current .feature-rot { line-height: 1; }
+.focus-ends-soon::before,
+#focus-archive-grid .focus-card.is-current .focus-status::before,
+#feat-company.is-current .feature-rot::before { flex: none; position: relative; top: -0.5px; }
+/* Insights: "Event ends soon" only shows while the analysis box is closed */
+#focus-archive-grid .focus-card.is-expanded .focus-ends-soon { display: none; }
+#focus-archive-grid .focus-card.is-current .focus-status { padding: 7px 11px; }
+#feat-company.is-current .feature-rot { padding: 5px 10px; }
+.focus-ends-soon { padding-top: 6px; padding-bottom: 6px; }
