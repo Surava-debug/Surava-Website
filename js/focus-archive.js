@@ -10,6 +10,9 @@
      status    "current" or "past"
      from      "YYYY-MM" when it went into focus
      to        "YYYY-MM" when it left focus ("" while current)
+     until     optional, current only: "YYYY-MM-DD" planned end of the focus.
+               Shows "Time frame" on the card and an "Event ends soon" tag
+               in the last 14 days. The "why" text is not shown on the current card.
      why       1-2 sentences: why it caught our attention
      homeTitle / homeText  optional: shorter wording for the homepage card
      chart     optional, for past companies: frozen chart image of the focus period,
@@ -31,6 +34,7 @@ const focusArchive = [
     status: "current",
     from: "2026-10",
     to: "",
+    until: "2026-11-06",
     why: "Phase 3 data showed its personalised mRNA cancer vaccine, used with Keytruda, lowered the risk of melanoma returning. The shares more than doubled in a day.",
     homeTitle: "A stock that can move double digits on one headline.",
     homeText: "Its price rests on the cancer vaccine pipeline, so trial data and earnings can swing it sharply in either direction.",
@@ -60,6 +64,13 @@ const focusArchive = [
   if (!grid) return;
   var M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   function fmt(ym) { if (!ym) return ''; var p = ym.split('-'); return M[+p[1] - 1] + ' ' + p[0]; }
+  var MF = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function dmy(d) { var p = d.split('-'); return p[2] + '. ' + MF[+p[1] - 1] + ' ' + p[0]; }
+  function endsSoon(d) {
+    var end = new Date(d + 'T23:59:59'), now = new Date();
+    var days = (end - now) / 864e5;
+    return days >= 0 && days <= 14;
+  }
   function esc(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
 
   var items = focusArchive.slice().sort(function (a, b) {
@@ -69,7 +80,8 @@ const focusArchive = [
 
   grid.innerHTML = items.map(function (f) {
     var current = f.status === 'current';
-    var period = fmt(f.from) + ' – ' + (current ? 'today' : fmt(f.to));
+    var period = fmt(f.from) + ' – ' + (current ? (f.until ? dmy(f.until) : 'today') : fmt(f.to));
+    var compact = current && f.until;
     var hasA = !!(f.analysis && f.analysis.length);
     var panelId = 'analysis-' + String(f.company).toLowerCase().replace(/[^a-z0-9]+/g, '-');
     return '' +
@@ -77,11 +89,13 @@ const focusArchive = [
         (hasA ? ' data-panel="' + panelId + '"' : '') + '>' +
         '<div class="focus-card-top">' +
           '<span class="focus-status">' + (current ? 'Current focus' : 'Past focus') + '</span>' +
-          '<span class="focus-period">' + esc(period) + '</span>' +
+          (compact ? (endsSoon(f.until) ? '<span class="focus-ends-soon">Event ends soon</span>' : '')
+                   : '<span class="focus-period">' + esc(period) + '</span>') +
         '</div>' +
         '<h3>' + esc(f.company) + ' <span class="focus-ticker">' + esc(f.ticker) + '</span></h3>' +
-        '<div class="focus-label">Why we watched</div>' +
-        '<p>' + esc(f.why) + '</p>' +
+        (compact
+          ? '<div class="focus-label">Time frame</div><p class="focus-timeframe">' + esc(period) + '</p>'
+          : '<div class="focus-label">Why we watched</div><p>' + esc(f.why) + '</p>') +
         (f.outcome || !current ? '<div class="focus-label">What happened</div>' +
           '<p>' + (f.outcome ? esc(f.outcome) : '<em>Still unfolding.</em>') + '</p>' : '') +
         (hasA ? '<button type="button" class="focus-toggle" aria-expanded="false" aria-controls="' + panelId + '">Explore our analysis <span class="focus-toggle-icon" aria-hidden="true">+</span></button>' : '') +

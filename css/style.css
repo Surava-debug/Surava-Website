@@ -2206,3 +2206,11 @@ table.trades { min-width: 820px; }
 #focus-archive-grid .focus-card.is-current + .focus-analysis .fa-body p { color: #3F516A; }
 #focus-archive-grid .focus-card.is-current + .focus-analysis .fa-more { color: #2C4A72; }
 #focus-archive-grid .focus-card.is-current + .focus-analysis .fa-more:hover { color: var(--color-ink); }
+/* ---- Insights: compact current focus card (time frame + ends soon) ---- */
+.focus-ends-soon {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: #7A4A00; background: #FFE3A8; border-radius: 999px; padding: 4px 10px; white-space: nowrap;
+}
+#focus-archive-grid .focus-card.is-current p.focus-timeframe {
+  font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 18px;
+}
