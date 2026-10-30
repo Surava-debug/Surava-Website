@@ -2193,3 +2193,16 @@ table.trades { min-width: 820px; }
 @media (prefers-reduced-motion: reduce) {
   #focus-archive-grid .focus-card.is-current .focus-status::before { animation: none; }
 }
+/* ---- Insights: analysis box next to the current focus, light blue ---- */
+#focus-archive-grid .focus-card.is-current + .focus-analysis {
+  background: linear-gradient(180deg, #EEF3FA 0%, #E3EBF6 100%);
+  border: 1px solid #C8D6E8;
+  box-shadow: 0 10px 28px rgba(27, 42, 63, 0.08);
+}
+#focus-archive-grid .focus-card.is-current + .focus-analysis > .focus-label { color: #2C4A72; }
+#focus-archive-grid .focus-card.is-current + .focus-analysis .focus-analysis-item { border-color: #C8D6E8; }
+#focus-archive-grid .focus-card.is-current + .focus-analysis .fa-pill-soon { background: #fff; border-color: #C8D6E8; }
+#focus-archive-grid .focus-card.is-current + .focus-analysis .focus-analysis-item summary:hover .fa-event { color: #2C4A72; }
+#focus-archive-grid .focus-card.is-current + .focus-analysis .fa-body p { color: #3F516A; }
+#focus-archive-grid .focus-card.is-current + .focus-analysis .fa-more { color: #2C4A72; }
+#focus-archive-grid .focus-card.is-current + .focus-analysis .fa-more:hover { color: var(--color-ink); }
