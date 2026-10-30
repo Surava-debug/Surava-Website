@@ -2482,3 +2482,68 @@ table.trades { min-width: 820px; }
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
+
+/* Homepage publish cards: big background icons (Markets grows, Insights slides up, Trades blinks) */
+.publish-grid > .card-art { position: relative; overflow: hidden; isolation: isolate; }
+.card-art > :not(.card-art-bg) { position: relative; z-index: 1; }
+.card-art-bg {
+  position: absolute;
+  right: -14px;
+  bottom: -14px;
+  width: 160px;
+  height: 160px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.1;
+  transform-origin: 80% 80%;
+  transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.55s ease;
+}
+.card-art-bg img, .card-art-bg svg { display: block; width: 100%; height: 100%; max-width: none; }
+.card-art-markets:hover .card-art-bg,
+.card-art-markets:focus-within .card-art-bg { transform: scale(1.22); opacity: 0.16; }
+.card-art-insights .card-art-bg { transform: translateY(62%); }
+.card-art-insights:hover .card-art-bg,
+.card-art-insights:focus-within .card-art-bg { transform: translateY(0); opacity: 0.15; }
+.card-art-trades .card-art-bg { opacity: 0.75; right: -8px; bottom: -10px; }
+.tj-body { fill: #5C6B80; opacity: 0.08; }
+.tj-ring { fill: #5C6B80; opacity: 0.2; }
+.tj-row { fill: none; stroke: currentColor; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; color: #2E8B57; opacity: 0.4; }
+.tj-row-1 { animation: tj-blink-a 4.3s linear infinite; }
+.tj-row-2 { animation: tj-blink-b 6.1s linear -2.2s infinite; }
+.tj-row-3 { animation: tj-blink-c 3.4s linear -1.1s infinite; }
+@keyframes tj-blink-a {
+  0%, 17%   { color: #2E8B57; opacity: 0.5; }
+  19%, 22%  { color: #2E8B57; opacity: 0.1; }
+  24%, 46%  { color: #C0392B; opacity: 0.45; }
+  48%       { color: #C0392B; opacity: 0.08; }
+  50%, 71%  { color: #3FA66B; opacity: 0.55; }
+  73%, 76%  { color: #3FA66B; opacity: 0.12; }
+  78%, 100% { color: #D9534F; opacity: 0.42; }
+}
+@keyframes tj-blink-b {
+  0%, 9%    { color: #C0392B; opacity: 0.45; }
+  11%, 38%  { color: #2E8B57; opacity: 0.5; }
+  40%, 43%  { color: #2E8B57; opacity: 0.08; }
+  45%, 62%  { color: #D9534F; opacity: 0.45; }
+  64%, 88%  { color: #3FA66B; opacity: 0.55; }
+  90%, 100% { color: #C0392B; opacity: 0.1; }
+}
+@keyframes tj-blink-c {
+  0%, 28%   { color: #3FA66B; opacity: 0.5; }
+  30%       { color: #3FA66B; opacity: 0.08; }
+  32%, 41%  { color: #C0392B; opacity: 0.5; }
+  43%, 47%  { color: #C0392B; opacity: 0.1; }
+  49%, 80%  { color: #2E8B57; opacity: 0.45; }
+  82%, 100% { color: #D9534F; opacity: 0.4; }
+}
+@media (max-width: 600px) {
+  .card-art-bg { width: 130px; height: 130px; }
+}
+@media (hover: none) {
+  .card-art-insights .card-art-bg { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-art-bg { transition: none; }
+  .tj-row { animation: none; }
+  .tj-row-2 { color: #C0392B; }
+}
