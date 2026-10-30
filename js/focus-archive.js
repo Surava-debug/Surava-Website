@@ -49,7 +49,7 @@ const focusArchive = [
         event: "Phase 3 melanoma data at ESMO",
         text: "The vaccine works. Saturday shows how well. A plain-language look at the number to watch and what is already priced in.",
         url: "/insights/insight-05-moderna-hazard-ratio.html",
-        conclusion: false
+        conclusion: true
       },
       {
         id: "analysis-q3-2026",
