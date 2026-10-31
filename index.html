@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20261031o" />
+  <link rel="stylesheet" href="/css/style.css?v=20261031p" />
   <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -307,18 +307,6 @@
         card.querySelector('.feature-rot').textContent = current ? 'Current focus' : 'Past focus';
         if (current) {
           card.classList.add('is-current');
-          if (f.until) {
-            var days = (new Date(f.until + 'T23:59:59') - new Date()) / 864e5;
-            if (days >= 0 && days <= 14) {
-              var soon = document.createElement('span');
-              soon.className = 'focus-ends-soon';
-              soon.textContent = 'Event ends soon';
-              // sits under the chart, left of the "Past year" caption
-              var capEl = card.querySelector('.feature-chart-caption');
-              if (capEl) { capEl.classList.add('has-soon'); capEl.insertBefore(soon, capEl.firstChild); }
-              else { var chartBox = card.querySelector('.feature-chart'); chartBox.parentNode.insertBefore(soon, chartBox.nextSibling); }
-            }
-          }
         }
         if (f.link) card.querySelector('.feature-link').href = f.link;
         if (current && f.until) {
@@ -331,6 +319,10 @@
           mEl.textContent = 'Time frame';
           xEl.textContent = fmt(f.from) + ' \u2013 ' + dmy(f.until);
           xEl.classList.add('feature-timeframe');
+          if ((f.analysis || []).some(function (a) { return a.url; })) {
+            var rb = document.createElement('span'); rb.className = 'research-badge feature-research'; rb.textContent = 'Own market research';
+            xEl.parentNode.insertBefore(rb, xEl.nextSibling);
+          }
           card.querySelector('.feature-cta').innerHTML = 'Explore our analysis &rarr;';
           card.querySelector('.feature-link').href = '/insights/#company-in-focus';
         }

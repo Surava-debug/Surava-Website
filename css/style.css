@@ -2546,3 +2546,6 @@ table.trades { min-width: 820px; }
 #feat-company.is-current .feature-title .focus-ticker { color: #9FAABA; }
 #feat-company .feature-text.feature-timeframe { font-size: 1.05rem; font-weight: 600; color: var(--color-ink); -webkit-line-clamp: unset; }
 #feat-company.is-current .feature-text.feature-timeframe { color: #fff; }
+
+/* Homepage company card: "Own market research" badge under the time frame */
+#feat-company .feature-research { display: inline-block; margin: 0 0 12px; }
