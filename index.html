@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20261031q" />
+  <link rel="stylesheet" href="/css/style.css?v=20261031r" />
   <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -323,6 +323,10 @@
             var rb = document.createElement('span'); rb.className = 'research-badge feature-research'; rb.textContent = 'Own market research';
             var row = document.createElement('div'); row.className = 'feature-title-row';
             tEl.parentNode.insertBefore(row, tEl); row.appendChild(tEl); row.appendChild(rb);
+          }
+          if (f.homeText) {
+            var note = document.createElement('p'); note.className = 'feature-note'; note.textContent = f.homeText;
+            xEl.parentNode.insertBefore(note, xEl.nextSibling);
           }
           card.querySelector('.feature-cta').innerHTML = 'Explore our analysis &rarr;';
           card.querySelector('.feature-link').href = '/insights/#company-in-focus';

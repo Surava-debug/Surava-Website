@@ -2551,3 +2551,7 @@ table.trades { min-width: 820px; }
 #feat-company .feature-title-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 0 0 6px; }
 #feat-company .feature-title-row .feature-title { margin: 0; }
 #feat-company .feature-research { flex: none; margin: 0; }
+
+/* Homepage company card: one short line of context under the time frame (max 3 lines) */
+#feat-company .feature-note { margin: 2px 0 12px; font-size: 0.9rem; line-height: 1.5; color: var(--color-ink-soft); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+#feat-company.is-current .feature-note { color: #D5DBE3; }
