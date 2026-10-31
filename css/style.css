@@ -2548,4 +2548,6 @@ table.trades { min-width: 820px; }
 #feat-company.is-current .feature-text.feature-timeframe { color: #fff; }
 
 /* Homepage company card: "Own market research" badge under the time frame */
-#feat-company .feature-research { display: inline-block; margin: 0 0 12px; }
+#feat-company .feature-title-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 0 0 6px; }
+#feat-company .feature-title-row .feature-title { margin: 0; }
+#feat-company .feature-research { flex: none; margin: 0; }
