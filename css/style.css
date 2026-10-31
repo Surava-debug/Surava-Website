@@ -2520,3 +2520,23 @@ table.trades { min-width: 820px; }
 
 /* Links inside skim marks: same text, just a thin underline */
 .article-body mark.skim a { color: inherit; font-weight: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+/* Insights: current company card shows its one-year price line in the background, growing on hover */
+#focus-archive-grid .focus-card.has-chart { position: relative; overflow: hidden; isolation: isolate; }
+#focus-archive-grid .focus-card.has-chart > :not(.focus-chart-bg) { position: relative; z-index: 1; }
+.focus-chart-bg {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 60%;
+  z-index: 0; pointer-events: none; opacity: 0.14;
+  transform-origin: 50% 100%;
+  transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.55s ease;
+}
+.focus-chart-bg svg { display: block; width: 100%; height: 100%; }
+.focus-chart-bg polyline { fill: none; stroke: #FFFFFF; stroke-width: 2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.focus-chart-bg polygon { fill: #FFFFFF; opacity: 0.35; }
+.focus-card:not(.is-current) .focus-chart-bg polyline { stroke: var(--color-ink); }
+.focus-card:not(.is-current) .focus-chart-bg polygon { fill: var(--color-ink); }
+.focus-card.has-chart:hover .focus-chart-bg,
+.focus-card.has-chart:focus-within .focus-chart-bg { transform: scale(1.12); opacity: 0.22; }
+@media (prefers-reduced-motion: reduce) {
+  .focus-chart-bg { transition: none; }
+}

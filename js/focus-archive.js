@@ -33,6 +33,7 @@ const focusArchive = [
   {
     company: "Moderna",
     ticker: "NASDAQ: MRNA",
+    chart: "/data/prices/mrna-1d.json",
     status: "current",
     from: "2026-10",
     to: "",
@@ -88,8 +89,9 @@ const focusArchive = [
     var hasA = !!(f.analysis && f.analysis.length);
     var panelId = 'analysis-' + String(f.company).toLowerCase().replace(/[^a-z0-9]+/g, '-');
     return '' +
-      '<article class="focus-card' + (current ? ' is-current' : '') + (hasA ? ' has-analysis' : '') + '"' +
-        (hasA ? ' data-panel="' + panelId + '"' : '') + '>' +
+      '<article class="focus-card' + (current ? ' is-current' : '') + (hasA ? ' has-analysis' : '') + (f.chart ? ' has-chart' : '') + '"' +
+        (hasA ? ' data-panel="' + panelId + '"' : '') + (f.chart ? ' data-chart="' + esc(f.chart) + '"' : '') + '>' +
+        (f.chart ? '<span class="focus-chart-bg" aria-hidden="true"></span>' : '') +
         '<div class="focus-card-top">' +
           '<span class="focus-status">' + (current ? 'Current focus' : 'Past focus') + '</span>' +
           (compact ? '' : '<span class="focus-period">' + esc(period) + '</span>') +
@@ -123,6 +125,25 @@ const focusArchive = [
     '<span class="coming-soon-pill">Next</span>' +
     '<p>The next company goes here once something catches our attention.</p>' +
   '</div>';
+
+  // Faint one-year price line behind cards that have a "chart" file (same saved data as the Trades charts)
+  grid.querySelectorAll('.focus-card.has-chart').forEach(function (card) {
+    var holder = card.querySelector('.focus-chart-bg');
+    if (!holder || !window.fetch) return;
+    fetch(card.getAttribute('data-chart')).then(function (r) { return r.json(); }).then(function (d) {
+      var bars = (d && d.bars) || [];
+      if (bars.length < 2) return;
+      var cut = bars[bars.length - 1][0] - 365 * 86400;
+      var c = bars.filter(function (b) { return b[0] >= cut; }).map(function (b) { return b[4]; });
+      if (c.length < 2) return;
+      var min = Math.min.apply(null, c), max = Math.max.apply(null, c), span = (max - min) || 1;
+      var pts = c.map(function (v, i) {
+        return (i / (c.length - 1) * 300).toFixed(1) + ',' + (94 - (v - min) / span * 84).toFixed(1);
+      }).join(' ');
+      holder.innerHTML = '<svg viewBox="0 0 300 100" preserveAspectRatio="none" focusable="false">' +
+        '<polygon points="0,100 ' + pts + ' 300,100"/><polyline points="' + pts + '"/></svg>';
+    }).catch(function () {});
+  });
 
   // The company card opens and closes its "Explore our analysis" panel
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
