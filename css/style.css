@@ -2483,7 +2483,7 @@ table.trades { min-width: 820px; }
   box-decoration-break: clone;
 }
 
-/* Homepage publish cards: big background icons (Markets grows, Insights slides up, Trades blinks) */
+/* Homepage publish cards: big background icons (Markets grows, Insights slides in from the right, Trades dims) */
 .publish-grid > .card-art { position: relative; overflow: hidden; isolation: isolate; }
 .card-art > :not(.card-art-bg) { position: relative; z-index: 1; }
 .card-art-bg {
@@ -2501,9 +2501,9 @@ table.trades { min-width: 820px; }
 .card-art-bg img, .card-art-bg svg { display: block; width: 100%; height: 100%; max-width: none; }
 .card-art-markets:hover .card-art-bg,
 .card-art-markets:focus-within .card-art-bg { transform: scale(1.22); opacity: 0.16; }
-.card-art-insights .card-art-bg { transform: translateY(62%); }
+.card-art-insights .card-art-bg { transform: translateX(62%); }
 .card-art-insights:hover .card-art-bg,
-.card-art-insights:focus-within .card-art-bg { transform: translateY(0); opacity: 0.15; }
+.card-art-insights:focus-within .card-art-bg { transform: translateX(0); opacity: 0.15; }
 .card-art-trades .card-art-bg { opacity: 0.75; right: -8px; bottom: -10px; }
 .tj-body { fill: #5C6B80; opacity: 0.08; }
 .tj-ring { fill: #5C6B80; opacity: 0.2; }
