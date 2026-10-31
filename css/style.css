@@ -2483,7 +2483,7 @@ table.trades { min-width: 820px; }
   box-decoration-break: clone;
 }
 
-/* Homepage publish cards: big background icons (Markets grows, Insights slides left to right, Trades dims on hover) */
+/* Homepage publish cards: big background icons (Markets grows, all three grow on hover, Trades also dims) */
 .publish-grid > .card-art { position: relative; overflow: hidden; isolation: isolate; }
 .card-art > :not(.card-art-bg) { position: relative; z-index: 1; }
 .card-art-bg {
@@ -2499,12 +2499,10 @@ table.trades { min-width: 820px; }
   transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.55s ease;
 }
 .card-art-bg img, .card-art-bg svg { display: block; width: 100%; height: 100%; max-width: none; }
-.card-art-markets:hover .card-art-bg,
-.card-art-markets:focus-within .card-art-bg { transform: scale(1.22); opacity: 0.16; }
-.card-art-insights .card-art-bg { right: auto; left: -14px; transition: left 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.55s ease; }
-.card-art-insights:hover .card-art-bg,
-.card-art-insights:focus-within .card-art-bg { left: calc(100% - 146px); opacity: 0.15; }
+.card-art:hover .card-art-bg,
+.card-art:focus-within .card-art-bg { transform: scale(1.22); opacity: 0.16; }
 .card-art-trades .card-art-bg { opacity: 0.75; right: -8px; bottom: -10px; }
+.card-art-trades:hover .card-art-bg, .card-art-trades:focus-within .card-art-bg { opacity: 0.9; }
 .tj-body { fill: #5C6B80; opacity: 0.08; }
 .tj-ring { fill: #5C6B80; opacity: 0.2; }
 .tj-row { fill: none; stroke: currentColor; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; color: #2E8B57; opacity: 0.4; }
@@ -2551,7 +2549,6 @@ table.trades { min-width: 820px; }
 }
 @media (max-width: 600px) {
   .card-art-bg { width: 130px; height: 130px; }
-  .card-art-insights:hover .card-art-bg, .card-art-insights:focus-within .card-art-bg { left: calc(100% - 116px); }
 }
 @media (hover: none) {
   .card-art-insights .card-art-bg { transform: none; }
