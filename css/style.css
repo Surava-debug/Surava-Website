@@ -2562,3 +2562,6 @@ table.trades { min-width: 820px; }
 
 /* Article pages: link to the analysis / conclusion uses the same navy button as Insights */
 .article-body a.article-cta { max-width: 420px; margin: 8px 0 28px; text-decoration: none; }
+
+/* Links inside skim marks: same text, just a thin underline */
+.article-body mark.skim a { color: inherit; font-weight: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
