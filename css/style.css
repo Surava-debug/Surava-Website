@@ -2476,7 +2476,7 @@ table.trades { min-width: 820px; }
 /* Skim marks: a light grey highlighter on the phrases a skimming reader should catch */
 .article-body mark.skim {
   color: inherit;
-  background: linear-gradient(180deg, transparent 40%, #DFE4EA 40%);
+  background: var(--color-accent-soft);
   padding: 0 2px;
   border-radius: 2px;
   -webkit-box-decoration-break: clone;
