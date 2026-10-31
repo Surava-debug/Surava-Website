@@ -33,7 +33,7 @@ const focusArchive = [
   {
     company: "Moderna",
     ticker: "NASDAQ: MRNA",
-    chart: "/data/prices/mrna-1d.json",
+    priceData: "/data/prices/mrna-1d.json",
     status: "current",
     from: "2026-10",
     to: "",
@@ -89,9 +89,9 @@ const focusArchive = [
     var hasA = !!(f.analysis && f.analysis.length);
     var panelId = 'analysis-' + String(f.company).toLowerCase().replace(/[^a-z0-9]+/g, '-');
     return '' +
-      '<article class="focus-card' + (current ? ' is-current' : '') + (hasA ? ' has-analysis' : '') + (f.chart ? ' has-chart' : '') + '"' +
-        (hasA ? ' data-panel="' + panelId + '"' : '') + (f.chart ? ' data-chart="' + esc(f.chart) + '"' : '') + '>' +
-        (f.chart ? '<span class="focus-chart-bg" aria-hidden="true"></span>' : '') +
+      '<article class="focus-card' + (current ? ' is-current' : '') + (hasA ? ' has-analysis' : '') + (f.priceData ? ' has-chart' : '') + '"' +
+        (hasA ? ' data-panel="' + panelId + '"' : '') + (f.priceData ? ' data-chart="' + esc(f.priceData) + '"' : '') + '>' +
+        (f.priceData ? '<span class="focus-chart-bg" aria-hidden="true"></span>' : '') +
         '<div class="focus-card-top">' +
           '<span class="focus-status">' + (current ? 'Current focus' : 'Past focus') + '</span>' +
           (compact ? '' : '<span class="focus-period">' + esc(period) + '</span>') +
@@ -126,7 +126,7 @@ const focusArchive = [
     '<p>The next company goes here once something catches our attention.</p>' +
   '</div>';
 
-  // Faint one-year price line behind cards that have a "chart" file (same saved data as the Trades charts)
+  // Faint one-year price line behind cards that have a "priceData" file (same saved data as the Trades charts)
   grid.querySelectorAll('.focus-card.has-chart').forEach(function (card) {
     var holder = card.querySelector('.focus-chart-bg');
     if (!holder || !window.fetch) return;

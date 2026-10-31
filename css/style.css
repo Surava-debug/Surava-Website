@@ -2540,3 +2540,9 @@ table.trades { min-width: 820px; }
 @media (prefers-reduced-motion: reduce) {
   .focus-chart-bg { transition: none; }
 }
+
+/* Homepage company card: name + ticker and time frame, like the Insights card */
+#feat-company .feature-title .focus-ticker { color: var(--color-ink-soft); }
+#feat-company.is-current .feature-title .focus-ticker { color: #9FAABA; }
+#feat-company .feature-text.feature-timeframe { font-size: 1.05rem; font-weight: 600; color: var(--color-ink); -webkit-line-clamp: unset; }
+#feat-company.is-current .feature-text.feature-timeframe { color: #fff; }
