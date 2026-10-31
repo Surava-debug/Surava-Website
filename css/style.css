@@ -2559,3 +2559,6 @@ table.trades { min-width: 820px; }
 @media (prefers-reduced-motion: reduce) {
   .card-art-bg { transition: none; }
 }
+
+/* Article pages: link to the analysis / conclusion uses the same navy button as Insights */
+.article-body a.article-cta { max-width: 420px; margin: 8px 0 28px; text-decoration: none; }
