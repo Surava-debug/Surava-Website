@@ -2483,7 +2483,7 @@ table.trades { min-width: 820px; }
   box-decoration-break: clone;
 }
 
-/* Homepage publish cards: big background icons (Markets grows, all three grow on hover, Trades also dims) */
+/* Homepage publish cards: big background icons that grow on hover */
 .publish-grid > .card-art { position: relative; overflow: hidden; isolation: isolate; }
 .card-art > :not(.card-art-bg) { position: relative; z-index: 1; }
 .card-art-bg {
@@ -2501,52 +2501,10 @@ table.trades { min-width: 820px; }
 .card-art-bg img, .card-art-bg svg { display: block; width: 100%; height: 100%; max-width: none; }
 .card-art:hover .card-art-bg,
 .card-art:focus-within .card-art-bg { transform: scale(1.22); opacity: 0.16; }
-.card-art-trades .card-art-bg { opacity: 0.75; right: -8px; bottom: -10px; }
-.card-art-trades:hover .card-art-bg, .card-art-trades:focus-within .card-art-bg { opacity: 0.9; }
-.tj-body { fill: #5C6B80; opacity: 0.08; }
-.tj-ring { fill: #5C6B80; opacity: 0.2; }
-.tj-row { fill: none; stroke: currentColor; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; color: #2E8B57; opacity: 0.4; }
-.tj-row-1, .tj-row-3 { color: #2E8B57; opacity: 0.42; }
-.tj-row-2 { color: #C0392B; opacity: 0.4; }
-/* Calm until hovered: then each row slowly dims out, changes colour while dim and fades back in */
-@media (prefers-reduced-motion: no-preference) {
-  .card-art-trades:hover .tj-row-1, .card-art-trades:focus-within .tj-row-1 { animation: tj-glow-a 13s ease-in-out infinite; }
-  .card-art-trades:hover .tj-row-2, .card-art-trades:focus-within .tj-row-2 { animation: tj-glow-b 17s ease-in-out 0.4s infinite; }
-  .card-art-trades:hover .tj-row-3, .card-art-trades:focus-within .tj-row-3 { animation: tj-glow-c 12s ease-in-out 1.1s infinite; }
-}
-@keyframes tj-glow-a {
-  0%        { color: #2E8B57; opacity: 0.42; }
-  5%        { color: #2E8B57; opacity: 0.06; }
-  6%        { color: #C0392B; opacity: 0.06; }
-  14%, 40%  { color: #C0392B; opacity: 0.4; }
-  48%       { color: #C0392B; opacity: 0.06; }
-  49%       { color: #2E8B57; opacity: 0.06; }
-  57%, 78%  { color: #2E8B57; opacity: 0.42; }
-  84%       { color: #2E8B57; opacity: 0.2; }
-  90%, 100% { color: #2E8B57; opacity: 0.42; }
-}
-@keyframes tj-glow-b {
-  0%        { color: #C0392B; opacity: 0.4; }
-  6%        { color: #C0392B; opacity: 0.06; }
-  7%        { color: #2E8B57; opacity: 0.06; }
-  14%, 44%  { color: #2E8B57; opacity: 0.42; }
-  52%       { color: #2E8B57; opacity: 0.06; }
-  53%       { color: #C0392B; opacity: 0.06; }
-  61%, 80%  { color: #C0392B; opacity: 0.4; }
-  86%       { color: #C0392B; opacity: 0.18; }
-  92%, 100% { color: #C0392B; opacity: 0.4; }
-}
-@keyframes tj-glow-c {
-  0%        { color: #2E8B57; opacity: 0.42; }
-  7%        { color: #2E8B57; opacity: 0.06; }
-  8%        { color: #C0392B; opacity: 0.06; }
-  17%, 45%  { color: #C0392B; opacity: 0.4; }
-  53%       { color: #C0392B; opacity: 0.06; }
-  54%       { color: #2E8B57; opacity: 0.06; }
-  63%, 82%  { color: #2E8B57; opacity: 0.42; }
-  88%       { color: #2E8B57; opacity: 0.2; }
-  94%, 100% { color: #2E8B57; opacity: 0.42; }
-}
+.card-art-trades .card-art-bg { right: -8px; bottom: -10px; }
+.tj-body { fill: #5C6B80; }
+.tj-ring { fill: #E7EAEF; }
+.tj-row { fill: none; stroke: currentColor; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; color: #E7EAEF; }
 @media (max-width: 600px) {
   .card-art-bg { width: 130px; height: 130px; }
 }
