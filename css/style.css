@@ -2633,17 +2633,6 @@ aside.article-disclaimer p,
 .cta-banner .btn-accent { background: #FFFFFF; color: var(--color-ink); border-color: #FFFFFF; }
 .cta-banner .btn-accent:hover { background: var(--color-accent-soft); color: var(--color-ink); border-color: var(--color-accent-soft); }
 
-/* Homepage hero: texture stays at the edges, clean behind the headline */
-.hero-bg::before { opacity: 0.12; }
-.hero-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: radial-gradient(ellipse 62% 75% at 50% 50%, rgba(246, 247, 248, 0.94) 0%, rgba(246, 247, 248, 0.7) 55%, rgba(246, 247, 248, 0) 100%);
-}
-
 /* Homepage publish cards: icon in a small tile above the title, not behind the text */
 .publish-grid > .card-art { overflow: visible; }
 .card-art-bg {
@@ -2726,3 +2715,14 @@ aside.article-disclaimer p,
 #focus-archive-grid .focus-card.is-current + .focus-analysis .focus-analysis-item { border-color: var(--color-line); }
 #focus-archive-grid .focus-card.is-current + .focus-analysis .fa-pill-soon { background: var(--color-bg); border-color: var(--color-line); }
 #focus-archive-grid .focus-card.is-current + .focus-analysis .fa-body p { color: #33404F; }
+
+/* Homepage hero: text left, embossed logo right (stacked on phones) */
+.hero-split .container { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; text-align: left; }
+.hero-split h1 { font-size: clamp(2.4rem, 4.4vw, 3.9rem); margin: 0 0 22px; max-width: none; }
+.hero-split p.lead { margin: 0; max-width: 560px; }
+.hero-brand img { display: block; width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; object-position: 38% 38%; border-radius: 20px; box-shadow: 0 24px 48px rgba(27, 42, 63, 0.14); }
+@media (max-width: 900px) {
+  .hero-split .container { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+  .hero-split p.lead { margin: 0 auto; }
+  .hero-brand img { aspect-ratio: 16 / 9; }
+}
