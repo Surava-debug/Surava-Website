@@ -2786,3 +2786,6 @@ aside.article-disclaimer p,
 @media (max-width: 800px) {
   .parents-strip { flex-direction: column; align-items: flex-start; padding: 20px; }
 }
+.parents-strip p a { color: var(--color-ink); font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+/* No light gap when a grey section sits right above the footer */
+.section-alt + footer { margin-top: 0; }
