@@ -2789,3 +2789,14 @@ aside.article-disclaimer p,
 .parents-strip p a { color: var(--color-ink); font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 /* No light gap when a grey section sits right above the footer */
 .section-alt + footer { margin-top: 0; }
+
+/* Homepage Education card: note for parents inside the card */
+.parents-note {
+  margin-top: 22px;
+  padding: 16px 18px;
+  background: #F1F8F3;
+  border: 1px solid #CFE5D6;
+  border-radius: 12px;
+}
+.parents-note .parents-strip-tag { margin-bottom: 8px; }
+.card-featured-body .parents-note p { margin: 0; max-width: none; font-size: 0.92rem; line-height: 1.5; color: #33404F; }
