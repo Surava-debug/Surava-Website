@@ -2888,3 +2888,11 @@ aside.article-disclaimer p,
 }
 @keyframes rm-pulse { from { transform: scale(1); opacity: 0.45; } to { transform: scale(2.4); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .rm-phase.is-now .rm-dot::after { animation: none; display: none; } }
+/* Roadmap on desktop: title on one line, all step cards the same height */
+@media (min-width: 901px) {
+  .section-head.roadmap-head { max-width: none; }
+  .roadmap { grid-template-rows: auto repeat(3, 1fr); row-gap: 12px; }
+  .rm-phase { display: grid; grid-row: 1 / span 4; grid-template-rows: subgrid; }
+  .rm-head { margin-bottom: 6px; }
+  .rm-card { margin: 0; }
+}
