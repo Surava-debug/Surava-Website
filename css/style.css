@@ -2937,3 +2937,9 @@ aside.article-disclaimer p,
 /* Coming-soon line: titles flow next to the pill instead of dropping below it */
 .coming-soon-line { display: block; line-height: 1.9; }
 .coming-soon-line .coming-soon-pill { display: inline-block; margin: 0 10px 0 0; vertical-align: 1px; }
+/* Education: coming-soon titles listed in a box next to the published cards */
+.coming-soon-box { align-self: start; padding: 20px 22px; border: 1.5px dashed var(--color-line); border-radius: var(--radius); }
+.coming-soon-box .coming-soon-pill { display: inline-block; margin: 0 0 12px; }
+.coming-soon-box ul { list-style: none; margin: 0; padding: 0; }
+.coming-soon-box li { font-size: 0.92rem; line-height: 1.45; color: var(--color-ink-soft); padding: 9px 0; border-top: 1px solid var(--color-line); }
+.coming-soon-box li:first-child { border-top: none; padding-top: 0; }
