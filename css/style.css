@@ -2880,3 +2880,11 @@ aside.article-disclaimer p,
   .rm-head { margin-left: -30px; gap: 12px; margin-bottom: 12px; }
   .rm-phase:not(:last-child) .rm-head::after { display: none; }
 }
+/* Roadmap: the Today dot pulses (we are here) */
+.rm-phase.is-now .rm-dot::after {
+  content: ""; position: absolute; inset: -2px; border-radius: 50%;
+  background: var(--color-ink); opacity: 0.45;
+  animation: rm-pulse 2s ease-out infinite;
+}
+@keyframes rm-pulse { from { transform: scale(1); opacity: 0.45; } to { transform: scale(2.4); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .rm-phase.is-now .rm-dot::after { animation: none; display: none; } }
