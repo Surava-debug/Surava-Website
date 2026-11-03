@@ -2736,3 +2736,7 @@ aside.article-disclaimer p,
   .hero-split h1 { font-size: 2rem; }
   .hero-split p.lead { font-size: 1.02rem; max-width: 400px; }
 }
+
+/* Cards only lift on hover when there is something to click */
+.card:not(:has(a)):hover,
+.contact-info .card:hover { transform: none; box-shadow: none; }
