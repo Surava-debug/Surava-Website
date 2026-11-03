@@ -2726,3 +2726,13 @@ aside.article-disclaimer p,
   .hero-split p.lead { margin: 0 auto; }
   .hero-brand img { aspect-ratio: 16 / 9; }
 }
+
+/* Hero: shorter, calmer */
+.hero.hero-split { padding: 64px 0 56px; }
+.hero-split h1 { font-size: clamp(2.2rem, 3.6vw, 3.3rem); line-height: 1.1; text-wrap: balance; }
+.hero-split p.lead { font-size: 1.12rem; max-width: 520px; text-wrap: pretty; }
+@media (max-width: 900px) {
+  .hero.hero-split { padding: 40px 0 36px; }
+  .hero-split h1 { font-size: 2rem; }
+  .hero-split p.lead { font-size: 1.02rem; max-width: 400px; }
+}
