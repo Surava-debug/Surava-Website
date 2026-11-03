@@ -2626,3 +2626,103 @@ aside.article-disclaimer p,
 .article-body .course-card p { font-size: 0.95rem; line-height: 1.55; margin: 0 0 14px; color: #33404F; }
 .course-card-points { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 0 0 16px; padding: 0; list-style: none; font-size: 0.88rem; color: #33404F; }
 .course-card-points li::before { content: "\2713"; color: #1F6B3A; font-weight: 700; margin-right: 6px; }
+
+/* ============ UI REFRESH (Nov 2026): calmer, more consistent ============ */
+
+/* Main button on dark banners: white, so it never looks disabled */
+.cta-banner .btn-accent { background: #FFFFFF; color: var(--color-ink); border-color: #FFFFFF; }
+.cta-banner .btn-accent:hover { background: var(--color-accent-soft); color: var(--color-ink); border-color: var(--color-accent-soft); }
+
+/* Homepage hero: texture stays at the edges, clean behind the headline */
+.hero-bg::before { opacity: 0.12; }
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 62% 75% at 50% 50%, rgba(246, 247, 248, 0.94) 0%, rgba(246, 247, 248, 0.7) 55%, rgba(246, 247, 248, 0) 100%);
+}
+
+/* Homepage publish cards: icon in a small tile above the title, not behind the text */
+.publish-grid > .card-art { overflow: visible; }
+.card-art-bg {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background: var(--color-accent-soft);
+  opacity: 1;
+  transform: none;
+  transition: transform 0.25s ease;
+}
+.card-art:hover .card-art-bg,
+.card-art:focus-within .card-art-bg { transform: scale(1.06); opacity: 1; }
+.card-art-trades .card-art-bg { right: auto; bottom: auto; }
+@media (max-width: 600px) {
+  .card-art-bg { width: 40px; height: 40px; padding: 10px; margin-bottom: 12px; }
+}
+
+/* AI label: still visible on every AI piece, but quieter than the titles */
+.ai-badge {
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  color: #9A5A12;
+  background: transparent;
+  border: 1px solid #EBC995;
+  padding: 2px 8px;
+}
+
+/* Coming-soon items: one slim line under the cards instead of empty placeholder cards */
+.coming-soon-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 18px 0 0;
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+}
+.coming-soon-line .coming-soon-pill { margin: 0; }
+
+/* About: initials until real photos exist */
+.founder-initials {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-ink);
+  color: #FFFFFF;
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 600px) { .founder-initials { width: 72px; height: 72px; font-size: 1.4rem; } }
+
+/* Less empty space between page titles and the first section */
+@media (min-width: 901px) {
+  .hero-page { padding-bottom: 32px; }
+  .hero-page + section { padding-top: 40px; }
+}
+
+/* Insights: the expanded analysis panel uses the standard white card */
+#focus-archive-grid .focus-card.is-current + .focus-analysis {
+  background: var(--color-card);
+  border: 1px solid var(--color-line);
+  box-shadow: 0 10px 28px rgba(27, 42, 63, 0.06);
+}
+#focus-archive-grid .focus-card.is-current + .focus-analysis > .focus-label,
+#focus-archive-grid .focus-card.is-current + .focus-analysis .focus-analysis-item summary:hover .fa-event,
+#focus-archive-grid .focus-card.is-current + .focus-analysis .fa-more { color: var(--color-ink); }
+#focus-archive-grid .focus-card.is-current + .focus-analysis .focus-analysis-item { border-color: var(--color-line); }
+#focus-archive-grid .focus-card.is-current + .focus-analysis .fa-pill-soon { background: var(--color-bg); border-color: var(--color-line); }
+#focus-archive-grid .focus-card.is-current + .focus-analysis .fa-body p { color: #33404F; }
