@@ -252,11 +252,13 @@
             link.classList.remove('is-fading');
           }, reduce ? 0 : 200);
         }
-        function start() { if (!reduce) { stop(); timer = setInterval(function () { show(i + 1); }, 7000); } }
+        // Switches every 7s (10s without the fade when the device asks for reduced motion)
+        function start() { stop(); timer = setInterval(function () { show(i + 1); }, reduce ? 10000 : 7000); }
         function stop() { if (timer) clearInterval(timer); timer = null; }
         btns.forEach(function (b, k) { b.addEventListener('click', function () { show(k); start(); }); });
-        card.addEventListener('mouseenter', stop);
-        card.addEventListener('mouseleave', start);
+        // Pause only while a mouse is over the card (a tap on a phone must not stop it for good)
+        card.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') stop(); });
+        card.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') start(); });
         show(i); start();
       }
       setup('feat-insight', insights);
