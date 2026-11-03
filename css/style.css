@@ -2803,3 +2803,50 @@ aside.article-disclaimer p,
 /* Parents note in navy (green stays reserved for content written by Yves) */
 .parents-note { background: #EEF2F8; border-color: #C9D5E6; }
 .parents-note .parents-strip-tag { background: var(--color-ink); color: #FFFFFF; border-color: var(--color-ink); }
+
+/* ============ PHONES: tables become stacked cards ============ */
+@media (max-width: 600px) {
+  /* Comparison tables in articles: one card per row, column name above each value */
+  table.compare-table, table.compare-table tbody, table.compare-table tr, table.compare-table td { display: block; width: 100%; }
+  table.compare-table tr:first-child:has(th) { display: none; }
+  table.compare-table tr { border: 1px solid #E2E6EA; border-radius: 10px; margin: 0 0 12px; overflow: hidden; background: #FFFFFF; }
+  table.compare-table td { border: none; padding: 8px 14px; }
+  table.compare-table td:first-child { background: #F4F5F3; color: #1B2A3F; font-weight: 700; padding: 10px 14px; }
+  table.compare-table td[data-label]::before { content: attr(data-label); display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-ink-soft); margin-bottom: 2px; }
+
+  /* Trades journal: one compact card per trade, nothing hidden off to the side */
+  table.trades { min-width: 0; }
+  table.trades thead { display: none; }
+  table.trades, table.trades tbody { display: block; }
+  #trades-body tr:not(.t-notes) {
+    display: grid;
+    grid-template-columns: 34px 1fr auto;
+    grid-template-areas: "num asset move" ". dir dir" ". date date" ". entry exit" ". held worst" ". act act";
+    column-gap: 10px;
+    row-gap: 4px;
+    padding: 14px 4px;
+    border-bottom: 1px solid var(--color-line);
+  }
+  #trades-body tr:not(.t-notes) td { display: block; padding: 0; border: none; }
+  #trades-body td.t-num { grid-area: num; font-weight: 700; }
+  #trades-body td.t-asset { grid-area: asset; font-weight: 600; }
+  #trades-body tr:not(.t-notes) td:nth-child(4) { grid-area: dir; }
+  #trades-body td.t-move { grid-area: move; font-size: 1.05rem; font-weight: 700; text-align: right; }
+  #trades-body td.t-date { grid-area: date; font-size: 0.88rem; }
+  #trades-body td.t-px:nth-child(5) { grid-area: entry; }
+  #trades-body td.t-px:nth-child(6) { grid-area: exit; }
+  #trades-body td.t-held { grid-area: held; }
+  #trades-body td.t-worst { grid-area: worst; }
+  #trades-body td.t-actions { grid-area: act; }
+  #trades-body td.t-actions:empty { display: none; }
+  #trades-body td.t-px:nth-child(5)::before { content: "Entry"; }
+  #trades-body td.t-px:nth-child(6)::before { content: "Exit"; }
+  #trades-body td.t-held::before { content: "Held"; }
+  #trades-body td.t-worst::before { content: "Worst point"; }
+  #trades-body td.t-px::before, #trades-body td.t-held::before, #trades-body td.t-worst::before {
+    display: block; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-ink-soft);
+  }
+  #trades-body tr.t-notes:not([hidden]) { display: block; }
+  #trades-body tr.t-notes td { display: block; padding: 12px; }
+  #trades-body tr.t-notes td:first-child { display: none; }
+}
