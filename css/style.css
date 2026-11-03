@@ -2555,3 +2555,20 @@ table.trades { min-width: 820px; }
 /* Homepage company card: one short line of context under the time frame (max 3 lines) */
 #feat-company .feature-note { margin: 2px 0 12px; font-size: 0.9rem; line-height: 1.5; color: var(--color-ink-soft); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
 #feat-company.is-current .feature-note { color: #D5DBE3; }
+
+/* Human-written badge (green counterpart to .ai-badge) */
+.human-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1F6B3A;
+  background: #EAF6EE;
+  border: 1px solid #BFDCC8;
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+.article-meta .human-badge { margin: 0 8px 0 0; vertical-align: 1px; }
