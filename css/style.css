@@ -2572,3 +2572,53 @@ table.trades { min-width: 820px; }
   margin-bottom: 10px;
 }
 .article-meta .human-badge { margin: 0 8px 0 0; vertical-align: 1px; }
+
+/* ============ ARTICLE ENDING: lighter disclaimer, text back link, course card ============ */
+.article-disclaimer {
+  margin: 36px 0 0;
+  padding: 16px 0 0;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--color-line);
+  border-radius: 0;
+}
+.article-disclaimer-label { font-size: 0.68rem; color: var(--color-ink-soft); margin-bottom: 6px; }
+aside.article-disclaimer p,
+.article-body aside.article-disclaimer p { font-size: 0.8rem; line-height: 1.55; color: #7A8696; }
+.back-link {
+  display: inline-block;
+  margin-top: 24px;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  text-decoration: none;
+}
+.back-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.article-body a.back-link { color: var(--color-ink); font-weight: 600; }
+
+.course-card {
+  margin: 12px 0 8px;
+  padding: 22px 24px;
+  background: #F1F8F3;
+  border: 1px solid #CFE5D6;
+  border-radius: 14px;
+  font-family: var(--font-sans);
+}
+.course-card-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1F6B3A;
+  background: #FFFFFF;
+  border: 1px solid #BFDCC8;
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+.article-body .course-card h3 { font-size: 1.2rem; margin: 0 0 6px; color: var(--color-ink); }
+.article-body .course-card p { font-size: 0.95rem; line-height: 1.55; margin: 0 0 14px; color: #33404F; }
+.course-card-points { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 0 0 16px; padding: 0; list-style: none; font-size: 0.88rem; color: #33404F; }
+.course-card-points li::before { content: "\2713"; color: #1F6B3A; font-weight: 700; margin-right: 6px; }
