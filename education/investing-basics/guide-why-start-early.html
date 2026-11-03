@@ -34,6 +34,11 @@
   .bias-list { margin:0 0 20px; padding-left:0; list-style:none; }
   .bias-list li { margin-bottom:18px; padding-left:20px; border-left:3px solid #E2E6EA; }
   .bias-list strong { color:#1B2A3F; display:block; margin-bottom:4px; }
+  .course-cta { display:flex; align-items:center; gap:20px; background:#FFFFFF; border:1px solid #E2E6EA; border-left:4px solid #1B2A3F; border-radius:10px; padding:16px 20px; margin:8px 0 28px; }
+  .course-cta strong { color:#1B2A3F; display:block; margin-bottom:4px; font-size:1rem; }
+  .article-body .course-cta p { font-size:0.92rem; line-height:1.55; margin:0; color:#33404F; }
+  .course-cta .btn { flex-shrink:0; }
+  @media (max-width:600px){ .course-cta { flex-direction:column; align-items:flex-start; gap:12px; } }
 </style>
 </head>
 <body>
@@ -123,11 +128,13 @@
 
       <h2>A note for parents</h2>
       <p>Parents can give their children something more valuable than money: an early start and an understanding of how money works.</p>
-      <ul class="bias-list">
-        <li><strong>Start small, early.</strong> Many Swiss banks and brokers let parents open an investment account for a child and invest a small amount every month. Even modest sums have the full benefit of time.</li>
-        <li><strong>Prepare for the first income.</strong> Pillar 3a, the tax-advantaged private pension, is only possible once someone earns an income subject to AHV. The first job or apprenticeship is the natural moment to start, and a child who already understands why will actually do it.</li>
-        <li><strong>Talk about money at home.</strong> Financial literacy is learned, not inherited. Explaining what a fund is, why prices rise or why you save is often worth more than the money itself.</li>
-      </ul>
+      <div class="course-cta">
+        <div>
+          <strong>Financial literacy courses for kids and teens</strong>
+          <p>We are building our own courses on how the financial world works: saving, compounding, risk and how markets function. No stock tips, no product recommendations. Interested as a parent? Get in touch and we will let you know when the first course starts.</p>
+        </div>
+        <a href="/contact/" class="btn btn-secondary btn-sm">Contact us</a>
+      </div>
 
       <aside class="tldr">
         <span class="tldr-label">Key takeaway</span>
