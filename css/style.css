@@ -2800,3 +2800,6 @@ aside.article-disclaimer p,
 }
 .parents-note .parents-strip-tag { margin-bottom: 8px; }
 .card-featured-body .parents-note p { margin: 0; max-width: none; font-size: 0.92rem; line-height: 1.5; color: #33404F; }
+/* Parents note in navy (green stays reserved for content written by Yves) */
+.parents-note { background: #EEF2F8; border-color: #C9D5E6; }
+.parents-note .parents-strip-tag { background: var(--color-ink); color: #FFFFFF; border-color: var(--color-ink); }
