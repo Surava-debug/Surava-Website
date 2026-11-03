@@ -2921,3 +2921,16 @@ aside.article-disclaimer p,
   .mission-points { grid-template-columns: 1fr; gap: 10px; margin-top: 24px; }
   .about-hero { padding-bottom: 36px; }
 }
+/* Author pill: exactly the same size and shape as the AI pill, only the colour differs */
+.human-badge {
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  color: #1F6B3A;
+  background: transparent;
+  border: 1px solid #A9D2B5;
+  padding: 2px 8px;
+  margin-bottom: 10px;
+}
+.article-meta .human-badge, .article-meta .ai-badge { margin: 0 8px 0 0; vertical-align: 1px; }
+.ai-badge, .human-badge { line-height: 1.5; }
+.ai-badge.ai-badge-sm { padding: 2px 8px; }
