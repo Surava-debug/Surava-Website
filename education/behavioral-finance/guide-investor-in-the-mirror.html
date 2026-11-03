@@ -37,6 +37,9 @@
   .bias-list { margin:0 0 20px; padding-left:0; list-style:none; }
   .bias-list li { margin-bottom:18px; padding-left:20px; border-left:3px solid #E2E6EA; }
   .bias-list strong { color:#1B2A3F; display:block; margin-bottom:4px; }
+  .habit-list { counter-reset: habit; list-style: none; padding: 0; margin: 0 0 20px; }
+  .habit-list li { counter-increment: habit; position: relative; padding-left: 40px; margin-bottom: 14px; font-size: 1.06rem; line-height: 1.6; color: #33404F; }
+  .habit-list li::before { content: counter(habit); position: absolute; left: 0; top: 1px; width: 26px; height: 26px; border-radius: 50%; background: #1B2A3F; color: #FFFFFF; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
 </style>
 </head>
 <body>
@@ -107,12 +110,12 @@
       <h2>Knowing your own tendencies</h2>
       <p>None of these biases disappear once you know about them. Knowing them does not make you immune; it makes you prepared. Recognising your own weaknesses and tendencies is the first step towards financial responsibility and real financial literacy.</p>
       <p>In practice that means a few simple habits:</p>
-      <ul class="bias-list">
+      <ol class="habit-list">
         <li>Write down why you are buying before you buy, and what would prove you wrong.</li>
         <li>Set your exit rules while you are calm, not while the position is red.</li>
         <li>Judge a price by the business behind it, not by its old high.</li>
         <li>After a win, ask whether you were right for the right reasons.</li>
-      </ul>
+      </ol>
       <p>The market will test every one of these tendencies. The goal is not to never feel them. The goal is to notice them before they make the decision for you.</p>
 
       <aside class="tldr">
