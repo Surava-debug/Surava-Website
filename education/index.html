@@ -180,16 +180,6 @@
           <div class="body">
             <span class="ai-badge">AI-generated (Claude) &middot; Test</span>
 
-            <div class="meta">Guide · 7 min read</div>
-            <h3>How much do you actually need to retire?</h3>
-            <p>A framework for estimating your retirement number based on spending, not arbitrary rules of thumb.</p>
-            <a href="/education/retirement-planning/guide-retirement-number.html" class="card-link">Read guide →</a>
-          </div>
-        </div>
-        <div class="article-card">
-          <div class="body">
-            <span class="ai-badge">AI-generated (Claude) &middot; Test</span>
-
             <div class="meta">Guide · 6 min read</div>
             <h3>The Swiss three-pillar system, explained</h3>
             <p>How AHV, occupational pensions, and Pillar 3a fit together — and where private savings come in.</p>
@@ -292,7 +282,7 @@
       if (!sec) return;
       var g = 0, t = 0;
       sec.querySelectorAll('.article-card:not(.is-coming-soon) a.card-link[href]').forEach(function (a) {
-        if (/^tool-/.test(a.getAttribute('href'))) t++; else g++;
+        if (/(^|\/)tool-[^\/]*$/.test(a.getAttribute('href'))) t++; else g++;
       });
       var parts = [];
       if (g) parts.push(g + (g === 1 ? ' guide' : ' guides'));
