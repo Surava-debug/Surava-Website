@@ -2740,3 +2740,18 @@ aside.article-disclaimer p,
 /* Cards only lift on hover when there is something to click */
 .card:not(:has(a)):hover,
 .contact-info .card:hover { transform: none; box-shadow: none; }
+
+/* Contact: info cards line up with the form (same top and bottom edge, equal heights) */
+.split:has(> .contact-info) { align-items: stretch; }
+.contact-info { grid-auto-rows: 1fr; gap: 20px; }
+.contact-info .card { display: flex; flex-direction: column; justify-content: center; padding: 24px 28px; }
+.contact-info .card h3 { margin-bottom: 6px; }
+.contact-info .card p { margin: 0; }
+
+/* Contact on phones: the hCaptcha box is a fixed 303px wide, so give it room */
+@media (max-width: 600px) {
+  .form-card { padding: 24px 18px; }
+}
+@media (max-width: 380px) {
+  .h-captcha { transform: scale(0.88); transform-origin: left top; margin-bottom: 4px !important; }
+}
