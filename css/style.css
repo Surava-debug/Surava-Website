@@ -2934,3 +2934,6 @@ aside.article-disclaimer p,
 .article-meta .human-badge, .article-meta .ai-badge { margin: 0 8px 0 0; vertical-align: 1px; }
 .ai-badge, .human-badge { line-height: 1.5; }
 .ai-badge.ai-badge-sm { padding: 2px 8px; }
+/* Coming-soon line: titles flow next to the pill instead of dropping below it */
+.coming-soon-line { display: block; line-height: 1.9; }
+.coming-soon-line .coming-soon-pill { display: inline-block; margin: 0 10px 0 0; vertical-align: 1px; }
