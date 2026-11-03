@@ -1481,9 +1481,13 @@ footer {
   border-radius: 2px;
   background: linear-gradient(90deg, #BFDCC8, #C9D0D9);
   transform-origin: left center;
-  animation: rn-draw-x 0.7s ease-out 0.25s both;
+  animation: rn-draw-x 0.45s ease-in 0.2s both;
 }
-.rn-step:nth-child(2)::after { animation-delay: 0.55s; background: linear-gradient(90deg, #C9D0D9, #BFDCC8); }
+/* one continuous line: 1 -> 2 first, then 2 -> 3; each number lights up when the line reaches it */
+.rn-step:nth-child(2)::after { animation-delay: 0.65s; animation-timing-function: ease-out; background: linear-gradient(90deg, #C9D0D9, #BFDCC8); }
+.rn-step:nth-child(2) .rn-num { animation: rn-pop 0.3s ease-out 0.6s both; }
+.rn-step:nth-child(3) .rn-num { animation: rn-pop 0.3s ease-out 1.05s both; }
+@keyframes rn-pop { from { transform: scale(0.6); opacity: 0.25; } 60% { transform: scale(1.12); opacity: 1; } to { transform: scale(1); opacity: 1; } }
 .rn-text strong { color: var(--color-ink); font-weight: 600; }
 @keyframes rn-draw-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes rn-draw-y { from { transform: scaleY(0); } to { transform: scaleY(1); } }
@@ -1502,7 +1506,7 @@ footer {
   .rn-step:nth-child(2)::after { background: linear-gradient(180deg, #C9D0D9, #BFDCC8); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .rn-step::after { animation: none !important; }
+  .rn-step::after, .rn-num { animation: none !important; }
 }
 
 /* ============ INSIGHTS: COMING SOON SLOT ============ */
