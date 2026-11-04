@@ -10,6 +10,7 @@ so a layout change only ever has to be made once.
   python3 scripts/build-de.py --extract FILE  write untranslated text to FILE
   python3 scripts/build-de.py --merge FILE    add translations from FILE
   python3 scripts/build-de.py --prune         drop translations no longer used
+  python3 scripts/build-de.py --check         list text that still needs German
 
 _i18n/de.json       page text, one entry per block of text
 _i18n/de-code.json  text inside JavaScript, as [find, replace] pairs
@@ -391,6 +392,17 @@ def main():
             del site.store[k]
         write(STORE, json.dumps(site.store, ensure_ascii=False, indent=0, sort_keys=True) + "\n")
         print(f"Store has {len(site.store)}")
+        return
+
+    if a[:1] == ["--check"]:
+        unused = [f for f, _ in site.code if f not in site.used_code]
+        for page, key in site.missing.values():
+            print(f"Needs German: {page}: {key[:100]}")
+        for f in unused:
+            print(f"JavaScript text changed: {f[:100]}")
+        if site.missing or unused:
+            sys.exit(f"{len(site.missing) + len(unused)} items still need German.")
+        print("All text has German.")
         return
 
     changed = 0
