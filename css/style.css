@@ -2972,3 +2972,14 @@ html[lang="de"] .focus-card-top { flex-wrap: wrap; row-gap: 4px; }
 html[lang="de"] .legal-links { flex-wrap: wrap; row-gap: 6px; }
 html[lang="de"] .feature-label { flex-wrap: wrap; row-gap: 4px; }
 html[lang="de"] .focus-period { white-space: normal; }
+/* Header: menu items and the pill keep the same place and size in English and German */
+.nav-actions .btn-primary { min-width: 118px; }
+@media (min-width: 1025px) {
+  .nav-links { gap: 0; }
+  .nav-links > a { flex: none; text-align: center; }
+  .nav-links > a:nth-of-type(1) { width: 92px; }
+  .nav-links > a:nth-of-type(2) { width: 90px; }
+  .nav-links > a:nth-of-type(3) { width: 86px; }
+  .nav-links > a:nth-of-type(4) { width: 85px; }
+  .nav-links > a:nth-of-type(5) { width: 84px; }
+}
