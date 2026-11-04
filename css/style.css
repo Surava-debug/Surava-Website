@@ -2946,3 +2946,5 @@ aside.article-disclaimer p,
 /* Education: section titles on one line on desktop */
 section#behavioral-finance .section-head.left, section#investing-basics .section-head.left, section#retirement-planning .section-head.left { max-width: none !important; }
 @media (min-width: 901px) { section#behavioral-finance .section-head h2, section#investing-basics .section-head h2, section#retirement-planning .section-head h2 { white-space: nowrap; font-size: min(2.8rem, 3.6vw); } }
+/* Markets: company intro text uses the full content width */
+.catalyst-intro { max-width: none !important; }
