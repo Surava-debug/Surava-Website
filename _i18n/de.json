@@ -67,6 +67,10 @@
 "de": "Die im Wissensbereich verfügbaren Artikel, Guides, Rechner und Tools dienen ausschliesslich der allgemeinen Information und berücksichtigen weder die Ziele noch die finanzielle Situation oder die Bedürfnisse einzelner Personen. Sie sind nicht als persönliche Anlage-, Rechts- oder Steuerberatung zu verstehen.",
 "en": "Articles, guides, calculators, and tools available through the Education Hub are provided for general informational purposes only and do not take into account the specific objectives, financial situation, or needs of any individual. They should not be construed as personalized investment, legal, or tax advice."
 },
+"068dacb1": {
+"de": "Die Inhalte dieser Website, einschliesslich Artikel, Guides, Tools und Rechner, dienen ausschliesslich der allgemeinen Information und Bildung. Sie stellen keine persönliche Anlage-, Rechts- oder Steuerberatung dar, und Sie sollten sich nicht als solche darauf verlassen. Surava Capital bietet derzeit keine Beratungsdienstleistungen an.",
+"en": "The content on this Site, including articles, guides, tools, and calculators, is provided for general informational and educational purposes only. It does not constitute personalized investment, legal, or tax advice and should not be relied upon as such. Surava Capital does not currently provide advisory services."
+},
 "06a9ebe8": {
 "de": "<a href=\"/legal/privacy.html\">Datenschutz</a> <a href=\"/legal/terms.html\">Nutzungsbedingungen</a> <a href=\"/legal/disclosures.html\">Rechtliche Hinweise</a>",
 "en": "<a href=\"/legal/privacy.html\">Privacy</a> <a href=\"/legal/terms.html\">Terms</a> <a href=\"/legal/disclosures.html\">Disclosures</a>"
@@ -106,10 +110,6 @@
 "0b6963c3": {
 "de": "Sprung, dann wohl Abgabe: unverändert bis &minus;10%",
 "en": "Jump, then likely fade: flat to &minus;10%"
-},
-"0b73200f": {
-"de": "<strong>Nutzungsdaten</strong>: Informationen, die beim Besuch unserer Website automatisch erfasst werden, etwa Browsertyp, aufgerufene Seiten und Verweildauer, in der Regel über Cookies und Analysetools.",
-"en": "<strong>Usage data</strong> — information automatically collected when you visit our website, such as browser type, pages viewed, and time spent on the site, typically through cookies and analytics tools."
 },
 "0badfbfc": {
 "de": "Direkt aus dem Export unseres Brokers, Gewinne wie Verluste. Gehandelt als CFDs (gehebelte Kontrakte) auf Trading 212. Die angezeigte Bewegung ist die Veränderung des Aktienkurses zugunsten des Trades, vor Hebel und Gebühren.",
@@ -194,10 +194,6 @@
 "136da9b7": {
 "de": "Artikel lesen &rarr;",
 "en": "Read article &rarr;"
-},
-"13db8209": {
-"de": "Surava Capital («Surava Capital», «wir», «uns» oder «unser») respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Informationen wir erheben, wie wir sie verwenden und welche Wahlmöglichkeiten Sie bezüglich Ihrer Informationen haben, wenn Sie unsere Website besuchen oder als Kundin oder Kunde mit uns zusammenarbeiten.",
-"en": "Surava Capital (\"Surava Capital,\" \"we,\" \"us,\" or \"our\") respects your privacy. This Privacy Policy explains what information we collect, how we use it, and the choices you have regarding your information when you visit our website or work with us as a client."
 },
 "144b49b7": {
 "de": "Kontoart",
@@ -379,6 +375,10 @@
 "de": "Warum die Lücke zwischen 1. und 2. Säule und deinen Zielen zählt",
 "en": "Why the gap between Pillars 1 and 2 and your actual goals matters"
 },
+"2572742e": {
+"de": "unsere Bildungsinhalte bereitzustellen, zu pflegen und zu verbessern",
+"en": "Provide, maintain, and improve our educational content"
+},
 "262e4531": {
 "de": "Finanzwissen für Kinder und Jugendliche",
 "en": "Money skills for kids and teens"
@@ -398,6 +398,10 @@
 "2722abc7": {
 "de": "Moderna teilt sich die Gewinne aus dem Impfstoff 50/50 mit Merck.",
 "en": "Moderna shares the profits from the vaccine 50/50 with Merck."
+},
+"279b4c1f": {
+"de": "auf Anfragen zu antworten und mit Ihnen zu kommunizieren",
+"en": "Respond to inquiries and communicate with you"
 },
 "28234cf2": {
 "de": "1J",
@@ -442,10 +446,6 @@
 "2d8c3f55": {
 "de": "Anwendbares Recht",
 "en": "Governing Law"
-},
-"2d973674": {
-"de": "auf Anfragen zu antworten und mit Ihnen über unsere Dienstleistungen zu kommunizieren",
-"en": "Respond to inquiries and communicate with you about our services"
 },
 "2dd1c87d": {
 "de": "Am besten für",
@@ -498,6 +498,10 @@
 "323686ee": {
 "de": "Anlegen 101: Vom ersten Konto zum ersten Portfolio",
 "en": "Investing 101: From your first account to your first portfolio"
+},
+"32d3ab85": {
+"de": "Surava Capital («Surava Capital», «wir», «uns» oder «unser») respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Informationen wir erheben, wie wir sie verwenden und welche Wahlmöglichkeiten Sie bezüglich Ihrer Informationen haben, wenn Sie unsere Website besuchen oder uns kontaktieren.",
+"en": "Surava Capital (\"Surava Capital,\" \"we,\" \"us,\" or \"our\") respects your privacy. This Privacy Policy explains what information we collect, how we use it, and the choices you have regarding your information when you visit our website or contact us."
 },
 "339c9517": {
 "de": "Das Schweizer Drei-Säulen-System, erklärt · Surava Capital",
@@ -683,6 +687,10 @@
 "de": "1. Säule: die AHV, das Sicherheitsnetz für alle",
 "en": "Pillar 1: AHV, the safety net for everyone"
 },
+"4812fe6d": {
+"de": "Der Impfstoff wirkt, aber wie gut? Unser verständlicher Blick vor den Daten und unser Fazit danach.",
+"en": "The vaccine works, but how well? Our plain-language look before the data, and our conclusion after it."
+},
 "48f88ac3": {
 "de": "Etwas anderes",
 "en": "Something else"
@@ -779,10 +787,6 @@
 "de": "Gold gehört zu den am meisten missverstandenen Anlagen bei jüngeren Anlegern. Ein verständlicher Blick auf Realzinsen, die Kennzahl, die am besten erklärt, wann Gold gut läuft, und was die Marktgeschichte zeigt.",
 "en": "Gold is one of the most misunderstood assets among younger investors. A plain-language look at real yields, the single number that best explains when gold performs, and what market history shows."
 },
-"54bb6a51": {
-"de": "<strong>Informationen, die Sie uns direkt geben</strong>: etwa Ihren Namen, Ihre E-Mail-Adresse, Ihre Telefonnummer und Angaben, die Sie über unsere Kontaktformulare oder im Rahmen von Beratungsmandaten mitteilen.",
-"en": "<strong>Information you provide directly</strong> — such as your name, email address, phone number, and any details you share through our contact forms or during advisory engagements."
-},
 "55e08773": {
 "de": "Einzahlungen sind bis zur jährlichen Höchstgrenze des Bundes vom steuerbaren Einkommen abziehbar. Das Wachstum bleibt bis zum Bezug steuerfrei.",
 "en": "Contributions deductible from taxable income, up to the annual federal limit. Growth is untaxed until withdrawal."
@@ -867,17 +871,13 @@
 "de": "<strong>Die Fed und die Wirtschaft.</strong> Unser Langzeitprojekt: Entscheide der Zentralbank und Veränderungen in der Wirtschaft lesen und herausfinden, was sie bedeuten.",
 "en": "<strong>The Fed and the economy.</strong> Our long-term project: reading central-bank decisions and shifts in the economy, and working out what they mean."
 },
-"5b17f20b": {
-"de": "Die Inhalte dieser Website, einschliesslich Artikel, Guides, Tools und Rechner, dienen ausschliesslich der allgemeinen Information und Bildung. Sie stellen keine persönliche Anlage-, Rechts- oder Steuerberatung dar, und Sie sollten sich nicht als solche darauf verlassen. Beratungsdienstleistungen werden nur auf Grundlage eines schriftlichen Vertrags mit Surava Capital erbracht.",
-"en": "The content on this Site, including articles, guides, tools, and calculators, is provided for general informational and educational purposes only. It does not constitute personalized investment, legal, or tax advice and should not be relied upon as such. Advisory services are only provided pursuant to a written agreement with Surava Capital."
-},
 "5b5b4e6c": {
 "de": "Diagramm, das CHF 10'000 über 30 Jahre bei 7% Rendite mit 0.2% Indexfonds-Gebühr und 1.5% Gebühr eines aktiven Fonds vergleicht und die Kosten höherer Gebühren durch den Zinseszins zeigt",
 "en": "Chart comparing CHF 10,000 invested for 30 years at a 7% return with a 0.2% index fund fee versus a 1.5% active fund fee, showing the compounding cost of higher fees"
 },
-"5b5e6b95": {
-"de": "Der Impfstoff wirkt. Der Samstag zeigt, wie gut. Ein verständlicher Blick auf die entscheidende Zahl und darauf, was bereits eingepreist ist.",
-"en": "The vaccine works. Saturday shows how well. A plain-language look at the number to watch and what is already priced in."
+"5b5e683e": {
+"de": "die für uns geltenden gesetzlichen Pflichten einzuhalten",
+"en": "Comply with legal obligations that apply to us"
 },
 "5b90dea9": {
 "de": "Unsere Roadmap",
@@ -987,10 +987,6 @@
 "de": "<span class=\"sw-band\"></span><span class=\"key\" id=\"calcRangeKey\">Bandbreite</span><span class=\"val small\" id=\"calcRange\">&mdash;</span>",
 "en": "<span class=\"sw-band\"></span><span class=\"key\" id=\"calcRangeKey\">Range</span><span class=\"val small\" id=\"calcRange\">&mdash;</span>"
 },
-"66f94fb5": {
-"de": "gesetzliche und regulatorische Pflichten für Anlageberater einzuhalten",
-"en": "Comply with legal and regulatory obligations applicable to investment advisers"
-},
 "67236162": {
 "de": "Wie AHV, Pensionskasse und Säule 3a die Altersvorsorge in der Schweiz finanzieren, in einfacher Sprache erklärt.",
 "en": "How AHV, occupational pensions, and Pillar 3a fit together to fund retirement in Switzerland, explained in plain language."
@@ -1043,10 +1039,6 @@
 "de": "Alle",
 "en": "All"
 },
-"6a7740cf": {
-"de": "unsere Beratungs- und Bildungsangebote bereitzustellen, zu betreiben und zu verbessern",
-"en": "Provide, maintain, and improve our advisory and educational services"
-},
 "6a869bdb": {
 "de": "Der Fehler, den du vermeiden solltest",
 "en": "The mistake worth avoiding"
@@ -1070,6 +1062,10 @@
 "6b4bc8d8": {
 "de": "Nimm diese Niveaus nicht zu genau. Die Chartanalyse zeigt nur, wo Käufer zuvor eingestiegen sind, nicht wo sie es das nächste Mal tun. Was diesmal wirklich über die Richtung entscheidet, sind die Daten vom Samstag. Und weil sie an einem Wochenende kommen, trifft die volle Reaktion erst zur Eröffnung am Montag ein, der Kurs kann also direkt über diese Niveaus hinausspringen.",
 "en": "Take these levels with a pinch of salt. Chart analysis only shows where buyers stepped in before, not where they will next time. What really decides the direction this time is Saturday's data. And because it lands on a weekend, the full reaction hits at Monday's open, so the price can jump straight past these levels."
+},
+"6b7a32a6": {
+"de": "<strong>Nutzungsdaten</strong>: Informationen, die beim Besuch unserer Website automatisch erfasst werden, etwa Browsertyp, aufgerufene Seiten und Verweildauer, in der Regel über Cookies und Analysetools.",
+"en": "<strong>Usage data</strong>: information automatically collected when you visit our website, such as browser type, pages viewed, and time spent on the site, typically through cookies and analytics tools."
 },
 "6bd60546": {
 "de": "Die Lösung ist langweilig und sie funktioniert: Entscheide vor dem Kauf, was dich zum Verkauf bringen würde. Schreib den Grund für die Position auf und das Niveau, ab dem dieser Grund nicht mehr gilt. Dann entscheidet dein ruhigeres Ich und nicht die Version von dir, die auf eine rote Zahl starrt.",
@@ -1367,10 +1363,6 @@
 "de": "Geben Sie Ihrem Kind einen Vorsprung im Umgang mit Geld. Wir bauen gerade Präsenzkurse für Kinder und Jugendliche auf.",
 "en": "Give your child a head start with money. We are in the process of building in-person courses for kids and teens."
 },
-"84f37a3c": {
-"de": "Wir verkaufen Ihre Personendaten nicht. Wir können Informationen an vertrauenswürdige Dienstleister weitergeben, die uns beim Betrieb unterstützen (etwa Depotbanken, Software für die Portfolioverwaltung und IT-Anbieter), und nur soweit dies für deren Aufgaben nötig ist. Wir können Informationen auch offenlegen, wenn Gesetz oder Behörden dies verlangen.",
-"en": "We do not sell your personal information. We may share information with trusted service providers who assist in operating our business (such as custodians, portfolio management software, and IT providers), and only to the extent necessary for them to perform their functions. We may also disclose information when required by law or regulatory authority."
-},
 "85a6283a": {
 "de": "Die Idee klingt einleuchtend: vor dem Einbruch verkaufen, am Tiefpunkt wieder einsteigen. In der Praxis gehört dieser Reflex zu den zuverlässigsten Kostenfallen für Anleger.",
 "en": "The idea is intuitive: sell before the drop, buy back in at the bottom. In practice, this is one of the most consistently costly instincts an investor can act on."
@@ -1615,6 +1607,10 @@
 "de": "Vermögensverwaltung",
 "en": "Wealth Management"
 },
+"99f751c4": {
+"de": "Wichtige rechtliche Hinweise zu Surava Capital und den Inhalten dieser Website.",
+"en": "Important disclosures about Surava Capital and the content on this site."
+},
 "99fa4132": {
 "de": "Wie viel brauchst du wirklich für den Ruhestand? · Surava Capital",
 "en": "How Much Do You Actually Need to Retire? — Surava Capital"
@@ -1662,10 +1658,6 @@
 "9ef08d96": {
 "de": "Warum früh anfangen wichtiger ist als gross anfangen",
 "en": "Why starting early matters more than starting big"
-},
-"a05e5081": {
-"de": "Letzte Aktualisierung: 1. Januar 2026. Übersetzung aus dem Englischen; massgebend ist die englische Fassung.",
-"en": "Last updated: January 1, 2026"
 },
 "a0984afd": {
 "de": "Wo wir stehen und wohin wir wollen",
@@ -1914,10 +1906,6 @@
 "b511e71c": {
 "de": "<strong>Home Bias.</strong> Sich stark auf Schweizer Unternehmen zu konzentrieren, weil sie vertraut sind, obwohl die Schweiz nur einen kleinen Teil der Weltwirtschaft ausmacht.",
 "en": "<strong>Home bias.</strong> Concentrating heavily in Swiss companies because they're familiar, when Switzerland is a small fraction of the global economy."
-},
-"b566dd8b": {
-"de": "Wichtige rechtliche Hinweise zu Surava Capital.",
-"en": "Important disclosures regarding Surava Capital's advisory services."
 },
 "b5d3297a": {
 "de": "Die häufigsten Fehler",
@@ -2299,6 +2287,10 @@
 "de": "Der Kurs setzt bereits ein spektakuläres Resultat voraus, ein bloss gutes kann also enttäuschen. Moderna wird mit fast dem 50-Fachen des Jahresumsatzes bewertet und schreibt weiterhin Verluste. Der Kurs beruht also auf Erwartungen, nicht auf heutigen Gewinnen. Erwartungen können sich über Nacht ändern, deshalb kann schon eine kleine Überraschung eine solche Aktie an einem Tag zweistellig bewegen, in beide Richtungen.",
 "en": "The price already assumes a spectacular result, so a merely good one can disappoint. Moderna is valued at almost 50 times what it sells in a year, and it still makes a loss. That means the price rests on expectations, not on profits the company earns today. Expectations can change overnight, so even a small surprise can move a stock like this by double digits in a single day, in either direction."
 },
+"d71cf4f9": {
+"de": "<strong>Informationen, die Sie uns direkt geben</strong>: etwa Ihren Namen, Ihre E-Mail-Adresse und Angaben, die Sie über unser Kontaktformular oder per E-Mail mitteilen.",
+"en": "<strong>Information you provide directly</strong>: such as your name, email address, and any details you share through our contact form or by email."
+},
 "d753de6e": {
 "de": "Schick uns eine Nachricht, wir antworten innerhalb von 1–2 Arbeitstagen per E-Mail. Bitte beachte, dass wir keine persönliche Anlageberatung geben können.",
 "en": "Send us a message and we will reply by email within 1–2 working days. Please note that we cannot give personal investment advice."
@@ -2363,6 +2355,10 @@
 "de": "Anstehende Sitzungen und Datenveröffentlichungen",
 "en": "Upcoming meetings and data releases"
 },
+"dc2178b9": {
+"de": "Wir verkaufen Ihre Personendaten nicht. Wir können Informationen an vertrauenswürdige Dienstleister weitergeben, die uns beim Betrieb der Website unterstützen (etwa Anbieter für Hosting, Webanalyse und Kontaktformular), und nur soweit dies für deren Aufgaben nötig ist. Wir können Informationen auch offenlegen, wenn Gesetz oder Behörden dies verlangen.",
+"en": "We do not sell your personal information. We may share information with trusted service providers who assist in operating our website (such as hosting, analytics, and contact form providers), and only to the extent necessary for them to perform their functions. We may also disclose information when required by law or regulatory authority."
+},
 "dc5e5ae5": {
 "de": "Ehrliche Begleitung ohne Interessenkonflikte für junge Anlegerinnen und Anleger in der Schweiz, später ergänzt durch Vermögensverwaltung.",
 "en": "Honest, conflict-free guidance built for young Swiss investors, with portfolio management added as we grow into it."
@@ -2422,6 +2418,10 @@
 "e279ee53": {
 "de": "Phase-3-Daten zeigten, dass der personalisierte mRNA-Krebsimpfstoff zusammen mit Keytruda das Risiko senkte, dass ein Melanom zurückkehrt. Die Aktie hat sich an einem Tag mehr als verdoppelt.",
 "en": "Phase 3 data showed its personalised mRNA cancer vaccine, used with Keytruda, lowered the risk of melanoma returning. The shares more than doubled in a day."
+},
+"e342b6fa": {
+"de": "Letzte Aktualisierung: 4. November 2026. Übersetzung aus dem Englischen; massgebend ist die englische Fassung.",
+"en": "Last updated: November 4, 2026"
 },
 "e3d5f234": {
 "de": "Unser Wissen ist kostenlos. Lies als Nächstes unseren neusten Kommentar.",
@@ -2515,10 +2515,6 @@
 "de": "<strong>Überleben:</strong> jedes frühe Zeichen, dass Patienten mit dem Impfstoff auch länger leben.",
 "en": "<strong>Survival:</strong> any early sign that patients on the vaccine also live longer."
 },
-"ea2062bd": {
-"de": "<strong>Finanzinformationen</strong>: bei Kundinnen und Kunden die für die Beratung nötigen Informationen, darunter Kontostände, Einkommen und Ziele, erhoben gemäss unserem Beratungsvertrag.",
-"en": "<strong>Financial information</strong> — for clients, information necessary to provide advisory services, including account balances, income, and goals, collected in accordance with our advisory agreement."
-},
 "ea3b51d1": {
 "de": "<a href=\"/\">Startseite</a> / Rechtliche Hinweise",
 "en": "<a href=\"/\">Home</a> / Disclosures"
@@ -2566,10 +2562,6 @@
 "ee1041fd": {
 "de": "Wo unsere Analyse auf echte Trades trifft.",
 "en": "Where our analysis meets real trades."
-},
-"ee1ec735": {
-"de": "Genau diese Mischung aus echtem wissenschaftlichem Meilenstein und viel Hype ist der Grund, warum wir hinschauen. Die vollständigen Daten werden erst am 24. Oktober am ESMO-Kongress präsentiert, und der Impfstoff ist noch nirgends zugelassen.",
-"en": "That mix of a real scientific milestone and a lot of hype is exactly why we are watching. The full data is only presented at ESMO on 24 October, and the vaccine is not yet approved anywhere."
 },
 "ee4521e5": {
 "de": "Guide &middot; 6 Min. Lesezeit",
@@ -2730,6 +2722,10 @@
 "fb30bc85": {
 "de": "<strong>Der Preis des Wartens.</strong> In diesem Beispiel kostet schon ein Jahr Warten, von 18 auf 19, mit 65 rund CHF 36'000. Über die sieben Jahre von 18 bis 25 kostet jedes Jahr Warten im Schnitt rund CHF 30'000.",
 "en": "<strong>The cost of waiting.</strong> In this example, waiting just one year, from 18 to 19, costs about CHF 36'000 at age 65. Across the seven years from 18 to 25, each year of waiting costs about CHF 30'000 on average."
+},
+"fb31981b": {
+"de": "Genau diese Mischung aus echtem wissenschaftlichem Meilenstein und viel Hype ist der Grund, warum wir hinschauen. Die vollständigen Phase-3-Daten kamen am 22. Oktober: ein um 42% tieferes Risiko für eine Rückkehr des Krebses oder Tod gegenüber Keytruda allein. Der Impfstoff ist noch nirgends zugelassen, und Merck und Moderna sind nach eigenen Angaben im Austausch mit den Behörden.",
+"en": "That mix of a real scientific milestone and a lot of hype is exactly why we are watching. The full Phase 3 data came out on 22 October: a 42% lower risk of the cancer returning or death compared with Keytruda alone. The vaccine is still not approved anywhere, and Merck and Moderna say they are engaging with regulators."
 },
 "fb6f15ed": {
 "de": "Ihre Wahlmöglichkeiten",

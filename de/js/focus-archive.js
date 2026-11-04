@@ -48,7 +48,7 @@ const focusArchive = [
         id: "analysis-esmo-2026",
         date: "Sa, 24. Okt.",
         event: "Phase-3-Melanomdaten am ESMO",
-        text: "Der Impfstoff wirkt. Der Samstag zeigt, wie gut. Ein verständlicher Blick auf die entscheidende Zahl und darauf, was bereits eingepreist ist.",
+        text: "Der Impfstoff wirkt, aber wie gut? Unser verständlicher Blick vor den Daten und unser Fazit danach.",
         url: "/de/insights/insight-05-moderna-hazard-ratio.html",
         conclusion: true
       },
