@@ -76,4 +76,51 @@
     <loc>https://suravacapital.ch/legal/terms.html</loc>
     <priority>0.3</priority>
   </url>
+  <!-- de:start -->
+  <url>
+    <loc>https://suravacapital.ch/de/</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/about/</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/markets/</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/insights/</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/education/</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/trades/</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/education/investing-basics/guide-why-start-early.html</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/education/behavioral-finance/guide-investor-in-the-mirror.html</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/education/retirement-planning/tool-growth-calculator.html</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/insights/insight-05-moderna-hazard-ratio.html</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/insights/insight-06-moderna-conclusion.html</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/contact/</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/legal/disclosures.html</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/legal/privacy.html</loc>
+  </url>
+  <url>
+    <loc>https://suravacapital.ch/de/legal/terms.html</loc>
+  </url>
+  <!-- de:end -->
 </urlset>

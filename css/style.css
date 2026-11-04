@@ -2843,6 +2843,10 @@ aside.article-disclaimer p,
   #trades-body td.t-px:nth-child(6)::before { content: "Exit"; }
   #trades-body td.t-held::before { content: "Held"; }
   #trades-body td.t-worst::before { content: "Worst point"; }
+  html[lang="de"] #trades-body td.t-px:nth-child(5)::before { content: "Einstieg"; }
+  html[lang="de"] #trades-body td.t-px:nth-child(6)::before { content: "Ausstieg"; }
+  html[lang="de"] #trades-body td.t-held::before { content: "Haltedauer"; }
+  html[lang="de"] #trades-body td.t-worst::before { content: "Schlechtester Punkt"; }
   #trades-body td.t-px::before, #trades-body td.t-held::before, #trades-body td.t-worst::before {
     display: block; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-ink-soft);
   }
@@ -2958,3 +2962,13 @@ select {
   padding-right: 46px !important;
 }
 select::-ms-expand { display: none; }
+/* Language switch (EN / DE) in the menu bar */
+.lang-switch { display: inline-flex; flex: none; padding: 2px; border: 1px solid var(--color-line); border-radius: 999px; background: var(--color-card); }
+.lang-switch a { padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; line-height: 1.4; letter-spacing: 0.03em; color: var(--color-ink-soft); text-decoration: none; }
+.lang-switch a:hover { color: var(--color-ink); }
+.lang-switch a.is-active { background: var(--color-navy); color: #fff; }
+/* German: the longer label row on Insights cards wraps instead of overflowing */
+html[lang="de"] .focus-card-top { flex-wrap: wrap; row-gap: 4px; }
+html[lang="de"] .legal-links { flex-wrap: wrap; row-gap: 6px; }
+html[lang="de"] .feature-label { flex-wrap: wrap; row-gap: 4px; }
+html[lang="de"] .focus-period { white-space: normal; }
