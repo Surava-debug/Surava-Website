@@ -2962,11 +2962,14 @@ select {
   padding-right: 46px !important;
 }
 select::-ms-expand { display: none; }
-/* Language switch (EN / DE) in the menu bar */
-.lang-switch { display: inline-flex; flex: none; padding: 2px; border: 1px solid var(--color-line); border-radius: 999px; background: var(--color-card); }
-.lang-switch a { padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; line-height: 1.4; letter-spacing: 0.03em; color: var(--color-ink-soft); text-decoration: none; }
+/* Language switch (EN / DE) in the menu bar: the dark pill slides to the chosen language */
+.lang-switch { position: relative; display: inline-flex; flex: none; padding: 2px; border: 1px solid var(--color-line); border-radius: 999px; background: var(--color-card); }
+.lang-switch::before { content: ""; position: absolute; top: 2px; bottom: 2px; left: 2px; width: calc(50% - 2px); border-radius: 999px; background: var(--color-navy); transition: transform 0.24s cubic-bezier(0.4, 0, 0.2, 1); }
+.lang-switch[data-lang="de"]::before { transform: translateX(100%); }
+.lang-switch a { position: relative; z-index: 1; width: 37px; padding: 4px 0; border-radius: 999px; font-size: 0.75rem; font-weight: 600; line-height: 1.4; letter-spacing: 0.03em; text-align: center; color: var(--color-ink-soft); text-decoration: none; transition: color 0.24s ease; }
 .lang-switch a:hover { color: var(--color-ink); }
-.lang-switch a.is-active { background: var(--color-navy); color: #fff; }
+.lang-switch a.is-active { color: #fff; }
+@media (prefers-reduced-motion: reduce) { .lang-switch::before, .lang-switch a { transition: none; } }
 /* German: the longer label row on Insights cards wraps instead of overflowing */
 html[lang="de"] .focus-card-top { flex-wrap: wrap; row-gap: 4px; }
 html[lang="de"] .legal-links { flex-wrap: wrap; row-gap: 6px; }

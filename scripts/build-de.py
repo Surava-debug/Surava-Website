@@ -301,10 +301,10 @@ class Site:
         de = "/de/insights/" if path in ENGLISH_ONLY else "/de" + en
         save = "try{localStorage.setItem('surava-lang','%s')}catch(e){}"
         on = ' class="is-active" aria-current="true"'
-        return ('<!-- i18n:toggle --><div class="lang-switch" role="group" aria-label="%s">'
+        return ('<!-- i18n:toggle --><div class="lang-switch" data-lang="%s" role="group" aria-label="%s">'
                 f'<a href="{en}" hreflang="en" lang="en"{on if lang == "en" else ""} onclick="{save % "en"}">EN</a>'
                 f'<a href="{de}" hreflang="de" lang="de"{on if lang == "de" else ""} onclick="{save % "de"}">DE</a>'
-                '</div><!-- /i18n:toggle -->') % ("Sprache" if lang == "de" else "Language")
+                '</div><!-- /i18n:toggle -->') % (lang, "Sprache" if lang == "de" else "Language")
 
     def inject(self, s, path, lang):
         s = BLOCK_RE.sub("", s)

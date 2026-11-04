@@ -113,3 +113,28 @@ document.addEventListener("DOMContentLoaded", () => {
     new MutationObserver(function () { mark(); }).observe(document.body, { childList: true, subtree: true });
   });
 })();
+
+// ===== Language switch: the dark pill slides across, then the other language loads =====
+(function () {
+  var sw = document.querySelector('.lang-switch');
+  if (!sw) return;
+  var here = sw.getAttribute('data-lang'), SLIDE = 240;
+  function show(lang) {
+    sw.setAttribute('data-lang', lang);
+    sw.querySelectorAll('a').forEach(function (a) {
+      a.classList.toggle('is-active', a.getAttribute('hreflang') === lang);
+    });
+  }
+  sw.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var lang = a.getAttribute('hreflang');
+    if (lang === here) { e.preventDefault(); return; }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    e.preventDefault();
+    show(lang);
+    setTimeout(function () { window.location.href = a.href; }, SLIDE);
+  });
+  // Back button: the browser may restore this page as it was left, so put the pill back
+  window.addEventListener('pageshow', function (e) { if (e.persisted) show(here); });
+})();
