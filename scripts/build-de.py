@@ -253,7 +253,7 @@ class Site:
         return s
 
     def js_links(self, s):
-        return re.sub(r"""(["'])(/[a-z][^"'\s]*|/)\1""", lambda m: m.group(1) + self.link(m.group(2)) + m.group(1), s)
+        return re.sub(r"""(["'])(/[a-z][^"'\s]*)\1""", lambda m: m.group(1) + self.link(m.group(2)) + m.group(1), s)
 
     def js_data(self, s, page):
         """Translates the reader-facing text in the data arrays at the top of a js/ file."""

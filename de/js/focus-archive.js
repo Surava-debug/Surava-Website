@@ -104,7 +104,7 @@ const focusArchive = [
           '<p>' + (f.outcome ? esc(f.outcome) : '<em>Läuft noch.</em>') + '</p>' : '') +
         (hasA ? '<div class="focus-actions"><button type="button" class="focus-toggle" aria-expanded="false" aria-controls="' + panelId + '">Zu unserer Analyse <span class="focus-toggle-icon" aria-hidden="true">+</span></button>' +
           (compact && endsSoon(f.until) ? '<span class="focus-ends-soon">Ereignis endet bald</span>' : '') + '</div>' : '') +
-        (f.link && !hasA ? '<a class="card-link" href="' + esc(f.link) + '">' + (current ? 'Auf der Märkte-Seite verfolgen' : 'Mehr lesen') + ' →</a>' : '') +
+        (f.link && !hasA ? '<a class="card-link" href="' + esc(f.link) + '">' + (current ? 'Auf der Markt-Seite verfolgen' : 'Mehr lesen') + ' →</a>' : '') +
       '</article>' +
       (f.analysis && f.analysis.length ?
         '<div class="focus-analysis" id="' + panelId + '" hidden>' +
@@ -118,7 +118,7 @@ const focusArchive = [
               (a.url ? '<a class="fa-link fa-cta" href="' + esc(a.url) + '"><span>' + (a.conclusion ? 'Analyse und Fazit lesen' : 'Analyse lesen') + '</span><span class="fa-cta-arrow" aria-hidden="true">→</span></a>' : '<span class="fa-soon">Demnächst</span>') +
               '</div></details>';
           }).join('') +
-          (f.link ? '<a class="fa-more" href="' + esc(f.link) + '">' + (current ? 'Live-Chart und wichtige Termine auf der Märkte-Seite' : 'Mehr lesen') + ' →</a>' : '') +
+          (f.link ? '<a class="fa-more" href="' + esc(f.link) + '">' + (current ? 'Live-Chart und wichtige Termine auf der Markt-Seite' : 'Mehr lesen') + ' →</a>' : '') +
         '</div>' : '');
   }).join('') +
   '<div class="focus-card focus-card-next">' +

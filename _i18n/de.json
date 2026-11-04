@@ -28,7 +28,7 @@
 "en": "The average analyst price target is about <strong>124 dollars</strong>, roughly half the current price."
 },
 "0298ce6f": {
-"de": "<a href=\"/education/\">Wissen</a> / Steuern &amp; Konten",
+"de": "<a href=\"/education/\">Bildung</a> / Steuern &amp; Konten",
 "en": "<a href=\"/education/\">Education</a> / Taxes &amp; Accounts"
 },
 "02e6da0b": {
@@ -64,7 +64,7 @@
 "en": "Financial education for anyone."
 },
 "06255c92": {
-"de": "Die im Wissensbereich verfügbaren Artikel, Guides, Rechner und Tools dienen ausschliesslich der allgemeinen Information und berücksichtigen weder die Ziele noch die finanzielle Situation oder die Bedürfnisse einzelner Personen. Sie sind nicht als persönliche Anlage-, Rechts- oder Steuerberatung zu verstehen.",
+"de": "Die im Bereich Bildung verfügbaren Artikel, Guides, Rechner und Tools dienen ausschliesslich der allgemeinen Information und berücksichtigen weder die Ziele noch die finanzielle Situation oder die Bedürfnisse einzelner Personen. Sie sind nicht als persönliche Anlage-, Rechts- oder Steuerberatung zu verstehen.",
 "en": "Articles, guides, calculators, and tools available through the Education Hub are provided for general informational purposes only and do not take into account the specific objectives, financial situation, or needs of any individual. They should not be construed as personalized investment, legal, or tax advice."
 },
 "068dacb1": {
@@ -76,7 +76,7 @@
 "en": "<a href=\"/legal/privacy.html\">Privacy</a> <a href=\"/legal/terms.html\">Terms</a> <a href=\"/legal/disclosures.html\">Disclosures</a>"
 },
 "0783c72f": {
-"de": "Auf dieser Website gezeigte Gebühren, Mindestbeträge oder Planbeschreibungen sind unverbindlich und veranschaulichen unser beabsichtigtes künftiges Modell. Sie sind keine Angebote und stellen keine tatsächlichen Ergebnisse dar. In den Bereichen Insights und Trades veröffentlichte Markteinschätzungen sind unsere eigenen, öffentlich dokumentierten Ansichten und keine Empfehlungen an irgendjemanden.",
+"de": "Auf dieser Website gezeigte Gebühren, Mindestbeträge oder Planbeschreibungen sind unverbindlich und veranschaulichen unser beabsichtigtes künftiges Modell. Sie sind keine Angebote und stellen keine tatsächlichen Ergebnisse dar. In den Bereichen Einblick und Trades veröffentlichte Markteinschätzungen sind unsere eigenen, öffentlich dokumentierten Ansichten und keine Empfehlungen an irgendjemanden.",
 "en": "Any fee figures, account minimums, or plan descriptions shown on this Site are indicative and illustrate our intended future model. They are not offers, and they do not represent actual results. Market calls published in the Insights and Trades sections are our own published views, documented in public, and are not recommendations to anyone."
 },
 "07bcdb62": {
@@ -316,7 +316,7 @@
 "en": "We may collect the following types of information:"
 },
 "2099035e": {
-"de": "<a href=\"/insights/\" class=\"btn btn-accent btn-sm\">Zu den Insights</a> <a href=\"/insights/\" class=\"btn btn-secondary btn-sm\">Alle Artikel ansehen</a>",
+"de": "<a href=\"/insights/\" class=\"btn btn-accent btn-sm\">Zu Einblick</a> <a href=\"/insights/\" class=\"btn btn-secondary btn-sm\">Alle Artikel ansehen</a>",
 "en": "<a href=\"/insights/\" class=\"btn btn-accent btn-sm\">Read the Insights</a> <a href=\"/insights/\" class=\"btn btn-secondary btn-sm\">Browse all articles</a>"
 },
 "209d8db1": {
@@ -408,7 +408,7 @@
 "en": "1Y"
 },
 "2845845f": {
-"de": "Auf der Märkte-Seite verfolgen &rarr;",
+"de": "Auf der Markt-Seite verfolgen &rarr;",
 "en": "Follow it on Markets &rarr;"
 },
 "28af7741": {
@@ -440,7 +440,7 @@
 "en": "1M"
 },
 "2d6f9687": {
-"de": "<a href=\"/education/\">Wissen</a> <a href=\"/markets/\">Märkte</a> <a href=\"/insights/\">Insights</a> <a href=\"/trades/\">Trades</a> <a href=\"/about/\">Über uns</a> <a data-feature=\"pricing\" href=\"/parked/pricing.html\">Preise</a>",
+"de": "<a href=\"/education/\">Bildung</a> <a href=\"/markets/\">Markt</a> <a href=\"/insights/\">Einblick</a> <a href=\"/trades/\">Trades</a> <a href=\"/about/\">Über uns</a> <a data-feature=\"pricing\" href=\"/parked/pricing.html\">Preise</a>",
 "en": "<a href=\"/education/\">Education</a> <a href=\"/markets/\">Markets</a> <a href=\"/insights/\">Insights</a> <a href=\"/trades/\">Trades</a> <a href=\"/about/\">About</a> <a data-feature=\"pricing\" href=\"/parked/pricing.html\">Pricing</a>"
 },
 "2d8c3f55": {
@@ -520,7 +520,7 @@
 "en": "Where our analysis meets real trades. Students trading on the signals in our own analysis, logging every call, right or wrong, to see how well it works."
 },
 "343abab3": {
-"de": "Wissen · Surava Capital",
+"de": "Bildung · Surava Capital",
 "en": "Education Hub — Surava Capital"
 },
 "3468bf62": {
@@ -636,7 +636,7 @@
 "en": "Show more indicators (PCE, Unemployment, GDP) ▾"
 },
 "40c333a8": {
-"de": "Unser Follow-up zu den Märkten.",
+"de": "Unser Follow-up zur Markt-Seite.",
 "en": "Our follow-up on Markets."
 },
 "40f52a49": {
@@ -728,7 +728,7 @@
 "en": "Trades — Surava Capital"
 },
 "4d47e97a": {
-"de": "<a href=\"/education/\">Wissen</a> / Grundlagen des Anlegens",
+"de": "<a href=\"/education/\">Bildung</a> / Grundlagen des Anlegens",
 "en": "<a href=\"/education/\">Education</a> / Investing Basics"
 },
 "4df6fb9b": {
@@ -852,7 +852,7 @@
 "en": "Trades"
 },
 "59bb24ae": {
-"de": "Märkte · Surava Capital",
+"de": "Markt · Surava Capital",
 "en": "Markets — Surava Capital"
 },
 "5a4a6869": {
@@ -896,7 +896,7 @@
 "en": "Same starting point, similar overall drift. The concentrated position's path is dramatically rougher. Hypothetical example."
 },
 "5d044baa": {
-"de": "<a href=\"/education/\">Wissen</a> / Behavioral Finance",
+"de": "<a href=\"/education/\">Bildung</a> / Behavioral Finance",
 "en": "<a href=\"/education/\">Education</a> / Behavioral Finance"
 },
 "5d13b0dd": {
@@ -1028,7 +1028,7 @@
 "en": "Company Focus"
 },
 "6977e0db": {
-"de": "<a href=\"/insights/\" class=\"btn btn-accent btn-sm\">Zu den Insights</a> <a href=\"/trades/\" class=\"btn btn-secondary btn-sm\">Zum Trading-Journal</a>",
+"de": "<a href=\"/insights/\" class=\"btn btn-accent btn-sm\">Zu Einblick</a> <a href=\"/trades/\" class=\"btn btn-secondary btn-sm\">Zum Trading-Journal</a>",
 "en": "<a href=\"/insights/\" class=\"btn btn-accent btn-sm\">Read the Insights</a> <a href=\"/trades/\" class=\"btn btn-secondary btn-sm\">See the Trades journal</a>"
 },
 "6a05fc72": {
@@ -1676,11 +1676,11 @@
 "en": "Confirmation Bias"
 },
 "a13492a1": {
-"de": "Märkte live",
+"de": "Markt live",
 "en": "Live Markets"
 },
 "a195956e": {
-"de": "<a href=\"/insights/\">Insights</a> / Unternehmen im Fokus",
+"de": "<a href=\"/insights/\">Einblick</a> / Unternehmen im Fokus",
 "en": "<a href=\"/insights/\">Insights</a> / Company in focus"
 },
 "a3136eb3": {
@@ -1732,7 +1732,7 @@
 "en": "The investor in the mirror"
 },
 "a7608d1b": {
-"de": "&larr; Zurück zu den Insights",
+"de": "&larr; Zurück zu Einblick",
 "en": "&larr; Back to Insights"
 },
 "a76edd0b": {
@@ -1784,7 +1784,7 @@
 "en": "Pillar 3 is where your own decisions matter most, and it splits into two parts."
 },
 "aaf87fe5": {
-"de": "Wissen",
+"de": "Bildung",
 "en": "Education"
 },
 "ab06c2e7": {
@@ -1820,7 +1820,7 @@
 "en": "Earnings"
 },
 "adc2f053": {
-"de": "=",
+"de": "Einblick",
 "en": "Market Insights"
 },
 "ae203854": {
@@ -1872,7 +1872,7 @@
 "en": "Contact"
 },
 "b375ed6d": {
-"de": "<a href=\"/education/\">Wissen</a> / Altersvorsorge",
+"de": "<a href=\"/education/\">Bildung</a> / Altersvorsorge",
 "en": "<a href=\"/education/\">Education</a> / Retirement Planning"
 },
 "b3a80997": {
@@ -1896,7 +1896,7 @@
 "en": "A stock that can move double digits on one headline."
 },
 "b4510362": {
-"de": "=",
+"de": "Einblick",
 "en": "Insights"
 },
 "b4f97fa3": {
@@ -1940,7 +1940,7 @@
 "en": "Guide &middot; 7 min read"
 },
 "b8edb286": {
-"de": "Insights · Surava Capital",
+"de": "Einblick · Surava Capital",
 "en": "Insights — Surava Capital"
 },
 "b9071dd9": {
@@ -1992,7 +1992,7 @@
 "en": "Page Not Found — Surava Capital"
 },
 "be398917": {
-"de": "Wir bauen die Insights-Bibliothek und das Trading-Journal aus, damit ein ehrliches, öffentliches Protokoll unseres Denkens besteht, lange bevor wir jemals jemanden bitten, danach zu handeln.",
+"de": "Wir bauen den Bereich Einblick und das Trading-Journal aus, damit ein ehrliches, öffentliches Protokoll unseres Denkens besteht, lange bevor wir jemals jemanden bitten, danach zu handeln.",
 "en": "Growing the Insights library and the Trades journal, so there is an honest, public record of our thinking long before we ever ask anyone to act on it."
 },
 "be453497": {
@@ -2064,7 +2064,7 @@
 "en": "No Investment Advice"
 },
 "c3c49d3e": {
-"de": "Märkte",
+"de": "Markt",
 "en": "Markets"
 },
 "c49bb4c2": {
@@ -2228,7 +2228,7 @@
 "en": "<strong>Recency bias</strong> Giving too much weight to what's happened recently, assuming a rising market will keep rising, or a falling one will keep falling, simply because that's the pattern of the last few months."
 },
 "d1b7a299": {
-"de": "Das Unternehmen im Fokus auf unserer Märkte-Seite wechselt mit der Zeit. Hier ist das Archiv: warum wir jeweils hingeschaut haben und was passiert ist.",
+"de": "Das Unternehmen im Fokus auf unserer Markt-Seite wechselt mit der Zeit. Hier ist das Archiv: warum wir jeweils hingeschaut haben und was passiert ist.",
 "en": "The company in focus on our Markets page changes over time. This is the record of each one: why we started watching, and what happened."
 },
 "d2517f7c": {
@@ -2424,7 +2424,7 @@
 "en": "Last updated: November 4, 2026"
 },
 "e3d5f234": {
-"de": "Unser Wissen ist kostenlos. Lies als Nächstes unseren neusten Kommentar.",
+"de": "Unsere Bildungsinhalte sind kostenlos. Lies als Nächstes unseren neusten Kommentar.",
 "en": "Our education is free. Read our latest commentary next."
 },
 "e3f4eeda": {
@@ -2532,7 +2532,7 @@
 "en": "This article is for general educational and informational purposes only. It is not investment, tax, or legal advice, a recommendation to buy or sell any security, or an offer of any regulated financial service. Investing involves risk, including the possible loss of principal, and past performance does not indicate future results. Views expressed are those of Surava Capital."
 },
 "ec93fe57": {
-"de": "&larr; Zurück zur Wissensübersicht",
+"de": "&larr; Zurück zu Bildung",
 "en": "&larr; Back to Education Hub"
 },
 "ecb0552b": {
@@ -2768,7 +2768,7 @@
 "en": "Direction"
 },
 "fda1701f": {
-"de": "Die Unternehmen und Makrothemen von unserer Märkte-Seite, und was danach geschah.",
+"de": "Die Unternehmen und Makrothemen von unserer Markt-Seite, und was danach geschah.",
 "en": "The companies and macro stories from our Markets page, and what happened next."
 },
 "fdca1918": {
@@ -2780,7 +2780,7 @@
 "en": "Our own scenario estimate, based on the early trial, the early success of the Phase 3 trial and the bars analysts have set. Judgement calls, not a forecast and not investment advice."
 },
 "feb0ac6b": {
-"de": "Wissen",
+"de": "Bildung",
 "en": "Education Hub"
 },
 "ff6efa86": {

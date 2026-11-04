@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const path = window.location.pathname.replace(/index\.html$/, "");
   document.querySelectorAll(".nav-links > a, .has-dropdown > a").forEach((a) => {
     const href = (a.getAttribute("href") || "").split("#")[0];
-    if (href.length > 1 && href.endsWith("/de/") && path.startsWith(href)) {
+    if (href.length > 1 && href.endsWith("/") && path.startsWith(href)) {
       a.style.color = "var(--color-accent-dark)";
     }
   });
