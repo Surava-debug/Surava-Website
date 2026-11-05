@@ -58,7 +58,7 @@ TOKEN = re.compile(
     re.S | re.I,
 )
 BLOCK_RE = re.compile(r"<!-- i18n:(head|toggle|remember) -->.*?<!-- /i18n:\1 -->\s*", re.S)
-REMEMBER = ("<!-- i18n:remember --><script>try{if(localStorage.getItem('surava-lang')==='de')"
+REMEMBER = ("<!-- i18n:remember --><script>try{if(localStorage.getItem('surava-lang')!=='en'&&document.referrer.indexOf(location.origin)!==0)"
             "location.replace('/de/'+location.search+location.hash)}catch(e){}</script><!-- /i18n:remember -->\n  ")
 LETTER = re.compile(r"[A-Za-zÀ-ÿ]")
 
