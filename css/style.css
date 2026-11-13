@@ -2986,3 +2986,63 @@ html[lang="de"] .focus-period { white-space: normal; }
   .nav-links > a:nth-of-type(4) { width: 85px; }
   .nav-links > a:nth-of-type(5) { width: 84px; }
 }
+
+/* ============ HOMEPAGE: hero + "what we publish" (Nov 2026 redesign) ============ */
+:root { --home-accent: #B5562B; --home-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
+.home-hero { border-bottom: 1px solid var(--color-line); }
+.hero.hero-split.home-hero { padding: 72px 0 64px; }
+.home-hero .container { grid-template-columns: 1.15fr 0.85fr; gap: 64px; }
+.home-kicker { display: flex; align-items: center; gap: 10px; margin: 0 0 22px; font: 400 12px var(--home-mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent-dark); }
+.home-kicker::before { content: ""; width: 28px; height: 2px; background: var(--home-accent); flex: none; }
+.home-hero h1 { font-weight: 400; font-size: clamp(2.4rem, 4.2vw, 3.4rem); line-height: 1.08; letter-spacing: -0.015em; margin: 0; text-wrap: balance; }
+.home-hero h1 em { font-style: italic; color: var(--home-accent); }
+.home-hero p.lead { margin: 24px 0 0; font-size: 1.12rem; line-height: 1.6; max-width: 520px; }
+.home-actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 18px 24px; align-items: center; font-size: 15px; }
+.home-btn { background: var(--color-navy); color: #fff; padding: 12px 20px; border-radius: 3px; font-weight: 500; text-decoration: none; }
+.home-btn:hover { background: #2A3D57; color: #fff; }
+.home-link { color: var(--color-ink); font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--color-ink); padding-bottom: 2px; }
+.home-link:hover { color: var(--home-accent); border-color: var(--home-accent); }
+.home-hero .hero-brand img { aspect-ratio: auto; border-radius: 3px; box-shadow: none; }
+
+section.home-pub { padding: 80px 0; }
+.home-pub-head { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: end; margin-bottom: 40px; }
+.home-pub-head h2 { font-weight: 400; font-size: 2.4rem; line-height: 1.15; margin: 0; text-align: left; }
+.home-pub-head p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--color-ink-soft); }
+.home-edu { display: grid; grid-template-columns: 1.15fr 0.85fr; background: var(--color-navy); color: #fff; }
+.home-edu-photo img { display: block; width: 100%; height: 100%; min-height: 340px; object-fit: cover; }
+.home-edu-body { padding: 40px; }
+.home-num { font: 400 12px var(--home-mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent-dark); margin: 0; }
+.home-edu .home-num { color: #9FB0C6; }
+.home-edu h3 { font-weight: 400; font-size: 1.9rem; line-height: 1.2; color: #fff; margin: 10px 0 14px; }
+.home-edu-body > p { font-size: 15px; line-height: 1.6; color: #D3DBE6; margin: 0; }
+.home-edu-list { list-style: none; margin: 22px 0; padding: 0; border-top: 1px solid #34465F; }
+.home-edu-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 10px 0; border-bottom: 1px solid #34465F; font-size: 14px; }
+.home-edu-list a { color: #fff; text-decoration: none; }
+.home-edu-list a:hover { text-decoration: underline; }
+.home-edu-list span { font: 400 11px var(--home-mono); text-transform: uppercase; letter-spacing: 0.04em; color: #9FB0C6; }
+.home-edu-body > p.home-parents { font-size: 13px; line-height: 1.5; border-left: 2px solid var(--home-accent); padding-left: 12px; }
+.home-index { border-bottom: 1px solid var(--color-line); }
+.home-row { display: grid; grid-template-columns: 70px 210px 1fr 170px; gap: 24px; align-items: baseline; padding: 26px 0; border-top: 1px solid var(--color-line); color: var(--color-ink); text-decoration: none; }
+.home-index .home-row:first-child { border-top: 0; }
+.home-row h3 { font-weight: 400; font-size: 1.65rem; margin: 0; }
+.home-row p { margin: 0; font-size: 15px; line-height: 1.5; color: #3A485C; }
+.home-row p b { font-weight: 500; color: var(--color-ink); }
+.home-go { text-align: right; font-size: 14px; font-weight: 500; }
+.home-row:hover .home-go, .home-row:hover h3 { color: var(--home-accent); }
+@media (max-width: 900px) {
+  .hero.hero-split.home-hero { padding: 44px 0 40px; }
+  .home-hero .container { grid-template-columns: 1fr; gap: 36px; text-align: left; }
+  .home-hero h1 { font-size: 2.25rem; }
+  .home-hero p.lead { margin: 20px 0 0; font-size: 1rem; max-width: none; }
+  section.home-pub { padding: 52px 0; }
+  .home-pub-head { grid-template-columns: 1fr; gap: 12px; margin-bottom: 28px; }
+  .home-pub-head h2 { font-size: 1.9rem; }
+  .home-edu { grid-template-columns: 1fr; }
+  .home-edu-photo img { min-height: 0; height: auto; aspect-ratio: 16 / 10; }
+  .home-edu-body { padding: 26px 22px; }
+  .home-edu h3 { font-size: 1.6rem; }
+  .home-row { grid-template-columns: 44px 1fr; gap: 4px 12px; padding: 22px 0; }
+  .home-row p, .home-go { grid-column: 2; }
+  .home-go { text-align: left; margin-top: 8px; }
+  .home-row h3 { font-size: 1.45rem; }
+}

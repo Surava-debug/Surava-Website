@@ -8,8 +8,8 @@
   <meta name="description" content="Surava Capital provides independent financial education and market commentary to help young Swiss investors build long-term understanding with clarity and confidence." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20261104g" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=20261113a" />
   <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -58,56 +58,48 @@
   </header>
 
   <!-- ===== HERO ===== -->
-  <section class="hero hero-split">
+  <section class="hero hero-split home-hero">
     <div class="container">
       <div class="hero-copy">
-        <h1>Analysis you can check, not calls you have to trust.</h1>
-        <p class="lead">Free financial education, macro analysis and a public record of our own trades. No product sales, no hidden incentives.</p>
+        <p class="home-kicker">Zurich · Independent · Free</p>
+        <h1>Two students learning to invest, <em>in public.</em></h1>
+        <p class="lead">We write down our macro view before we trade, then publish what happened. Wins and misses stay on the record. Free to read, nothing to sell.</p>
+        <div class="home-actions">
+          <a href="/trades/" class="home-btn">Read the journal</a>
+          <a href="/education/" class="home-link">Start with the basics →</a>
+        </div>
       </div>
       <div class="hero-brand">
         <img src="/assets/brand/hero-logo.jpg" alt="The Surava Capital logo embossed on paper" width="1200" height="768" decoding="async" fetchpriority="high">
       </div>
     </div>
   </section>
-  
-  <!-- ===== SERVICES GRID ===== -->
-  <section>
+
+  <!-- ===== WHAT WE PUBLISH ===== -->
+  <section class="home-pub">
     <div class="container">
-      <div class="section-head">
-        <h2>Everything we publish</h2>
-        <p>Free guides, macro articles, live market data and a public trading journal. All of it open.</p>
+      <div class="home-pub-head">
+        <h2>Four things we publish.<br>All of it free.</h2>
+        <p>Guides for the basics, our own read on the economy, the markets we watch and the trades we actually took.</p>
       </div>
-      <div class="grid publish-grid">
-        <div class="card card-featured">
-          <div class="card-photo"><img src="/assets/photos/education-students.webp" alt="Three young people talking on benches outside, one working on a laptop" width="768" height="576" loading="lazy" decoding="async"></div>
-          <div class="card-featured-body">
-            <h3>Education</h3>
-            <p>Free guides and tools that explain how markets, taxes, and investing actually work, no sales pitch attached.</p>
-            <a href="/education/" class="card-link">2 guides, 1 tool →</a>
-            <div class="parents-note">
-              <span class="parents-strip-tag">For parents</span>
-              <p>Give your child a head start with money. We are in the process of building in-person courses for kids and teens.</p>
-            </div>
-          </div>
+      <div class="home-edu">
+        <div class="home-edu-photo"><img src="/assets/photos/education-students.webp" alt="Three young people talking on benches outside, one working on a laptop" width="768" height="576" loading="lazy" decoding="async"></div>
+        <div class="home-edu-body">
+          <p class="home-num">01 · Education</p>
+          <h3>Start here if you have never invested.</h3>
+          <p>Plain guides on how markets, taxes and accounts work in Switzerland.</p>
+          <ul class="home-edu-list">
+            <li><a href="/education/investing-basics/guide-why-start-early.html">Why starting early matters</a><span>Guide</span></li>
+            <li><a href="/education/behavioral-finance/guide-investor-in-the-mirror.html">The investor in the mirror</a><span>Guide</span></li>
+            <li><a href="/education/retirement-planning/tool-growth-calculator.html">Growth calculator</a><span>Tool</span></li>
+          </ul>
+          <p class="home-parents">For parents: we are building in-person courses for kids and teens.</p>
         </div>
-        <div class="card card-art card-art-markets">
-          <span class="card-art-bg" aria-hidden="true"><img src="/assets/icons/icon-live-markets.svg" alt="" width="24" height="24"></span>
-          <h3>Markets</h3>
-          <p>The companies and macro stories we follow, shown with live charts, prices and key dates. Data only, no commentary.</p>
-          <a href="/markets/" class="card-link">Live data →</a>
-        </div>
-        <div class="card card-art card-art-insights">
-          <span class="card-art-bg" aria-hidden="true"><img src="/assets/icons/icon-market-insights.svg" alt="" width="24" height="24"></span>
-          <h3>Insights</h3>
-          <p>Articles on macro topics and real-world events that caught our attention, written in plain English and published free.</p>
-          <a href="/insights/" class="card-link" id="publish-insights-count">4 articles →</a>
-        </div>
-        <div class="card card-art card-art-trades">
-          <span class="card-art-bg" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect class="tj-body" x="4" y="3" width="15.5" height="18" rx="1.4"/><circle class="tj-ring" cx="4" cy="6.5" r="0.85"/><circle class="tj-ring" cx="4" cy="10.5" r="0.85"/><circle class="tj-ring" cx="4" cy="14.5" r="0.85"/><circle class="tj-ring" cx="4" cy="18.5" r="0.85"/><g class="tj-row tj-row-1"><line x1="8" y1="8" x2="15" y2="8"/><path d="M16.3,6.3 L17.4,8.3 L18.5,6.3" transform="rotate(180 17.4 7.3)"/></g><g class="tj-row tj-row-2"><line x1="8" y1="12.5" x2="15" y2="12.5"/><path d="M16.3,11.5 L17.4,13.5 L18.5,11.5"/></g><g class="tj-row tj-row-3"><line x1="8" y1="17" x2="15" y2="17"/><path d="M16.3,15.2 L17.4,17.2 L18.5,15.2" transform="rotate(180 17.4 16.2)"/></g></svg></span>
-          <h3>Trades</h3>
-          <p>A public record of the calls we make, documented as they happen, including the ones that don't work out.</p>
-          <a href="/trades/" class="card-link">See the journal →</a>
-        </div>
+      </div>
+      <div class="home-index">
+        <a class="home-row" href="/markets/"><span class="home-num">02</span><h3>Markets</h3><p>The company and the macro stories we follow. <b>In focus: <span id="home-focus-name">Moderna</span>.</b></p><span class="home-go">Live data →</span></a>
+        <a class="home-row" href="/insights/"><span class="home-num">03</span><h3>Insights</h3><p>Our own read on macro events and on the company in focus.</p><span class="home-go" id="publish-insights-count">4 articles →</span></a>
+        <a class="home-row" href="/trades/"><span class="home-num">04</span><h3>Trades</h3><p>The calls we made, logged as they happened. <b>Including the ones that did not work.</b></p><span class="home-go">See the journal →</span></a>
       </div>
     </div>
   </section>
@@ -218,6 +210,9 @@
     // Publish card: article count follows js/articles.js
     (function () { var el = document.getElementById('publish-insights-count');
       if (el && typeof articles !== 'undefined' && articles.length) el.textContent = articles.length + (articles.length === 1 ? ' article' : ' articles') + ' \u2192'; })();
+    // Markets row: name of the company in focus follows js/focus-archive.js
+    (function () { var el = document.getElementById('home-focus-name');
+      if (el && typeof focusArchive !== 'undefined' && focusArchive.length) el.textContent = focusArchive[0].company; })();
   </script>
   <script>
     (function featureRotation(){

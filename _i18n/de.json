@@ -15,6 +15,10 @@
 "de": "<span>Zum Fazit</span><span class=\"fa-cta-arrow\" aria-hidden=\"true\">&rarr;</span>",
 "en": "<span>Read the conclusion</span><span class=\"fa-cta-arrow\" aria-hidden=\"true\">&rarr;</span>"
 },
+"020a7224": {
+"de": "01 · Bildung",
+"en": "01 · Education"
+},
 "0211518c": {
 "de": "Üblich ist, sich eine riesige Summe vorzustellen und von dort rückwärts in Panik zu rechnen. Bodenständiger ist eine einfachere Frage: Wie viel brauchst du pro Jahr für deinen Lebensstil im Ruhestand? Kennst du diese Zahl, ergibt sich das gesamte Sparziel aus einer bekannten Regel.",
 "en": "The common approach is to imagine some large lump sum and work backward into panic. A more grounded approach starts with a simpler question: how much would you need each year to cover your lifestyle in retirement? Once you know that number, the total savings target follows from a well-known rule."
@@ -578,6 +582,10 @@
 "3827c1f3": {
 "de": "Innerhalb von 72 Stunden nach den gemeinsamen Angriffen der USA und Israels auf Iran kam der Tankerverkehr durch die Strasse von Hormus praktisch zum Erliegen, und Brent-Rohöl erreichte kurzzeitig 120 Dollar. Wir schauen uns an, was die Bewegung antreibt und wie viel davon Fundamentaldaten und wie viel Narrativ ist.",
 "en": "Within 72 hours of joint US\\u2013Israeli strikes on Iran, tanker traffic through the Strait of Hormuz effectively halted and Brent crude briefly touched $120. We look at what's driving the move, and how much of it is fundamentals versus narrative."
+},
+"38c76e7d": {
+"de": "Unsere Einschätzungen, festgehalten, als sie passierten. <b>Auch die, die nicht aufgegangen sind.</b>",
+"en": "The calls we made, logged as they happened. <b>Including the ones that did not work.</b>"
 },
 "39325db3": {
 "de": "Unsere Artikel zu Zentralbanken, Wirtschaft und Ereignissen, die die Märkte bewegen. Die neusten zuerst.",
@@ -1183,6 +1191,10 @@
 "de": "Zinseszins heisst, dass deine Erträge selbst wieder Erträge abwerfen. Legst du CHF 1'000 an und sie wachsen in einem Jahr um 6%, hast du CHF 1'060. Im nächsten Jahr werden die 6% auf CHF 1'060 berechnet, nicht auf die ursprünglichen CHF 1'000. Jedes Jahr wird die Basis etwas grösser, also auch das Wachstum.",
 "en": "Compounding means your returns start earning returns of their own. If you invest CHF 1'000 and it grows 6% in a year, you have CHF 1'060. The next year, the 6% is calculated on CHF 1'060, not on your original CHF 1'000. Each year the base gets a little bigger, so the growth gets a little bigger too."
 },
+"7589be87": {
+"de": "Vier Dinge, die wir veröffentlichen.<br>Alles kostenlos.",
+"en": "Four things we publish.<br>All of it free."
+},
 "7651978f": {
 "de": "Was wir gerade beobachten",
 "en": "What we are watching"
@@ -1206,6 +1218,10 @@
 "76fbfc25": {
 "de": "Finanzkurse für Kinder und Jugendliche",
 "en": "Financial literacy courses for kids and teens"
+},
+"7748df9a": {
+"de": "Für Eltern: Wir bauen Präsenzkurse für Kinder und Jugendliche auf.",
+"en": "For parents: we are building in-person courses for kids and teens."
 },
 "778089ee": {
 "de": "Eröffnet / geschlossen",
@@ -1278,6 +1294,10 @@
 "7d8761f0": {
 "de": "Hier anfangen, wenn du neu beim Anlegen bist",
 "en": "Start here if you're new to investing"
+},
+"7db09dd0": {
+"de": "Unser eigener Blick auf Makro-Ereignisse und auf das Unternehmen im Fokus.",
+"en": "Our own read on macro events and on the company in focus."
 },
 "7dc0f484": {
 "de": "<a href=\"/\">Startseite</a> / Datenschutzerklärung",
@@ -1591,6 +1611,10 @@
 "de": "Bei Fragen zu dieser Datenschutzerklärung <a href=\"/contact/\" style=\"color:var(--color-accent-dark); font-weight:600;\">kontaktieren Sie uns bitte</a>.",
 "en": "If you have questions about this Privacy Policy, please <a href=\"/contact/\" style=\"color:var(--color-accent-dark); font-weight:600;\">contact us</a>."
 },
+"97e91376": {
+"de": "Zwei Studenten lernen investieren, <em>öffentlich.</em>",
+"en": "Two students learning to invest, <em>in public.</em>"
+},
 "9861c63a": {
 "de": "Gib ein, was du jeden Monat zur Seite legen könntest, und sieh, was daraus werden könnte. Das Diagramm teilt das Ergebnis auf in das, was du einbezahlt hast, und das, was der Zinseszins dazugelegt hat. Dieser Unterschied ist der ganze Grund, früh anzufangen.",
 "en": "Enter what you could set aside each month and see what it might become. The chart splits the result into what you paid in versus what compounding added, that difference is the whole reason to start early."
@@ -1598,6 +1622,10 @@
 "989671cd": {
 "de": "Soweit gesetzlich zulässig, haftet Surava Capital nicht für direkte, indirekte, zufällige oder Folgeschäden, die aus Ihrer Nutzung oder der Unmöglichkeit der Nutzung dieser Website oder ihrer Inhalte entstehen.",
 "en": "To the fullest extent permitted by law, Surava Capital shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of, or inability to use, this Site or its content."
+},
+"9897ecf2": {
+"de": "Verständliche Guides dazu, wie Märkte, Steuern und Konten in der Schweiz funktionieren.",
+"en": "Plain guides on how markets, taxes and accounts work in Switzerland."
 },
 "98d0a493": {
 "de": "<strong>Direkt vom Broker.</strong> Zeiten und Kurse stammen aus unserem Export von Trading 212, nicht aus dem Gedächtnis.",
@@ -1931,6 +1959,10 @@
 "de": "=",
 "en": "6M"
 },
+"b7ad489e": {
+"de": "Das Unternehmen und die Makro-Themen, die wir verfolgen. <b>Im Fokus: <span id=\"home-focus-name\">Moderna</span>.</b>",
+"en": "The company and the macro stories we follow. <b>In focus: <span id=\"home-focus-name\">Moderna</span>.</b>"
+},
 "b8194bb5": {
 "de": "Artikel zu Makrothemen und Weltgeschehen, die uns aufgefallen sind, in einfacher Sprache und kostenlos.",
 "en": "Articles on macro topics and real-world events that caught our attention, written in plain English and published free."
@@ -2035,6 +2067,10 @@
 "de": "Wie wir Informationen verwenden",
 "en": "How We Use Information"
 },
+"c0b7feda": {
+"de": "Starte hier, wenn du noch nie investiert hast.",
+"en": "Start here if you have never invested."
+},
 "c133a0f2": {
 "de": "Inhalte und Leistung unserer Website zu analysieren und zu verbessern",
 "en": "Analyze and improve the content and performance of our website"
@@ -2066,6 +2102,10 @@
 "c3c49d3e": {
 "de": "Markt",
 "en": "Markets"
+},
+"c43da9d9": {
+"de": "<a href=\"/trades/\" class=\"home-btn\">Zum Journal</a> <a href=\"/education/\" class=\"home-link\">Mit den Grundlagen starten →</a>",
+"en": "<a href=\"/trades/\" class=\"home-btn\">Read the journal</a> <a href=\"/education/\" class=\"home-link\">Start with the basics →</a>"
 },
 "c49bb4c2": {
 "de": "Kontakt",
@@ -2138,6 +2178,10 @@
 "c97bce56": {
 "de": "Sieh den Faktor 25 als groben Anhaltspunkt für ein Gespräch, nicht als präzises Ziel. Deine tatsächliche Zahl hängt von deinen erwarteten Renten aus AHV und BVG, deinem Pensionierungsalter, der Flexibilität deiner Ausgaben und der Dauer ab, für die du das Geld voraussichtlich brauchst.",
 "en": "Treat the 25x figure as a rough anchor for a conversation, not a precise target. Your actual number depends on your expected AHV and BVG income, your retirement age, how flexible your spending can be, and how long you expect to need the money for."
+},
+"ca39f988": {
+"de": "Zürich · Unabhängig · Kostenlos",
+"en": "Zurich · Independent · Free"
 },
 "cac7bbb6": {
 "de": "Anna Muster",
@@ -2259,6 +2303,10 @@
 "de": "3. Säule: was du selbst aufbaust",
 "en": "Pillar 3: what you build yourself"
 },
+"d55fa946": {
+"de": "<a href=\"/education/investing-basics/guide-why-start-early.html\">Warum früh anfangen zählt</a><span>Guide</span>",
+"en": "<a href=\"/education/investing-basics/guide-why-start-early.html\">Why starting early matters</a><span>Guide</span>"
+},
 "d561d95d": {
 "de": "Fee-only garantiert keine bessere Beratung, beseitigt aber eine ganze Kategorie von Interessenkonflikten, die andere Modelle von Haus aus mitbringen. Es ist eine Tatsache zur Bezahlung, keine Aussage über den Charakter, und sie lässt sich überprüfen, was bei Vertrauen allein nicht geht.",
 "en": "Fee-only doesn't guarantee better advice, but it removes an entire category of conflict of interest that other structures build in by default. It's a fact about compensation, not a claim about character, and it's verifiable in a way that trust alone isn't."
@@ -2306,6 +2354,14 @@
 "d86e48c1": {
 "de": "Grundlagen des Anlegens",
 "en": "Investing Basics"
+},
+"d87a9e93": {
+"de": "Wir schreiben unsere Makro-Einschätzung auf, bevor wir traden, und veröffentlichen danach, was passiert ist. Treffer und Fehler bleiben stehen. Kostenlos zu lesen, nichts zu verkaufen.",
+"en": "We write down our macro view before we trade, then publish what happened. Wins and misses stay on the record. Free to read, nothing to sell."
+},
+"d8b9b2f8": {
+"de": "<a href=\"/education/retirement-planning/tool-growth-calculator.html\">Wachstumsrechner</a><span>Tool</span>",
+"en": "<a href=\"/education/retirement-planning/tool-growth-calculator.html\">Growth calculator</a><span>Tool</span>"
 },
 "d8c2fb4b": {
 "de": "Warum Market Timing selten funktioniert",
@@ -2427,6 +2483,10 @@
 "de": "Unsere Bildungsinhalte sind kostenlos. Lies als Nächstes unseren neusten Kommentar.",
 "en": "Our education is free. Read our latest commentary next."
 },
+"e3f36618": {
+"de": "<a href=\"/education/behavioral-finance/guide-investor-in-the-mirror.html\">Der Anleger im Spiegel</a><span>Guide</span>",
+"en": "<a href=\"/education/behavioral-finance/guide-investor-in-the-mirror.html\">The investor in the mirror</a><span>Guide</span>"
+},
 "e3f4eeda": {
 "de": "Antwortzeit",
 "en": "Response time"
@@ -2458,6 +2518,10 @@
 "e5e8caea": {
 "de": "Alle Anlagen sind mit Risiken verbunden, einschliesslich des möglichen Verlusts des eingesetzten Kapitals. Diversifikation und Vermögensaufteilung sichern weder Gewinne noch schützen sie vor Verlusten. Vergangene Wertentwicklungen lassen keine Rückschlüsse auf künftige Ergebnisse zu, und es gibt keine Garantie, dass eine Anlagestrategie ihre Ziele erreicht.",
 "en": "All investments involve risk, including the possible loss of principal invested. Diversification and asset allocation do not ensure a profit or guarantee against loss. Past performance is not indicative of future results, and there is no guarantee that any investment strategy will achieve its objectives."
+},
+"e61a3806": {
+"de": "Guides für die Grundlagen, unser eigener Blick auf die Wirtschaft, die Märkte, die wir beobachten, und die Trades, die wir wirklich gemacht haben.",
+"en": "Guides for the basics, our own read on the economy, the markets we watch and the trades we actually took."
 },
 "e63577cb": {
 "de": "Kostenlose Guides und Tools, die erklären, wie Märkte, Steuern und Anlegen wirklich funktionieren, ohne Verkaufsgespräch.",
