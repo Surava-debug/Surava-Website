@@ -55,7 +55,7 @@
 ["<div class=\"focus-label\">In short</div>", "<div class=\"focus-label\">Kurz gesagt</div>"],
 [">Read the article →</a>", ">Artikel lesen →</a>"],
 ["<p>More articles, researched and written by us, are in the works.</p>", "<p>Weitere Artikel, von uns recherchiert und geschrieben, sind in Arbeit.</p>"],
-["'<p class=\"card-byline\">By '", "'<p class=\"card-byline\">Von '"],
+["<span class=\"human-badge\">Author: '", "<span class=\"human-badge\">Autor: '"],
 ["more ? 'See further (' + more + ' more)' : 'See further'", "more ? 'Mehr anzeigen (' + more + ' weitere)' : 'Mehr anzeigen'"],
 ["open ? label : 'Show less'", "open ? label : 'Weniger anzeigen'"],
 ["'Hide extra indicators ▴'", "'Weitere Indikatoren ausblenden ▴'"],

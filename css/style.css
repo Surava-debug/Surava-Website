@@ -3128,3 +3128,18 @@ section.hp-dark { background: #16202D; color: #fff; padding: 88px 0 !important; 
 
 /* Past key dates in a past-focus box */
 .catalyst-read { display: inline-block; margin-right: 14px; font-size: .85rem; font-weight: 600; color: var(--color-ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---- One pill format for all label badges: author, AI (Claude), own research ---- */
+.human-badge, .ai-badge, .ai-badge.ai-badge-sm, .research-badge, .research-badge.fa-pill {
+  display: inline-block; box-sizing: border-box;
+  font-family: var(--font-sans); font-size: 0.66rem; font-weight: 700; line-height: 1.5;
+  letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap;
+  padding: 2px 10px; border: 1px solid; border-radius: 999px; background: transparent;
+  vertical-align: middle;
+}
+.human-badge { color: #1F6B3A; border-color: #A9CFB5; }
+.research-badge { color: #1F6B3A; border-color: #A9CFB5; }
+.ai-badge { color: #9A5A12; border-color: #EBC995; }
+.card-author { margin: 0 0 12px; }
+.hero-page .card-author { margin: 6px 0 18px; }
+.card-byline { display: none; }
