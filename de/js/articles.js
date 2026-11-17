@@ -10,13 +10,13 @@
    =================================================================== */
 const articles = [
   {
-    title: "Warum die Strasse von Hormus wichtiger ist als die OPEC",
+    title: "Der Iran-Konflikt und die globalen Ölmärkte",
     category: "Weltgeschehen",
-    readTime: "8 Min. Lesezeit",
+    readTime: "3 Min. Lesezeit",
     author: "Yves Hüppi",
-    excerpt: "Wer an Öl denkt, schaut auf die OPEC. Doch Engpässe bewegen die Märkte schneller und stärker als jede Förderquote. Von Suez über den Tankerkrieg der 1980er-Jahre bis heute: warum die Strasse von Hormus wichtiger ist.",
-    url: "/insights/insight-02-hormuz-vs-opec.html",
-    image: "/assets/charts/hormuz-chokepoints.png"
+    excerpt: "Innerhalb von 72 Stunden nach den gemeinsamen Angriffen der USA und Israels auf Iran kam der Tankerverkehr durch die Strasse von Hormus praktisch zum Erliegen, und Brent-Rohöl erreichte kurzzeitig 120 Dollar. Wir schauen uns an, was die Bewegung antreibt und wie viel davon Fundamentaldaten und wie viel Narrativ ist.",
+    url: "/insights/insight-01-iran-oil-markets.html",
+    image: "/assets/charts/hormuz-ais.png"
   }
   // To publish a new article, copy a block above, paste it ABOVE the
   // others, and fill in the new details. Keep the comma between entries.

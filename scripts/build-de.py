@@ -35,7 +35,7 @@ CODE = I18N / "de-code.json"
 ENGLISH_ONLY = {
     "parked/pricing.html",
     "parked/services.html",
-    "insights/insight-02-hormuz-vs-opec.html",
+    "insights/insight-01-iran-oil-markets.html",
 }
 NOT_INDEXED = {"404.html"}
 SECTIONS = ["about", "contact", "education", "insights", "legal", "markets", "parked", "trades"]

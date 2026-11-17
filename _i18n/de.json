@@ -207,10 +207,6 @@
 "de": "Kontoart",
 "en": "Account type"
 },
-"14706762": {
-"de": "8 Min. Lesezeit",
-"en": "8 min read"
-},
 "14f0930d": {
 "de": "Nur weil eine Aktie 40% gefallen ist, ist sie noch lange nicht günstig. Anchoring ist unsere Gewohnheit, uns an einer Referenzzahl festzuhalten, meist dem letzten Hoch, und alles daran zu messen. Das alte Hoch fühlt sich plötzlich wie der «echte» Preis an, und alles darunter sieht nach Rabatt aus.",
 "en": "Just because a stock is down 40% does not mean it is cheap. Anchoring is our habit of fixing on a reference number, usually the last high, and judging everything against it. The old high starts to feel like the \"real\" price, and anything below it looks like a discount."
@@ -314,6 +310,10 @@
 "1efb8e0e": {
 "de": "Zeit ist der stärkste Faktor beim Anlegen. In unserem Beispiel werden aus sieben zusätzlichen Jahren und CHF 16'800 Einzahlungen mit 65 rund CHF 213'000 mehr. Fang mit dem Betrag an, den du dir leisten kannst, bau zuerst teure Schulden ab, halte einen Notgroschen und lass dann den Zinseszins arbeiten.",
 "en": "Time is the most powerful input in investing. In our example, seven extra years and CHF 16'800 paid in turn into about CHF 213'000 more at 65. Start with whatever amount you can, clear expensive debt and keep a cash cushion first, and then let compounding do its work."
+},
+"1efb9a1f": {
+"de": "3 Min. Lesezeit",
+"en": "3 min read"
 },
 "1f3e0b1a": {
 "de": "Angehender Bachelorstudent in Wirtschaftsinformatik und nebenberuflicher technischer Trader mit Fokus auf Charts.",
@@ -594,6 +594,10 @@
 "37e6baba": {
 "de": "Datensicherheit",
 "en": "Data Security"
+},
+"3827c1f3": {
+"de": "Innerhalb von 72 Stunden nach den gemeinsamen Angriffen der USA und Israels auf Iran kam der Tankerverkehr durch die Strasse von Hormus praktisch zum Erliegen, und Brent-Rohöl erreichte kurzzeitig 120 Dollar. Wir schauen uns an, was die Bewegung antreibt und wie viel davon Fundamentaldaten und wie viel Narrativ ist.",
+"en": "Within 72 hours of joint US\\u2013Israeli strikes on Iran, tanker traffic through the Strait of Hormuz effectively halted and Brent crude briefly touched $120. We look at what's driving the move, and how much of it is fundamentals versus narrative."
 },
 "39325db3": {
 "de": "Unsere Artikel zu Zentralbanken, Wirtschaft und Ereignissen, die die Märkte bewegen. Die neusten zuerst.",
@@ -1479,10 +1483,6 @@
 "de": "Quelle: <a href=\"https://fred.stlouisfed.org/series/A191RL1Q225SBEA\" target=\"_blank\" rel=\"noopener\">Bureau of Economic Analysis</a>",
 "en": "Source: <a href=\"https://fred.stlouisfed.org/series/A191RL1Q225SBEA\" target=\"_blank\" rel=\"noopener\">Bureau of Economic Analysis</a>"
 },
-"88e0595d": {
-"de": "Wer an Öl denkt, schaut auf die OPEC. Doch Engpässe bewegen die Märkte schneller und stärker als jede Förderquote. Von Suez über den Tankerkrieg der 1980er-Jahre bis heute: warum die Strasse von Hormus wichtiger ist.",
-"en": "When investors think about oil, they watch OPEC. But chokepoints move markets faster and harder than any production quota. From Suez to the 1980s Tanker War to today, a look at why the Strait of Hormuz matters more."
-},
 "8936785b": {
 "de": "Geistiges Eigentum",
 "en": "Intellectual Property"
@@ -1522,6 +1522,10 @@
 "8be30a72": {
 "de": "FOMO und Verlustaversion",
 "en": "FOMO and Loss Aversion"
+},
+"8c3891a2": {
+"de": "Der Iran-Konflikt und die globalen Ölmärkte",
+"en": "The Iran Conflict and Global Oil Markets"
 },
 "8cbf23f5": {
 "de": "Diese Seite ist aus deinem Portfolio gefallen.",
@@ -2326,10 +2330,6 @@
 "cfeca7fc": {
 "de": "Makroanalyse",
 "en": "Macro analysis"
-},
-"d06e4e0f": {
-"de": "Warum die Strasse von Hormus wichtiger ist als die OPEC",
-"en": "Why the Strait of Hormuz Matters More Than OPEC"
 },
 "d09daf19": {
 "de": "«Sell the News», &minus;15 bis 25%",

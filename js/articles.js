@@ -10,13 +10,13 @@
    =================================================================== */
 const articles = [
   {
-    title: "Why the Strait of Hormuz Matters More Than OPEC",
+    title: "The Iran Conflict and Global Oil Markets",
     category: "World Events",
-    readTime: "8 min read",
+    readTime: "3 min read",
     author: "Yves Hüppi",
-    excerpt: "When investors think about oil, they watch OPEC. But chokepoints move markets faster and harder than any production quota. From Suez to the 1980s Tanker War to today, a look at why the Strait of Hormuz matters more.",
-    url: "/insights/insight-02-hormuz-vs-opec.html",
-    image: "/assets/charts/hormuz-chokepoints.png"
+    excerpt: "Within 72 hours of joint US\u2013Israeli strikes on Iran, tanker traffic through the Strait of Hormuz effectively halted and Brent crude briefly touched $120. We look at what's driving the move, and how much of it is fundamentals versus narrative.",
+    url: "/insights/insight-01-iran-oil-markets.html",
+    image: "/assets/charts/hormuz-ais.png"
   }
   // To publish a new article, copy a block above, paste it ABOVE the
   // others, and fill in the new details. Keep the comma between entries.
