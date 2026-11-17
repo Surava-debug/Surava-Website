@@ -479,6 +479,10 @@
 "de": "Er spiegelt den Stand vom 21. Oktober 2026 und kann von den Ereignissen überholt werden. Datenquellen: Mitteilungen von Moderna und Merck, ESMO, S&amp;P Global (über StockAnalysis), CNBC und SEC-Berichte. Die Chancen zur Hazard Ratio sind unsere eigene Schätzung.",
 "en": "It reflects conditions as of 21 October 2026 and may be overtaken by events. Data cited from Moderna and Merck company releases, ESMO, S&amp;P Global (via StockAnalysis), CNBC and SEC filings. Hazard ratio odds are our own estimate."
 },
+"2e4b776d": {
+"de": "Warum Finfluencer so überzeugend klingen",
+"en": "Why finfluencers sound so convincing"
+},
 "2ea109ca": {
 "de": "Rechtliche Hinweise · Surava Capital",
 "en": "Disclosures — Surava Capital"
@@ -626,10 +630,6 @@
 "3d2f7c5d": {
 "de": "Der Mechanismus, der dein Ergebnis wirklich bestimmt: Kosten",
 "en": "The mechanism that actually decides your outcome: cost"
-},
-"3d41cbf3": {
-"de": "Warum Market Timing selten funktioniert",
-"en": "Why market timing rarely works"
 },
 "3e531beb": {
 "de": "Das wahrscheinlichste Ergebnis ist die zweite Zeile: eine HR <strong>zwischen 0.56 und 0.65</strong>. Das wäre ein sehr gutes Medikament. Ob es für die Aktie gut genug ist, ist eine andere Frage.",
@@ -1035,10 +1035,6 @@
 "de": "Wie AHV, Pensionskasse und Säule 3a die Altersvorsorge in der Schweiz finanzieren, in einfacher Sprache erklärt.",
 "en": "How AHV, occupational pensions, and Pillar 3a fit together to fund retirement in Switzerland, explained in plain language."
 },
-"67a054ae": {
-"de": "Eine Checkliste vor grossen finanziellen Entscheidungen",
-"en": "A pre-decision checklist for big financial moves"
-},
 "67c35425": {
 "de": "Altersvorsorge",
 "en": "Retirement Planning"
@@ -1142,6 +1138,10 @@
 "6de8ec42": {
 "de": "Ein paar weitere Punkte:",
 "en": "A few more things worth knowing:"
+},
+"6e207405": {
+"de": "Die Lottoschein-Falle",
+"en": "The lottery-ticket trap"
 },
 "6e3b7dde": {
 "de": "Drei übliche Gebührenmodelle",
