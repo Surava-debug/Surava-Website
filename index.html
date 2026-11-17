@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20261117f" />
+  <link rel="stylesheet" href="/css/style.css?v=20261117h" />
   <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -67,85 +67,50 @@
     </div>
   </section>
   
-  <!-- ===== SERVICES GRID ===== -->
-  <section>
-    <div class="container">
-      <div class="section-head">
-        <h2>Everything we publish</h2>
-        <p>Free guides, macro articles, live market data and a public trading journal. All of it open.</p>
-      </div>
-      <div class="grid publish-grid">
-        <div class="card card-featured">
-          <div class="card-photo"><img src="/assets/photos/education-students.webp" alt="Three young people talking on benches outside, one working on a laptop" width="768" height="576" loading="lazy" decoding="async"></div>
-          <div class="card-featured-body">
-            <h3>Education</h3>
-            <p>Free guides and tools that explain how markets, taxes, and investing actually work, no sales pitch attached.</p>
-            <a href="/education/" class="card-link">2 guides, 1 tool →</a>
-            <div class="parents-note">
-              <span class="parents-strip-tag">For parents</span>
-              <p>Give your child a head start with money. We are in the process of building in-person courses for kids and teens.</p>
-            </div>
-          </div>
-        </div>
-        <div class="card card-art card-art-markets">
-          <span class="card-art-bg" aria-hidden="true"><img src="/assets/icons/icon-live-markets.svg" alt="" width="24" height="24"></span>
-          <h3>Markets</h3>
-          <p>The companies and macro stories we follow, shown with live charts, prices and key dates. Data only, no commentary.</p>
-          <a href="/markets/" class="card-link">Live data →</a>
-        </div>
-        <div class="card card-art card-art-insights">
-          <span class="card-art-bg" aria-hidden="true"><img src="/assets/icons/icon-market-insights.svg" alt="" width="24" height="24"></span>
-          <h3>Insights</h3>
-          <p>Articles on macro topics and real-world events that caught our attention, written in plain English and published free.</p>
-          <a href="/insights/" class="card-link" id="publish-insights-count">4 articles →</a>
-        </div>
-        <div class="card card-art card-art-trades">
-          <span class="card-art-bg" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect class="tj-body" x="4" y="3" width="15.5" height="18" rx="1.4"/><circle class="tj-ring" cx="4" cy="6.5" r="0.85"/><circle class="tj-ring" cx="4" cy="10.5" r="0.85"/><circle class="tj-ring" cx="4" cy="14.5" r="0.85"/><circle class="tj-ring" cx="4" cy="18.5" r="0.85"/><g class="tj-row tj-row-1"><line x1="8" y1="8" x2="15" y2="8"/><path d="M16.3,6.3 L17.4,8.3 L18.5,6.3" transform="rotate(180 17.4 7.3)"/></g><g class="tj-row tj-row-2"><line x1="8" y1="12.5" x2="15" y2="12.5"/><path d="M16.3,11.5 L17.4,13.5 L18.5,11.5"/></g><g class="tj-row tj-row-3"><line x1="8" y1="17" x2="15" y2="17"/><path d="M16.3,15.2 L17.4,17.2 L18.5,15.2" transform="rotate(180 17.4 16.2)"/></g></svg></span>
-          <h3>Trades</h3>
-          <p>A public record of the calls we make, documented as they happen, including the ones that don't work out.</p>
-          <a href="/trades/" class="card-link">See the journal →</a>
-        </div>
+  <!-- ===== WHO WE ARE ===== -->
+  <section class="hp-sec">
+    <div class="container hp-intro">
+      <span class="hp-eb">Who we are</span>
+      <h2>Two students who write everything down.</h2>
+      <p>We publish how we read the markets before we trade, and what happened after. The guides are free, the analysis is free, and there is nothing to buy.</p>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="hp-sec">
+    <div class="container hp-split">
+      <div class="hp-pic"><img src="/assets/photos/education-students.webp" alt="Three young people talking on benches outside, one working on a laptop" width="768" height="576" loading="lazy" decoding="async"></div>
+      <div class="hp-txt">
+        <span class="hp-eb">Education</span>
+        <h3>Understand your money before you invest it.</h3>
+        <p>Plain guides on how markets, taxes and accounts work in Switzerland, and a calculator to see how small amounts grow over time.</p>
+        <p class="hp-note">For parents: we are building in-person courses for kids and teens.</p>
+        <a class="hp-more" href="/education/">Discover the guides</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHAT WE ARE WATCHING: company in focus + macro (from js/focus-archive.js and js/articles.js) ===== -->
-  <section class="section-alt">
-    <div class="container">
-      <div class="section-head">
-        <span class="tag">Latest</span>
-        <h2>What we are watching</h2>
+  <!-- ===== INSIGHTS SHOWCASE ===== -->
+  <section class="hp-sec hp-sec-last">
+    <div class="container hp-split hp-rev">
+      <div class="hp-pic hp-chart"><img src="/assets/charts/moderna-support-levels.png?v=6" alt="Line chart of Moderna's daily close from 12 August to 21 October 2026 with shaded support zones" loading="lazy" decoding="async"></div>
+      <div class="hp-txt">
+        <span class="hp-eb">Insights &middot; 21 October</span>
+        <h3>The cancer vaccine works. Is that enough for Moderna's stock?</h3>
+        <p>Our plain-language look at the Phase 3 melanoma data: what the key number means, and why good data can still disappoint a high share price.</p>
+        <a class="hp-more" href="/insights/insight-05-moderna-hazard-ratio.html">Read the analysis</a>
       </div>
-      <div class="feature-pair">
-        <article class="feature-card" id="feat-company" aria-live="polite">
-          <div class="feature-label"><span>Company in focus</span><span class="feature-rot">Current focus</span></div>
-          <div class="feature-img feature-chart">
-            <!-- TradingView: 1-year price chart of the company in focus, filled in by the script below -->
-            <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div>
-          </div>
-          <a class="feature-link" href="/markets/">
-            <div class="feature-body">
-              <div class="feature-meta">Why it caught our attention</div>
-              <h3 class="feature-title"></h3>
-              <p class="feature-text"></p>
-              <span class="feature-cta">Follow it on Markets &rarr;</span>
-            </div>
-          </a>
-          <div class="feature-foot"><div class="feature-dots"></div><a href="/insights/#company-in-focus">All companies &rarr;</a></div>
-        </article>
-        <article class="feature-card" id="feat-insight" aria-live="polite">
-          <div class="feature-label"><span>Macro analysis</span><span class="feature-rot">Rotating example</span></div>
-          <a class="feature-link" href="/insights/">
-            <div class="feature-img"><img alt="" /></div>
-            <div class="feature-body">
-              <div class="feature-meta"></div>
-              <h3 class="feature-title"></h3>
-              <p class="feature-text"></p>
-              <span class="feature-cta">Read article &rarr;</span>
-            </div>
-          </a>
-          <div class="feature-foot"><div class="feature-dots"></div><a href="/insights/#macro-analysis">All macro pieces &rarr;</a></div>
-        </article>
+    </div>
+  </section>
+
+  <!-- ===== MARKETS + TRADES ===== -->
+  <section class="hp-dark">
+    <div class="container">
+      <span class="hp-eb">Follow along</span>
+      <h2>Data and a public record.</h2>
+      <div class="hp-dark-grid">
+        <a href="/markets/"><span class="hp-eb">Markets</span><h3>The numbers, every morning</h3><p>Oil, silver and the economy at a glance. Data only, no commentary.</p><span class="hp-more">Live data</span></a>
+        <a href="/trades/"><span class="hp-eb">Trades</span><h3>Every trade we closed</h3><p>Straight from the broker's export, including the ones that did not work.</p><span class="hp-more">See the journal</span></a>
       </div>
     </div>
   </section>
