@@ -25,40 +25,6 @@
    =================================================================== */
 const catalysts = [
   {
-    date: "2026-10-22",
-    time: "18:30",
-    company: "Moderna",
-    ticker: "NASDAQ: MRNA",
-    type: "Datenleck",
-    impact: "high",
-    title: "Phase-3-Daten zwei Tage zu früh durchgesickert",
-    why: "",
-    points: [],
-    outcome: [
-      "Die Resultate erschienen vor Ablauf der Sperrfrist auf einer medizinischen Nachrichtenseite",
-      "Die Aktie fiel im Tagesverlauf um bis zu 26% und schloss rund 17% tiefer"
-    ],
-    source: "",
-    link: "/de/insights/insight-06-moderna-conclusion.html"
-  },
-  {
-    date: "2026-11-12",
-    time: "",
-    company: "Moderna",
-    ticker: "NASDAQ: MRNA",
-    type: "Investorenanlass",
-    impact: "medium",
-    title: "Analyst Day",
-    why: "",
-    points: [],
-    outcome: [
-      "Die Barkosten steigen ab 2027 wieder auf rund 4 Milliarden Dollar pro Jahr",
-      "Kein Umsatzziel für 2027; die Aktie fiel an diesem Tag um 7%"
-    ],
-    source: "https://investors.modernatx.com",
-    link: "/de/insights/insight-07-moderna-q3-earnings.html"
-  },
-  {
     date: "2026-10-24",
     time: "16:30",
     company: "Moderna",
@@ -75,22 +41,6 @@ const catalysts = [
     outcome: [
       "Die offiziellen Daten bestätigten das Leck: 42% tieferes Risiko für Rückfall oder Tod",
       "Die Kursreaktion war bereits am 22. Oktober passiert"
-    ],
-    source: "https://www.newswire.com/news/moderna-announces-late-breaking-data-to-be-presented-at-esmo-congress-2026",
-    link: "/de/insights/insight-05-moderna-hazard-ratio.html"
-  },
-  {
-    date: "2026-10-24",
-    time: "19:00",
-    company: "Moderna",
-    ticker: "NASDAQ: MRNA",
-    type: "Investorenanlass",
-    impact: "low",
-    title: "Investoren-Webcast zu den Daten",
-    why: "",
-    points: [
-      "Daten bis dahin bereits öffentlich",
-      "Im Blick: Zeitplan für Zulassung und Markteinführung"
     ],
     source: "https://www.newswire.com/news/moderna-announces-late-breaking-data-to-be-presented-at-esmo-congress-2026",
     link: "/de/insights/insight-05-moderna-hazard-ratio.html"

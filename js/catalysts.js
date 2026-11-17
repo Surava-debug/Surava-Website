@@ -25,40 +25,6 @@
    =================================================================== */
 const catalysts = [
   {
-    date: "2026-10-22",
-    time: "18:30",
-    company: "Moderna",
-    ticker: "NASDAQ: MRNA",
-    type: "Data leak",
-    impact: "high",
-    title: "Phase 3 data leaked two days early",
-    why: "",
-    points: [],
-    outcome: [
-      "Results appeared on a medical news site before the embargo",
-      "Stock fell up to 26% intraday and closed about 17% lower"
-    ],
-    source: "",
-    link: "/insights/insight-06-moderna-conclusion.html"
-  },
-  {
-    date: "2026-11-12",
-    time: "",
-    company: "Moderna",
-    ticker: "NASDAQ: MRNA",
-    type: "Investor event",
-    impact: "medium",
-    title: "Analyst Day",
-    why: "",
-    points: [],
-    outcome: [
-      "Cash costs rise again from 2027, to around $4 billion a year",
-      "No revenue target for 2027; the stock fell 7% that day"
-    ],
-    source: "https://investors.modernatx.com",
-    link: "/insights/insight-07-moderna-q3-earnings.html"
-  },
-  {
     date: "2026-10-24",
     time: "16:30",
     company: "Moderna",
@@ -75,22 +41,6 @@ const catalysts = [
     outcome: [
       "Official data matched the leak: 42% lower risk of recurrence or death",
       "The price reaction had already happened on 22 October"
-    ],
-    source: "https://www.newswire.com/news/moderna-announces-late-breaking-data-to-be-presented-at-esmo-congress-2026",
-    link: "/insights/insight-05-moderna-hazard-ratio.html"
-  },
-  {
-    date: "2026-10-24",
-    time: "19:00",
-    company: "Moderna",
-    ticker: "NASDAQ: MRNA",
-    type: "Investor event",
-    impact: "low",
-    title: "Investor webcast on the data",
-    why: "",
-    points: [
-      "Data already public by then",
-      "Watch: approval and launch timeline"
     ],
     source: "https://www.newswire.com/news/moderna-announces-late-breaking-data-to-be-presented-at-esmo-congress-2026",
     link: "/insights/insight-05-moderna-hazard-ratio.html"
