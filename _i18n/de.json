@@ -67,10 +67,6 @@
 "de": "Umsatz 1.31 Milliarden Dollar, Wachstumsziel 2026 auf 15-25% angehoben",
 "en": "Revenue $1.31 billion, 2026 growth target raised to 15-25%"
 },
-"05772627": {
-"de": "<span class=\"rm-dot\" aria-hidden=\"true\"></span><span class=\"rm-label\">Als Nächstes</span>",
-"en": "<span class=\"rm-dot\" aria-hidden=\"true\"></span><span class=\"rm-label\">Next</span>"
-},
 "05ef5ac9": {
 "de": "Finanzbildung für alle.",
 "en": "Financial education for anyone."
@@ -190,10 +186,6 @@
 "11b3fd12": {
 "de": "Liniendiagramm der monatlichen Schlusskurse von Peloton von 2019 bis 2026: Höchststand von 152 Dollar im Dezember 2020, 98 Dollar im April 2021 und Tiefststand von 3.11 Dollar im April 2024, 98% unter dem Höchststand.",
 "en": "Line chart of Peloton monthly closing prices from 2019 to 2026: a peak of $152 in December 2020, $98 in April 2021, and a low of $3.11 in April 2024, 98% below the peak."
-},
-"11e0f0a6": {
-"de": "Kostenlose Makrokommentare, Marktwissen und ein öffentliches Trading-Journal, in dem jede Einschätzung dokumentiert ist, auch die falschen.",
-"en": "Free macro commentary, market education, and a public trading journal where every call is documented, including the ones we get wrong."
 },
 "11f9010f": {
 "de": "Bestätigungsfehler, Verlustaversion, FOMO und Anchoring: drei Anlagefehler und einfache Gewohnheiten, um sie bei dir selbst zu erkennen.",
@@ -503,6 +495,10 @@
 "de": "Die eigenen Denkfehler als Anleger erkennen · Surava Capital",
 "en": "Recognizing Your Own Biases as an Investor — Surava Capital"
 },
+"2feed829": {
+"de": "Ein Präsenzkurs ist in Arbeit.",
+"en": "An in-person course is in the works."
+},
 "2fef70da": {
 "de": "Deshalb ist «Fee-only» eine ganz andere Aussage als «wir handeln in deinem Interesse». Das Erste beschreibt eine überprüfbare Bezahlung. Das Zweite kann jeder sagen, egal wie er wirklich bezahlt wird.",
 "en": "This is why \"fee-only\" is a meaningfully different claim than \"we act in your interest.\" The first describes a verifiable payment structure. The second is something anyone can say regardless of how they're actually paid."
@@ -671,10 +667,6 @@
 "de": "=",
 "en": "<img src=\"/assets/brand/logo-icon.png\" alt=\"Surava Capital logo\" class=\"logo-mark-img\"> Surava Capital"
 },
-"420f36a5": {
-"de": "<span class=\"rm-dot\" aria-hidden=\"true\"></span><span class=\"rm-label\">Heute</span>",
-"en": "<span class=\"rm-dot\" aria-hidden=\"true\"></span><span class=\"rm-label\">Today</span>"
-},
 "427084f8": {
 "de": "Wer hinter dem Leck steckt, ist noch unklar, und <mark class=\"skim\">ESMO untersucht den Fall</mark>. Eine interessante Randgeschichte, die wir hier aber nicht weiterverfolgen. Der nächste echte Test ist der <mark class=\"skim\"><a href=\"https://investors.modernatx.com\" target=\"_blank\" rel=\"noopener\">Quartalsbericht vom 6. November</a></mark>.",
 "en": "Who was behind the leak is still unclear, and <mark class=\"skim\">ESMO is investigating</mark>. It is an interesting side story, but we won't pursue it further here. The next real test is the <mark class=\"skim\"><a href=\"https://investors.modernatx.com\" target=\"_blank\" rel=\"noopener\">quarterly earnings report on 6 November</a></mark>."
@@ -714,6 +706,10 @@
 "490bb42f": {
 "de": "<strong>Verlustaversion</strong> Verluste schmerzen meist deutlich stärker, als gleich hohe Gewinne Freude machen. Das kann dazu führen, dass Gewinner zu früh verkauft werden, um Gewinne zu «sichern», während Verlierer viel zu lange gehalten werden, in der Hoffnung, «wieder auf null zu kommen».",
 "en": "<strong>Loss aversion</strong> Losses tend to feel considerably more painful than equivalent gains feel good. This can push people to sell winners too early to \"lock in\" gains, while holding onto losers far too long hoping to \"get back to even.\""
+},
+"4911b87b": {
+"de": "Kostenlose Kommentare, Bildung und ein öffentliches Trading-Journal.",
+"en": "Free commentary, education and a public trading journal."
 },
 "49d353e3": {
 "de": "Entspricht der frühen Studie",
@@ -790,10 +786,6 @@
 "52aa3506": {
 "de": "AUM-basiert (verwaltetes Vermögen)",
 "en": "AUM-based (assets under management)"
-},
-"52bf98b0": {
-"de": "Wir lassen uns im Schweizer Beraterregister nach FIDLEG eintragen, damit persönliche Anlageberatung, sobald wir sie anbieten, korrekt und regelkonform erfolgt.",
-"en": "Entering the Swiss adviser register under FIDLEG, so that when we offer personal investment advice, it is done compliantly and above board."
 },
 "530827b2": {
 "de": "Schwach für den Hype",
@@ -1235,6 +1227,10 @@
 "de": "Die AHV (Alters- und Hinterlassenenversicherung), auf Französisch AVS, ist die staatliche Rente. Sie ist für alle obligatorisch, die in der Schweiz arbeiten, wird über Lohnbeiträge von Arbeitnehmenden und Arbeitgebern finanziert und funktioniert im Umlageverfahren: Die heute Erwerbstätigen finanzieren die heutigen Rentnerinnen und Rentner, nicht ihre eigene Zukunft.",
 "en": "AHV (Alters- und Hinterlassenenversicherung), known as AVS in French, is the state pension. It is mandatory for anyone working in Switzerland, funded through payroll contributions split between employee and employer, and it works on a pay-as-you-go basis: today's workers fund today's retirees, not their own future selves."
 },
+"7479cb0c": {
+"de": "<span class=\"ms-tick\" aria-hidden=\"true\"></span><span class=\"ms-when\">Heute</span>",
+"en": "<span class=\"ms-tick\" aria-hidden=\"true\"></span><span class=\"ms-when\">Today</span>"
+},
 "7526271b": {
 "de": "Zinseszins heisst, dass deine Erträge selbst wieder Erträge abwerfen. Legst du CHF 1'000 an und sie wachsen in einem Jahr um 6%, hast du CHF 1'060. Im nächsten Jahr werden die 6% auf CHF 1'060 berechnet, nicht auf die ursprünglichen CHF 1'000. Jedes Jahr wird die Basis etwas grösser, also auch das Wachstum.",
 "en": "Compounding means your returns start earning returns of their own. If you invest CHF 1'000 and it grows 6% in a year, you have CHF 1'060. The next year, the 6% is calculated on CHF 1'060, not on your original CHF 1'000. Each year the base gets a little bigger, so the growth gets a little bigger too."
@@ -1271,6 +1267,10 @@
 "de": "Für Eltern: Wir bauen Präsenzkurse für Kinder und Jugendliche auf.",
 "en": "For parents: we are building in-person courses for kids and teens."
 },
+"775c2306": {
+"de": "<span class=\"ms-fill\"></span><span class=\"ms-here\">Hier stehen wir</span><span class=\"ms-end\"></span>",
+"en": "<span class=\"ms-fill\"></span><span class=\"ms-here\">We are here</span><span class=\"ms-end\"></span>"
+},
 "778089ee": {
 "de": "Eröffnet / geschlossen",
 "en": "Opened / closed"
@@ -1294,6 +1294,10 @@
 "784b8fc9": {
 "de": "Studiendaten",
 "en": "Data readout"
+},
+"79045b12": {
+"de": "Hier stehen wir",
+"en": "We are here"
 },
 "79eea472": {
 "de": "Mit KI gebaut (Claude)",
@@ -1370,6 +1374,10 @@
 "7f2aa3be": {
 "de": "Unsere Website kann Cookies und ähnliche Technologien verwenden, um zu verstehen, wie Besucher unsere Website nutzen, und um das Surferlebnis zu verbessern. Sie können Cookies über Ihre Browsereinstellungen steuern.",
 "en": "Our website may use cookies and similar technologies to understand how visitors use our site and to improve the browsing experience. You can control cookies through your browser settings."
+},
+"7f9c5cfa": {
+"de": "<span class=\"ms-tick\" aria-hidden=\"true\"></span><span class=\"ms-when\">Als Nächstes</span>",
+"en": "<span class=\"ms-tick\" aria-hidden=\"true\"></span><span class=\"ms-when\">Next</span>"
 },
 "7fbe5216": {
 "de": "Surava Capital · Unabhängige Finanzbildung &amp; Marktkommentare",
@@ -1466,10 +1474,6 @@
 "87df60de": {
 "de": "Ressourcen",
 "en": "Resources"
-},
-"881019fe": {
-"de": "<span class=\"rm-dot\" aria-hidden=\"true\"></span><span class=\"rm-label\">Das Ziel</span>",
-"en": "<span class=\"rm-dot\" aria-hidden=\"true\"></span><span class=\"rm-label\">The goal</span>"
 },
 "8816d71d": {
 "de": "Quelle: <a href=\"https://fred.stlouisfed.org/series/A191RL1Q225SBEA\" target=\"_blank\" rel=\"noopener\">Bureau of Economic Analysis</a>",
@@ -1590,10 +1594,6 @@
 "91d1d865": {
 "de": "Gesperrt bis zur Pensionierung, mit wenigen Ausnahmen (Kauf von selbstgenutztem Wohneigentum, Auswanderung, Start in die Selbstständigkeit).",
 "en": "Locked until retirement, with narrow exceptions (buying a primary home, emigrating, starting self-employment)."
-},
-"9281c1f0": {
-"de": "Wir schliessen unser Studium ab und streben den CFA-Titel an, damit das Fachwissen hinter den Kommentaren formal belegt ist und nicht nur selbst angeeignet.",
-"en": "Completing our studies and pursuing the CFA designation, so the expertise behind the commentary is formal, not just self-taught."
 },
 "92f3a029": {
 "de": "Ein Rahmen, um deinen Bedarf für den Ruhestand anhand deiner Ausgaben zu schätzen, nicht mit willkürlichen Faustregeln.",
@@ -1734,6 +1734,10 @@
 "a03f9046": {
 "de": "Modernas Quartal war wirklich gut: ein überraschender Gewinn, eine höhere Umsatzprognose und tiefere Ausgaben. Doch die Aktie wird nicht auf Quartalszahlen bewertet. Anleger wetten auf den Krebsimpfstoff, und der Analyst Day zeigte, dass diese Wette ab 2027 teurer wird. Der Rückgang sieht nach einer Neubewertung dieser Kosten aus, nicht nach Leerverkäufern im Squeeze.",
 "en": "Moderna's quarter was genuinely good: a surprise profit, a higher sales forecast and lower spending. But the stock is not priced on quarterly earnings. Investors are betting on the cancer vaccine, and Analyst Day showed that this bet gets more expensive from 2027. The pullback looks like investors repricing those costs, not short sellers being squeezed."
+},
+"a058a98e": {
+"de": "<span class=\"ms-tick\" aria-hidden=\"true\"></span><span class=\"ms-when\">Das Ziel</span>",
+"en": "<span class=\"ms-tick\" aria-hidden=\"true\"></span><span class=\"ms-when\">The goal</span>"
 },
 "a0984afd": {
 "de": "Wo wir stehen und wohin wir wollen",
@@ -2063,6 +2067,10 @@
 "de": "Ein Indexfonds kauft einfach alle Unternehmen eines bestimmten Marktindex im Verhältnis zu ihrer Grösse und hält sie. Der Swiss Market Index (SMI) zum Beispiel bildet die 20 grössten börsenkotierten Schweizer Unternehmen ab. Ein Fonds auf den SMI versucht nicht zu erraten, welches der 20 am besten läuft. Er kauft alle 20, gewichtet nach Grösse, und belässt es dabei.",
 "en": "An index fund is a fund that simply buys every company in a given market index, in proportion to their size, and holds them. The Swiss Market Index, for example, tracks the 20 largest listed Swiss companies. A fund tracking the SMI does not try to guess which of those 20 will do best. It buys all 20, weighted by size, and leaves it at that."
 },
+"bd121420": {
+"de": "Studium abschliessen und den CFA-Titel anstreben.",
+"en": "Finishing our studies and pursuing the CFA designation."
+},
 "bd295c12": {
 "de": "Weiterer Anstieg, +15 bis 30%",
 "en": "Squeeze higher, +15 to 30%"
@@ -2078,10 +2086,6 @@
 "bdd48234": {
 "de": "Seite nicht gefunden · Surava Capital",
 "en": "Page Not Found — Surava Capital"
-},
-"be398917": {
-"de": "Wir bauen den Bereich Einblick und das Trading-Journal aus, damit ein ehrliches, öffentliches Protokoll unseres Denkens besteht, lange bevor wir jemals jemanden bitten, danach zu handeln.",
-"en": "Growing the Insights library and the Trades journal, so there is an honest, public record of our thinking long before we ever ask anyone to act on it."
 },
 "be453497": {
 "de": "Eigener Wert",
@@ -2242,6 +2246,10 @@
 "c97bce56": {
 "de": "Sieh den Faktor 25 als groben Anhaltspunkt für ein Gespräch, nicht als präzises Ziel. Deine tatsächliche Zahl hängt von deinen erwarteten Renten aus AHV und BVG, deinem Pensionierungsalter, der Flexibilität deiner Ausgaben und der Dauer ab, für die du das Geld voraussichtlich brauchst.",
 "en": "Treat the 25x figure as a rough anchor for a conversation, not a precise target. Your actual number depends on your expected AHV and BVG income, your retirement age, how flexible your spending can be, and how long you expect to need the money for."
+},
+"ca297e44": {
+"de": "Eintrag ins Schweizer Beraterregister nach FIDLEG.",
+"en": "Entering the Swiss adviser register under FIDLEG."
 },
 "cac7bbb6": {
 "de": "Anna Muster",
@@ -2478,10 +2486,6 @@
 "dc2178b9": {
 "de": "Wir verkaufen Ihre Personendaten nicht. Wir können Informationen an vertrauenswürdige Dienstleister weitergeben, die uns beim Betrieb der Website unterstützen (etwa Anbieter für Hosting, Webanalyse und Kontaktformular), und nur soweit dies für deren Aufgaben nötig ist. Wir können Informationen auch offenlegen, wenn Gesetz oder Behörden dies verlangen.",
 "en": "We do not sell your personal information. We may share information with trusted service providers who assist in operating our website (such as hosting, analytics, and contact form providers), and only to the extent necessary for them to perform their functions. We may also disclose information when required by law or regulatory authority."
-},
-"dc5e5ae5": {
-"de": "Ehrliche Begleitung ohne Interessenkonflikte für junge Anlegerinnen und Anleger in der Schweiz, später ergänzt durch Vermögensverwaltung.",
-"en": "Honest, conflict-free guidance built for young Swiss investors, with portfolio management added as we grow into it."
 },
 "dcfd318f": {
 "de": "Warum Anleger teure Fehler machen und welche Gewohnheiten dagegen helfen.",
@@ -2803,6 +2807,10 @@
 "de": "Steuern &amp; Konten",
 "en": "Taxes &amp; Accounts"
 },
+"f6d474eb": {
+"de": "Ein langes öffentliches Protokoll, bevor jemand danach handelt.",
+"en": "A long public record before anyone acts on it."
+},
 "f6d6c11c": {
 "de": "Erwartung der Analysten",
 "en": "Analysts expected"
@@ -2875,10 +2883,6 @@
 "de": "Öffentlich aufbauen",
 "en": "Building in the open"
 },
-"fbcd8430": {
-"de": "Alle Eltern möchten ihr Kind gut auf den Umgang mit Geld vorbereiten. Wir erleichtern das mit Lerninhalten in einfacher Sprache, und ein Präsenzkurs ist in Arbeit.",
-"en": "Every parent wants their child to be ready for life with money. We are making that easier with plain-language learning, and an in-person course is in the works."
-},
 "fc1045da": {
 "de": "Klarer Erfolg, etwas schwächer",
 "en": "Clear win, a bit weaker"
@@ -2918,6 +2922,10 @@
 "fdd17523": {
 "de": "Unsere eigene Szenario-Schätzung, basierend auf der frühen Studie, dem frühen Erfolg der Phase-3-Studie und den Erwartungen der Analysten. Einschätzungen, keine Prognose und keine Anlageberatung.",
 "en": "Our own scenario estimate, based on the early trial, the early success of the Phase 3 trial and the bars analysts have set. Judgement calls, not a forecast and not investment advice."
+},
+"fe7e4637": {
+"de": "Beratung ohne Interessenkonflikte für junge Anlegerinnen und Anleger in der Schweiz.",
+"en": "Conflict-free guidance for young Swiss investors."
 },
 "feb0ac6b": {
 "de": "Bildung",
