@@ -3171,7 +3171,7 @@ section.ms-sec { padding: 96px 0 !important; }
 .ms-track { right: calc((100% - 5 * 24px) / 6); }
 .ms-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 30%; background: #16202D; border-radius: 4px; }
 .ms-here { position: absolute; left: 30%; top: -32px; transform: translateX(-50%); font: 600 .68rem var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: #16202D; white-space: nowrap; }
-.ms-here::after { content: ""; position: absolute; left: 50%; top: 23px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: #fff; border: 3px solid #16202D; box-sizing: border-box; }
+.ms-here::after { content: ""; position: absolute; left: 50%; top: 27px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: #fff; border: 3px solid #16202D; box-sizing: border-box; }
 .ms-end { position: absolute; right: -1px; top: -9px; width: 3px; height: 22px; border-radius: 2px; background: #9A4A2A; }
 .ms-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; }
 .ms-here-m { display: none; }
