@@ -3107,3 +3107,13 @@ section.hp-dark { background: #16202D; color: #fff; padding: 88px 0 !important; 
   section.hp-dark { padding: 60px 0 !important; }
   .hp-dark-grid { grid-template-columns: 1fr; gap: 32px; }
 }
+/* Follow along: light, with chart thumbnails */
+.hp-follow h2 { font-family: var(--font-serif); font-weight: 300; font-size: 2.7rem; line-height: 1.1; letter-spacing: -.01em; margin: 14px 0 0; color: #16202D; }
+.hp-follow-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 40px; }
+.hp-follow-grid a { display: block; text-decoration: none; }
+.hp-thumb { display: block; aspect-ratio: 16 / 9; background: #fff; border: 1px solid #E2E6EA; padding: 14px; margin-bottom: 22px; overflow: hidden; }
+.hp-thumb img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform .4s ease; }
+.hp-follow-grid a:hover .hp-thumb img { transform: scale(1.02); }
+.hp-follow-grid h3 { font-family: var(--font-serif); font-weight: 300; font-size: 1.8rem; margin: 10px 0 10px; color: #16202D; }
+.hp-follow-grid p { color: #4A5666; margin: 0 0 20px; line-height: 1.6; }
+@media (max-width: 760px) { .hp-follow h2 { font-size: 2rem; } .hp-follow-grid { grid-template-columns: 1fr; gap: 40px; } }

@@ -15,7 +15,7 @@ const articles = [
     excerpt: "Der Ölschock von 2026 ist zurück. Brent steigt wieder, weil die Spannungen in der Meerenge zunehmen, und diesmal trifft es eine Federal Reserve mit neuem Vorsitz, während die Märkte eine Zinserhöhung einpreisen. Warum der Folgeeffekt wichtiger ist als die Schlagzeile.",
     url: "/insights/insight-04-strait-fed-dilemma.html",
     aiTest: true,
-    image: "/assets/charts/brent-strait-crisis.png"
+    image: "/assets/charts/de/brent-strait-crisis.png"
   },
   {
     title: "Wenn Anleihen sich nicht mehr lohnen: Warum Gold auf Realzinsen reagiert",

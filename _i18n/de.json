@@ -823,6 +823,10 @@
 "de": "2 Guides, 1 Tool →",
 "en": "2 guides, 1 tool →"
 },
+"50a2e563": {
+"de": "<span class=\"hp-thumb\"><img src=\"/assets/charts/brent-strait-crisis.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></span><span class=\"hp-eb\">Markt</span>",
+"en": "<span class=\"hp-thumb\"><img src=\"/assets/charts/brent-strait-crisis.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></span><span class=\"hp-eb\">Markets</span>"
+},
 "51dc07d1": {
 "de": "Insider haben Aktien im Umfang von rund 0.05% des Unternehmens verkauft, ein kleiner Betrag, über Monate im Voraus eingerichtete Verkaufsprogramme. Niemand hat gekauft, doch das sagt derzeit wenig aus: Vor Ergebnissen und mit unveröffentlichten Studiendaten in der Hand dürfen Insider nicht kaufen.",
 "en": "Insiders have sold shares worth around 0.05% of the company, a small amount, through sale programs set up months in advance. None have bought, but that tells us little right now: before results and with unpublished trial data in hand, insiders are not allowed to buy."
@@ -2766,6 +2770,10 @@
 "e79a0383": {
 "de": "Was ist ein Indexfonds, und warum funktioniert er? · Surava Capital",
 "en": "What Is an Index Fund, and Why Do They Work? — Surava Capital"
+},
+"e7a97b1c": {
+"de": "<span class=\"hp-thumb\"><img src=\"/assets/charts/moderna-leak-aftermath.png?v=4\" alt=\"\" loading=\"lazy\" decoding=\"async\"></span><span class=\"hp-eb\">Trades</span>",
+"en": "<span class=\"hp-thumb\"><img src=\"/assets/charts/moderna-leak-aftermath.png?v=4\" alt=\"\" loading=\"lazy\" decoding=\"async\"></span><span class=\"hp-eb\">Trades</span>"
 },
 "e84a1e25": {
 "de": "Ein Prozentsatz deines gesamten Portfoliowerts, jährlich verrechnet.",
