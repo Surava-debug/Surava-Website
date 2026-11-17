@@ -3181,7 +3181,7 @@ section.ms-sec { padding: 96px 0 !important; }
 .ms-step.goal .ms-tick { display: none; }
 .ms-step:not(.done):not(.goal) .ms-when { color: #6B7480; }
 .ms-step h3 { font-family: var(--font-serif); font-weight: 400; font-size: 1.12rem; line-height: 1.25; color: #16202D; margin: 8px 0 6px; }
-.ms-step.goal h3 { font-weight: 300; font-size: 1.3rem; }
+
 .ms-step p { margin: 0; font-size: .86rem; line-height: 1.55; color: #4A5666; }
 @media (max-width: 860px) {
   .ms-head h2 { font-size: 2rem; margin-bottom: 36px; }
