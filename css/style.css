@@ -3161,3 +3161,26 @@ a.hp-link:hover .hp-more::after { transform: translateX(4px); }
 a.hp-link:hover .hp-txt h3 { color: #2C4A72; }
 .hp-txt h3 { transition: color .2s ease; }
 @media (prefers-reduced-motion: reduce) { a.hp-link .hp-pic img, .hp-txt h3 { transition: none; } }
+
+/* ---- About roadmap, editorial version (Nov 2026): lines instead of boxes ---- */
+.roadmap-head-v2 .tag { background: none; padding: 0; border: 0; color: #9A4A2A; font-size: .7rem; letter-spacing: .11em; }
+.roadmap-head-v2 h2 { font-family: var(--font-serif); font-weight: 300; font-size: 2.7rem; line-height: 1.1; letter-spacing: -.01em; color: #16202D; }
+.roadmap.roadmap-v2 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: none; gap: 48px; align-items: start; }
+.roadmap-v2 .rm-phase { display: block; grid-row: auto; padding: 22px 0 0; border-top: 2px solid #16202D; }
+.roadmap-v2 .rm-phase.is-next { border-top: 2px dashed #9AA6B5; }
+.roadmap-v2 .rm-phase.is-goal { border-top-color: #9A4A2A; }
+.roadmap-v2 .rm-phase::before, .roadmap-v2 .rm-head::after, .roadmap-v2 .rm-dot { display: none !important; }
+.roadmap-v2 .rm-head { display: block; margin: 0 0 6px; }
+.roadmap-v2 .rm-label { background: none; padding: 0; font-size: .7rem; font-weight: 600; letter-spacing: .11em; color: #9A4A2A; }
+.roadmap-v2 .rm-card, .roadmap-v2 .rm-phase.is-now .rm-card, .roadmap-v2 .rm-phase.is-next .rm-card, .roadmap-v2 .rm-phase.is-goal .rm-card {
+  background: none; border: 0; border-radius: 0; box-shadow: none; padding: 18px 0; margin: 0; }
+.roadmap-v2 .rm-card + .rm-card { border-top: 1px solid #DAD7D2; }
+.roadmap-v2 .rm-card h3, .roadmap-v2 .rm-phase.is-goal .rm-card h3 { font-family: var(--font-serif); font-weight: 400; font-size: 1.35rem; line-height: 1.25; margin: 0 0 8px; color: #16202D; }
+.roadmap-v2 .rm-card p, .roadmap-v2 .rm-phase.is-goal .rm-card p { font-size: .95rem; line-height: 1.65; color: #4A5666; margin: 0; }
+.roadmap-v2 .rm-phase.is-goal .rm-card h3 { font-weight: 300; font-size: 2rem; line-height: 1.15; letter-spacing: -.01em; }
+@media (max-width: 760px) {
+  .roadmap.roadmap-v2 { grid-template-columns: 1fr; gap: 36px; }
+  .roadmap-v2 .rm-phase { padding-left: 0; }
+  .roadmap-v2 .rm-head { margin-left: 0; }
+  .roadmap-head-v2 h2 { font-size: 2rem; }
+}
