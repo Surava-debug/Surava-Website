@@ -3149,5 +3149,6 @@ section.hp-dark { background: #16202D; color: #fff; padding: 88px 0 !important; 
 .hp-follow-grid a { transition: border-color .2s ease; }
 .hp-follow-grid a:hover { border-top-color: #9A4A2A; }
 .hp-follow-grid h3 span { background: linear-gradient(#16202D, #16202D) 0 100% / 0 1px no-repeat; padding-bottom: 2px; transition: background-size .35s ease; }
-.hp-follow-grid a:hover h3 span { background-size: 100% 1px; }
+.hp-follow-grid a:hover h3 span { background-size: 0 1px; }
+.hp-follow-grid .hp-more { border-bottom: 0; padding-bottom: 0; }
 @media (prefers-reduced-motion: reduce) { .hp-follow-grid h3 span, .hp-follow-grid a { transition: none; } }
