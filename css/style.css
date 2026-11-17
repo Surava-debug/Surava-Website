@@ -3237,3 +3237,5 @@ label { font-weight: 600; }
 .coming-soon-single .cs-title { margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 1.12rem; line-height: 1.3; color: var(--color-ink-soft); }
 .cs-stack { grid-column: span 2; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: inherit; align-content: start; }
 @media (max-width: 900px) { .cs-stack { grid-column: auto; grid-template-columns: 1fr; } }
+/* Coming soon boxes: same size as the guide card next to them */
+.coming-soon-single { align-self: stretch; justify-content: center; }
