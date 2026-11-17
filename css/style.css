@@ -3052,7 +3052,7 @@ section.home-pub { padding: 80px 0; }
 
 /* ---- Homepage hero: full-width photo, light serif headline (Nov 2026) ---- */
 .hp-hero { position: relative; display: flex; align-items: flex-end; min-height: 560px; padding: 0; color: #fff;
-  background: #2A2E33 url(/assets/brand/hero-logo.jpg) 85% 50% / cover no-repeat; }
+  background: #2A2E33 url(/assets/brand/hero-wide.jpg) 85% 50% / cover no-repeat; }
 .hp-hero::before { content: ""; position: absolute; inset: 0;
   background: linear-gradient(90deg, rgba(20,24,30,.92) 0%, rgba(20,24,30,.8) 45%, rgba(20,24,30,.2) 85%); }
 .hp-hero .container { position: relative; width: 100%; padding-top: 80px; padding-bottom: 72px; }
