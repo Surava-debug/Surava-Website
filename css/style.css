@@ -3152,3 +3152,12 @@ section.hp-dark { background: #16202D; color: #fff; padding: 88px 0 !important; 
 .hp-follow-grid a:hover h3 span { background-size: 0 1px; }
 .hp-follow-grid .hp-more { border-bottom: 0; padding-bottom: 0; }
 @media (prefers-reduced-motion: reduce) { .hp-follow-grid h3 span, .hp-follow-grid a { transition: none; } }
+
+/* Education + Insights sections: whole block is one link */
+a.hp-link { display: grid; color: inherit; text-decoration: none; }
+a.hp-link .hp-pic img { transition: transform .5s ease; }
+a.hp-link:hover .hp-pic img { transform: scale(1.02); }
+a.hp-link:hover .hp-more::after { transform: translateX(4px); }
+a.hp-link:hover .hp-txt h3 { color: #2C4A72; }
+.hp-txt h3 { transition: color .2s ease; }
+@media (prefers-reduced-motion: reduce) { a.hp-link .hp-pic img, .hp-txt h3 { transition: none; } }
