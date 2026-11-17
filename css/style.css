@@ -3205,3 +3205,20 @@ section.ms-sec { padding: 96px 0 !important; }
   .ms-here-m span { display: inline-block; font: 600 .66rem var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: #16202D; border: 1px solid #16202D; border-radius: 999px; padding: 2px 10px; }
   .ms-here-m::before { content: ""; position: absolute; left: -9px; top: 3px; width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 3px solid #16202D; box-sizing: border-box; z-index: 2; }
 }
+
+/* ==================================================================
+   TYPOGRAPHY SYSTEM (Nov 2026): one set of rules for the whole site
+   - Headings: Source Serif 4. Display sizes light (300), smaller ones regular (400)
+   - Body: Inter 400. Labels: Inter 600, small caps-style uppercase
+   ================================================================== */
+button, input, select, textarea { font-family: inherit; }
+h1:not(footer h1) { font-weight: 300 !important; letter-spacing: -0.015em; }
+h2:not(footer h2), h3:not(footer h3), h4:not(footer h4) { font-weight: 400 !important; }
+.section-head h2, .hp-intro h2, .hp-follow h2, .ms-head h2, .roadmap-head h2,
+.hp-txt h3, .hp-follow-grid h3, .hp-dark-grid h3 { font-weight: 300 !important; letter-spacing: -0.01em; }
+.tag, .hp-eb, .ms-eb, .ms-when { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.11em; text-transform: uppercase; }
+.tag { color: #9A4A2A; }
+.focus-label, th, .tb-count, .tb-past, .tb-next { font-weight: 600; letter-spacing: 0.08em; }
+label { font-weight: 600; }
+.tb-title { font-family: var(--font-serif); font-weight: 400; font-size: 1.2rem; }
+.tb-title .focus-ticker { font-family: var(--font-sans); }
