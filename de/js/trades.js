@@ -113,9 +113,9 @@ const tradeLevels = {
   body.querySelectorAll('tr[data-n]').forEach(function (r, i) { r.style.setProperty('--i', i); });
   var tbox = body.closest('details');
   if (tbox) {
-    // The box of the company with our most recent trade starts unfolded
+    // The box of the company with our most recent trade starts unfolded (unless it carries data-closed: past focus)
     var latest = chrono[chrono.length - 1];
-    if (!tbox.getAttribute('data-symbol') || tbox.getAttribute('data-symbol') === latest.symbol) tbox.open = true;
+    if (!tbox.hasAttribute('data-closed') && (!tbox.getAttribute('data-symbol') || tbox.getAttribute('data-symbol') === latest.symbol)) tbox.open = true;
     var cnt = tbox.querySelector('.tb-count');
     if (cnt) cnt.textContent = trades.length + (trades.length === 1 ? ' Trade' : ' Trades');
   }

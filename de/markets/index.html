@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20261104g" />
+  <link rel="stylesheet" href="/css/style.css?v=20261117a" />
   <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -65,50 +65,59 @@
   <section>
     <div class="container">
       <div class="section-head left">
-        <span class="tag">Im Fokus · Moderna (NASDAQ: MRNA)</span>
+        <span class="tag">Im Fokus</span>
         <h2>Das Unternehmen in unserem Fokus</h2>
       </div>
-      <p class="catalyst-intro">Im August gaben Moderna und Merck bekannt, dass ihr personalisierter mRNA-Krebsimpfstoff Intismeran zusammen mit Keytruda in einer Phase-3-Studie das Risiko senkte, dass ein Melanom zurückkehrt oder streut. Die Aktie hat sich an einem einzigen Tag mehr als verdoppelt.</p>
-      <p class="catalyst-intro">Genau diese Mischung aus echtem wissenschaftlichem Meilenstein und viel Hype ist der Grund, warum wir hinschauen. Die vollständigen Phase-3-Daten kamen am 22. Oktober: ein um 42% tieferes Risiko für eine Rückkehr des Krebses oder Tod gegenüber Keytruda allein. Der Impfstoff ist noch nirgends zugelassen, und Merck und Moderna sind nach eigenen Angaben im Austausch mit den Behörden.</p>
+      <p class="catalyst-intro">Gerade ist kein Unternehmen im Fokus. Das nächste kommt hierhin, sobald uns etwas auffällt.</p>
 
-      <div class="focus-chart">
-        <!-- TradingView: Moderna price and chart -->
-        <div class="tradingview-widget-container">
-          <div class="tradingview-widget-container__widget"></div>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
-          {
-            "symbols": [["Moderna", "NASDAQ:MRNA|1D"]],
-            "chartOnly": false,
-            "width": "100%",
-            "height": "100%",
-            "locale": "de_DE",
-            "colorTheme": "light",
-            "isTransparent": true,
-            "showVolume": false,
-            "hideDateRanges": false,
-            "scalePosition": "right",
-            "scaleMode": "Normal",
-            "fontFamily": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
-            "chartType": "area",
-            "lineColor": "#1B2A3F",
-            "topColor": "rgba(27, 42, 63, 0.18)",
-            "bottomColor": "rgba(27, 42, 63, 0)",
-            "lineWidth": 2,
-            "dateRanges": ["1d|1", "1m|30", "3m|60", "12m|1D", "60m|1W", "all|1M"]
-          }
-          </script>
-        </div>
-      </div>
+      <details class="trade-box" id="past-focus-moderna">
+        <summary>
+          <span class="tb-head"> <span class="tb-title">Moderna <span class="focus-ticker">NASDAQ: MRNA</span></span> <span class="tb-sub">Moderna war von Oktober bis November 2026 unser Unternehmen im Fokus. Unsere Begleitung ist abgeschlossen. <a href="/de/insights/insight-07-moderna-q3-earnings.html">Zu unserer letzten Analyse &rarr;</a></span> </span> <span class="tb-past">Früherer Fokus</span> <span class="tb-chev" aria-hidden="true"></span>
+        </summary>
+        <div class="tb-body">
+          <p class="catalyst-intro" style="margin-top:14px;">Im August gaben Moderna und Merck bekannt, dass ihr personalisierter mRNA-Krebsimpfstoff Intismeran zusammen mit Keytruda in einer Phase-3-Studie das Risiko senkte, dass ein Melanom zurückkehrt oder streut. Die Aktie hat sich an einem einzigen Tag mehr als verdoppelt.</p>
+          <p class="catalyst-intro">Genau diese Mischung aus echtem wissenschaftlichem Meilenstein und viel Hype war der Grund, warum wir hingeschaut haben. Die vollständigen Phase-3-Daten kamen am 22. Oktober: ein um 42% tieferes Risiko für eine Rückkehr des Krebses oder Tod gegenüber Keytruda allein. Der Impfstoff ist noch nirgends zugelassen, und Merck und Moderna sind nach eigenen Angaben im Austausch mit den Behörden.</p>
 
-      <div class="focus-dates-head">
-        <h3 class="focus-subhead">Wichtige Termine</h3>
-        <div class="impact-legend" aria-label="Erwarteter Einfluss auf den Aktienkurs">
-          <span><i class="dot impact-high"></i>Hoher Einfluss</span> <span><i class="dot impact-medium"></i>Mittel</span> <span><i class="dot impact-low"></i>Tief</span>
+          <div class="focus-chart">
+            <!-- TradingView: Moderna price and chart, loaded the first time the box is opened -->
+            <div class="tradingview-widget-container" id="past-focus-chart">
+              <div class="tradingview-widget-container__widget"></div>
+            </div>
+          </div>
+
+          <div class="focus-dates-head">
+            <h3 class="focus-subhead">Wichtige Termine</h3>
+            <div class="impact-legend" aria-label="Erwarteter Einfluss auf den Aktienkurs">
+              <span><i class="dot impact-high"></i>Hoher Einfluss</span> <span><i class="dot impact-medium"></i>Mittel</span> <span><i class="dot impact-low"></i>Tief</span>
+            </div>
+          </div>
+          <div id="catalystList" class="catalyst-list"></div>
         </div>
-      </div>
-      <div id="catalystList" class="catalyst-list"></div>
+      </details>
     </div>
   </section>
+  <script>
+    (function () {
+      var box = document.getElementById('past-focus-moderna'), tv = document.getElementById('past-focus-chart'), done = false;
+      if (!box || !tv) return;
+      function load() {
+        if (done || !box.open) return; done = true;
+        var sc = document.createElement('script');
+        sc.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
+        sc.async = true;
+        sc.text = JSON.stringify({
+          symbols: [['Moderna', 'NASDAQ:MRNA|1D']], chartOnly: false, width: '100%', height: '100%',
+          locale: 'de_DE', colorTheme: 'light', isTransparent: true, showVolume: false, hideDateRanges: false,
+          scalePosition: 'right', scaleMode: 'Normal',
+          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
+          chartType: 'area', lineColor: '#1B2A3F', topColor: 'rgba(27, 42, 63, 0.18)', bottomColor: 'rgba(27, 42, 63, 0)',
+          lineWidth: 2, dateRanges: ['1d|1', '1m|30', '3m|60', '12m|1D', '60m|1W', 'all|1M']
+        });
+        tv.appendChild(sc);
+      }
+      box.addEventListener('toggle', load);
+    })();
+  </script>
   <script src="/de/js/catalysts.js?v=435d11d9" defer></script>
 
   <!-- ===== ECONOMY AT A GLANCE + ECONOMIC CALENDAR (side by side) ===== -->

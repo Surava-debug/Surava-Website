@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20261104g" />
+  <link rel="stylesheet" href="/css/style.css?v=20261117a" />
   <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -74,52 +74,66 @@
   <section>
     <div class="container">
       <div class="section-head left">
-        <span class="tag">In focus · Moderna (NASDAQ: MRNA)</span>
+        <span class="tag">In focus</span>
         <h2>The company in our focus</h2>
       </div>
-      <p class="catalyst-intro">In August, Moderna and Merck reported that their personalised mRNA cancer vaccine, intismeran, used together with Keytruda, lowered the risk of melanoma coming back or spreading in a Phase 3 trial. The shares more than doubled in a single day.</p>
-      <p class="catalyst-intro">That mix of a real scientific milestone and a lot of hype is exactly why we are watching. The full Phase 3 data came out on 22 October: a 42% lower risk of the cancer returning or death compared with Keytruda alone. The vaccine is still not approved anywhere, and Merck and Moderna say they are engaging with regulators.</p>
+      <p class="catalyst-intro">No company in focus right now. The next one goes here once something catches our attention.</p>
 
-      <div class="focus-chart">
-        <!-- TradingView: Moderna price and chart -->
-        <div class="tradingview-widget-container">
-          <div class="tradingview-widget-container__widget"></div>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
-          {
-            "symbols": [["Moderna", "NASDAQ:MRNA|1D"]],
-            "chartOnly": false,
-            "width": "100%",
-            "height": "100%",
-            "locale": "en",
-            "colorTheme": "light",
-            "isTransparent": true,
-            "showVolume": false,
-            "hideDateRanges": false,
-            "scalePosition": "right",
-            "scaleMode": "Normal",
-            "fontFamily": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
-            "chartType": "area",
-            "lineColor": "#1B2A3F",
-            "topColor": "rgba(27, 42, 63, 0.18)",
-            "bottomColor": "rgba(27, 42, 63, 0)",
-            "lineWidth": 2,
-            "dateRanges": ["1d|1", "1m|30", "3m|60", "12m|1D", "60m|1W", "all|1M"]
-          }
-          </script>
-        </div>
-      </div>
+      <details class="trade-box" id="past-focus-moderna">
+        <summary>
+          <span class="tb-head">
+            <span class="tb-title">Moderna <span class="focus-ticker">NASDAQ: MRNA</span></span>
+            <span class="tb-sub">Moderna was our company in focus from October to November 2026. Our coverage of it is over. <a href="/insights/insight-07-moderna-q3-earnings.html">Read our last analysis &rarr;</a></span>
+          </span>
+          <span class="tb-past">Past focus</span>
+          <span class="tb-chev" aria-hidden="true"></span>
+        </summary>
+        <div class="tb-body">
+          <p class="catalyst-intro" style="margin-top:14px;">In August, Moderna and Merck reported that their personalised mRNA cancer vaccine, intismeran, used together with Keytruda, lowered the risk of melanoma coming back or spreading in a Phase 3 trial. The shares more than doubled in a single day.</p>
+          <p class="catalyst-intro">That mix of a real scientific milestone and a lot of hype is exactly why we watched. The full Phase 3 data came out on 22 October: a 42% lower risk of the cancer returning or death compared with Keytruda alone. The vaccine is still not approved anywhere, and Merck and Moderna say they are engaging with regulators.</p>
 
-      <div class="focus-dates-head">
-        <h3 class="focus-subhead">Key dates</h3>
-        <div class="impact-legend" aria-label="Expected impact on the share price">
-          <span><i class="dot impact-high"></i>High impact</span>
-          <span><i class="dot impact-medium"></i>Medium</span>
-          <span><i class="dot impact-low"></i>Low</span>
+          <div class="focus-chart">
+            <!-- TradingView: Moderna price and chart, loaded the first time the box is opened -->
+            <div class="tradingview-widget-container" id="past-focus-chart">
+              <div class="tradingview-widget-container__widget"></div>
+            </div>
+          </div>
+
+          <div class="focus-dates-head">
+            <h3 class="focus-subhead">Key dates</h3>
+            <div class="impact-legend" aria-label="Expected impact on the share price">
+              <span><i class="dot impact-high"></i>High impact</span>
+              <span><i class="dot impact-medium"></i>Medium</span>
+              <span><i class="dot impact-low"></i>Low</span>
+            </div>
+          </div>
+          <div id="catalystList" class="catalyst-list"></div>
         </div>
-      </div>
-      <div id="catalystList" class="catalyst-list"></div>
+      </details>
     </div>
   </section>
+  <script>
+    (function () {
+      var box = document.getElementById('past-focus-moderna'), tv = document.getElementById('past-focus-chart'), done = false;
+      if (!box || !tv) return;
+      function load() {
+        if (done || !box.open) return; done = true;
+        var sc = document.createElement('script');
+        sc.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
+        sc.async = true;
+        sc.text = JSON.stringify({
+          symbols: [['Moderna', 'NASDAQ:MRNA|1D']], chartOnly: false, width: '100%', height: '100%',
+          locale: 'en', colorTheme: 'light', isTransparent: true, showVolume: false, hideDateRanges: false,
+          scalePosition: 'right', scaleMode: 'Normal',
+          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
+          chartType: 'area', lineColor: '#1B2A3F', topColor: 'rgba(27, 42, 63, 0.18)', bottomColor: 'rgba(27, 42, 63, 0)',
+          lineWidth: 2, dateRanges: ['1d|1', '1m|30', '3m|60', '12m|1D', '60m|1W', 'all|1M']
+        });
+        tv.appendChild(sc);
+      }
+      box.addEventListener('toggle', load);
+    })();
+  </script>
   <script src="/js/catalysts.js" defer></script>
 
   <!-- ===== ECONOMY AT A GLANCE + ECONOMIC CALENDAR (side by side) ===== -->
