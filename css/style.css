@@ -3183,6 +3183,14 @@ section.ms-sec { padding: 96px 0 !important; }
 .ms-step h3 { font-family: var(--font-serif); font-weight: 400; font-size: 1.12rem; line-height: 1.25; color: #16202D; margin: 8px 0 6px; }
 
 .ms-step p { margin: 0; font-size: .86rem; line-height: 1.55; color: #4A5666; }
+/* Roadmap (desktop): ticks in the middle of each column, text centred under them */
+@media (min-width: 861px) {
+  .ms { --c: calc((100% - 120px) / 6); }
+  .ms-track { left: calc(var(--c) / 2); right: calc(var(--c) / 2); }
+  .ms-step { text-align: center; }
+  .ms-tick { left: 50%; margin-left: -1px; }
+  .ms-end { right: -1.5px; }
+}
 @media (max-width: 860px) {
   .ms-head h2 { font-size: 2rem; margin-bottom: 36px; }
   .ms-track { display: none; }
