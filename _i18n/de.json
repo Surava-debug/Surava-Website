@@ -159,6 +159,10 @@
 "de": "Indexfonds funktionieren nicht, weil sie clever sind, sondern weil sie zwei Dinge entfernen, die die Rendite der meisten Anleger still auffressen: hohe Gebühren und konzentrierte Wetten auf einzelne Unternehmen. Tiefe Kosten und breite Diversifikation sind keine aufregenden Eigenschaften, aber über Jahrzehnte sind sie die zwei Faktoren, die am meisten zählen.",
 "en": "Index funds work not because they are clever, but because they remove two things that quietly erode most investors' returns: high fees and concentrated bets on individual companies. Low cost and broad diversification are not exciting features, but over decades they are the two variables that matter most."
 },
+"0ed162c3": {
+"de": "Sobald wir es ausgewählt haben, findest du hier den Live-Chart, die wichtigen Termine und die Links zu unseren Analysen.",
+"en": "As soon as we pick it, this is where you will find its live chart, the key dates and links to our analysis."
+},
 "0f2b1d52": {
 "de": "Unsere Mission",
 "en": "Our mission"
@@ -274,6 +278,10 @@
 "1945d5bd": {
 "de": "+162 Millionen Dollar",
 "en": "+162 million dollars"
+},
+"1aae1604": {
+"de": "Jeder Trade, den wir darauf abschliessen, kommt direkt aus dem Export unseres Brokers hierhin, Verluste inklusive, genau wie bei Moderna.",
+"en": "Every trade we close on it goes in straight from the broker export, losses included, the same way as for Moderna."
 },
 "1af19aad": {
 "de": "Beitragsgrenzen, Schwellenwerte und Regeln für AHV, BVG und Säule 3a ändern regelmässig. Prüfe vor Entscheidungen immer die aktuellen Zahlen bei einer offiziellen Quelle (z. B. ahv-iv.ch) oder einer Fachperson.",
@@ -2335,6 +2343,10 @@
 "de": "Direkt aus dem Export unseres Brokers, auch die, die nicht aufgegangen sind.",
 "en": "Straight from the broker's export, including the ones that did not work."
 },
+"c75cd3fb": {
+"de": "<span class=\"tb-head\"> <span class=\"tb-title\">Nächstes Unternehmen</span> <span class=\"tb-sub\">Trades auf das nächste Unternehmen im Fokus erscheinen hier.</span> </span> <span class=\"tb-next\">Als Nächstes</span> <span class=\"tb-chev\" aria-hidden=\"true\"></span>",
+"en": "<span class=\"tb-head\"> <span class=\"tb-title\">Next company</span> <span class=\"tb-sub\">Trades on the next company in our focus will appear here.</span> </span> <span class=\"tb-next\">Next</span> <span class=\"tb-chev\" aria-hidden=\"true\"></span>"
+},
 "c77f8fe3": {
 "de": "Alles, was wir veröffentlichen, ist kostenlos und frei zugänglich. Am schnellsten erreichst du uns per E-Mail an info@suravacapital.ch.",
 "en": "Everything we publish is free and open. The fastest way to reach us is by email at info@suravacapital.ch."
@@ -2394,6 +2406,10 @@
 "cb55b15c": {
 "de": "Modernas Phase-3-Melanomdaten sickerten zwei Tage vor dem ESMO durch und der Ausverkauf begann früher. Unser Fazit zum Leck, zu den Zahlen und zu dem, was als Nächstes kommt.",
 "en": "Moderna's Phase 3 melanoma data leaked two days before ESMO and the selloff started early. Our conclusion on the leak, the numbers and what comes next."
+},
+"cbe6dd23": {
+"de": "<span class=\"tb-head\"> <span class=\"tb-title\">Nächstes Unternehmen</span> <span class=\"tb-sub\">Das nächste Unternehmen kommt hierhin, sobald uns etwas auffällt.</span> </span> <span class=\"tb-next\">Als Nächstes</span> <span class=\"tb-chev\" aria-hidden=\"true\"></span>",
+"en": "<span class=\"tb-head\"> <span class=\"tb-title\">Next company</span> <span class=\"tb-sub\">The next company goes here once something catches our attention.</span> </span> <span class=\"tb-next\">Next</span> <span class=\"tb-chev\" aria-hidden=\"true\"></span>"
 },
 "cc11b3a2": {
 "de": "Kontext",
