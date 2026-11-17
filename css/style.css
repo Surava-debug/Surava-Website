@@ -2243,7 +2243,8 @@ table.trades { min-width: 820px; }
 .tb-sub a { color: var(--color-ink); font-weight: 600; text-decoration: underline; white-space: nowrap; }
 .tb-count { font-size: 0.72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink); background: var(--color-accent-soft); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
 .tb-past { font-size: 0.72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-soft); background: #E9EBEE; border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
-.tb-title .focus-ticker { font-size: 0.75rem; }
+.tb-title .focus-ticker { font-size: 0.7rem; letter-spacing: 0.08em; margin-left: 10px; position: relative; top: -1px; }
+.trade-box .tb-title + .tb-sub { margin-top: 6px; line-height: 1.5; }
 @media (max-width: 600px) { .trade-box summary { flex-wrap: wrap; } .trade-box .tb-head { flex-basis: 100%; } }
 .tb-chev { width: 10px; height: 10px; border-right: 2px solid var(--color-ink); border-bottom: 2px solid var(--color-ink); transform: rotate(45deg); transition: transform .25s ease; margin: 0 4px 4px; flex: none; }
 .trade-box[open] .tb-chev { transform: rotate(-135deg); margin-bottom: -4px; }
