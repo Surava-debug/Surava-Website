@@ -235,6 +235,10 @@
 "de": "Nimm Kontakt mit Surava Capital auf: Fragen zu unseren Artikeln, Feedback, Interesse an Kursen oder Zusammenarbeit.",
 "en": "Get in touch with Surava Capital: questions about our articles, feedback, course interest or collaborations."
 },
+"1725d137": {
+"de": "Wir erklären alles so, wie wir es einem Freund erklären würden: in einfacher Sprache, ohne Fachjargon. Wir lernen selbst noch und sagen das auch. Nichts hier ist Anlageberatung, nur das, was wir für verstehenswert halten.",
+"en": "We explain things the way we would to a friend: plain language, no jargon. We are still learning ourselves and we say so. Nothing here is investment advice, just what we find worth understanding."
+},
 "1736ddc2": {
 "de": "Guide &middot; 8 Min. Lesezeit",
 "en": "Guide &middot; 8 min read"
@@ -719,6 +723,10 @@
 "de": "Kostenlose Kommentare, Bildung und ein öffentliches Trading-Journal.",
 "en": "Free commentary, education and a public trading journal."
 },
+"49a75a81": {
+"de": "Klare Guides, ehrliche Analysen und ein öffentliches Protokoll unserer eigenen Trades, gemacht für Einsteiger.",
+"en": "Clear guides, honest analysis and a public record of our own trades, built for people starting out."
+},
 "49d353e3": {
 "de": "Entspricht der frühen Studie",
 "en": "Matches the early trial"
@@ -967,10 +975,6 @@
 "de": "<span class=\"sw-line\"></span><span class=\"key\">Voraussichtlicher Wert (Einzahlungen plus Wachstum)</span><span class=\"val\" id=\"calcValue\">&mdash;</span>",
 "en": "<span class=\"sw-line\"></span><span class=\"key\">Projected value (what you paid in plus growth)</span><span class=\"val\" id=\"calcValue\">&mdash;</span>"
 },
-"600aa252": {
-"de": "Wer versteht, wie Anlegen funktioniert, trifft bessere Entscheidungen, mit oder ohne Berater. Kostenlos, ohne Anmeldung, ohne Fachjargon, ohne Verkaufsgespräch.",
-"en": "Knowing how investing works helps you make better decisions, with or without an advisor. Free, ungated, no jargon, no sales pitch."
-},
 "601748de": {
 "de": "Wo möchtest du anfangen?",
 "en": "Where do you want to start?"
@@ -1022,10 +1026,6 @@
 "63e601d2": {
 "de": "Steuerbehandlung",
 "en": "Tax treatment"
-},
-"641f431d": {
-"de": "Wir erklären alles so, wie wir es einem Freund erklären würden: in einfacher Sprache, ohne Fachjargon, ohne Verkaufsgespräch. Wir lernen selbst noch und sagen das auch. Nichts hier ist Anlageberatung, nur das, was wir für verstehenswert halten.",
-"en": "We explain things the way we would to a friend: plain language, no jargon, no sales pitch. We are still learning ourselves and we say so. Nothing here is investment advice, just what we find worth understanding."
 },
 "64a90d17": {
 "de": "<span class=\"tb-head\"> <span class=\"tb-title\">Moderna <span class=\"focus-ticker\">NASDAQ: MRNA</span></span> <span class=\"tb-sub\">Moderna war von Oktober bis November 2026 unser Unternehmen im Fokus. Unsere Begleitung ist abgeschlossen. <a href=\"/insights/insight-07-moderna-q3-earnings.html\">Zu unserer letzten Analyse &rarr;</a></span> </span> <span class=\"tb-past\">Früherer Fokus</span> <span class=\"tb-chev\" aria-hidden=\"true\"></span>",
@@ -1847,6 +1847,10 @@
 "de": "Anlageberatung",
 "en": "Investment Advisory"
 },
+"a8d6a863": {
+"de": "Wer versteht, wie Anlegen funktioniert, trifft bessere Entscheidungen, mit oder ohne Berater. Kostenlos lesbar, ohne Fachjargon.",
+"en": "Knowing how investing works helps you make better decisions, with or without an advisor. Free to read, no jargon."
+},
 "a9998268": {
 "de": "Drei junge Menschen im Gespräch auf Bänken im Freien, eine Person arbeitet am Laptop",
 "en": "Three young people talking on benches outside, one working on a laptop"
@@ -2275,10 +2279,6 @@
 "de": "Kontext",
 "en": "Context"
 },
-"cca4b1f7": {
-"de": "Kostenlose Finanzbildung, Makroanalysen und ein öffentliches Protokoll unserer eigenen Trades. Kein Produktverkauf, keine versteckten Interessen.",
-"en": "Free financial education, macro analysis and a public record of our own trades. No product sales, no hidden incentives."
-},
 "cd3e550f": {
 "de": "Eine bessere Frage als «Wie stark ist sie gefallen?» lautet: «Würde ich zu diesem Preis kaufen, wenn ich den Chart nie gesehen hätte?»",
 "en": "A better question than \"how far has it fallen?\" is \"would I buy this at this price if I had never seen the chart?\""
@@ -2459,6 +2459,10 @@
 "de": "Die Schweiz besteuert Anlagen auf zwei Arten, die die meisten anderen Länder nicht kennen: mit einer jährlichen Vermögenssteuer und einer Verrechnungssteuer, die du oft zurückholen kannst. Beide werden leicht missverstanden.",
 "en": "Switzerland taxes investments in two ways most other countries don't: an annual wealth tax, and a withholding tax you can often get back. Both are easy to misunderstand."
 },
+"da53100d": {
+"de": "Wir veröffentlichen, wie wir die Märkte lesen, bevor wir handeln, und was danach passiert ist. Unsere Guides und Analysen sind kostenlos lesbar.",
+"en": "We publish how we read the markets before we trade, and what happened after. Our guides and analysis are free to read."
+},
 "da73f258": {
 "de": "Schick uns eine Nachricht",
 "en": "Send us a message"
@@ -2602,10 +2606,6 @@
 "e88638f2": {
 "de": "Was Diversifikation wirklich bewirkt",
 "en": "What diversification actually does"
-},
-"e88abe0b": {
-"de": "Wir veröffentlichen, wie wir die Märkte lesen, bevor wir handeln, und was danach passiert ist. Die Guides sind kostenlos, die Analysen sind kostenlos, und es gibt nichts zu kaufen.",
-"en": "We publish how we read the markets before we trade, and what happened after. The guides are free, the analysis is free, and there is nothing to buy."
 },
 "e8ac7494": {
 "de": "In diesem Beispiel erzielen beide Anlagen dieselbe Bruttorendite von 7 Prozent pro Jahr, dem Markt ist egal, welchen Fonds du gewählt hast. Der einzige Unterschied ist, was jeder Fonds für sich behält, bevor du deine Rendite siehst. Über 30 Jahre macht diese Lücke allein einen spürbaren Teil des ganzen Ergebnisses aus. Niemand musste dafür die Zukunft richtig vorhersagen. Sie entsteht rein durch Mathematik.",
