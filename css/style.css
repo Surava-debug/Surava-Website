@@ -3186,15 +3186,22 @@ section.ms-sec { padding: 96px 0 !important; }
 @media (max-width: 860px) {
   .ms-head h2 { font-size: 2rem; margin-bottom: 36px; }
   .ms-track { display: none; }
-  .ms-grid { grid-template-columns: 1fr; gap: 0; }
-  .ms-step { padding: 4px 0 26px 30px; border-left: 2px dashed #B9C1CC; margin-left: 6px; }
-  .ms-step.done { border-left: 2px solid #16202D; }
-  .ms-step.goal { border-left-color: transparent; padding-bottom: 0; }
-  .ms-tick, .ms-step.goal .ms-tick { display: block; top: 6px; left: -8px; width: 14px; height: 14px; border-radius: 50%; background: #F4F5F3; border: 2px solid #B9C1CC; box-sizing: border-box; }
+  .ms-grid { position: relative; grid-template-columns: 1fr; gap: 0; }
+  /* one continuous dotted line from the first dot to the goal */
+  .ms-grid::before { content: ""; position: absolute; left: 4px; top: 13px; bottom: 0; width: 2px;
+    background: repeating-linear-gradient(180deg, #B9C1CC 0 6px, transparent 6px 12px); }
+  .ms-step, .ms-step.done, .ms-step.goal { position: relative; margin-left: 6px; padding: 4px 0 26px 30px; border-left: 0; }
+  .ms-step.goal { padding-bottom: 0; }
+  /* solid line over the done part, down to "We are here" */
+  .ms-step.done::before { content: ""; position: absolute; left: -2px; top: 13px; bottom: -13px; width: 2px; background: #16202D; z-index: 1; }
+  /* hide the dotted line below the goal dot */
+  .ms-step.goal::after { content: ""; position: absolute; left: -6px; width: 10px; top: 20px; bottom: 0; background: var(--color-bg-alt); }
+  .ms-tick, .ms-step.goal .ms-tick { display: block; top: 6px; left: -8px; width: 14px; height: 14px; border-radius: 50%;
+    background: var(--color-bg-alt); border: 2px solid #B9C1CC; box-sizing: border-box; z-index: 2; }
   .ms-step.done .ms-tick { background: #16202D; border-color: #16202D; }
   .ms-step.goal .ms-tick { background: #9A4A2A; border-color: #9A4A2A; }
   .ms-step h3 { margin-top: 6px; }
-  .ms-here-m { display: block; margin-left: 6px; padding: 0 0 26px 30px; border-left: 2px dashed #B9C1CC; position: relative; }
+  .ms-here-m { display: block; position: relative; margin-left: 6px; padding: 0 0 26px 30px; }
   .ms-here-m span { display: inline-block; font: 600 .66rem var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: #16202D; border: 1px solid #16202D; border-radius: 999px; padding: 2px 10px; }
-  .ms-here-m::before { content: ""; position: absolute; left: -9px; top: 3px; width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 3px solid #16202D; box-sizing: border-box; }
+  .ms-here-m::before { content: ""; position: absolute; left: -9px; top: 3px; width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 3px solid #16202D; box-sizing: border-box; z-index: 2; }
 }
