@@ -19,8 +19,45 @@
      source    link to the company's own announcement
      link      optional: our own page on this event. Makes the whole card
                clickable (it grows slightly on hover).
+     outcome   optional, 1-2 short points: what actually happened. Shown instead
+               of "points" in a past-focus box (a list with data-past="Company"
+               shows that company's past dates, oldest first).
    =================================================================== */
 const catalysts = [
+  {
+    date: "2026-10-22",
+    time: "18:30",
+    company: "Moderna",
+    ticker: "NASDAQ: MRNA",
+    type: "Datenleck",
+    impact: "high",
+    title: "Phase-3-Daten zwei Tage zu früh durchgesickert",
+    why: "",
+    points: [],
+    outcome: [
+      "Die Resultate erschienen vor Ablauf der Sperrfrist auf einer medizinischen Nachrichtenseite",
+      "Die Aktie fiel im Tagesverlauf um bis zu 26% und schloss rund 17% tiefer"
+    ],
+    source: "",
+    link: "/de/insights/insight-06-moderna-conclusion.html"
+  },
+  {
+    date: "2026-11-12",
+    time: "",
+    company: "Moderna",
+    ticker: "NASDAQ: MRNA",
+    type: "Investorenanlass",
+    impact: "medium",
+    title: "Analyst Day",
+    why: "",
+    points: [],
+    outcome: [
+      "Die Barkosten steigen ab 2027 wieder auf rund 4 Milliarden Dollar pro Jahr",
+      "Kein Umsatzziel für 2027; die Aktie fiel an diesem Tag um 7%"
+    ],
+    source: "https://investors.modernatx.com",
+    link: "/de/insights/insight-07-moderna-q3-earnings.html"
+  },
   {
     date: "2026-10-24",
     time: "16:30",
@@ -34,6 +71,10 @@ const catalysts = [
       "Die Bewertung hängt an dieser Pipeline",
       "Vollständige Daten: Grösse und Dauer des Effekts",
       "Allein die Schlagzeile im August: +177% an einem Tag"
+    ],
+    outcome: [
+      "Die offiziellen Daten bestätigten das Leck: 42% tieferes Risiko für Rückfall oder Tod",
+      "Die Kursreaktion war bereits am 22. Oktober passiert"
     ],
     source: "https://www.newswire.com/news/moderna-announces-late-breaking-data-to-be-presented-at-esmo-congress-2026",
     link: "/de/insights/insight-05-moderna-hazard-ratio.html"
@@ -67,8 +108,12 @@ const catalysts = [
       "Umsatz klein und weitgehend vorhersehbar",
       "Im Blick: Geldverbrauch und Ausblick"
     ],
+    outcome: [
+      "Überraschender Gewinn: 0.38 Dollar pro Aktie statt eines erwarteten Verlusts von rund 1.10 Dollar",
+      "Umsatz 1.31 Milliarden Dollar, Wachstumsziel 2026 auf 15-25% angehoben"
+    ],
     source: "https://www.newswire.com/news/moderna-to-report-third-quarter-2026-financial-results-on-friday-november-6-2026",
-    link: "/de/insights/#analysis-q3-2026"
+    link: "/de/insights/insight-07-moderna-q3-earnings.html"
   }
 ];
 
@@ -78,6 +123,8 @@ const catalysts = [
 (function () {
   var list = document.getElementById('catalystList');
   if (!list) return;
+  // data-past="Company": show that company's past dates (past-focus box)
+  var pastCo = list.getAttribute('data-past');
 
   var MONTHS = ['Jan.','Feb.','März','Apr.','Mai','Juni','Juli','Aug.','Sept.','Okt.','Nov.','Dez.'];
   var DAYS = ['So','Mo','Di','Mi','Do','Fr','Sa'];
@@ -100,7 +147,7 @@ const catalysts = [
 
   var upcoming = catalysts
     .map(function (c) { return Object.assign({}, c, { _d: parse(c.date) }); })
-    .filter(function (c) { return c._d >= today; })
+    .filter(function (c) { return pastCo ? c.company === pastCo && c._d < today : c._d >= today; })
     .sort(function (a, b) {
       return a._d - b._d || (a.time || '99').localeCompare(b.time || '99');
     });
@@ -125,9 +172,14 @@ const catalysts = [
     var countdown = days === 0 ? 'Heute' : days === 1 ? 'Morgen' : 'In ' + days + ' Tagen';
     var impact = IMPACT[c.impact] ? c.impact : 'medium';
     var when = DAYS[c._d.getDay()] + (c.time ? ' ' + esc(c.time) + zurichZone(c.date) : ' · Zeit folgt');
+    if (pastCo) {
+      countdown = 'Vorbei';
+      if (!c.time) when = DAYS[c._d.getDay()];
+    }
+    var pts = pastCo && c.outcome && c.outcome.length ? c.outcome : c.points;
 
     return '' +
-      '<article class="catalyst impact-' + impact + (days <= 7 ? ' is-soon' : '') + (c.link ? ' has-link' : '') + '"' +
+      '<article class="catalyst impact-' + impact + (!pastCo && days <= 7 ? ' is-soon' : '') + (c.link ? ' has-link' : '') + '"' +
         (c.link ? ' data-href="' + esc(c.link) + '" tabindex="0" role="link" aria-label="' + esc(c.title) + ': Analyse lesen"' : '') + '>' +
         '<div class="catalyst-date">' +
           '<span class="catalyst-day">' + c._d.getDate() + '</span>' +
@@ -141,9 +193,10 @@ const catalysts = [
           '</div>' +
           '<h3>' + esc(c.title) + '</h3>' +
           (c.why ? '<p>' + esc(c.why) + '</p>' : '') +
-          (c.points && c.points.length
-            ? '<ul class="catalyst-points">' + c.points.map(function (pt) { return '<li>' + esc(pt) + '</li>'; }).join('') + '</ul>'
+          (pts && pts.length
+            ? '<ul class="catalyst-points">' + pts.map(function (pt) { return '<li>' + esc(pt) + '</li>'; }).join('') + '</ul>'
             : '') +
+          (pastCo && c.link ? '<a class="catalyst-read" href="' + esc(c.link) + '">Zu unserer Analyse →</a>' : '') +
           (c.source ? '<a class="catalyst-src" href="' + esc(c.source) + '" target="_blank" rel="noopener">Quelle ↗</a>' : '') +
         '</div>' +
         '<div class="catalyst-countdown">' + countdown + '</div>' +

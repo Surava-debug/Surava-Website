@@ -268,8 +268,8 @@ class Site:
 
         data = re.sub(r'\b(' + JS_FIELDS + r'):\s*"((?:[^"\\]|\\.)*)"',
                       lambda m: f'{m.group(1)}: "{lit(m.group(2)) or m.group(2)}"', data)
-        data = re.sub(r"points:\s*\[(.*?)\]",
-                      lambda m: "points: [" + re.sub(r'"((?:[^"\\]|\\.)*)"', lambda q: f'"{lit(q.group(1)) or q.group(1)}"', m.group(1)) + "]",
+        data = re.sub(r"(points|outcome):\s*\[(.*?)\]",
+                      lambda m: m.group(1) + ": [" + re.sub(r'"((?:[^"\\]|\\.)*)"', lambda q: f'"{lit(q.group(1)) or q.group(1)}"', m.group(2)) + "]",
                       data, flags=re.S)
         return s[:start.start()] + data + s[stop:]
 

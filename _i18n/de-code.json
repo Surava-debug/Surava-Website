@@ -46,6 +46,8 @@
 ["' · time TBC'", "' · Zeit folgt'"],
 ["': read our analysis\"", "': Analyse lesen\""],
 [">Source ↗</a>", ">Quelle ↗</a>"],
+["countdown = 'Past';", "countdown = 'Vorbei';"],
+["'\">Read our analysis →</a>'", "'\">Zu unserer Analyse →</a>'"],
 ["'% to ' + lastUpper", "'% bis ' + lastUpper"],
 ["(latest ? 'Latest' : 'Earlier')", "(latest ? 'Neuster' : 'Früher')"],
 ["esc(a.category) + ' &middot; ' + esc(a.readTime) + '</span>'", "esc(a.category) + ' &middot; ' + esc(a.readTime) + (a.url.indexOf('/de/') === 0 ? '' : ' &middot; auf Englisch') + '</span>'"],

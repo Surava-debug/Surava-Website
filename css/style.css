@@ -3125,3 +3125,6 @@ section.hp-dark { background: #16202D; color: #fff; padding: 88px 0 !important; 
 
 /* Author line on Insights article cards */
 .card-byline { margin: -2px 0 12px; font-size: .85rem; font-weight: 500; color: var(--color-ink-soft); }
+
+/* Past key dates in a past-focus box */
+.catalyst-read { display: inline-block; margin-right: 14px; font-size: .85rem; font-weight: 600; color: var(--color-ink); text-decoration: underline; text-underline-offset: 3px; }
