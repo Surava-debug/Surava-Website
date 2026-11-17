@@ -23,6 +23,7 @@
 ["mEl.textContent = 'Time frame';", "mEl.textContent = 'Zeitraum';"],
 ["rb.textContent = 'Own market research';", "rb.textContent = 'Eigene Marktanalyse';"],
 ["'Explore our analysis &rarr;'", "'Zu unserer Analyse &rarr;'"],
+["'Read our latest analysis &rarr;'", "'Lies unsere neuste Analyse &rarr;'"],
 ["(f.until ? dmy(f.until) : 'today')", "(f.until ? dmy(f.until) : 'heute')"],
 ["<div class=\"focus-label\">Time frame</div>", "<div class=\"focus-label\">Zeitraum</div>"],
 ["<div class=\"focus-label\">Why we watched</div>", "<div class=\"focus-label\">Warum wir hingeschaut haben</div>"],

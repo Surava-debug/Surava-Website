@@ -204,7 +204,7 @@
   </footer>
 
   <script src="/js/script.js?v=20261104a"></script>
-  <script src="/js/focus-archive.js?v=20261117a"></script>
+  <script src="/js/focus-archive.js?v=20261117b"></script>
   <script src="/js/articles.js"></script>
   <script>
     // Publish card: article count follows js/articles.js
@@ -300,6 +300,7 @@
           card.classList.add('is-current');
         }
         if (f.link) card.querySelector('.feature-link').href = f.link;
+        if (!current) card.querySelector('.feature-cta').innerHTML = 'Read our latest analysis &rarr;';
         if (current && f.until) {
           var MF = ['January','February','March','April','May','June','July','August','September','October','November','December'];
           var dmy = function (d) { var p = d.split('-'); return p[2] + '. ' + MF[+p[1] - 1] + ' ' + p[0]; };
