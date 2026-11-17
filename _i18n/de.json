@@ -79,6 +79,10 @@
 "de": "Die im Bereich Bildung verfügbaren Artikel, Guides, Rechner und Tools dienen ausschliesslich der allgemeinen Information und berücksichtigen weder die Ziele noch die finanzielle Situation oder die Bedürfnisse einzelner Personen. Sie sind nicht als persönliche Anlage-, Rechts- oder Steuerberatung zu verstehen.",
 "en": "Articles, guides, calculators, and tools available through the Education Hub are provided for general informational purposes only and do not take into account the specific objectives, financial situation, or needs of any individual. They should not be construed as personalized investment, legal, or tax advice."
 },
+"064e70e3": {
+"de": "<span class=\"hp-thumb\"><img src=\"/assets/charts/home-trades.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></span><span class=\"hp-eb\">Trades</span>",
+"en": "<span class=\"hp-thumb\"><img src=\"/assets/charts/home-trades.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></span><span class=\"hp-eb\">Trades</span>"
+},
 "068dacb1": {
 "de": "Die Inhalte dieser Website, einschliesslich Artikel, Guides, Tools und Rechner, dienen ausschliesslich der allgemeinen Information und Bildung. Sie stellen keine persönliche Anlage-, Rechts- oder Steuerberatung dar, und Sie sollten sich nicht als solche darauf verlassen. Surava Capital bietet derzeit keine Beratungsdienstleistungen an.",
 "en": "The content on this Site, including articles, guides, tools, and calculators, is provided for general informational and educational purposes only. It does not constitute personalized investment, legal, or tax advice and should not be relied upon as such. Surava Capital does not currently provide advisory services."
@@ -770,10 +774,6 @@
 "503933c7": {
 "de": "2 Guides, 1 Tool →",
 "en": "2 guides, 1 tool →"
-},
-"50a2e563": {
-"de": "<span class=\"hp-thumb\"><img src=\"/assets/charts/brent-strait-crisis.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></span><span class=\"hp-eb\">Markt</span>",
-"en": "<span class=\"hp-thumb\"><img src=\"/assets/charts/brent-strait-crisis.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></span><span class=\"hp-eb\">Markets</span>"
 },
 "51dc07d1": {
 "de": "Insider haben Aktien im Umfang von rund 0.05% des Unternehmens verkauft, ein kleiner Betrag, über Monate im Voraus eingerichtete Verkaufsprogramme. Niemand hat gekauft, doch das sagt derzeit wenig aus: Vor Ergebnissen und mit unveröffentlichten Studiendaten in der Hand dürfen Insider nicht kaufen.",
@@ -1795,6 +1795,10 @@
 "de": "Alle unsere Makrotexte",
 "en": "Every macro piece we have written"
 },
+"a52ba7da": {
+"de": "<span class=\"hp-thumb\"><img src=\"/assets/charts/home-markets.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></span><span class=\"hp-eb\">Markt</span>",
+"en": "<span class=\"hp-thumb\"><img src=\"/assets/charts/home-markets.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></span><span class=\"hp-eb\">Markets</span>"
+},
 "a5fa5dd4": {
 "de": "Moderna übertraf die Prognosen mit einem überraschenden Q3-Gewinn, doch die Aktie steht heute tiefer als vor den Zahlen. Was das Quartal antrieb, warum der Sprung verpuffte und warum es kein Short Squeeze war.",
 "en": "Moderna beat forecasts with a surprise Q3 profit, yet the stock now trades below its pre-earnings level. What drove the quarter, why the jump faded, and why it was not a short squeeze."
@@ -2590,10 +2594,6 @@
 "e79a0383": {
 "de": "Was ist ein Indexfonds, und warum funktioniert er? · Surava Capital",
 "en": "What Is an Index Fund, and Why Do They Work? — Surava Capital"
-},
-"e7a97b1c": {
-"de": "<span class=\"hp-thumb\"><img src=\"/assets/charts/moderna-leak-aftermath.png?v=4\" alt=\"\" loading=\"lazy\" decoding=\"async\"></span><span class=\"hp-eb\">Trades</span>",
-"en": "<span class=\"hp-thumb\"><img src=\"/assets/charts/moderna-leak-aftermath.png?v=4\" alt=\"\" loading=\"lazy\" decoding=\"async\"></span><span class=\"hp-eb\">Trades</span>"
 },
 "e84a1e25": {
 "de": "Ein Prozentsatz deines gesamten Portfoliowerts, jährlich verrechnet.",
