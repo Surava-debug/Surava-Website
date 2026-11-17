@@ -367,10 +367,6 @@
 "de": "Er spiegelt den Stand vom 30. Oktober 2026 und kann von den Ereignissen überholt werden. Datenquellen: Mitteilungen von Moderna und Merck, ESMO, CNBC, Benzinga, EMJ, StockAnalysis, Yahoo Finance und Nasdaq.",
 "en": "It reflects conditions as of 30 October 2026 and may be overtaken by events. Data cited from Moderna and Merck company releases, ESMO, CNBC, Benzinga, EMJ, StockAnalysis, Yahoo Finance and Nasdaq."
 },
-"2317ee1d": {
-"de": "Für Eltern",
-"en": "For parents"
-},
 "23ced9d3": {
 "de": "Niemand wirbt damit, befangen zu sein. Zu jedem dieser Modelle kann jemand gehören, der wirklich das Beste für seine Kundschaft will. Doch Anreize prägen das Verhalten mit der Zeit auf eine Weise, die gute Absichten nicht ganz ausgleichen. Das ist in vielen Bereichen gut belegt, nicht nur in der Finanzwelt. Ein Provisionsmodell belohnt still bestimmte Empfehlungen stärker als andere, selbst wenn niemand etwas Unehrliches im Sinn hat.",
 "en": "Nobody advertises themselves as biased. Every structure above can be paired with someone who genuinely wants the best outcome for their client. But incentives shape behavior over time in ways that good intentions don't fully overcome, this is well-documented across many fields, not unique to finance. A commission structure quietly rewards certain recommendations over others, even when nobody involved intends anything dishonest."
@@ -599,10 +595,6 @@
 "de": "Die Datenschutzerklärung von Surava Capital.",
 "en": "Surava Capital's privacy policy."
 },
-"3794abb1": {
-"de": "Die Unternehmen und Makrothemen, die wir verfolgen, mit Live-Charts, Kursen und wichtigen Terminen. Nur Daten, kein Kommentar.",
-"en": "The companies and macro stories we follow, shown with live charts, prices and key dates. Data only, no commentary."
-},
 "37c543f8": {
 "de": "=",
 "en": "<span>YH</span><span>MH</span>"
@@ -759,10 +751,6 @@
 "de": "Mehr",
 "en": "More"
 },
-"4bdcb766": {
-"de": "<span>Lies, was wir vor den Daten erwartet haben</span><span class=\"fa-cta-arrow\" aria-hidden=\"true\">&rarr;</span>",
-"en": "<span>Read what we expected before the data</span><span class=\"fa-cta-arrow\" aria-hidden=\"true\">&rarr;</span>"
-},
 "4c4a2e80": {
 "de": "Haftungsausschluss",
 "en": "Disclaimer"
@@ -835,6 +823,10 @@
 "de": "Eltern können ihren Kindern etwas Wertvolleres geben als Geld: einen frühen Start und das Verständnis dafür, wie Geld funktioniert.",
 "en": "Parents can give their children something more valuable than money: an early start and an understanding of how money works."
 },
+"544dee25": {
+"de": "Sein Krebsimpfstoff senkte das Risiko, dass das Melanom zurückkehrt. Die Aktie verdoppelte sich an einem Tag.",
+"en": "Its cancer vaccine cut the risk of melanoma returning. The shares doubled in a day."
+},
 "5462a2b6": {
 "de": "Gold gehört zu den am meisten missverstandenen Anlagen bei jüngeren Anlegern. Ein verständlicher Blick auf Realzinsen, die Kennzahl, die am besten erklärt, wann Gold gut läuft, und was die Marktgeschichte zeigt.",
 "en": "Gold is one of the most misunderstood assets among younger investors. A plain-language look at real yields, the single number that best explains when gold performs, and what market history shows."
@@ -866,10 +858,6 @@
 "571ae4a1": {
 "de": "Oder andersherum: Von den CHF 594'000 beim Start mit 18 sind nur CHF 112'800 selbst einbezahlt. Die anderen vier Fünftel sind Wachstum.",
 "en": "Look at it the other way: of the early starter's CHF 594'000, only CHF 112'800 is money they actually paid in. The other four fifths are growth."
-},
-"57aa8d47": {
-"de": "Unser Blick aufs Quartal folgt nach den Ergebnissen.",
-"en": "Our look at the quarter follows after the results."
 },
 "57b0deee": {
 "de": "<strong>Prozente, keine Franken.</strong> Wir zeigen die Kursbewegung, nicht Kontogrösse oder Gewinn in CHF.",
@@ -1427,10 +1415,6 @@
 "de": "Die 1. Säule soll den Existenzbedarf decken, nicht deinen Lebensstil. Die Rente ist nach oben begrenzt und hängt von deinen Beitragsjahren und deinem Durchschnittseinkommen ab, sie ist aber bewusst bescheiden. Ihre Aufgabe ist es sicherzustellen, dass in der Schweiz niemand ganz ohne etwas in Pension geht, nicht deinen Lohn zu ersetzen.",
 "en": "Pillar 1 is designed to cover basic subsistence, not your lifestyle. The payout is capped and depends on your contribution years and average income, but it is intentionally modest. Its job is to make sure nobody in Switzerland retires with literally nothing, not to replace your salary."
 },
-"83931a2c": {
-"de": "Analysen, die du prüfen kannst. Keine Tipps, denen du vertrauen musst.",
-"en": "Analysis you can check, not calls you have to trust."
-},
 "83d11d2b": {
 "de": "Die Nutzungsbedingungen für die Website von Surava Capital.",
 "en": "Surava Capital's terms of use for this website."
@@ -1446,10 +1430,6 @@
 "8421040f": {
 "de": "Rechner fürs Anlagewachstum · Surava Capital",
 "en": "Investment Growth Calculator — Surava Capital"
-},
-"84aa794a": {
-"de": "Geben Sie Ihrem Kind einen Vorsprung im Umgang mit Geld. Wir bauen gerade Präsenzkurse für Kinder und Jugendliche auf.",
-"en": "Give your child a head start with money. We are in the process of building in-person courses for kids and teens."
 },
 "84c5b876": {
 "de": "Reingewinn",
@@ -1911,10 +1891,6 @@
 "de": "In der 3. Säule zählen deine eigenen Entscheidungen am meisten. Sie teilt sich in zwei Teile.",
 "en": "Pillar 3 is where your own decisions matter most, and it splits into two parts."
 },
-"aaf87fe5": {
-"de": "Bildung",
-"en": "Education"
-},
 "ab06c2e7": {
 "de": "Bezahlt vom Produktanbieter (Fonds, Versicherung), wenn du das Produkt kaufst.",
 "en": "Paid by the product provider (a fund, an insurance policy) when you buy it."
@@ -2067,10 +2043,6 @@
 "de": "Das Kleingedruckte",
 "en": "The fine print"
 },
-"b8194bb5": {
-"de": "Artikel zu Makrothemen und Weltgeschehen, die uns aufgefallen sind, in einfacher Sprache und kostenlos.",
-"en": "Articles on macro topics and real-world events that caught our attention, written in plain English and published free."
-},
 "b8c4509a": {
 "de": "Guide &middot; 7 Min. Lesezeit",
 "en": "Guide &middot; 7 min read"
@@ -2199,10 +2171,6 @@
 "de": "Nach Thema stöbern",
 "en": "Browse by topic"
 },
-"c20bee9f": {
-"de": "Kostenlose Guides, Makroartikel, Live-Marktdaten und ein öffentliches Trading-Journal. Alles frei zugänglich.",
-"en": "Free guides, macro articles, live market data and a public trading journal. All of it open."
-},
 "c214c989": {
 "de": "Ein Hinweis für Eltern",
 "en": "A note for parents"
@@ -2234,6 +2202,10 @@
 "c4c94d4d": {
 "de": "Die durchgesickerten Zahlen erwiesen sich als <mark class=\"skim\">praktisch identisch mit den offiziellen Resultaten</mark>. ESMO hob das Embargo (die Veröffentlichungssperre) noch am selben Tag auf, und Merck und Moderna bestätigten die Zahlen: ein <mark class=\"skim\">um 42% tieferes Risiko für eine Rückkehr des Krebses oder Tod</mark> gegenüber Keytruda allein, Mercks Immuntherapie und der heutigen Standardbehandlung nach einer Operation.",
 "en": "The leaked figures turned out to be <mark class=\"skim\">practically identical to the official results</mark>. ESMO lifted the embargo (the publication freeze) the same day, and Merck and Moderna confirmed the numbers: a <mark class=\"skim\">42% lower risk of the cancer returning or death</mark> compared with Keytruda alone, Merck's immunotherapy and today's standard treatment after surgery."
+},
+"c52d1e62": {
+"de": "Starke Studiendaten und ein überraschender Q3-Gewinn, doch nach dem Analyst Day fiel die Aktie zurück.",
+"en": "Strong trial data and a surprise Q3 profit, but the stock fell back after Analyst Day."
 },
 "c5ed96c4": {
 "de": "Hier steckt der Grossteil unserer Arbeit.",
@@ -2311,10 +2283,6 @@
 "de": "Kontext",
 "en": "Context"
 },
-"cca4b1f7": {
-"de": "Kostenlose Finanzbildung, Makroanalysen und ein öffentliches Protokoll unserer eigenen Trades. Kein Produktverkauf, keine versteckten Interessen.",
-"en": "Free financial education, macro analysis and a public record of our own trades. No product sales, no hidden incentives."
-},
 "cd3e550f": {
 "de": "Eine bessere Frage als «Wie stark ist sie gefallen?» lautet: «Würde ich zu diesem Preis kaufen, wenn ich den Chart nie gesehen hätte?»",
 "en": "A better question than \"how far has it fallen?\" is \"would I buy this at this price if I had never seen the chart?\""
@@ -2382,10 +2350,6 @@
 "d14cdbc1": {
 "de": "Schreib vor dem Kauf auf, warum du kaufst und was dich widerlegen würde.",
 "en": "Write down why you are buying before you buy, and what would prove you wrong."
-},
-"d18d9ef3": {
-"de": "Alles, was wir veröffentlichen",
-"en": "Everything we publish"
 },
 "d1a0e1b9": {
 "de": "30-Minuten-Kerzenchart von Moderna vom 21. Oktober bis 17. November 2026 in Prozent. Nach dem Melanom-Datenleck fällt die Aktie um rund 18%, erholt sich, springt rund um die Q3-Zahlen vom 6. November auf etwa 26% über den Start und rutscht bis zum 17. November auf etwa 6% unter den Start",
@@ -2587,10 +2551,6 @@
 "de": "Diversifikation, ohne Fachjargon erklärt",
 "en": "Diversification, Explained Without the Jargon"
 },
-"e1894536": {
-"de": "Die Phase-3-Daten bestätigten ein um 42% tieferes Risiko für eine Rückkehr des Melanoms oder Tod. Danach meldete Moderna einen überraschenden Q3-Gewinn, doch die Aktie gab ihre Gewinne wieder ab, nachdem der Analyst Day höhere Kosten ab 2027 zeigte.",
-"en": "The Phase 3 data confirmed a 42% lower risk of melanoma returning or death. Moderna then posted a surprise Q3 profit, but the stock gave back its gains after Analyst Day showed higher costs from 2027."
-},
 "e21ee77d": {
 "de": "Jahre",
 "en": "years"
@@ -2602,10 +2562,6 @@
 "e262d5fe": {
 "de": "Kurze Freude gegen langfristige Freiheit",
 "en": "Temporary satisfaction versus long-term freedom"
-},
-"e279ee53": {
-"de": "Phase-3-Daten zeigten, dass der personalisierte mRNA-Krebsimpfstoff zusammen mit Keytruda das Risiko senkte, dass ein Melanom zurückkehrt. Die Aktie hat sich an einem Tag mehr als verdoppelt.",
-"en": "Phase 3 data showed its personalised mRNA cancer vaccine, used with Keytruda, lowered the risk of melanoma returning. The shares more than doubled in a day."
 },
 "e342b6fa": {
 "de": "Letzte Aktualisierung: 4. November 2026. Übersetzung aus dem Englischen; massgebend ist die englische Fassung.",
@@ -2655,10 +2611,6 @@
 "de": "Guides für die Grundlagen, unser eigener Blick auf die Wirtschaft, die Märkte, die wir beobachten, und die Trades, die wir wirklich gemacht haben.",
 "en": "Guides for the basics, our own read on the economy, the markets we watch and the trades we actually took."
 },
-"e63577cb": {
-"de": "Kostenlose Guides und Tools, die erklären, wie Märkte, Steuern und Anlegen wirklich funktionieren, ohne Verkaufsgespräch.",
-"en": "Free guides and tools that explain how markets, taxes, and investing actually work, no sales pitch attached."
-},
 "e6799824": {
 "de": "=",
 "en": "Mathias Hinderer"
@@ -2670,10 +2622,6 @@
 "e6a5b111": {
 "de": "Surava Capital Logo",
 "en": "Surava Capital logo"
-},
-"e6f96472": {
-"de": "Ein öffentliches Protokoll unserer Einschätzungen, laufend dokumentiert, auch wenn sie nicht aufgehen.",
-"en": "A public record of the calls we make, documented as they happen, including the ones that don't work out."
 },
 "e79a0383": {
 "de": "Was ist ein Indexfonds, und warum funktioniert er? · Surava Capital",

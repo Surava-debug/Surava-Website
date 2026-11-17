@@ -38,10 +38,10 @@ const focusArchive = [
     from: "2026-10",
     to: "2026-11",
     chart: "/assets/charts/de/moderna-q3-earnings.png",
-    why: "Phase-3-Daten zeigten, dass der personalisierte mRNA-Krebsimpfstoff zusammen mit Keytruda das Risiko senkte, dass ein Melanom zurückkehrt. Die Aktie hat sich an einem Tag mehr als verdoppelt.",
+    why: "Sein Krebsimpfstoff senkte das Risiko, dass das Melanom zurückkehrt. Die Aktie verdoppelte sich an einem Tag.",
     homeTitle: "Eine Aktie, die sich mit einer einzigen Schlagzeile zweistellig bewegen kann.",
     homeText: "Ihr Kurs hängt an der Krebsimpfstoff-Pipeline, deshalb können Studiendaten und Quartalszahlen ihn stark in beide Richtungen bewegen.",
-    outcome: "Die Phase-3-Daten bestätigten ein um 42% tieferes Risiko für eine Rückkehr des Melanoms oder Tod. Danach meldete Moderna einen überraschenden Q3-Gewinn, doch die Aktie gab ihre Gewinne wieder ab, nachdem der Analyst Day höhere Kosten ab 2027 zeigte.",
+    outcome: "Starke Studiendaten und ein überraschender Q3-Gewinn, doch nach dem Analyst Day fiel die Aktie zurück.",
     link: "/de/insights/insight-07-moderna-q3-earnings.html",
     analysis: [
       {
@@ -82,7 +82,12 @@ const focusArchive = [
     return (b.from || '').localeCompare(a.from || '');
   });
 
-  grid.innerHTML = items.map(function (f) {
+  grid.innerHTML =
+  '<div class="focus-card focus-card-next">' +
+    '<span class="coming-soon-pill">Als Nächstes</span>' +
+    '<p>Das nächste Unternehmen kommt hierhin, sobald uns etwas auffällt.</p>' +
+  '</div>' +
+  items.map(function (f) {
     var current = f.status === 'current';
     var period = fmt(f.from) + ' – ' + (current ? (f.until ? dmy(f.until) : 'heute') : fmt(f.to));
     var compact = current && f.until;
@@ -120,11 +125,7 @@ const focusArchive = [
           }).join('') +
           (f.link ? '<a class="fa-more" href="' + esc(f.link) + '">' + (current ? 'Live-Chart und wichtige Termine auf der Markt-Seite' : 'Mehr lesen') + ' →</a>' : '') +
         '</div>' : '');
-  }).join('') +
-  '<div class="focus-card focus-card-next">' +
-    '<span class="coming-soon-pill">Als Nächstes</span>' +
-    '<p>Das nächste Unternehmen kommt hierhin, sobald uns etwas auffällt.</p>' +
-  '</div>';
+  }).join('');
 
   // Faint one-year price line behind cards that have a "priceData" file (same saved data as the Trades charts)
   grid.querySelectorAll('.focus-card.has-chart').forEach(function (card) {

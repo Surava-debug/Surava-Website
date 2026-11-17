@@ -38,10 +38,10 @@ const focusArchive = [
     from: "2026-10",
     to: "2026-11",
     chart: "/assets/charts/moderna-q3-earnings.png",
-    why: "Phase 3 data showed its personalised mRNA cancer vaccine, used with Keytruda, lowered the risk of melanoma returning. The shares more than doubled in a day.",
+    why: "Its cancer vaccine cut the risk of melanoma returning. The shares doubled in a day.",
     homeTitle: "A stock that can move double digits on one headline.",
     homeText: "Its price rests on the cancer vaccine pipeline, so trial data and earnings can swing it sharply in either direction.",
-    outcome: "The Phase 3 data confirmed a 42% lower risk of melanoma returning or death. Moderna then posted a surprise Q3 profit, but the stock gave back its gains after Analyst Day showed higher costs from 2027.",
+    outcome: "Strong trial data and a surprise Q3 profit, but the stock fell back after Analyst Day.",
     link: "/insights/insight-07-moderna-q3-earnings.html",
     analysis: [
       {
@@ -82,7 +82,12 @@ const focusArchive = [
     return (b.from || '').localeCompare(a.from || '');
   });
 
-  grid.innerHTML = items.map(function (f) {
+  grid.innerHTML =
+  '<div class="focus-card focus-card-next">' +
+    '<span class="coming-soon-pill">Next</span>' +
+    '<p>The next company goes here once something catches our attention.</p>' +
+  '</div>' +
+  items.map(function (f) {
     var current = f.status === 'current';
     var period = fmt(f.from) + ' – ' + (current ? (f.until ? dmy(f.until) : 'today') : fmt(f.to));
     var compact = current && f.until;
@@ -120,11 +125,7 @@ const focusArchive = [
           }).join('') +
           (f.link ? '<a class="fa-more" href="' + esc(f.link) + '">' + (current ? 'Live chart and key dates on Markets' : 'Read more') + ' →</a>' : '') +
         '</div>' : '');
-  }).join('') +
-  '<div class="focus-card focus-card-next">' +
-    '<span class="coming-soon-pill">Next</span>' +
-    '<p>The next company goes here once something catches our attention.</p>' +
-  '</div>';
+  }).join('');
 
   // Faint one-year price line behind cards that have a "priceData" file (same saved data as the Trades charts)
   grid.querySelectorAll('.focus-card.has-chart').forEach(function (card) {
