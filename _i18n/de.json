@@ -55,6 +55,10 @@
 "de": "Nimm zwei Personen. Beide legen bis 65 jeden Monat CHF 200 an, und beide erzielen dieselbe angenommene Durchschnittsrendite von 6% pro Jahr. Der einzige Unterschied: Eine beginnt mit 18, die andere mit 25.",
 "en": "Take two people. Both invest CHF 200 every month until they turn 65, and both earn the same assumed average return of 6% per year. The only difference: one starts at 18, the other at 25."
 },
+"04aae186": {
+"de": "Woher der Gewinn kam",
+"en": "Where the profit came from"
+},
 "0508f2c8": {
 "de": "Wir treffen administrative, technische und physische Schutzmassnahmen, um Personendaten vor unbefugtem Zugriff, unbefugter Offenlegung oder Zerstörung zu schützen.",
 "en": "We maintain administrative, technical, and physical safeguards designed to protect personal information from unauthorized access, disclosure, or destruction."
@@ -187,6 +191,10 @@
 "de": "Bestätigungsfehler, Verlustaversion, FOMO und Anchoring: drei Anlagefehler und einfache Gewohnheiten, um sie bei dir selbst zu erkennen.",
 "en": "Confirmation bias, loss aversion, FOMO and anchoring: three investing mistakes and simple habits to catch them in yourself."
 },
+"123fd05b": {
+"de": "&minus;0.51 Dollar",
+"en": "&minus;0.51 dollars"
+},
 "13505e01": {
 "de": "Früh anfangen funktioniert nur, wenn du investiert bleibst. Wer ein- und aussteigt, um schlechte Tage zu vermeiden, verpasst meist auch die besten Tage, und das ist teuer.",
 "en": "Starting early only works if you stay invested. Trying to jump in and out to avoid the bad days usually means missing the best days too, and that is expensive."
@@ -246,6 +254,10 @@
 "19172e9e": {
 "de": "Einstieg",
 "en": "Entry"
+},
+"1945d5bd": {
+"de": "+162 Millionen Dollar",
+"en": "+162 million dollars"
 },
 "1af19aad": {
 "de": "Beitragsgrenzen, Schwellenwerte und Regeln für AHV, BVG und Säule 3a ändern regelmässig. Prüfe vor Entscheidungen immer die aktuellen Zahlen bei einer offiziellen Quelle (z. B. ahv-iv.ch) oder einer Fachperson.",
@@ -331,6 +343,10 @@
 "de": "<strong>Säule 3b</strong> ist normales privates Sparen und Anlegen, ohne besondere Steuervorteile, aber auch ohne Einschränkungen. Es ist einfach Geld, das du für die Zukunft zur Seite legst und anlegst, zusätzlich zur 3a oder an ihrer Stelle.",
 "en": "<strong>Pillar 3b</strong> is ordinary private savings and investing, with no special tax treatment but no restrictions either. It is simply money you choose to set aside and invest for the future, alongside or instead of 3a."
 },
+"21015476": {
+"de": "Ergebnis von Moderna",
+"en": "Moderna reported"
+},
 "213ebf12": {
 "de": "Gewohnheiten, die ihre Wirkung verringern",
 "en": "Habits that reduce their impact"
@@ -374,6 +390,10 @@
 "248cf30d": {
 "de": "Das ist das Gegenteil von dem, was sich die meisten unter «Anlegen» vorstellen. Kein Analyst wählt Aktien aus, kein Fondsmanager entscheidet, wann gekauft oder verkauft wird. Die einzige Aufgabe des Fonds ist es, den Index so genau und so günstig wie möglich abzubilden.",
 "en": "This is the opposite of what most people imagine when they think of \"investing.\" There is no analyst picking stocks, no fund manager making calls on when to buy or sell. The fund's only job is to mirror the index as closely and as cheaply as possible."
+},
+"254bca80": {
+"de": "Ein überraschender Gewinn, eine höhere Prognose und eine Aktie, die trotzdem fiel. Unser Blick auf das Quartal.",
+"en": "A surprise profit, a higher forecast, and a stock that still fell. Our look at the quarter."
 },
 "256cce13": {
 "de": "Warum die Lücke zwischen 1. und 2. Säule und deinen Zielen zählt",
@@ -430,6 +450,10 @@
 "2a6fd586": {
 "de": "Die HR erklärt",
 "en": "HR explained"
+},
+"2a99968c": {
+"de": "Moderna schreibt Gewinn. Warum steht die Aktie trotzdem tiefer? — Surava Capital",
+"en": "Moderna Turned a Profit. So Why Is the Stock Lower? — Surava Capital"
 },
 "2b795115": {
 "de": "Das Journal",
@@ -539,9 +563,17 @@
 "de": "Zum Journal →",
 "en": "See the journal →"
 },
+"35508180": {
+"de": "Erst hoch, dann runter",
+"en": "Up first, then down"
+},
 "3564445f": {
 "de": "Die Aufgabe der Diversifikation ist es, das Risiko zu entfernen, das dir nichts einbringt, nicht deine Rendite zu verwässern. Ein breiter Indexfonds erledigt das automatisch, ein wichtiger Grund, warum er die Standardlösung ist, die wir in unserem Indexfonds-Guide behandeln.",
 "en": "Diversification's job is to remove the risk that isn't paying you anything, not to water down your returns. A broad index fund does this automatically, which is a large part of why it's the default recommendation covered in our index fund guide."
+},
+"35cf82f9": {
+"de": "Umsatz",
+"en": "Revenue"
 },
 "35eaadce": {
 "de": "Das grösste Risiko in deinem Portfolio ist nicht der Markt. Es ist die Person, die die Entscheidungen trifft.",
@@ -679,6 +711,10 @@
 "de": "Das ist etwas ganz anderes, als selbst eine Handvoll Einzelaktien auszuwählen. Dort kann eine einzige schlechte Wahl deine Gesamtrendite spürbar beschädigen, und du trägst dieses Klumpenrisiko, ohne dafür mit einer höheren erwarteten Rendite entschädigt zu werden.",
 "en": "This is meaningfully different from picking a handful of individual stocks yourself, where a single bad pick can meaningfully damage your total return, and where you carry that concentration risk without being compensated for it through higher expected returns."
 },
+"43275453": {
+"de": "<a class=\"fa-cta article-cta\" href=\"/insights/insight-05-moderna-hazard-ratio.html\"><span>Lies, was wir vor den Daten erwartet haben</span><span class=\"fa-cta-arrow\" aria-hidden=\"true\">&rarr;</span></a> <a class=\"fa-cta article-cta\" href=\"/insights/insight-07-moderna-q3-earnings.html\"><span>Lies unseren Blick auf die Q3-Zahlen</span><span class=\"fa-cta-arrow\" aria-hidden=\"true\">&rarr;</span></a>",
+"en": "<a class=\"fa-cta article-cta\" href=\"/insights/insight-05-moderna-hazard-ratio.html\"><span>Read what we expected before the data</span><span class=\"fa-cta-arrow\" aria-hidden=\"true\">&rarr;</span></a> <a class=\"fa-cta article-cta\" href=\"/insights/insight-07-moderna-q3-earnings.html\"><span>Read our look at the Q3 results</span><span class=\"fa-cta-arrow\" aria-hidden=\"true\">&rarr;</span></a>"
+},
 "444419c1": {
 "de": "Möchtest du sehen, wie wir denken?",
 "en": "Want to see how we think?"
@@ -735,6 +771,10 @@
 "de": "Trades · Surava Capital",
 "en": "Trades — Surava Capital"
 },
+"4d41bcd5": {
+"de": "Moderna schreibt Gewinn. Warum steht die Aktie trotzdem tiefer?",
+"en": "Moderna Turned a Profit. So Why Is the Stock Lower?"
+},
 "4d47e97a": {
 "de": "<a href=\"/education/\">Bildung</a> / Grundlagen des Anlegens",
 "en": "<a href=\"/education/\">Education</a> / Investing Basics"
@@ -746,6 +786,10 @@
 "4f56848e": {
 "de": "=",
 "en": "YH"
+},
+"4f576584": {
+"de": "ein Verlust",
+"en": "a loss"
 },
 "503933c7": {
 "de": "2 Guides, 1 Tool →",
@@ -891,6 +935,10 @@
 "de": "Unsere Roadmap",
 "en": "Our roadmap"
 },
+"5bc91150": {
+"de": "Q3 2025",
+"en": "Q3 2025"
+},
 "5c9b6199": {
 "de": "Die eigenen Denkfehler als Anleger erkennen",
 "en": "Recognizing Your Own Biases as an Investor"
@@ -918,6 +966,10 @@
 "5e23a1cf": {
 "de": "Die meisten Anlagefehler entstehen nicht aus Mangel an Informationen. Sie entstehen aus vorhersehbaren, gut dokumentierten Mustern, wie Menschen unter Unsicherheit denken.",
 "en": "Most investing mistakes aren't caused by lack of information. They're caused by predictable, well-documented patterns in how people think under uncertainty."
+},
+"5e433e96": {
+"de": "Ein Short Squeeze entsteht, wenn viele Händler auf fallende Kurse gewettet haben und ihre Aktien gleichzeitig zurückkaufen müssen, was den Kurs weiter nach oben treibt. Die Daten deuten hier nicht darauf hin. Am 20. Oktober schätzte der Datenanbieter ORTEX, dass nur <mark class=\"skim\">9.8% der frei handelbaren Aktien leerverkauft waren</mark>, bei <mark class=\"skim\">2 Tagen zum Eindecken</mark>: Leerverkäufer hätten alle ihre Aktien in etwa zwei Tagen normalen Handels zurückkaufen können. Die Gebühr, um Aktien für Leerverkäufe zu leihen, lag bei <mark class=\"skim\">0.48% pro Jahr</mark>. Das ist tief und zeigt, dass nur wenige Händler gegen die Aktie wetten wollten. Die Zählung von FINRA von Mitte Oktober war ähnlich, mit rund 32.6 Millionen Aktien und unter zwei Tagen zum Eindecken. Der echte Squeeze passierte im August, nach den ersten Phase-3-Daten. Der Anstieg nach den Zahlen sieht nach gewöhnlichen Käufen auf ein starkes Ergebnis aus, der Rückgang nach <mark class=\"skim\">«Sell the News»</mark> plus Sorgen um die Kosten ab 2027.",
+"en": "A short squeeze happens when many traders have bet on a falling price and are forced to buy their shares back at once, which pushes the price up further. The data does not point to one here. On 20 October, the data provider ORTEX estimated that only <mark class=\"skim\">9.8% of freely traded shares were sold short</mark>, with <mark class=\"skim\">2 days to cover</mark>: short sellers could have bought back all their shares in about two days of normal trading. The fee to borrow shares for shorting was <mark class=\"skim\">0.48% a year</mark>, which is low and shows that few traders wanted to short the stock. FINRA's mid-October count was similar, at about 32.6 million shares and under two days to cover. The real squeeze happened in August, after the first Phase 3 data. The rise after earnings looks like ordinary buying on a strong beat, and the fall like <mark class=\"skim\">&ldquo;sell the news&rdquo;</mark> plus worries about costs from 2027."
 },
 "5e4e301c": {
 "de": "Bevor du entscheidest, worin du anlegst, lohnt es sich zu entscheiden, wo. Jede Kontoart wägt Steuerbehandlung und Flexibilität anders ab, und Geld am falschen Ort kann dich entweder Steuern kosten oder den Zugriff, wenn du es brauchst.",
@@ -962,6 +1014,10 @@
 "6368e12f": {
 "de": "Bruttoinlandprodukt (BIP)",
 "en": "Gross Domestic Product (GDP)"
+},
+"636b2f13": {
+"de": "Er spiegelt den Stand vom 17. November 2026 und kann von den Ereignissen überholt werden. Datenquellen: Modernas Q3-2026-Ergebnismitteilung (SEC-Einreichung), Zacks, Earnings Whispers, 24/7 Wall St, StockHub, TIKR, Trefis, Weiss Ratings, The Motley Fool, ORTEX, FINRA und TradingView.",
+"en": "It reflects conditions as of 17 November 2026 and may be overtaken by events. Data cited from Moderna's Q3 2026 results release (SEC filing), Zacks, Earnings Whispers, 24/7 Wall St, StockHub, TIKR, Trefis, Weiss Ratings, The Motley Fool, ORTEX, FINRA and TradingView."
 },
 "6370b2ff": {
 "de": "Welche Informationen wir erheben",
@@ -1079,6 +1135,10 @@
 "de": "Die Lösung ist langweilig und sie funktioniert: Entscheide vor dem Kauf, was dich zum Verkauf bringen würde. Schreib den Grund für die Position auf und das Niveau, ab dem dieser Grund nicht mehr gilt. Dann entscheidet dein ruhigeres Ich und nicht die Version von dir, die auf eine rote Zahl starrt.",
 "en": "The fix is boring and it works: decide before you buy what would make you sell. Write down your reason for the position and the level at which that reason is no longer valid. Then the decision is made by your calmer self, not by the version of you staring at a red number."
 },
+"6be22612": {
+"de": "+0.38 Dollar",
+"en": "+0.38 dollars"
+},
 "6cf1b729": {
 "de": "Fragen zu diesen Bedingungen können Sie über unsere <a href=\"/contact/\" style=\"color:var(--color-accent-dark); font-weight:600;\">Kontaktseite</a> an uns richten.",
 "en": "Questions about these Terms can be directed to us via our <a href=\"/contact/\" style=\"color:var(--color-accent-dark); font-weight:600;\">contact page</a>."
@@ -1194,6 +1254,10 @@
 "7589be87": {
 "de": "Vier Dinge, die wir veröffentlichen.<br>Alles kostenlos.",
 "en": "Four things we publish.<br>All of it free."
+},
+"75a90a1b": {
+"de": "&minus;200 Millionen Dollar",
+"en": "&minus;200 million dollars"
 },
 "7651978f": {
 "de": "Was wir gerade beobachten",
@@ -1331,6 +1395,10 @@
 "de": "Die Daten kamen früh, der Ausverkauf kam früh, und die durchgesickerten Zahlen waren die echten. Unser Rückblick auf die ESMO-Woche.",
 "en": "The data came out early, the selloff came early, and the leaked numbers were the real ones. Our wrap-up of the ESMO week."
 },
+"809d1866": {
+"de": "rund &minus;1.10 Dollar",
+"en": "about &minus;1.10 dollars"
+},
 "81102865": {
 "de": "3J",
 "en": "3Y"
@@ -1383,6 +1451,10 @@
 "de": "Geben Sie Ihrem Kind einen Vorsprung im Umgang mit Geld. Wir bauen gerade Präsenzkurse für Kinder und Jugendliche auf.",
 "en": "Give your child a head start with money. We are in the process of building in-person courses for kids and teens."
 },
+"84c5b876": {
+"de": "Reingewinn",
+"en": "Net income"
+},
 "85a6283a": {
 "de": "Die Idee klingt einleuchtend: vor dem Einbruch verkaufen, am Tiefpunkt wieder einsteigen. In der Praxis gehört dieser Reflex zu den zuverlässigsten Kostenfallen für Anleger.",
 "en": "The idea is intuitive: sell before the drop, buy back in at the bottom. In practice, this is one of the most consistently costly instincts an investor can act on."
@@ -1398,6 +1470,10 @@
 "863ee18e": {
 "de": "Eine praktische Erklärung von Indexanlagen, Kosten und warum günstige Indexfonds für die meisten Anleger die Standardlösung sind.",
 "en": "A practical explanation of index investing, costs, and why low-cost index funds are the default recommendation for most investors."
+},
+"871d150c": {
+"de": "Moderna legte am <mark class=\"skim\">6. November</mark> die Zahlen zum dritten Quartal vor, und sie übertrafen die Erwartungen deutlich. Analysten hatten mit einem <mark class=\"skim\">Verlust von rund 1.10 Dollar pro Aktie</mark> bei einem Umsatz von etwa 889 Millionen Dollar gerechnet. Diese Zahl ist der Konsens: die durchschnittliche Prognose der Analysten, die die Aktie verfolgen. Stattdessen verdiente Moderna <mark class=\"skim\">38 Cent pro Aktie</mark> bei einem Umsatz von <mark class=\"skim\">1.31 Milliarden Dollar</mark>. Der Reingewinn betrug 162 Millionen Dollar, nach einem Verlust von 200 Millionen Dollar im Vorjahr. Es war das <mark class=\"skim\">erste profitable Quartal seit Jahren</mark>.",
+"en": "Moderna reported its third-quarter results on <mark class=\"skim\">6 November</mark>, and they beat expectations by a wide margin. Analysts had expected a <mark class=\"skim\">loss of about 1.10 dollars per share</mark> on revenue of roughly 889 million dollars. That figure is the consensus: the average forecast of the analysts who cover the stock. Moderna instead earned <mark class=\"skim\">38 cents per share</mark> on revenue of <mark class=\"skim\">1.31 billion dollars</mark>. Net income was 162 million dollars, against a loss of 200 million dollars a year earlier. It was the company's <mark class=\"skim\">first profitable quarter in years</mark>."
 },
 "8729e0fb": {
 "de": "<strong>Jede Änderung ist datiert und öffentlich.</strong> Jede Bearbeitung dieses Journals siehst du mit Datum in unserer <a href=\"https://github.com/Surava-debug/Surava-Website/commits/main/js/trades.js\" target=\"_blank\" rel=\"noopener\">öffentlichen Versionsgeschichte</a>.",
@@ -1430,6 +1506,10 @@
 "8936785b": {
 "de": "Geistiges Eigentum",
 "en": "Intellectual Property"
+},
+"8961fdc6": {
+"de": "Für das ganze Jahr 2026 erwarten Analysten rund <mark class=\"skim\">2.4 Milliarden Dollar Umsatz</mark> und weiterhin einen <mark class=\"skim\">Verlust von etwa 7.37 Dollar pro Aktie</mark>. Eine Aktie, die sich dieses Jahr vervielfacht hat, wird nicht auf Impfstoffumsätze bewertet. Sie wird auf <mark class=\"skim\">Intismeran</mark> bewertet, den personalisierten Melanom-Impfstoff, den Moderna mit Merck entwickelt. Deshalb verpuffte der Sprung nach den Zahlen so schnell.",
+"en": "For all of 2026, analysts expect about <mark class=\"skim\">2.4 billion dollars in sales</mark> and still a <mark class=\"skim\">loss of about 7.37 dollars per share</mark>. A stock that has multiplied several times this year is not being priced on vaccine sales. It is priced on <mark class=\"skim\">intismeran</mark>, the personalised melanoma vaccine Moderna develops with Merck. That is why the earnings jump faded so quickly."
 },
 "8962e916": {
 "de": "Zeit im Markt statt Timing des Markts",
@@ -1591,6 +1671,10 @@
 "de": "«Wie viel brauche ich für die Pension?» wird meist mit einer vagen, beängstigenden Zahl beantwortet. Sinnvoller ist es, bei deinen Ausgaben anzusetzen und nicht bei einer Schlagzeilenzahl.",
 "en": "\"How much do I need to retire?\" usually gets answered with a vague, scary-sounding number. A more useful approach starts with your spending, not a headline figure."
 },
+"96bc6b05": {
+"de": "<span>Lies unser Fazit zum Datenleck</span><span class=\"fa-cta-arrow\" aria-hidden=\"true\">&rarr;</span>",
+"en": "<span>Read our conclusion on the data leak</span><span class=\"fa-cta-arrow\" aria-hidden=\"true\">&rarr;</span>"
+},
 "96cf88cb": {
 "de": "Peloton zeigt, wie das abläuft. Nach dem Boom von 2020 erreichte der Aktienkurs Ende Dezember 2020 seinen Höchststand bei rund 152 Dollar. Bis April 2021 fiel er um 35%, und viele nannten die Aktie günstig. Drei Jahre später stand sie bei 3.11 Dollar, 98% unter dem Höchststand.",
 "en": "Peloton shows how this plays out. After the 2020 boom, its share price peaked at around $152 at the end of December 2020. By April 2021 it was down 35% and many called it cheap. Three years later it traded at $3.11, 98% below the peak."
@@ -1687,6 +1771,10 @@
 "de": "Warum früh anfangen wichtiger ist als gross anfangen",
 "en": "Why starting early matters more than starting big"
 },
+"a03f9046": {
+"de": "Modernas Quartal war wirklich gut: ein überraschender Gewinn, eine höhere Umsatzprognose und tiefere Ausgaben. Doch die Aktie wird nicht auf Quartalszahlen bewertet. Anleger wetten auf den Krebsimpfstoff, und der Analyst Day zeigte, dass diese Wette ab 2027 teurer wird. Der Rückgang sieht nach einer Neubewertung dieser Kosten aus, nicht nach Leerverkäufern im Squeeze.",
+"en": "Moderna's quarter was genuinely good: a surprise profit, a higher sales forecast and lower spending. But the stock is not priced on quarterly earnings. Investors are betting on the cancer vaccine, and Analyst Day showed that this bet gets more expensive from 2027. The pullback looks like investors repricing those costs, not short sellers being squeezed."
+},
 "a0984afd": {
 "de": "Wo wir stehen und wohin wir wollen",
 "en": "Where we are, and where we're headed"
@@ -1747,6 +1835,10 @@
 "de": "Alle unsere Makrotexte",
 "en": "Every macro piece we have written"
 },
+"a5fa5dd4": {
+"de": "Moderna übertraf die Prognosen mit einem überraschenden Q3-Gewinn, doch die Aktie steht heute tiefer als vor den Zahlen. Was das Quartal antrieb, warum der Sprung verpuffte und warum es kein Short Squeeze war.",
+"en": "Moderna beat forecasts with a surprise Q3 profit, yet the stock now trades below its pre-earnings level. What drove the quarter, why the jump faded, and why it was not a short squeeze."
+},
 "a6031c3d": {
 "de": "Der Krebsimpfstoff wirkt. Reicht das für die Moderna-Aktie? · Surava Capital",
 "en": "The Cancer Vaccine Works. Is That Enough for Moderna's Stock? — Surava Capital"
@@ -1794,6 +1886,14 @@
 "a9f2cd31": {
 "de": "«Leg nicht alle Eier in einen Korb» ist schon die ganze Idee. Selten erklärt wird, warum das wirklich funktioniert, mathematisch und nicht nur aus dem Bauch heraus.",
 "en": "\"Don't put all your eggs in one basket\" is the whole idea. The part that rarely gets explained is why it actually works, mathematically, not just intuitively."
+},
+"aa0d644c": {
+"de": "rund 889 Millionen Dollar",
+"en": "about 889 million dollars"
+},
+"aa159638": {
+"de": "Gewinn pro Aktie",
+"en": "Earnings per share"
 },
 "aa266cfd": {
 "de": "Diese Nutzungsbedingungen («Bedingungen») regeln Ihren Zugang zur Website von Surava Capital (die «Website») und deren Nutzung. Mit dem Zugriff auf die Website oder ihrer Nutzung erklären Sie sich an diese Bedingungen gebunden.",
@@ -1963,6 +2063,10 @@
 "de": "Das Unternehmen und die Makro-Themen, die wir verfolgen. <b>Im Fokus: <span id=\"home-focus-name\">Moderna</span>.</b>",
 "en": "The company and the macro stories we follow. <b>In focus: <span id=\"home-focus-name\">Moderna</span>.</b>"
 },
+"b7cb47e2": {
+"de": "Das Kleingedruckte",
+"en": "The fine print"
+},
 "b8194bb5": {
 "de": "Artikel zu Makrothemen und Weltgeschehen, die uns aufgefallen sind, in einfacher Sprache und kostenlos.",
 "en": "Articles on macro topics and real-world events that caught our attention, written in plain English and published free."
@@ -1982,6 +2086,10 @@
 "b98086b1": {
 "de": "Die meisten Länder besteuern nur Anlageerträge, also Dividenden, Zinsen und Kapitalgewinne. Die Schweiz erhebt zusätzlich auf Kantons- und Gemeindeebene eine jährliche Vermögenssteuer auf dein Reinvermögen, Anlageportfolios eingeschlossen. Sätze und Freibeträge unterscheiden sich je nach Kanton stark, und die Steuer fällt jedes Jahr an, egal ob deine Anlagen gestiegen oder gefallen sind.",
 "en": "Most countries only tax investment income, dividends, interest, capital gains. Switzerland additionally levies an annual wealth tax on your net assets, including investment portfolios, at the cantonal and communal level. Rates and exemption thresholds vary significantly by canton, and this is charged every year regardless of whether your investments went up or down."
+},
+"b99a5aa4": {
+"de": "Unternehmen im Fokus &middot; 3 Min. Lesezeit &middot; 17. November 2026",
+"en": "Company Focus &middot; 3 min read &middot; 17 November 2026"
 },
 "ba894b44": {
 "de": "Was ein Indexfonds wirklich ist",
@@ -2035,6 +2143,10 @@
 "de": "Aus der Funktionsweise dieser Steuern folgen direkt zwei Gewohnheiten. Erstens: Deklariere dein ganzes Portfolio und alle Erträge immer in der Steuererklärung, auch die Teile, die mühsam wirken, denn genau diese Deklaration löst deine Rückerstattung der Verrechnungssteuer aus. Zweitens: Die Vermögenssteuer ist ein echter, dauerhafter Kostenfaktor beim Halten von Anlagen in der Schweiz, kein Fehler und nichts, was man umgehen sollte. Es lohnt sich, sie in deine Gesamtrendite einzurechnen.",
 "en": "Two habits follow directly from how these taxes work. First, always declare your full investment portfolio and income on your tax return, even the parts that feel tedious to report, since that declaration is what triggers your withholding tax refund. Second, understand that wealth tax is a genuine, permanent cost of holding investments in Switzerland, not an error or something to work around, and it's worth factoring into how you think about your overall return."
 },
+"bf3b1cc0": {
+"de": "Zuerst stieg die Aktie. Sie <mark class=\"skim\">schloss am Tag der Zahlen rund 5% höher</mark> und erreichte am 9. November ein <mark class=\"skim\">52-Wochen-Hoch von 280.80 Dollar</mark>. Dann kam am 12. November der Analyst Day, an dem Moderna Investoren seine Pläne vorstellte. Das Unternehmen will <mark class=\"skim\">mehr in seine Krebs-Pipeline investieren</mark>: Die Barkosten sinken dieses Jahr, steigen ab 2027 aber wieder auf rund 4 Milliarden Dollar pro Jahr, und ein Umsatzziel für 2027 gab es nicht. Die Aktie <mark class=\"skim\">fiel an diesem Tag um 7%</mark>, zusammen mit dem Grossteil der Biotech-Branche: 74 von 79 vergleichbaren Unternehmen schlossen tiefer. Am 17. November notierte sie bei rund <mark class=\"skim\">209 Dollar, etwa 25% unter dem Hoch</mark>.",
+"en": "The stock first rose. It <mark class=\"skim\">closed about 5% higher</mark> on results day and hit a <mark class=\"skim\">52-week high of 280.80 dollars on 9 November</mark>. Then came Analyst Day on 12 November, where Moderna presented its plans to investors. It said it will <mark class=\"skim\">spend more on its cancer pipeline</mark>: cash costs come down this year but rise again from 2027, to around 4 billion dollars a year, and it gave no revenue target for 2027. The stock <mark class=\"skim\">fell 7% that day</mark>, along with most of biotech: 74 of 79 comparable companies closed lower. On 17 November it traded around <mark class=\"skim\">209 dollars, about 25% below the peak</mark>."
+},
 "bfdb44e0": {
 "de": "Die Zone von 135 bis 160 Dollar ist dort, wo sich die Aktie nach dem Sprung im August eingependelt hat. Unter rund 110 Dollar liegt eine Lücke, in der kaum gehandelt wurde. Quelle: StockAnalysis.",
 "en": "The 135 to 160 dollar zone is where the stock settled after the August jump. Below about 110 dollars there is a gap where it barely traded. Source: StockAnalysis."
@@ -2058,6 +2170,10 @@
 "c0727edb": {
 "de": "=",
 "en": "YTD"
+},
+"c07e9688": {
+"de": "Moderna, 30-Minuten-Kerzen, 21. Oktober bis 17. November 2026, in % ab Beginn des Zeitraums. Markierungen von Surava Capital. Quelle: TradingView.",
+"en": "Moderna, 30-minute candles, 21 October to 17 November 2026, in % from the start of the period. Annotations by Surava Capital. Source: TradingView."
 },
 "c09d84c6": {
 "de": "Peloton (PTON), monatliche Schlusskurse. Quelle: digrin.com. Vergangene Wertentwicklungen lassen keine Rückschlüsse auf künftige Ergebnisse zu.",
@@ -2235,6 +2351,10 @@
 "de": "Freies Depot (3b)",
 "en": "Taxable account (3b)"
 },
+"cf2795ff": {
+"de": "1.31 Milliarden Dollar",
+"en": "1.31 billion dollars"
+},
 "cf35ebb5": {
 "de": "6 Min. Lesezeit",
 "en": "6 min read"
@@ -2266,6 +2386,10 @@
 "d18d9ef3": {
 "de": "Alles, was wir veröffentlichen",
 "en": "Everything we publish"
+},
+"d1a0e1b9": {
+"de": "30-Minuten-Kerzenchart von Moderna vom 21. Oktober bis 17. November 2026 in Prozent. Nach dem Melanom-Datenleck fällt die Aktie um rund 18%, erholt sich, springt rund um die Q3-Zahlen vom 6. November auf etwa 26% über den Start und rutscht bis zum 17. November auf etwa 6% unter den Start",
+"en": "Moderna 30-minute candlestick chart from 21 October to 17 November 2026 in percent. It falls about 18% after the melanoma data leak, recovers, jumps around the Q3 earnings on 6 November to about 26% above the start, then slides to about 6% below the start by 17 November"
 },
 "d1aa5dc5": {
 "de": "<strong>Recency Bias</strong> Dem jüngsten Geschehen zu viel Gewicht geben und annehmen, dass ein steigender Markt weiter steigt oder ein fallender weiter fällt, nur weil das in den letzten Monaten das Muster war.",
@@ -2358,6 +2482,10 @@
 "d87a9e93": {
 "de": "Wir schreiben unsere Makro-Einschätzung auf, bevor wir traden, und veröffentlichen danach, was passiert ist. Treffer und Fehler bleiben stehen. Kostenlos zu lesen, nichts zu verkaufen.",
 "en": "We write down our macro view before we trade, then publish what happened. Wins and misses stay on the record. Free to read, nothing to sell."
+},
+"d8886214": {
+"de": "Der Grossteil des zusätzlichen Umsatzes stammte aus <mark class=\"skim\">Verkäufen von COVID-Impfstoffen ausserhalb der USA</mark>, geliefert im Rahmen langfristiger Lieferverträge mit Regierungen wie Grossbritannien, Kanada und Australien. Auch die Kosten sanken: Die Ausgaben für Forschung und Entwicklung fielen <mark class=\"skim\">um 27% auf 583 Millionen Dollar</mark>, weil Studien in später Phase zu Infektionskrankheiten ausliefen. Das Management hob das Umsatzwachstumsziel für 2026 auf <mark class=\"skim\">15% bis 25%</mark> an, nach zuvor «bis zu 10%», und erwartet nun, das Jahr mit 8.1 bis 8.3 Milliarden Dollar an liquiden Mitteln abzuschliessen.",
+"en": "Most of the extra revenue came from <mark class=\"skim\">COVID vaccine sales outside the US</mark>, delivered under long-term supply deals with governments such as the UK, Canada and Australia. Costs fell too: research and development spending dropped <mark class=\"skim\">27% to 583 million dollars</mark> as late-stage trials for infectious diseases wound down. Management raised its 2026 revenue growth target to <mark class=\"skim\">15% to 25%</mark>, up from &ldquo;up to 10%&rdquo;, and now expects to end the year with 8.1 to 8.3 billion dollars in cash."
 },
 "d8b9b2f8": {
 "de": "<a href=\"/education/retirement-planning/tool-growth-calculator.html\">Wachstumsrechner</a><span>Tool</span>",
@@ -2575,6 +2703,10 @@
 "de": "Trading-Journal",
 "en": "Trades Journal"
 },
+"e9716d6f": {
+"de": "Analysten erwarteten einen Verlust von über einem Dollar pro Aktie. Moderna verdiente 38 Cent. Elf Tage später steht die Aktie tiefer als vor dem Bericht.",
+"en": "Analysts expected a loss of more than a dollar per share. Moderna earned 38 cents. Eleven days later, the stock trades below where it was before the report."
+},
 "e9aef401": {
 "de": "<strong>Überleben:</strong> jedes frühe Zeichen, dass Patienten mit dem Impfstoff auch länger leben.",
 "en": "<strong>Survival:</strong> any early sign that patients on the vaccine also live longer."
@@ -2586,6 +2718,10 @@
 "eaf18136": {
 "de": "Gleiche Marktrendite, gleicher Startbetrag. Der einzige Unterschied ist die Gebühr, und sie wirkt drei Jahrzehnte lang mit Zinseszins. Hypothetisches Beispiel, keine Prognose.",
 "en": "Same market return, same starting amount. The only difference is the fee, and it compounds for three decades. Hypothetical example, not a forecast."
+},
+"ebb545d8": {
+"de": "Das war ein Quartal, keine Trendwende. In den ersten neun Monaten 2026 verlor Moderna noch immer <mark class=\"skim\">1.96 Milliarden Dollar</mark>. Ein grosser Teil der Quartalsumsätze war <mark class=\"skim\">noch nicht bezahlt</mark>: Die Forderungen, also Geld, das Kunden schulden, aber noch nicht überwiesen haben, lagen Ende September bei 1.37 Milliarden Dollar. Zudem stiegen die Herstellungskosten der Impfstoffe um 54%, schneller als der Umsatz.",
+"en": "This was one quarter, not a turnaround. Over the first nine months of 2026, Moderna still lost <mark class=\"skim\">1.96 billion dollars</mark>. A large part of the quarter's sales had <mark class=\"skim\">not been paid yet</mark>: receivables, money customers owe but haven't paid, stood at 1.37 billion dollars at the end of September. And the cost of making the vaccines rose 54%, faster than revenue."
 },
 "ebb54f52": {
 "de": "Wie die Beratung bezahlt wird",
@@ -2663,6 +2799,10 @@
 "de": "=",
 "en": "Instrument"
 },
+"f0952e1c": {
+"de": "1.02 Milliarden Dollar",
+"en": "1.02 billion dollars"
+},
 "f190c98e": {
 "de": "Deine Nachricht",
 "en": "Your message"
@@ -2690,6 +2830,10 @@
 "f3af6a72": {
 "de": "Die Schweiz finanziert die Altersvorsorge über drei getrennte Systeme, die zusammenspielen, nicht über eines. Zu verstehen, wie sie zusammenpassen, ist das Nützlichste, was du lernen kannst, bevor du über deine eigene Vorsorge nachdenkst.",
 "en": "Switzerland funds retirement through three separate systems working together, not one. Understanding how they fit is the single most useful thing you can learn before thinking about your own retirement planning."
+},
+"f3c4f786": {
+"de": "War es ein Short Squeeze?",
+"en": "Was it a short squeeze?"
 },
 "f3db2ba0": {
 "de": "Anlegen funktioniert am besten auf einer soliden Basis. Zwei Dinge kommen zuerst:",
@@ -2734,6 +2878,10 @@
 "f6ad093e": {
 "de": "Steuern &amp; Konten",
 "en": "Taxes &amp; Accounts"
+},
+"f6d6c11c": {
+"de": "Erwartung der Analysten",
+"en": "Analysts expected"
 },
 "f78cb40a": {
 "de": "Was das in der Praxis heisst",
@@ -2782,6 +2930,10 @@
 "fa29658e": {
 "de": "Die <mark class=\"skim\">stärkste jüngste Unterstützung hielt</mark>. Die Zone von 209 bis 217 Dollar gab nach, doch die Zone von 183 bis 197 Dollar aus unserer <a href=\"/insights/insight-05-moderna-hazard-ratio.html\">Chartanalyse</a> fing den Fall auf. Im Tagesverlauf rutschte die Aktie kurz auf rund 180 Dollar, aber <mark class=\"skim\">kein Schlusskurs lag unter 197 Dollar</mark>. Der tiefste Schlusskurs waren 198.85 Dollar am 26. Oktober, und bis zum 30. Oktober stand die Aktie <mark class=\"skim\">wieder bei 221.72 Dollar</mark>. Das zeigt, wo Käufer diesmal eingestiegen sind, nicht wo sie es das nächste Mal tun.",
 "en": "The <mark class=\"skim\">strongest recent floor held</mark>. The 209 to 217 dollar zone gave way, but the 183 to 197 dollar zone from our <a href=\"/insights/insight-05-moderna-hazard-ratio.html\">chart analysis</a> caught the fall. During the day the stock briefly dipped to about 180 dollars, yet <mark class=\"skim\">no close fell below 197 dollars</mark>. The lowest close was 198.85 dollars on 26 October, and by 30 October the stock was <mark class=\"skim\">back at 221.72 dollars</mark>. That shows where buyers stepped in this time, not where they will next time."
+},
+"fa904cf3": {
+"de": "Warum ein gutes Quartal den Kurs nicht erklärt",
+"en": "Why one good quarter doesn't explain the price"
 },
 "fb30bc85": {
 "de": "<strong>Der Preis des Wartens.</strong> In diesem Beispiel kostet schon ein Jahr Warten, von 18 auf 19, mit 65 rund CHF 36'000. Über die sieben Jahre von 18 bis 25 kostet jedes Jahr Warten im Schnitt rund CHF 30'000.",

@@ -56,8 +56,8 @@ const focusArchive = [
         id: "analysis-q3-2026",
         date: "Fr, 6. Nov.",
         event: "Q3-2026-Ergebnisse",
-        text: "Unser Blick aufs Quartal folgt nach den Ergebnissen.",
-        url: ""
+        text: "Ein überraschender Gewinn, eine höhere Prognose und eine Aktie, die trotzdem fiel. Unser Blick auf das Quartal.",
+        url: "/de/insights/insight-07-moderna-q3-earnings.html"
       }
     ]
   }
