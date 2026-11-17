@@ -3230,3 +3230,10 @@ h2:not(footer h2), h3:not(footer h3), h4:not(footer h4) { font-weight: 400 !impo
 label { font-weight: 600; }
 .tb-title { font-family: var(--font-serif); font-weight: 400; font-size: 1.2rem; }
 .tb-title .focus-ticker { font-family: var(--font-sans); }
+
+/* Education: one dashed box per upcoming topic */
+.coming-soon-single { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.coming-soon-single .coming-soon-pill { margin: 0; }
+.coming-soon-single .cs-title { margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 1.12rem; line-height: 1.3; color: var(--color-ink-soft); }
+.cs-stack { grid-column: span 2; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: inherit; align-content: start; }
+@media (max-width: 900px) { .cs-stack { grid-column: auto; grid-template-columns: 1fr; } }
