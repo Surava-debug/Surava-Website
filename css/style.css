@@ -3111,7 +3111,7 @@ section.hp-dark { background: #16202D; color: #fff; padding: 88px 0 !important; 
 /* Follow along: light, with chart thumbnails */
 .hp-follow h2 { font-family: var(--font-serif); font-weight: 300; font-size: 2.7rem; line-height: 1.1; letter-spacing: -.01em; margin: 14px 0 0; color: #16202D; }
 .hp-follow-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 40px; }
-.hp-follow-grid a { display: block; text-decoration: none; }
+.hp-follow-grid a { display: block; text-decoration: none; border-top: 2px solid #16202D; padding-top: 22px; }
 .hp-thumb { display: block; aspect-ratio: 16 / 9; background: #fff; border: 1px solid #E2E6EA; padding: 14px; margin-bottom: 22px; overflow: hidden; }
 .hp-thumb img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform .4s ease; }
 .hp-follow-grid a:hover .hp-thumb img { transform: scale(1.02); }
@@ -3144,3 +3144,10 @@ section.hp-dark { background: #16202D; color: #fff; padding: 88px 0 !important; 
 .card-author { margin: 0 0 12px; }
 .hero-page .card-author { margin: 6px 0 18px; }
 .card-byline { display: none; }
+
+/* Follow along: hover effect (line turns rust, title underline grows, arrow slides) */
+.hp-follow-grid a { transition: border-color .2s ease; }
+.hp-follow-grid a:hover { border-top-color: #9A4A2A; }
+.hp-follow-grid h3 span { background: linear-gradient(#16202D, #16202D) 0 100% / 0 1px no-repeat; padding-bottom: 2px; transition: background-size .35s ease; }
+.hp-follow-grid a:hover h3 span { background-size: 100% 1px; }
+@media (prefers-reduced-motion: reduce) { .hp-follow-grid h3 span, .hp-follow-grid a { transition: none; } }
