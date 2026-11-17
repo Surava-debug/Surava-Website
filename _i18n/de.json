@@ -559,10 +559,6 @@
 "de": "Ähnlich gesperrt wie die Säule 3a, Bezug bei Pensionierung oder unter ähnlichen Ausnahmen.",
 "en": "Locked similarly to Pillar 3a, released at retirement or under similar exceptions."
 },
-"35508180": {
-"de": "Erst hoch, dann runter",
-"en": "Up first, then down"
-},
 "3564445f": {
 "de": "Die Aufgabe der Diversifikation ist es, das Risiko zu entfernen, das dir nichts einbringt, nicht deine Rendite zu verwässern. Ein breiter Indexfonds erledigt das automatisch, ein wichtiger Grund, warum er die Standardlösung ist, die wir in unserem Indexfonds-Guide behandeln.",
 "en": "Diversification's job is to remove the risk that isn't paying you anything, not to water down your returns. A broad index fund does this automatically, which is a large part of why it's the default recommendation covered in our index fund guide."
@@ -1394,6 +1390,10 @@
 "7f2aa3be": {
 "de": "Unsere Website kann Cookies und ähnliche Technologien verwenden, um zu verstehen, wie Besucher unsere Website nutzen, und um das Surferlebnis zu verbessern. Sie können Cookies über Ihre Browsereinstellungen steuern.",
 "en": "Our website may use cookies and similar technologies to understand how visitors use our site and to improve the browsing experience. You can control cookies through your browser settings."
+},
+"7f602295": {
+"de": "Das Urteil des Marktes",
+"en": "The market's verdict"
 },
 "7f9c5cfa": {
 "de": "<span class=\"ms-tick\" aria-hidden=\"true\"></span><span class=\"ms-when\">Als Nächstes</span>",
