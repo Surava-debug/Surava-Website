@@ -2062,6 +2062,7 @@ html {
 /* Insights: "See further" toggle under a focus grid */
 .focus-grid [hidden] { display: none !important; }
 .see-further-wrap { display: flex; justify-content: center; margin-top: 24px; }
+.see-further-wrap[hidden] { display: none; }
 
 /* Homepage: live 1-year chart of the company in focus */
 .feature-chart { background: var(--color-card); padding: 4px 6px; height: 230px; }
