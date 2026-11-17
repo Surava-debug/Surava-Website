@@ -54,7 +54,7 @@
 ["cat: a.category + ' \\u00b7 ' + a.readTime,", "cat: a.category + ' \\u00b7 ' + a.readTime + (a.url.indexOf('/de/') === 0 ? '' : ' \\u00b7 auf Englisch'),"],
 ["<div class=\"focus-label\">In short</div>", "<div class=\"focus-label\">Kurz gesagt</div>"],
 [">Read the article →</a>", ">Artikel lesen →</a>"],
-["<p>More articles, researched and written by us, are in the works.</p>", "<p>Weitere Artikel, von uns recherchiert und geschrieben, sind in Arbeit.</p>"],
+["<p>New macro developments that catch our attention will be covered here.</p>", "<p>Neue Entwicklungen in der Makroökonomie, die uns auffallen, behandeln wir hier.</p>"],
 ["<span class=\"human-badge\">Author: '", "<span class=\"human-badge\">Autor: '"],
 ["more ? 'See further (' + more + ' more)' : 'See further'", "more ? 'Mehr anzeigen (' + more + ' weitere)' : 'Mehr anzeigen'"],
 ["open ? label : 'Show less'", "open ? label : 'Weniger anzeigen'"],
