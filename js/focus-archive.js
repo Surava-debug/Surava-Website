@@ -83,10 +83,6 @@ const focusArchive = [
   });
 
   grid.innerHTML =
-  '<div class="focus-card focus-card-next">' +
-    '<span class="coming-soon-pill">Next</span>' +
-    '<p>The next company goes here once something catches our attention.</p>' +
-  '</div>' +
   items.map(function (f) {
     var current = f.status === 'current';
     var period = fmt(f.from) + ' – ' + (current ? (f.until ? dmy(f.until) : 'today') : fmt(f.to));
@@ -125,7 +121,11 @@ const focusArchive = [
           }).join('') +
           (f.link ? '<a class="fa-more" href="' + esc(f.link) + '">' + (current ? 'Live chart and key dates on Markets' : 'Read more') + ' →</a>' : '') +
         '</div>' : '');
-  }).join('');
+  }).join('') +
+  '<div class="focus-card focus-card-next">' +
+    '<span class="coming-soon-pill">Coming soon</span>' +
+    '<p>The next company goes here once something catches our attention.</p>' +
+  '</div>';
 
   // Faint one-year price line behind cards that have a "priceData" file (same saved data as the Trades charts)
   grid.querySelectorAll('.focus-card.has-chart').forEach(function (card) {
