@@ -3240,3 +3240,6 @@ label { font-weight: 600; }
 @media (max-width: 900px) { .cs-stack { grid-column: auto; grid-template-columns: 1fr; } }
 /* Coming soon boxes: same size as the guide card next to them */
 .coming-soon-single { align-self: stretch; justify-content: center; }
+
+/* Trades: note that the charts cover the focus period only */
+.tb-period-note { margin: 20px 0 0; padding: 8px 0 8px 14px; border-left: 2px solid #9A4A2A; font-size: .88rem; line-height: 1.55; color: var(--color-ink-soft); }
