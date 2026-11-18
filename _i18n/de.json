@@ -131,10 +131,6 @@
 "de": "HR vom Samstag",
 "en": "Saturday's HR"
 },
-"0c9d2eed": {
-"de": "Neugierig? Scroll nach unten. Alles hier ist Kontext, keine Empfehlung.",
-"en": "Curious? Scroll down. Everything here is context, not recommendations."
-},
 "0cad2f8d": {
 "de": "<strong>Anzahl Titel mit echter Diversifikation verwechseln.</strong> Zwanzig Tech-Aktien sind nicht diversifiziert, sondern zwanzig Wetten auf denselben Trend.",
 "en": "<strong>Confusing number of holdings with actual diversification.</strong> Twenty tech stocks are not diversified, they're twenty bets on the same underlying trend."
@@ -783,6 +779,10 @@
 "de": "2 Guides, 1 Tool →",
 "en": "2 guides, 1 tool →"
 },
+"50ab40bd": {
+"de": "Einordnung, keine Empfehlungen.",
+"en": "Context, not recommendations."
+},
 "51dc07d1": {
 "de": "Insider haben Aktien im Umfang von rund 0.05% des Unternehmens verkauft, ein kleiner Betrag, über Monate im Voraus eingerichtete Verkaufsprogramme. Niemand hat gekauft, doch das sagt derzeit wenig aus: Vor Ergebnissen und mit unveröffentlichten Studiendaten in der Hand dürfen Insider nicht kaufen.",
 "en": "Insiders have sold shares worth around 0.05% of the company, a small amount, through sale programs set up months in advance. None have bought, but that tells us little right now: before results and with unpublished trial data in hand, insiders are not allowed to buy."
@@ -907,10 +907,6 @@
 "de": "Wir können diese Datenschutzerklärung von Zeit zu Zeit anpassen. Das Datum «Letzte Aktualisierung» oben auf dieser Seite zeigt die jüngste Überarbeitung.",
 "en": "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent revision."
 },
-"5b02147b": {
-"de": "<strong>Die Fed und die Wirtschaft.</strong> Unser Langzeitprojekt: Entscheide der Zentralbank und Veränderungen in der Wirtschaft lesen und herausfinden, was sie bedeuten.",
-"en": "<strong>The Fed and the economy.</strong> Our long-term project: reading central-bank decisions and shifts in the economy, and working out what they mean."
-},
 "5b5b4e6c": {
 "de": "Diagramm, das CHF 10'000 über 30 Jahre bei 7% Rendite mit 0.2% Indexfonds-Gebühr und 1.5% Gebühr eines aktiven Fonds vergleicht und die Kosten höherer Gebühren durch den Zinseszins zeigt",
 "en": "Chart comparing CHF 10,000 invested for 30 years at a 7% return with a 0.2% index fund fee versus a 1.5% active fund fee, showing the compounding cost of higher fees"
@@ -962,10 +958,6 @@
 "5e946134": {
 "de": "Zürcher Oberland",
 "en": "Zurich Oberland"
-},
-"5f96fd99": {
-"de": "<strong>Das Unternehmen oder Ereignis in unserem Fokus.</strong> Nicht festgelegt. Was gerade unsere Aufmerksamkeit geweckt hat, sei es durch eine Kontroverse, einen Durchbruch oder eine Überraschung.",
-"en": "<strong>The company or event in our focus.</strong> Not fixed. Whatever has caught our attention, whether through a controversy, a breakthrough or a surprise."
 },
 "5faa59d4": {
 "de": "Ergebnis",
@@ -1550,10 +1542,6 @@
 "8e3c640d": {
 "de": "Jede Säule hat eine andere Aufgabe. Zusammen sollen sie rund 60% oder mehr deines bisherigen Einkommens ersetzen.",
 "en": "Each pillar has a different job. Together, they are designed to replace roughly 60% or more of your pre-retirement income."
-},
-"8e4c4594": {
-"de": "Diese Seite ist das Herz von Surava Capital. Sie verfolgt zwei Stränge:",
-"en": "This page is the heart of Surava Capital. It follows two threads:"
 },
 "8e9f75cd": {
 "de": "1 Guide →",
@@ -2191,10 +2179,6 @@
 "de": "Starke Studiendaten und ein überraschender Q3-Gewinn, doch nach dem Analyst Day fiel die Aktie zurück.",
 "en": "Strong trial data and a surprise Q3 profit, but the stock fell back after Analyst Day."
 },
-"c5ed96c4": {
-"de": "Hier steckt der Grossteil unserer Arbeit.",
-"en": "Where we put most of our work."
-},
 "c6c391c7": {
 "de": "Bachelorstudent in Wirtschaftsingenieurwesen an der ZHAW. Plant einen Master in Quantitative Finance an der Universität Zürich und strebt den CFA-Titel an.",
 "en": "Wirtschaftsingenieurwesen (industrial engineering and management) bachelor student at the ZHAW, with plans to complete a quantitative finance master at the University of Zurich and to pursue the CFA designation."
@@ -2590,6 +2574,10 @@
 "e6a5b111": {
 "de": "Surava Capital Logo",
 "en": "Surava Capital logo"
+},
+"e759bb12": {
+"de": "Das Unternehmen, das wir verfolgen, und die Wirtschaft in Zahlen.",
+"en": "The company we follow, and the economy in numbers."
 },
 "e79a0383": {
 "de": "Was ist ein Indexfonds, und warum funktioniert er? · Surava Capital",
