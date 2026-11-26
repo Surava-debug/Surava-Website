@@ -19,6 +19,10 @@
 "de": "Üblich ist, sich eine riesige Summe vorzustellen und von dort rückwärts in Panik zu rechnen. Bodenständiger ist eine einfachere Frage: Wie viel brauchst du pro Jahr für deinen Lebensstil im Ruhestand? Kennst du diese Zahl, ergibt sich das gesamte Sparziel aus einer bekannten Regel.",
 "en": "The common approach is to imagine some large lump sum and work backward into panic. A more grounded approach starts with a simpler question: how much would you need each year to cover your lifestyle in retirement? Once you know that number, the total savings target follows from a well-known rule."
 },
+"021c94a0": {
+"de": "Unabhängige Beratung auf Honorarbasis für junge Anleger",
+"en": "Independent, fee-only advice for young investors"
+},
 "02468935": {
 "de": "Wer hinter dem Leck steckt, ist noch unklar, und ESMO untersucht den Fall. Eine interessante Randgeschichte, die wir hier aber nicht weiterverfolgen. Der nächste echte Test ist der <a href=\"https://investors.modernatx.com\" target=\"_blank\" rel=\"noopener\">Quartalsbericht vom 6. November</a>.",
 "en": "Who was behind the leak is still unclear, and ESMO is investigating. It is an interesting side story, but we won't pursue it further here. The next real test is the <a href=\"https://investors.modernatx.com\" target=\"_blank\" rel=\"noopener\">quarterly earnings report on 6 November</a>."
@@ -179,13 +183,13 @@
 "de": "Ein Student an seinem Schreibtisch schaut ein Trading-Video mit dem Titel «How to get rich with trading»",
 "en": "A student at his desk watching a trading video titled How to get rich with trading"
 },
-"112e4dbc": {
-"de": "<time datetime=\"2026-10-30\">30. Okt.</time><span class=\"series-list-title\">Fazit: Das Leck, das Moderna zwei Tage zu früh bewegte</span><span class=\"series-list-here\">Diesen Artikel liest du gerade</span>",
-"en": "<time datetime=\"2026-10-30\">30 Oct</time><span class=\"series-list-title\">Conclusion: the leak that moved Moderna two days early</span><span class=\"series-list-here\">You are reading this</span>"
-},
 "11444fa7": {
 "de": "Behavioral Finance: Der Anleger im Spiegel · Surava Capital",
 "en": "Behavioural Finance: The Investor in the Mirror — Surava Capital"
+},
+"1145b5b8": {
+"de": "Ein langer, öffentlicher Leistungsausweis",
+"en": "A long public track record"
 },
 "11a05e1d": {
 "de": "Eine vernünftige Standardreihenfolge, bevor du deine persönliche Situation berücksichtigst: Bau zuerst einen Notgroschen auf, denn keine dieser Lösungen ist wirklich liquide oder für kurzfristige Bedürfnisse gedacht. Fülle dann deine Säule 3a bis zur Jahresgrenze, denn der Steuerabzug gehört zu den verlässlichsten Vorteilen in den Schweizer Privatfinanzen. Erst danach ergibt ein freies Depot Sinn, für Ersparnisse über deine 3a-Möglichkeiten hinaus oder für Ziele vor der Pensionierung.",
@@ -250,10 +254,6 @@
 "1851cbe5": {
 "de": "Über uns · Surava Capital",
 "en": "About — Surava Capital"
-},
-"18fa1f69": {
-"de": "<time datetime=\"2026-11-17\">17. Nov.</time><a href=\"/insights/insight-07-moderna-q3-earnings.html\">Moderna Q3 2026: Ergebnisse und Marktreaktion</a>",
-"en": "<time datetime=\"2026-11-17\">17 Nov</time><a href=\"/insights/insight-07-moderna-q3-earnings.html\">Moderna Q3 2026: results and market reaction</a>"
 },
 "19172e9e": {
 "de": "Einstieg",
@@ -527,6 +527,10 @@
 "de": "Deshalb ist «Fee-only» eine ganz andere Aussage als «wir handeln in deinem Interesse». Das Erste beschreibt eine überprüfbare Bezahlung. Das Zweite kann jeder sagen, egal wie er wirklich bezahlt wird.",
 "en": "This is why \"fee-only\" is a meaningfully different claim than \"we act in your interest.\" The first describes a verifiable payment structure. The second is something anyone can say regardless of how they're actually paid."
 },
+"30d2b6ac": {
+"de": "Ein Geldkurs für Kinder und Jugendliche",
+"en": "A money course for kids and teens"
+},
 "312d3cb2": {
 "de": "Das Wichtigste",
 "en": "Key takeaway"
@@ -546,10 +550,6 @@
 "323686ee": {
 "de": "Anlegen 101: Vom ersten Konto zum ersten Portfolio",
 "en": "Investing 101: From your first account to your first portfolio"
-},
-"32a0b6e7": {
-"de": "<time datetime=\"2026-11-17\">17. Nov.</time><span class=\"series-list-title\">Moderna Q3 2026: Ergebnisse und Marktreaktion</span><span class=\"series-list-here\">Diesen Artikel liest du gerade</span>",
-"en": "<time datetime=\"2026-11-17\">17 Nov</time><span class=\"series-list-title\">Moderna Q3 2026: results and market reaction</span><span class=\"series-list-here\">You are reading this</span>"
 },
 "32d3ab85": {
 "de": "Surava Capital («Surava Capital», «wir», «uns» oder «unser») respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erläutert, welche Informationen wir erheben, wie wir sie verwenden und welche Wahlmöglichkeiten Sie bezüglich Ihrer Informationen haben, wenn Sie unsere Website besuchen oder uns kontaktieren.",
@@ -786,10 +786,6 @@
 "4df6fb9b": {
 "de": "Warum drei Systeme statt einem",
 "en": "Why three systems instead of one"
-},
-"4f56848e": {
-"de": "=",
-"en": "YH"
 },
 "4f576584": {
 "de": "ein Verlust",
@@ -1171,10 +1167,6 @@
 "de": "Drei übliche Gebührenmodelle",
 "en": "Three common fee structures"
 },
-"6e40cbc8": {
-"de": "<time datetime=\"2026-10-30\">30. Okt.</time><a href=\"/insights/insight-06-moderna-conclusion.html\">Fazit: Das Leck, das Moderna zwei Tage zu früh bewegte</a>",
-"en": "<time datetime=\"2026-10-30\">30 Oct</time><a href=\"/insights/insight-06-moderna-conclusion.html\">Conclusion: the leak that moved Moderna two days early</a>"
-},
 "6ed1b760": {
 "de": "0.56 bis 0.65",
 "en": "0.56 to 0.65"
@@ -1298,10 +1290,6 @@
 "778089ee": {
 "de": "Eröffnet / geschlossen",
 "en": "Opened / closed"
-},
-"77a17ded": {
-"de": "<span><i class=\"dot impact-high\"></i>Hoher Einfluss</span> <span><i class=\"dot impact-medium\"></i>Mittel</span> <span><i class=\"dot impact-low\"></i>Tief</span>",
-"en": "<span><i class=\"dot impact-high\"></i>High impact</span> <span><i class=\"dot impact-medium\"></i>Medium</span> <span><i class=\"dot impact-low\"></i>Low</span>"
 },
 "77b7c161": {
 "de": "Woher der Faktor 25 kommt",
@@ -1735,10 +1723,6 @@
 "de": "Dienstleistungen (geplant)",
 "en": "Services (Planned)"
 },
-"9b2c2f95": {
-"de": "Unsere Moderna-Analyse",
-"en": "Our Moderna analysis"
-},
 "9cfa38f6": {
 "de": "Die 1. Säule verhindert, dass du ins Bodenlose fällst. Die 2. Säule leistet über deinen Arbeitgeber den Grossteil des Einkommensersatzes. Die 3. Säule ist die einzige, die du ganz selbst steuerst, und dort entscheidet sich die Höhe deines späteren Einkommens wirklich.",
 "en": "Pillar 1 keeps you from falling through the floor. Pillar 2 does most of the actual replacement work through your employer. Pillar 3 is the only pillar you fully control, and it is where the size of your eventual retirement income is really decided."
@@ -1794,6 +1778,10 @@
 "a195956e": {
 "de": "<a href=\"/insights/\">Einblick</a> / Unternehmen im Fokus",
 "en": "<a href=\"/insights/\">Insights</a> / Company in focus"
+},
+"a2942828": {
+"de": "Studiert Wirtschaftsingenieurwesen an der ZHAW, als Nächstes folgen ein Master in Quantitative Finance an der UZH und der CFA.",
+"en": "Industrial engineering student at ZHAW, heading for a quant finance master at UZH and the CFA."
 },
 "a3136eb3": {
 "de": "Die Bewertung hängt an dieser Pipeline",
@@ -1959,10 +1947,6 @@
 "de": "Die Verrechnungssteuer bekommst du zurück, wenn du korrekt deklarierst, die Vermögenssteuer nicht. Wer die Deklaration weglässt, spart keine Steuern, sondern verschenkt Geld, das ihm zustünde.",
 "en": "Withholding tax is recoverable if you declare properly, wealth tax is not. Missing your tax declaration doesn't avoid taxes, it just forfeits money that was rightfully yours to reclaim."
 },
-"ae7f8adb": {
-"de": "<time datetime=\"2026-10-21\">21. Okt.</time><span class=\"series-list-title\">Der Krebsimpfstoff wirkt. Reicht das für die Moderna-Aktie?</span><span class=\"series-list-here\">Diesen Artikel liest du gerade</span>",
-"en": "<time datetime=\"2026-10-21\">21 Oct</time><span class=\"series-list-title\">The cancer vaccine works. Is that enough for Moderna's stock?</span><span class=\"series-list-here\">You are reading this</span>"
-},
 "aea8f535": {
 "de": "Geld, das du vor der Pensionierung brauchen könntest, oder Ersparnisse über deine jährliche 3a-Grenze hinaus.",
 "en": "Money you might need before retirement, or savings beyond what fits in your annual 3a limit."
@@ -1970,10 +1954,6 @@
 "b037467d": {
 "de": "Gründer &amp; Makroanalyst",
 "en": "Founder &amp; Macro Analyst"
-},
-"b053d987": {
-"de": "<time datetime=\"2026-10-21\">21. Okt.</time><a href=\"/insights/insight-05-moderna-hazard-ratio.html\">Der Krebsimpfstoff wirkt. Reicht das für die Moderna-Aktie?</a>",
-"en": "<time datetime=\"2026-10-21\">21 Oct</time><a href=\"/insights/insight-05-moderna-hazard-ratio.html\">The cancer vaccine works. Is that enough for Moderna's stock?</a>"
 },
 "b08ee920": {
 "de": "Kostenlose Finanzbildung, Guides und Kurse von Surava Capital rund um Anlegen, Altersvorsorge und mehr.",
@@ -2006,10 +1986,6 @@
 "b25daba8": {
 "de": "Schon mit uns in Kontakt?",
 "en": "Already in touch with us?"
-},
-"b2d72124": {
-"de": "<span class=\"rn-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><path d=\"M15.5 15.5 21 21\"/><path d=\"M8 12.5v-1.5M10.5 12.5v-4M13 12.5v-2.5\"/></svg></span> <span class=\"research-badge\">Eigene Marktanalyse</span>",
-"en": "<span class=\"rn-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><path d=\"M15.5 15.5 21 21\"/><path d=\"M8 12.5v-1.5M10.5 12.5v-4M13 12.5v-2.5\"/></svg></span> <span class=\"research-badge\">Own market research</span>"
 },
 "b37456c4": {
 "de": "Kontakt",
@@ -2054,6 +2030,10 @@
 "b5d3297a": {
 "de": "Die häufigsten Fehler",
 "en": "The common ways people get it wrong"
+},
+"b64dcbd1": {
+"de": "Studiert Wirtschaftsinformatik und tradet anhand von Charts.",
+"en": "Business IT student and chart-based trader."
 },
 "b65395ff": {
 "de": "Das Leck zog den Ausverkauf um zwei Handelstage vor. Die Zonen sind unsere Lesart des Charts, keine Prognose. Quellen: Yahoo Finance, Nasdaq.",
@@ -2286,10 +2266,6 @@
 "c94d3175": {
 "de": "E-Mail-Adresse",
 "en": "Email address"
-},
-"c958f66b": {
-"de": "So entstand dieser Artikel",
-"en": "How this article was made"
 },
 "c97bce56": {
 "de": "Sieh den Faktor 25 als groben Anhaltspunkt für ein Gespräch, nicht als präzises Ziel. Deine tatsächliche Zahl hängt von deinen erwarteten Renten aus AHV und BVG, deinem Pensionierungsalter, der Flexibilität deiner Ausgaben und der Dauer ab, für die du das Geld voraussichtlich brauchst.",
@@ -2551,6 +2527,10 @@
 "de": "Zu den Guides",
 "en": "Discover the guides"
 },
+"df168a53": {
+"de": "In der Schweiz zuhause und fasziniert von Märkten und davon, wie Geld funktioniert. Wir erklären es in einfacher Sprache, sagen, wo wir selbst noch lernen, und geben keine Anlageberatung.",
+"en": "Based in Switzerland and hooked on markets and how money works. We explain it in plain language, say when we're still learning, and don't give investment advice."
+},
 "df37f89d": {
 "de": "Wie die Verteilung auf verschiedene Anlagen das Risiko senkt und welche Fehler dabei häufig passieren.",
 "en": "How spreading investments across assets reduces risk, and the common ways people get it wrong."
@@ -2703,10 +2683,6 @@
 "de": "&larr; Zurück zu Bildung",
 "en": "&larr; Back to Education Hub"
 },
-"ecb0552b": {
-"de": "Erwarteter Einfluss auf den Aktienkurs",
-"en": "Expected impact on the share price"
-},
 "eccdf214": {
 "de": "Genau diese Mischung aus echtem wissenschaftlichem Meilenstein und viel Hype war der Grund, warum wir hingeschaut haben. Die vollständigen Phase-3-Daten kamen am 22. Oktober: ein um 42% tieferes Risiko für eine Rückkehr des Krebses oder Tod gegenüber Keytruda allein. Der Impfstoff ist noch nirgends zugelassen, und Merck und Moderna sind nach eigenen Angaben im Austausch mit den Behörden.",
 "en": "That mix of a real scientific milestone and a lot of hype is exactly why we watched. The full Phase 3 data came out on 22 October: a 42% lower risk of the cancer returning or death compared with Keytruda alone. The vaccine is still not approved anywhere, and Merck and Moderna say they are engaging with regulators."
@@ -2826,6 +2802,10 @@
 "f4a0a659": {
 "de": "Keine Wahl, die du direkt triffst: Hier liegt dein Pensionskassenguthaben, wenn du eine Stelle verlässt, bevor du in die Pensionskasse eines neuen Arbeitgebers eintrittst.",
 "en": "Not a choice you make directly, this is where your occupational pension balance sits when you leave a job before joining a new employer's plan."
+},
+"f4e55ab7": {
+"de": "Studium, CFA und FIDLEG-Registrierung",
+"en": "Studies, CFA and FIDLEG registration"
 },
 "f5af243d": {
 "de": "Optimistisch (7% pro Jahr)",

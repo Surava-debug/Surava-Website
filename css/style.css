@@ -3361,3 +3361,11 @@ footer .scam-note { margin: 10px 0 0; padding-left: 9px; border-left: 2px solid 
 
 /* Coming-soon card whose only description is "Coming soon": keep it under the title */
 .article-card.is-coming-soon .coming-soon-pill.cs-inline { margin-top: 4px; }
+
+/* Roadmap with 5 steps (Nov 2026): 5 columns, "we are here" between step 2 and 3 */
+.ms-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.ms-fill { width: 37.5%; }
+.ms-here { left: 37.5%; }
+@media (min-width: 861px) {
+  .ms { --c: calc((100% - 96px) / 5); }
+}
