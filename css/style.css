@@ -3243,3 +3243,80 @@ label { font-weight: 600; }
 
 /* Trades: note that the charts cover the focus period only */
 .tb-period-note { margin: 20px 0 0; padding: 8px 0 8px 14px; border-left: 2px solid #9A4A2A; font-size: .88rem; line-height: 1.55; color: var(--color-ink-soft); }
+
+/* ============ NO PILLS: "ledger marks" (Nov 2026) ============
+   Labels are plain text with a thin coloured rule on the left.
+   Impact tiers are a 3-bar meter. Buttons have square corners.
+   This block overrides every earlier pill style, so keep it last. */
+
+/* Buttons and controls: square corners */
+.btn, .focus-toggle, .chart-zoom button, .t-notes-btn { border-radius: 3px !important; }
+
+/* Language switch: underlined text instead of a sliding capsule */
+.lang-switch { border: 0 !important; background: transparent !important; padding: 0 !important; gap: 2px; }
+.lang-switch::before { display: none !important; }
+.lang-switch a { border-radius: 0 !important; padding: 4px 0 3px !important; border-bottom: 2px solid transparent; color: var(--color-ink-soft); }
+.lang-switch a.is-active { color: var(--color-ink) !important; border-bottom-color: var(--color-ink); }
+
+/* Labels: text with a left rule, sentence case */
+.hero-eyebrow, .pill, .coming-soon-pill, .feature-rot, .focus-status, .fa-pill-soon,
+.t-tag, .tb-count, .tb-past, .tb-next, .focus-ends-soon, .human-badge, .ai-badge,
+.ai-badge.ai-badge-sm, .research-badge, .research-badge.fa-pill, .course-card-tag,
+.parents-strip-tag, .ms-here-m span,
+#focus-archive-grid .focus-card.is-current .focus-status,
+#feat-company.is-current .feature-rot,
+#feat-company.is-current .focus-ends-soon,
+.focus-actions .focus-ends-soon,
+#focus-archive-grid .focus-card.is-current + .focus-analysis .fa-pill-soon,
+.parents-note .parents-strip-tag {
+  background: transparent !important;
+  border: 0 !important;
+  border-left: 2px solid currentColor !important;
+  border-radius: 0 !important;
+  padding: 0 0 0 7px !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  box-shadow: none !important;
+}
+.coming-soon-pill, .fa-pill-soon, .tb-past, .t-tag, .feature-rot, .focus-status { color: var(--color-ink-soft) !important; }
+.tb-count, .tb-next, .ms-here-m span, .parents-note .parents-strip-tag { color: var(--color-ink) !important; }
+.human-badge, .research-badge, .course-card-tag, .parents-strip-tag { color: #1F6B3A !important; }
+.ai-badge { color: #9A5A12 !important; }
+.focus-ends-soon { color: #A3261F !important; }
+.focus-ends-soon::before { display: none !important; }
+/* On the navy "current" cards */
+#focus-archive-grid .focus-card.is-current .focus-status,
+#feat-company.is-current .feature-rot { color: #fff !important; border-left-color: #2E9E5B !important; }
+#feat-company.is-current .feature-rot::before,
+#focus-archive-grid .focus-card.is-current .focus-status::before { display: none !important; }
+#feat-company.is-current .focus-ends-soon,
+#focus-archive-grid .focus-card.is-current .focus-ends-soon { color: #FFB4AC !important; }
+#focus-archive-grid .focus-card.is-current + .focus-analysis .fa-pill-soon { color: var(--color-ink-soft) !important; }
+
+/* Catalyst type: plain text */
+.catalyst-pill { background: transparent !important; border-radius: 0 !important; padding: 0 !important; text-transform: none !important; letter-spacing: 0 !important; font-size: 0.8rem !important; font-weight: 500 !important; color: var(--color-ink-soft) !important; }
+
+/* Impact tier: 3-bar meter + coloured word */
+.impact-pill {
+  --b1: #D5DAE0; --b2: #D5DAE0; --b3: #D5DAE0;
+  display: inline-block; border-radius: 0 !important; text-transform: none !important; letter-spacing: 0 !important;
+  font-size: 0.8rem !important; font-weight: 600 !important;
+  padding: 0 0 0 23px !important;
+  background: linear-gradient(var(--b1), var(--b1)) 0 50% / 4px 11px no-repeat,
+              linear-gradient(var(--b2), var(--b2)) 6px 50% / 4px 11px no-repeat,
+              linear-gradient(var(--b3), var(--b3)) 12px 50% / 4px 11px no-repeat !important;
+}
+.impact-high .impact-pill   { color: var(--impact-high) !important; --b1: var(--impact-high); --b2: var(--impact-high); --b3: var(--impact-high); }
+.impact-medium .impact-pill { color: var(--impact-medium) !important; --b1: var(--impact-medium); --b2: var(--impact-medium); }
+.impact-low .impact-pill    { color: var(--impact-low) !important; --b1: var(--impact-low); }
+.catalyst.impact-high   { border-left-width: 5px; }
+.catalyst.impact-medium { border-left-width: 3px; }
+.catalyst.impact-low    { border-left-width: 2px; }
+
+/* Trade direction: coloured word with an arrow */
+.dir { background: transparent !important; border-radius: 0 !important; padding: 0 !important; text-transform: none !important; letter-spacing: 0 !important; font-size: 0.85rem !important; font-weight: 600 !important; }
+.dir-short::before { content: "\2193\00a0"; }
+.dir-long::before  { content: "\2191\00a0"; }
