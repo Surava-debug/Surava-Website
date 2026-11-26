@@ -3326,3 +3326,26 @@ label { font-weight: 600; }
 .catalyst-src { position: absolute; right: 18px; bottom: 14px; margin: 0; }
 .catalyst-body:has(.catalyst-src):not(:has(.catalyst-read)) { padding-bottom: 1.5em; }
 @media (max-width: 720px) { .catalyst-src { right: 14px; bottom: 12px; } }
+
+/* ============ RESEARCH NOTE: fold-out that opens into small steps ============ */
+.research-fold { margin: 16px 0 0; font-size: 0.88rem; }
+.research-fold summary { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; list-style: none; cursor: pointer; }
+.research-fold summary::-webkit-details-marker { display: none; }
+.research-fold .research-badge { margin: 0; }
+.rf-how { font-size: 0.82rem; color: var(--color-ink-soft); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--color-line); }
+.rf-how::after { content: " +"; }
+.research-fold[open] .rf-how::after { content: " \2212"; }
+.research-fold summary:hover .rf-how { color: var(--color-ink); text-decoration-color: currentColor; }
+.research-fold summary:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 3px; }
+.research-fold .rn-steps { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; margin: 12px 0 0; padding: 0 0 0 9px; list-style: none; }
+.research-fold .rn-step { display: flex; flex-direction: row; align-items: center; gap: 7px; margin: 0; padding: 0; background: none; border: 0; box-shadow: none; flex: none; font-size: 0.85rem; color: var(--color-ink-soft); }
+.research-fold .rn-step::after { display: none !important; }
+.research-fold .rn-step::before { display: none; }
+.research-fold .rn-num { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 18px; height: 18px; margin: 0; border-radius: 50%; font-size: 0.68rem; font-weight: 700; line-height: 1; color: #fff; background: #1F6B3A; box-shadow: none; animation: none !important; opacity: 1; transform: none; }
+.research-fold .rn-ai .rn-num { background: #5C6B80; }
+.research-fold .rn-steps .rn-step:nth-child(n) .rn-num { animation: none !important; }
+.research-fold .rn-text { margin: 0; font-size: inherit; line-height: 1.4; }
+.research-fold .rn-text strong { color: var(--color-ink); font-weight: 600; }
+@media (max-width: 720px) {
+  .research-fold .rn-steps { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
