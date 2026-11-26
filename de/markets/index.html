@@ -98,6 +98,12 @@
     </div>
   </section>
   <script>
+    // The newest company (the first box after "Next company") starts unfolded.
+    // Add a new company directly below the "Next company" box and it opens by default instead.
+    (function () {
+      var first = document.querySelector('#next-focus ~ details.trade-box');
+      if (first) first.open = true;
+    })();
     (function () {
       var box = document.getElementById('past-focus-moderna'), tv = document.getElementById('past-focus-chart'), done = false;
       if (!box || !tv) return;
@@ -117,6 +123,7 @@
         tv.appendChild(sc);
       }
       box.addEventListener('toggle', load);
+      load();
     })();
   </script>
   <script src="/de/js/catalysts.js?v=ca4e5278" defer></script>
