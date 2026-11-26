@@ -3336,3 +3336,9 @@ label { font-weight: 600; }
   .article-body .series-list li { grid-template-columns: 64px minmax(0, 1fr); column-gap: 10px; font-size: 0.95rem; }
   .series-list li.is-here { margin-left: -10px; padding-left: 10px; }
 }
+
+/* Key dates: source link in the bottom right corner, analysis link stays left */
+.catalyst { position: relative; }
+.catalyst-src { position: absolute; right: 18px; bottom: 14px; margin: 0; }
+.catalyst-body:has(.catalyst-src):not(:has(.catalyst-read)) { padding-bottom: 1.5em; }
+@media (max-width: 720px) { .catalyst-src { right: 14px; bottom: 12px; } }
