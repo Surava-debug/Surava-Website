@@ -3358,3 +3358,6 @@ label { font-weight: 600; }
 /* Scam warning: footer line and contact card */
 footer .scam-note { margin: 10px 0 0; padding-left: 9px; border-left: 2px solid #C97A2B; font-size: 0.78rem; line-height: 1.5; color: #C9D1DC; }
 .contact-info .scam-card { border-left: 3px solid #B26A00; }
+
+/* Coming-soon card whose only description is "Coming soon": keep it under the title */
+.article-card.is-coming-soon .coming-soon-pill.cs-inline { margin-top: 4px; }
